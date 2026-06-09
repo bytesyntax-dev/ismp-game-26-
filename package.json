@@ -1,0 +1,14 @@
+{
+  "name": "ISMP-GAME-26",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "npm install --prefix backend && npm start --prefix backend"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
