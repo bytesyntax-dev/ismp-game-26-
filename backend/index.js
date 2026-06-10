@@ -17,6 +17,9 @@ const io = new Server(server, {
 });
 const PORT = process.env.port || 3000;
 
+const groups = new Map()
+const refTable = new Map()
+
 const points = {
 
 }
@@ -24,6 +27,34 @@ const points = {
 // Socket.io connection handler
 io.on('connection', (socket) => {
     console.log('A user connected:', socket.id);
+
+    // client should add this token to local storage if not set
+    socket.emit('ref_init', { ref: socket.id })
+
+    // client should use once the connection is established
+    socket.on('ref_sync', (data) => {
+        if(data.ref) refTable.set(data.ref, socket.id)
+    })
+
+    socket.on('create_team', (data) => {
+        const { group, ref } = data;
+        if(groups.has(group)){
+            return socket.emit('error', { success: false, message: 'team already exists' })
+        } else {
+            groups.set(group, { members: [ref] })
+        }
+    })
+
+    socket.on('join_team', (data) => {
+        const { group, ref } = data;
+        if(groups.has(group)){
+            let gp = groups.get(group);
+            gp.members.push(ref);
+            groups.set(group, gp);
+        } else {
+            socket.emit('error', { message : 'couldn\'t join group' })
+        }
+    })
 
     socket.on('submit_answer', (data) => {
         const { questionId, answer, group } = data;
