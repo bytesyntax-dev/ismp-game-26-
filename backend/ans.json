@@ -1,0 +1,37 @@
+{
+    "A":{
+        "answer":"A1",
+        "points":"500",
+        "people":[]
+    },
+    "B":{
+        "answer":"B1",
+        "points":"750",
+        "people":[]
+    },
+    "C":{
+        "answer":"C1",
+        "points":"1000",
+        "people":[]
+    },
+    "D":{
+        "answer":"D1",
+        "points":"1250",
+        "people":[]
+    },
+    "E":{
+        "answer":"E1",
+        "points":"1500",
+        "people":[]
+    },
+    "F":{
+        "answer":"F1",
+        "points":"1750",
+        "people":[]
+    },
+    "G":{
+        "answer":"G1",
+        "points":"2000",
+        "people":[]
+    }
+}
