@@ -1,79 +1,71 @@
 {
   "root": {
-    "sub_dir": {
-      "dir1": {
-        "sub_dir": {
-          "dir3": {
-            "sub_dir": {
-              "file1.txt": {
-                "content": "This is file 1",
-                "metadata": {
-                  "hidden": true,
-                  "author": "AMN",
-                  "creation": "Date_Here"
-                }
-              },
-              "metadata": {
-                "hidden": false,
-                "author": "AMN",
-                "creation": "Date_Here"
-              }
-            }
-          },
-          "file1.txt": {
-            "content": "This is file 1",
-            "metadata": {
-              "hidden": true,
-              "author": "AMN",
-              "creation": "Date_Here"
-            }
-          },
-          "file2.txt": {
-            "content": "This is file 2",
-            "metadata": {
-              "hidden": false,
-              "author": "AMN",
-              "creation": "Date_Here"
-            }
-          }
-        },
-        "metadata": {
-          "hidden": false,
-          "author": "AMN",
-          "creation": "Date_Here"
-        }
-      },
-      ".dir2": {
-        "sub_dir": {
-          "file1.txt": {
-            "content": "This is file 1",
-            "metadata": {
-              "hidden": true,
-              "author": "AMN",
-              "creation": "Date_Here"
-            }
-          }
-        },
-        "metadata": {
-          "hidden": false,
-          "author": "AMN",
-          "creation": "Date_Here"
-        }
-      },
-      "output.txt": {
-        "content": "This is file 1",
-        "metadata": {
-          "hidden": false,
-          "author": "AMN",
-          "creation": "Date_Here",
-          "password": "572990d52a3b8c590c8c62555f04b89e58733f5b0d5616605fe782e6cc6776db"
-        }
-      }
-    },
-    "metadata": {
+    "type": "dir",
+    "hidden": false,
+    "author": "AMN",
+    "creation": "Date_Here",
+
+    "dir1": {
+      "type": "dir",
       "hidden": false,
       "author": "AMN",
-      "creation": "Date_Here"
+      "creation": "Date_Here",
+
+      "dir3": {
+        "type": "dir",
+        "hidden": false,
+        "author": "AMN",
+        "creation": "Date_Here",
+
+        "file1.txt": {
+          "type": "file",
+          "hidden": true,
+          "author": "AMN",
+          "creation": "Date_Here",
+
+          "content": "This is file 1"
+        }
+      },
+      "file1.txt": {
+        "type": "file",
+        "hidden": true,
+        "author": "AMN",
+        "creation": "Date_Here",
+
+        "content": "This is file 1"
+      },
+      "file2.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "AMN",
+        "creation": "Date_Here",
+
+        "content": "This is file 2"
+      }
+    },
+    ".dir2": {
+      "type": "dir",
+      "hidden": false,
+      "author": "AMN",
+      "creation": "Date_Here",
+
+      "file1.txt": {
+        "type": "file",
+        "hidden": true,
+        "author": "AMN",
+        "creation": "Date_Here",
+
+        "content": "This is file 1"
+      }
+    },
+    "output.txt": {
+      "type": "file",
+      "hidden": false,
+      "author": "AMN",
+      "creation": "Date_Here",
+      "password": "572990d52a3b8c590c8c62555f04b89e58733f5b0d5616605fe782e6cc6776db",
+
+      "content": "This is file 1"
     }
   }
 }
