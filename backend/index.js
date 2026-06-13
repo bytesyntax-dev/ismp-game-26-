@@ -14,11 +14,10 @@ const loadJson = (relativePath) => JSON.parse(fs.readFileSync(new URL(relativePa
 const writeJson = (relativePath, data) => fs.writeFileSync(new URL(relativePath, import.meta.url), JSON.stringify(data, null, 2), "utf-8");
 let root, answers;
 
-const loadData = () => {
-    root = loadJson("./data/dir.json");// Load directory structure and question data from JSON files
+const loadData = (lvl) => {
+    root = loadJson("./data/" + (lvl) + ".json");// Load directory structure and question data from JSON files
     answers = loadJson("./data/ans.json");// Load answers and points configuration for quiz questions
 }
-loadData(); // Initial data load
 
 // Initialize Express app and HTTP server
 const app = express();
@@ -55,12 +54,12 @@ io.on("connection", (socket) => {
 
     // Sync client reference with socket ID when connection is established
     socket.on("ref_sync", (data) => {
-        if (data.ref) refTable.set(data.ref, [socket.id,null]);
+        if (data.ref) refTable.set(data.ref, [socket.id, null]);
     });
 
-    socket.on("name-set",(data)=>{
+    socket.on("name-set", (data) => {
         let tmp = refTable.get(data.ref)
-        tmp[1]=data.name;
+        tmp[1] = data.name;
         refTable.set(data.ref, tmp);
     })
 
@@ -90,7 +89,7 @@ io.on("connection", (socket) => {
     socket.on("join_team", (data, callback) => {
         const { group, ref } = data;
         if (groups.has(group)) {
-            // Add member to existing team
+            // Add member to exist    ing team
             let gp = groups.get(group);
             if (!gp.members.includes(ref)) {
                 gp.members.push(ref);
@@ -186,6 +185,9 @@ function find_dir(root, path_arr) {
 
 app.get("/api/directory", (req, res) => {
     const dir = req.query.path?.split(/\/|\\/g).filter(Boolean) ?? [];
+    const level = req.query.level;
+    if (!fs.existsSync(`./data/levels/${level}.json`)) return res.status(400).json({ error: "Incorrect Level parameter!" });
+    loadData(level);
     let response = root;
     try {
         response = find_dir(response, dir);
@@ -214,7 +216,9 @@ app.get("/api/directory", (req, res) => {
 // 2. Fetch File Contents
 app.get("/api/file", (req, res) => {
     const dir = req.query.path?.split(/\/|\\/g).filter(Boolean) ?? [];
-
+    const level = req.query.level;
+    if (!fs.existsSync(`./data/levels/${level}.json`)) return res.status(400).json({ error: "Incorrect Level parameter!" });
+    loadData(level);
     let file = root;
     try {
         file = find_dir(root, dir);
@@ -245,18 +249,17 @@ app.get("/api/file", (req, res) => {
  * POST /admin/clear_points
  * Reset all game data (points and groups)
  */
+
 app.post("/admin/clear_points", (req, res) => {
-    // Verify admin authorization
-    if (req.cookies?.role !== "admin") {
-        return res.status(401).json({ error: "Unauthorized" });
+    const { password } = req.body;
+    // Validate admin password (salted with "admin@IITRPR")
+    if (hash(password + "admin@IITRPR") === process.env.ADMIN_PASSWORD) {
+        points = {}; // Clear points on successful login
+        groups.clear();
+        return res.json({ message: "Points and Groups cleared successfully!" });
+    } else {
+        return res.status(401).json({ error: "Incorrect password" });
     }
-    // Clear all groups and points
-    for (const key in points) {
-        groups.delete(key);
-        delete points[key];
-    }
-    loadData(); // Reload data to reset any question states if necessary
-    return res.json({ message: "All points cleared successfully!" });
 });
 
 /**
@@ -265,85 +268,6 @@ app.post("/admin/clear_points", (req, res) => {
  */
 app.get("/api/points", (req, res) => {
     return res.json(points);
-});
-
-/**
- * POST /admin/login
- * Authenticate admin and create session cookie
- */
-app.post("/admin/login", (req, res) => {
-    const { password } = req.body;
-    // Validate admin password (salted with "admin@IITRPR")
-    if (hash(password + "admin@IITRPR") === process.env.ADMIN_PASSWORD) {
-        // Set secure, httpOnly, sameSite cookie for session
-        res.cookie("role", "admin", {
-            httpOnly: true,
-            secure: true,
-            sameSite: "strict",
-            path: "/",
-        });
-        return res.json({ message: "Login successful!" });
-    } else {
-        return res.status(401).json({ error: "Incorrect password" });
-    }
-});
-
-/**
- * GET /admin/logout
- * Clear admin session cookie
- */
-app.get("/admin/logout", (req, res) => {
-    res.clearCookie("role");
-    return res.json({ message: "Logout successful!" });
-});
-
-/**
- * GET /admin
- * Admin dashboard - redirect to login or admin panel based on auth
- */
-app.get("/admin", (req, res) => {
-    // Show login page if not authenticated, otherwise show admin panel
-    if (req.cookies?.role !== "admin") {
-        return res.sendFile(path.join(__dirname, "../frontend/admin/login.html"));
-    }
-    else {
-        return res.sendFile(path.join(__dirname, "../frontend/admin/index.html"));
-    }
-});
-
-/**
- * POST /admin/update_answers
- * Update quiz answers and points configuration
- */
-app.post("/admin/update_answers", (req, res) => {
-    // Verify admin authorization
-    if (req.cookies?.role !== "admin") {
-        return res.status(401).json({ error: "Unauthorized" });
-    }
-    else {
-        const answers = req.body;
-        // Write updated answers to ans.json file
-        writeJson("./data/ans.json", answers);
-        loadData(); // Reload data into memory after update
-        return res.json({ message: "Answers updated successfully!" });
-    }
-});
-/**
- * POST /admin/update_question
- * Update directory structure and question file contents
- */
-app.post("/admin/update_question", (req, res) => {
-    // Verify admin authorization
-    if (req.cookies?.role !== "admin") {
-        return res.status(401).json({ error: "Unauthorized" });
-    }
-    else {
-        const dir_data = req.body;
-        // Write updated directory structure to dir.json file
-        writeJson("./data/dir.json", dir_data);
-        loadData(); // Reload data into memory after update
-        return res.json({ message: "Questions updated successfully!" });
-    }
 });
 
 /*----- Frontend Hosting -----*/
