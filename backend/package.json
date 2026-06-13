@@ -10,6 +10,7 @@
     "dev": "nodemon index.js"
   },
   "dependencies": {
+    "cookie-parser": "^1.4.7",
     "express": "^5.2.1",
     "ISMP-GAME-26": "file:..",
     "path": "^0.12.7",

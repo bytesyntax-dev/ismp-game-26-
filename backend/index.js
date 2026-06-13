@@ -213,20 +213,6 @@ app.get("/api/file", (req, res) => {
     return res.json(file);
 });
 
-/**
- * POST /api/register_group
- * Register a new team/group in the game
- */
-app.post("/api/register_group", (req, res) => {
-    const { group_name } = req.body;
-    // Prevent duplicate group registration
-    if (Object.hasOwn(points, group_name)) {
-        return res.status(400).json({ error: "Group name already exists!" });
-    }
-    // Initialize group with 0 points
-    points[group_name] = 0;
-    return res.json({ message: "Group registered successfully!" });
-});
 
 /*----- Admin Control Endpoints: Require admin authentication -----*/
 
