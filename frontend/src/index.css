@@ -1,1 +1,97 @@
-@import "tailwindcss"
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Share+Tech+Mono&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cyber-bg text-white font-sans overflow-x-hidden selection:bg-cyber-green selection:text-black;
+  }
+}
+
+/* CRT Screen Effect Overlay */
+.crt::after {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  aspect-ratio: 1;
+  background-size: 100% 3px, 3px 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* scanline movement overlay */
+.scanline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0) 50%,
+    rgba(0, 255, 102, 0.04) 50%,
+    rgba(0, 255, 102, 0.04)
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+/* Glowing Neon Borders & Box Shadows */
+.cyber-glow-border {
+  border: 1px solid rgba(0, 255, 102, 0.3);
+  box-shadow: 0 0 8px rgba(0, 255, 102, 0.15);
+}
+
+.cyber-glow-border:hover {
+  border-color: rgba(0, 255, 102, 0.6);
+  box-shadow: 0 0 15px rgba(0, 255, 102, 0.3);
+}
+
+/* Matrix Code Background Animation */
+@keyframes matrix {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 0% 100%; }
+}
+
+.matrix-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.96)), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Ctext x='10' y='20' fill='%2300ff66' font-family='monospace' font-size='10' opacity='0.25'%3E01%3C/text%3E%3Ctext x='40' y='50' fill='%2300ff66' font-family='monospace' font-size='10' opacity='0.25'%3E10%3C/text%3E%3Ctext x='70' y='30' fill='%2300ff66' font-family='monospace' font-size='10' opacity='0.25'%3E11%3C/text%3E%3Ctext x='20' y='80' fill='%2300ff66' font-family='monospace' font-size='10' opacity='0.25'%3E00%3C/text%3E%3Ctext x='80' y='80' fill='%2300ff66' font-family='monospace' font-size='10' opacity='0.25'%3E01%3C/text%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  animation: matrix 30s linear infinite;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #060907;
+}
+::-webkit-scrollbar-thumb {
+  background: #18261e;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 255, 102, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00ff66;
+}
+
+/* CRT monitor flickering */
+@keyframes flicker {
+  0% { opacity: 0.98; }
+  50% { opacity: 1; }
+  100% { opacity: 0.99; }
+}
+
+.crt-flicker {
+  animation: flicker 0.15s infinite;
+}
