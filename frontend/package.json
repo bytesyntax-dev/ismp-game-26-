@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "ISMP-GAME-26": "file:..",
     "lucide-react": "^0.475.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6"

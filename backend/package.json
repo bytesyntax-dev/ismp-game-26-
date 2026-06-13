@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "express": "^5.2.1",
+    "ISMP-GAME-26": "file:..",
     "path": "^0.12.7",
     "socket.io": "^4.8.3"
   },

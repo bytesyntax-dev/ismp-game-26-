@@ -4,8 +4,12 @@ import { createServer } from "http";
 import { Server } from "socket.io";
 import { createHash } from "crypto";
 import fs from "fs";
+import cookieParser from "cookie-parser";
 import { table, log } from "console";
+import path from "path";
+import { fileURLToPath } from "url";
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const loadJson = (relativePath) => JSON.parse(fs.readFileSync(new URL(relativePath, import.meta.url), "utf-8"));
 const writeJson = (relativePath, data) => fs.writeFileSync(new URL(relativePath, import.meta.url), JSON.stringify(data, null, 2), "utf-8");
 let root, answers;
@@ -19,6 +23,9 @@ loadData(); // Initial data load
 // Initialize Express app and HTTP server
 const app = express();
 const server = createServer(app);
+
+app.use(express.json());
+app.use(cookieParser());
 
 // Utility function to hash strings using SHA256
 const hash = (str) => createHash("sha256").update(str).digest("hex");
@@ -257,8 +264,13 @@ app.post("/admin/login", (req, res) => {
     const { password } = req.body;
     // Validate admin password (salted with "admin@IITRPR")
     if (hash(password + "admin@IITRPR") === process.env.ADMIN_PASSWORD) {
-        // Set secure httpOnly cookie for session
-        res.cookie("role", "admin", { httpOnly: true, secure: true });
+        // Set secure, httpOnly, sameSite cookie for session
+        res.cookie("role", "admin", {
+            httpOnly: true,
+            secure: true,
+            sameSite: "strict",
+            path: "/",
+        });
         return res.json({ message: "Login successful!" });
     } else {
         return res.status(401).json({ error: "Incorrect password" });
@@ -330,7 +342,7 @@ if (process.env.NODE_ENV == "production") {
     app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
     // Catch-all route for SPA - serve index.html for any unmatched routes
-    app.get("*", (req, res) => {
+    app.get("/*", (req, res) => {
         res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
     });
 }
