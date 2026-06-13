@@ -739,6 +739,7 @@ export default function App() {
     });
   };
 
+  //UNDER REVIEW PLEASE LOOK INTO IT
   const handleDisconnect = () => {
     sound.playClick();
     
