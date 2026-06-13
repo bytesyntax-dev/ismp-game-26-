@@ -646,27 +646,21 @@ export default function App() {
     e.preventDefault();
     sound.playClick();
 
-    fetch('/api/create_team', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-player-id': playerId
-      },
-      body: JSON.stringify({ teamName })
-    })
-    .then(res => res.json())
-    .then(res => {
-      if (res.success) {
+    const socket = socketRef.current;
+    if (!socket) {
+      sound.playError();
+      setErrorMsg('Socket connection is not initialized.');
+      return;
+    }
+
+    socket.emit('create_team', { group: teamName, ref: localStorage.getItem('ref') }, (res) => {
+      if (res?.success) {
         setTeam(res.team);
         initializeGame();
       } else {
         sound.playError();
-        setErrorMsg(res.error);
+        setErrorMsg(res?.error || 'Cannot establish team host.');
       }
-    })
-    .catch(err => {
-      sound.playError();
-      setErrorMsg('Cannot establish team host.');
     });
   };
 
@@ -675,27 +669,21 @@ export default function App() {
     e.preventDefault();
     sound.playClick();
 
-    fetch('/api/join_team', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-player-id': playerId
-      },
-      body: JSON.stringify({ code: teamCodeInput })
-    })
-    .then(res => res.json())
-    .then(res => {
-      if (res.success) {
+    const socket = socketRef.current;
+    if (!socket) {
+      sound.playError();
+      setErrorMsg('Socket connection is not initialized.');
+      return;
+    }
+
+    socket.emit('join_team', { group: teamCodeInput, ref: localStorage.getItem('ref') }, (res) => {
+      if (res?.success) {
         setTeam(res.team);
         initializeGame();
       } else {
         sound.playError();
-        setErrorMsg(res.error);
+        setErrorMsg(res?.error || 'Cannot join selected team.');
       }
-    })
-    .catch(err => {
-      sound.playError();
-      setErrorMsg('Cannot join selected team.');
     });
   };
 
