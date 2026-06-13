@@ -55,8 +55,14 @@ io.on("connection", (socket) => {
 
     // Sync client reference with socket ID when connection is established
     socket.on("ref_sync", (data) => {
-        if (data.ref) refTable.set(data.ref, socket.id);
+        if (data.ref) refTable.set(data.ref, [socket.id,null]);
     });
+
+    socket.on("name-set",(data)=>{
+        let tmp = refTable.get(data.ref)
+        tmp[1]=data.name;
+        refTable.set(data.ref, tmp);
+    })
 
     // Handle team creation event
     socket.on("create_team", (data) => {
