@@ -110,7 +110,7 @@ export default function App() {
     socketRef.current = io({ autoConnect: false });
 
     socketRef.current.on('ref_init', (data) => {
-      localStorage.setItem('ref', data.ref);
+      if(!localStorage.getItem('ref')) {localStorage.setItem('ref', data.ref);}
       socketRef.current.emit('ref_sync', { ref: data.ref });
     });
 
