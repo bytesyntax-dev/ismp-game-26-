@@ -37,7 +37,7 @@ export default function App() {
     return '';
   });
   const [teamName, setTeamName] = useState('');
-  const [teamCodeInput, setTeamCodeInput] = useState('');
+  const [joinTeamName, setJoinTeamName] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
 
   // Game States
@@ -676,7 +676,7 @@ export default function App() {
       return;
     }
 
-    socket.emit('join_team', { group: teamCodeInput, ref: localStorage.getItem('ref') }, (res) => {
+    socket.emit('join_team', { group: teamName, ref: localStorage.getItem('ref') }, (res) => {
       if (res?.success) {
         setTeam(res.team);
         initializeGame();
@@ -820,8 +820,8 @@ export default function App() {
           playerName={playerName}
           teamName={teamName}
           setTeamName={setTeamName}
-          teamCodeInput={teamCodeInput}
-          setTeamCodeInput={setTeamCodeInput}
+          joinTeamName={joinTeamName}
+          setJoinTeamName={setJoinTeamName}
           errorMsg={errorMsg}
           handleCreateTeamSubmit={handleCreateTeamSubmit}
           handleJoinTeamSubmit={handleJoinTeamSubmit}
