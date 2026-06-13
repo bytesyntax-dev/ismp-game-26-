@@ -3,10 +3,18 @@ import express from "express";
 import { createServer } from "http";
 import { Server } from "socket.io";
 import { createHash } from "crypto";
-import root from "./dir.json" with { type: "json" }; // Directory structure for file system navigation
-import * as answers from "./ans.json" with { type: "json" }; // Quiz answers and points data
 import fs from "fs";
-import { table , log } from "console";
+import { table, log } from "console";
+
+const loadJson = (relativePath) => JSON.parse(fs.readFileSync(new URL(relativePath, import.meta.url), "utf-8"));
+const writeJson = (relativePath, data) => fs.writeFileSync(new URL(relativePath, import.meta.url), JSON.stringify(data, null, 2), "utf-8");
+let root, answers;
+
+const loadData = () => {
+    root = loadJson("./data/dir.json");// Load directory structure and question data from JSON files
+    answers = loadJson("./data/ans.json");// Load answers and points configuration for quiz questions
+}
+loadData(); // Initial data load
 
 // Initialize Express app and HTTP server
 const app = express();
@@ -137,7 +145,7 @@ function find_dir(root, path_arr) {
     let r = root;
     for (const p of path_arr) {
         if (p == "" || p == "type" || p == "author" || p == "creation" || p == "hidden" || p == "password" || p == "content") return;
-        if (!Object.hasOwn(r, p))throw new Error("invalid path");
+        if (!Object.hasOwn(r, p)) throw new Error("invalid path");
         r = r[p];
     };
     log(r)
@@ -165,7 +173,7 @@ app.get("/api/directory", (req, res) => {
         const { type, author, creation, hidden, content } = v;
         output[k] = { type, author, creation, hidden, content };
         if (k == "type" || k == "author" || k == "creation" || k == "hidden" || k == "password" || k == "content") delete output[k];
-        if (v.password !== undefined) output[k]={type : "Protected_file"};
+        if (v.password !== undefined) output[k] = { type: "Protected_file" };
     }
 
     return res.json(output);
@@ -174,7 +182,7 @@ app.get("/api/directory", (req, res) => {
 // 2. Fetch File Contents
 app.get("/api/file", (req, res) => {
     const dir = req.query.path?.split(/\/|\\/g).filter(Boolean) ?? [];
-    
+
     let file = root;
     try {
         file = find_dir(root, dir);
@@ -291,13 +299,8 @@ app.post("/admin/update_answers", (req, res) => {
     else {
         const answers = req.body;
         // Write updated answers to ans.json file
-        fs.writeFile("./backend/ans.json", JSON.stringify(answers, null, 2), (err) => {
-            if (err) {
-                console.error("Error writing to ans.json:", err);
-                return res.status(500).json({ error: "Failed to update questions" });
-            }
-            return res.json({ message: "Questions updated successfully!" });
-        });
+        writeJson("./data/ans.json", answers);
+        return res.json({ message: "Answers updated successfully!" });
     }
 });
 /**
@@ -312,13 +315,8 @@ app.post("/admin/update_question", (req, res) => {
     else {
         const dir_data = req.body;
         // Write updated directory structure to dir.json file
-        fs.writeFile("./backend/dir.json", JSON.stringify(dir_data, null, 2), (err) => {
-            if (err) {
-                console.error("Error writing to dir.json:", err);
-                return res.status(500).json({ error: "Failed to update questions" });
-            }
-            return res.json({ message: "Questions updated successfully!" });
-        });
+        writeJson("./data/dir.json", dir_data);
+        return res.json({ message: "Questions updated successfully!" });
     }
 });
 
