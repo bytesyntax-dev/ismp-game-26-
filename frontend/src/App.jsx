@@ -720,6 +720,10 @@ export default function App() {
       headers: {
         'Content-Type': 'application/json',
         'x-player-id': playerId
+      },
+      query: {
+          level:"level1",
+          path:"root"
       }
     })
     .then(res => res.json())
