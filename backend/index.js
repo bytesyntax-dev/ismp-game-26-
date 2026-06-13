@@ -237,6 +237,7 @@ app.post("/admin/clear_points", (req, res) => {
         groups.delete(key);
         delete points[key];
     }
+    loadData(); // Reload data to reset any question states if necessary
     return res.json({ message: "All points cleared successfully!" });
 });
 
@@ -300,6 +301,7 @@ app.post("/admin/update_answers", (req, res) => {
         const answers = req.body;
         // Write updated answers to ans.json file
         writeJson("./data/ans.json", answers);
+        loadData(); // Reload data into memory after update
         return res.json({ message: "Answers updated successfully!" });
     }
 });
@@ -316,6 +318,7 @@ app.post("/admin/update_question", (req, res) => {
         const dir_data = req.body;
         // Write updated directory structure to dir.json file
         writeJson("./data/dir.json", dir_data);
+        loadData(); // Reload data into memory after update
         return res.json({ message: "Questions updated successfully!" });
     }
 });
