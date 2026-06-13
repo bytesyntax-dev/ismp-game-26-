@@ -65,31 +65,50 @@ io.on("connection", (socket) => {
     })
 
     // Handle team creation event
-    socket.on("create_team", (data) => {
+    socket.on("create_team", (data, callback) => {
         const { group, ref } = data;
         // Prevent duplicate team creation
         if (groups.has(group)) {
-            return socket.emit("error", {
+            return callback({
                 success: false,
-                message: "team already exists",
+                error: "team already exists",
             });
-        } else {
-            // Create new team with first member
-            groups.set(group, { members: [ref] });
         }
+        // Create new team with first member
+        groups.set(group, { members: [ref] });
+        points[group] = 0;
+        callback({
+            success: true,
+            team: {
+                name: group,
+                members: [{ id: ref, name: refTable.get(ref)?.[1] || "Unknown" }],
+            },
+        });
     });
 
     // Handle team join event
-    socket.on("join_team", (data) => {
+    socket.on("join_team", (data, callback) => {
         const { group, ref } = data;
         if (groups.has(group)) {
             // Add member to existing team
             let gp = groups.get(group);
-            gp.members.push(ref);
-            groups.set(group, gp);
+            if (!gp.members.includes(ref)) {
+                gp.members.push(ref);
+                groups.set(group, gp);
+            }
+            callback({
+                success: true,
+                team: {
+                    name: group,
+                    members: gp.members.map((memberRef) => ({
+                        id: memberRef,
+                        name: refTable.get(memberRef)?.[1] || "Unknown",
+                    })),
+                },
+            });
         } else {
             // Error if team doesn't exist
-            socket.emit("error", { message: "couldn't join group" });
+            callback({ success: false, error: "couldn't join group" });
         }
     });
 
