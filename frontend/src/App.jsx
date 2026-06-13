@@ -12,6 +12,7 @@ import FileExplorerPanel from './components/FileExplorerPanel';
 import MissionProgressPanel from './components/MissionProgressPanel';
 import TerminalPanel from './components/TerminalPanel';
 import SuccessScreen from './components/SuccessScreen';
+import { io } from 'socket.io-client';
 
 
 // The backend can read this from the 'player-id' header to track sessions and about it.
@@ -103,6 +104,26 @@ export default function App() {
   });
 
   const terminalEndRef = useRef(null);
+  const socketRef = useRef(null);
+
+  useEffect(() => {
+    socketRef.current = io({ autoConnect: false });
+
+    socketRef.current.on('ref_init', (data) => {
+      localStorage.setItem('ref', data.ref);
+      socketRef.current.emit('ref_sync', { ref: data.ref });
+    });
+
+    socketRef.current.on('connect_error', (err) => {
+      console.warn('Socket connection error:', err);
+    });
+
+    socketRef.current.connect();
+
+    return () => {
+      socketRef.current?.disconnect();
+    };
+  }, []);
 
   // 1. Keep scrolling terminal to the bottom
   useEffect(() => {
@@ -600,28 +621,24 @@ export default function App() {
     startAudioEngine();
     sound.playClick();
 
-    fetch('/api/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-player-id': playerId
-      },
-      body: JSON.stringify({ name: playerName })
-    })
-    .then(res => res.json())
-    .then(res => {
-      if (res.success) {
-        setScreen('lobby');
-        setErrorMsg('');
-      } else {
-        sound.playError();
-        setErrorMsg(res.error);
-      }
-    })
-    .catch(err => {
+    const socket = socketRef.current;
+    if (!socket) {
       sound.playError();
-      setErrorMsg('Cannot establish uplink connection to server.');
+      setErrorMsg('Socket connection is not initialized.');
+      return;
+    }
+
+    if (!socket.connected) {
+      socket.connect();
+    }
+
+    socket.emit('name-set', {
+      ref: localStorage.getItem('ref'),
+      name: playerName,
     });
+
+    setScreen('lobby');
+    setErrorMsg('');
   };
 
   // 2. Create Team Lobby

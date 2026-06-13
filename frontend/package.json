@@ -12,7 +12,8 @@
     "ISMP-GAME-26": "file:..",
     "lucide-react": "^0.475.0",
     "react": "^19.2.6",
-    "react-dom": "^19.2.6"
+    "react-dom": "^19.2.6",
+    "socket.io-client": "^4.9.0"
   },
   "devDependencies": {
     "@types/react": "^19.2.14",
