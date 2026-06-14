@@ -275,7 +275,7 @@ app.get("/admin/login", (req, res) => {
 app.post("/admin/clear_points", (req, res) => {
     const { password } = req.body;
     // Validate admin password (salted with "admin@IITRPR")
-    if (hash(password + "admin@IITRPR") === /*process.env.ADMIN_PASSWORD*/ "a59550bc5b00ce521e9b73372a7a8bfd1fd6451c2f7b285bf460d573adf5881b") {
+    if (hash(password + "admin@IITRPR") === process.env.ADMIN_PASSWORD) {
         points = {}; // Clear points on successful login
         groups.clear();
         loadDetails(); // Reload question details to reset answered_by arrays
