@@ -12,11 +12,13 @@ import { fileURLToPath } from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const loadJson = (relativePath) => JSON.parse(fs.readFileSync(new URL(relativePath, import.meta.url), "utf-8"));
 const writeJson = (relativePath, data) => fs.writeFileSync(new URL(relativePath, import.meta.url), JSON.stringify(data, null, 2), "utf-8");
-let root, answers;
+let root, details;
 
 const loadData = (lvl) => {
     root = loadJson("./data/" + (lvl) + ".json");// Load directory structure and question data from JSON files
-    answers = loadJson("./data/ans.json");// Load answers and points configuration for quiz questions
+}
+const loadDetails = () => {
+    details = loadJson("./data/ans.json");// Load answers and points configuration for quiz questions
 }
 
 // Initialize Express app and HTTP server
@@ -122,14 +124,14 @@ io.on("connection", (socket) => {
         // Validate: team exists, question exists, answer is correct, and team hasn't answered before
         if (
             groups.has(group) &&
-            Object.hasOwn(answers, questionId) &&
-            answers[questionId].answer === answer &&
-            !answers[questionId].answered_by.includes(group)
+            Object.hasOwn(details, questionId) &&
+            details[questionId].answer === answer &&
+            !details[questionId].answered_by.includes(group)
         ) {
             // Award points and mark question as answered by this group
-            points[group] += answers[questionId].points;
-            answers[questionId].answered_by.push(group);
-            answers[questionId].points -= 2; // Reduce points for subsequent correct answers to incentivize speed
+            points[group] += details[questionId].points;
+            details[questionId].answered_by.push(group);
+            details[questionId].points -= 2; // Reduce points for subsequent correct answers to incentivize speed
             sendResponse({
                 success: true,
                 message: "Correct answer!",
@@ -144,13 +146,13 @@ io.on("connection", (socket) => {
                 });
                 return;
             }
-            else if (!Object.hasOwn(answers, questionId)) {
+            else if (!Object.hasOwn(details, questionId)) {
                 sendResponse({
                     success: false,
                     message: "Invalid question ID!",
                 });
                 return;
-            } else if (answers[questionId].answered_by.includes(group)) {
+            } else if (details[questionId].answered_by.includes(group)) {
                 sendResponse({
                     success: false,
                     message: "Your group has already answered this question!",
@@ -188,6 +190,16 @@ function find_dir(root, path_arr) {
     log(r)
     return r;
 }
+
+app.get("/api/level_details", (req, res) => {
+    const { level,group } = req.query;
+    const response={
+        levelName: details[level].levelName || `Level ${level}`,
+        points: details[level].points || 0,
+        completed: group ? details[level].answered_by.includes(group) : details[level].answered_by
+    }
+    return res.json(response);
+})
 
 app.get("/api/directory", (req, res) => {
     const dir = req.query.path?.split(/\/|\\/g).filter(Boolean) ?? [];
@@ -256,13 +268,19 @@ app.get("/api/file", (req, res) => {
  * Reset all game data (points and groups)
  */
 
+app.get("/admin/login", (req, res) => {
+    res.writeHead(200, { "Content-Type": "text/html" });
+    res.write(`<form action="./clear_points" method="POST" style="font-family: system-ui, sans-serif; display: flex; gap: 10px; max-width: 320px; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);"><input type="password" name="password" placeholder="Enter password" required style="flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='#0070f3'"><button type="submit" style="padding: 10px 16px; background: #0070f3; color: white; border: none; border-radius: 6px; font-size: 14px; font-weight: 500; cursor: pointer; transition: background 0.2s;" onmouseover="this.style.background='#0051a8'" onmouseout="this.style.background='#0070f3'">Submit</button></form>`)
+})
+
 app.post("/admin/clear_points", (req, res) => {
     const { password } = req.body;
     // Validate admin password (salted with "admin@IITRPR")
     if (hash(password + "admin@IITRPR") === process.env.ADMIN_PASSWORD) {
         points = {}; // Clear points on successful login
         groups.clear();
-        return res.json({ message: "Points and Groups cleared successfully!" });
+        loadDetails(); // Reload question details to reset answered_by arrays
+        return res.json({ message: "Points and Groups cleared successfully!", details });
     } else {
         return res.status(401).json({ error: "Incorrect password" });
     }

@@ -1,37 +1,44 @@
 {
-    "A":{
-        "answer":"A1",
-        "points":"500",
-        "people":[]
-    },
-    "B":{
-        "answer":"B1",
-        "points":"750",
-        "people":[]
-    },
-    "C":{
-        "answer":"C1",
-        "points":"1000",
-        "people":[]
-    },
-    "D":{
-        "answer":"D1",
-        "points":"1250",
-        "people":[]
-    },
-    "E":{
-        "answer":"E1",
-        "points":"1500",
-        "people":[]
-    },
-    "F":{
-        "answer":"F1",
-        "points":"1750",
-        "people":[]
-    },
-    "G":{
-        "answer":"G1",
-        "points":"2000",
-        "people":[]
-    }
+  "A": {
+    "levelName": "Level name here",
+    "answer": "A1",
+    "points": "500",
+    "answered_by": []
+  },
+  "B": {
+    "levelName": "Level name here",
+    "answer": "B1",
+    "points": "750",
+    "answered_by": []
+  },
+  "C": {
+    "levelName": "Level name here",
+    "answer": "C1",
+    "points": "1000",
+    "answered_by": []
+  },
+  "D": {
+    "levelName": "Level name here",
+    "answer": "D1",
+    "points": "1250",
+    "answered_by": []
+  },
+  "E": {
+    "levelName": "Level name here",
+    "answer": "E1",
+    "points": "1500",
+    "answered_by": []
+  },
+  "F": {
+    "levelName": "Level name here",
+    "answer": "F1",
+    "points": "1750",
+    "answered_by": []
+  },
+  "G": {
+    "levelName": "Level name here",
+    "answer": "G1",
+    "points": "2000",
+    "answered_by": []
+  }
 }
