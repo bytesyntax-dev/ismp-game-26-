@@ -392,6 +392,8 @@ export default function App() {
 
       case 'ls': {
         const showAll = args.includes('-a');
+
+        /** @todo : To fetch 1 level deep directory items */
         const contents = getContentsAtPath();
         const items = Object.keys(contents);
         
