@@ -539,40 +539,40 @@ export default function App() {
 
   // Submit Answer Action
   const submitDecryptionKey = (ans) => {
-    fetch('/api/submit_answer', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-player-id': playerId
-      },
-      body: JSON.stringify({ answer: ans })
-    })
-    .then(res => res.json())
-    .then(res => {
+    const socket = socketRef.current;
+    if (!socket || !socket.connected) {
+      sound.playError();
+      setTerminalOutput(prev => [
+        ...prev,
+        { type: 'error', text: `Socket is not connected. Please reconnect and try again.` }
+      ]);
+      return;
+    }
+
+    socket.emit('submit_answer', {questionId: ans.level,answer: ans.answer,group: team?.name,}, (res) => {
+      if (!res) {
+        sound.playError();
+        setTerminalOutput(prev => [
+          ...prev,
+          { type: 'error', text: `No response from server.` }
+        ]);
+        return;
+      }
+
       if (res.success) {
-        if (res.correct) {
-          pollStatus(); // sync state immediately
-        } else {
-          sound.playError();
-          setTerminalOutput(prev => [
-            ...prev,
-            { type: 'error', text: `[DECRYPTION DENIED]: ${res.error}` }
-          ]);
-        }
+        sound.playSuccess();
+        setTerminalOutput(prev => [
+          ...prev,
+          { type: 'success', text: `[DECRYPTION ACCEPTED]: ${res.message}` }
+        ]);
+        pollStatus(); // sync state immediately
       } else {
         sound.playError();
         setTerminalOutput(prev => [
           ...prev,
-          { type: 'error', text: `Server error: ${res.error}` }
+          { type: 'error', text: `[DECRYPTION DENIED]: ${res.message}` }
         ]);
       }
-    })
-    .catch(err => {
-      sound.playError();
-      setTerminalOutput(prev => [
-        ...prev,
-        { type: 'error', text: `Network error: Cannot reach mainframe server.` }
-      ]);
     });
   };
 

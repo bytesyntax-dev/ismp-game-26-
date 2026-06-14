@@ -112,8 +112,13 @@ io.on("connection", (socket) => {
     });
 
     // Handle answer submission event
-    socket.on("submit_answer", (data) => {
+    socket.on("submit_answer", (data, callback) => {
         const { questionId, answer, group } = data;
+        const sendResponse = (payload) => {
+            if (typeof callback === 'function') callback(payload);
+            else socket.emit("answer_result", payload);
+        };
+
         // Validate: team exists, question exists, answer is correct, and team hasn't answered before
         if (
             groups.has(group) &&
@@ -125,7 +130,7 @@ io.on("connection", (socket) => {
             points[group] += answers[questionId].points;
             answers[questionId].answered_by.push(group);
             answers[questionId].points -= 2; // Reduce points for subsequent correct answers to incentivize speed
-            socket.emit("answer_result", {
+            sendResponse({
                 success: true,
                 message: "Correct answer!",
             });
@@ -133,29 +138,30 @@ io.on("connection", (socket) => {
             io.emit("points", points);
         } else {
             if (!groups.has(group)) {
-                socket.emit("answer_result", {
+                sendResponse({
                     success: false,
                     message: "Your group doesn't exist!",
                 });
                 return;
             }
             else if (!Object.hasOwn(answers, questionId)) {
-                socket.emit("answer_result", {
+                sendResponse({
                     success: false,
                     message: "Invalid question ID!",
                 });
                 return;
             } else if (answers[questionId].answered_by.includes(group)) {
-                socket.emit("answer_result", {
+                sendResponse({
                     success: false,
                     message: "Your group has already answered this question!",
                 });
                 return;
-            } else
-                socket.emit("answer_result", {
+            } else {
+                sendResponse({
                     success: false,
                     message: "Incorrect answer . Try again!",
                 });
+            }
         }
     });
 
