@@ -549,7 +549,7 @@ export default function App() {
       return;
     }
 
-    socket.emit('submit_answer', {questionId: ans.level,answer: ans.answer,group: team?.name,}, (res) => {
+    socket.emit('submit_answer', {questionId: levelData.level,answer: ans,group: team?.name,}, (res) => {
       if (!res) {
         sound.playError();
         setTerminalOutput(prev => [
