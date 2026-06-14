@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Portal</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      background: #1a1a1a;
+      color: #e0e0e0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    form {
+      background: #242424;
+      padding: 40px;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 350px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .form-header {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .form-header h1 {
+      font-size: 24px;
+      margin-bottom: 8px;
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .form-header p {
+      font-size: 13px;
+      color: #999;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #b0b0b0;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .input-group {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    input[type="password"] {
+      flex: 1;
+      padding: 12px 14px;
+      background: #1a1a1a;
+      border: 1px solid #404040;
+      border-radius: 6px;
+      color: #e0e0e0;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    input[type="password"]:focus {
+      border-color: #555;
+      background: #1f1f1f;
+    }
+
+    input[type="password"]::placeholder {
+      color: #555;
+    }
+
+    button {
+      padding: 12px 20px;
+      background: #3d3d3d;
+      color: #e0e0e0;
+      border: 1px solid #505050;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    button:hover {
+      background: #4a4a4a;
+      border-color: #666;
+    }
+
+    button:active {
+      background: #333;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .button-group button {
+      flex: 1;
+      padding: 10px 16px;
+      font-size: 13px;
+    }
+
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+    }
+
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      padding: 20px;
+    }
+
+    .modal.show {
+      display: flex;
+    }
+
+    .modal-content {
+      background: #242424;
+      border-radius: 8px;
+      padding: 32px;
+      max-width: 95%;
+      max-height: 85vh;
+      overflow: auto;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+      width: 100%;
+    }
+
+    .modal-header {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      color: #ffffff;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    th, td {
+      padding: 14px 12px;
+      text-align: left;
+      border-bottom: 1px solid #3a3a3a;
+      color: #e0e0e0;
+    }
+
+    th {
+      background: #1a1a1a;
+      font-weight: 600;
+      color: #ffffff;
+      border-bottom: 2px solid #505050;
+      padding: 14px 12px;
+    }
+
+    tr:hover {
+      background: #2a2a2a;
+    }
+
+    .error-text {
+      color: #ff6b6b;
+      font-weight: 600;
+    }
+
+    .close-btn {
+      margin-top: 24px;
+      padding: 12px 20px;
+      background: #3d3d3d;
+      color: #e0e0e0;
+      border: 1px solid #505050;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      width: 100%;
+      max-width: 120px;
+    }
+
+    .close-btn:hover {
+      background: #4a4a4a;
+      border-color: #666;
+    }
+  </style>
+</head>
+<body>
+  <form id="admin-form">
+    <div class="form-header">
+      <h1>⚙️ ADMIN ACCESS</h1>
+      <p>// SECURE AUTHENTICATION PROTOCOL</p>
+    </div>
+    
+    <div>
+      <label for="admin-pass">Admin Password</label>
+      <div class="input-group">
+        <input
+          id="admin-pass"
+          type="password"
+          name="password"
+          placeholder="Enter Password ..."
+          required
+        />
+        <button type="submit">Submit</button>
+      </div>
+    </div>
+
+    <div class="footer">
+      [SYSTEM SECURED] • Authentication Required
+    </div>
+
+    <div class="button-group">
+      <button type="button" onclick="checkPoints()">Check Points</button>
+    </div>
+  </form>
+
+  <div id="data-modal" class="modal">
+    <div class="modal-content">
+      <div id="modal-header" class="modal-header">System Data</div>
+      <div id="modal-body"></div>
+      <button class="close-btn" onclick="document.getElementById('data-modal').classList.remove('show')">Close</button>
+    </div>
+  </div>
+
+  <script>
+    function renderDataTable(data) {
+      if (!data || typeof data !== 'object') {
+        return '<p style="color: #ff3366;">Invalid data format</p>';
+      }
+
+      let html = '<table>';
+      html += '<thead><tr>';
+      
+      // Get all unique keys from all objects
+      const allKeys = new Set();
+      Object.values(data).forEach(obj => {
+        if (obj && typeof obj === 'object') {
+          Object.keys(obj).forEach(key => allKeys.add(key));
+        }
+      });
+      
+      // Add header row
+      html += '<th>Level</th>';
+      Array.from(allKeys).forEach(key => {
+        html += `<th>${key}</th>`;
+      });
+      html += '</tr></thead>';
+      
+      // Add data rows
+      html += '<tbody>';
+      Object.entries(data).forEach(([levelKey, levelData]) => {
+        html += '<tr>';
+        html += `<td style="font-weight: 700;">${levelKey}</td>`;
+        
+        Array.from(allKeys).forEach(key => {
+          const value = levelData?.[key];
+          if (value === undefined || value === null) {
+            html += `<td><span class="error-text">ERROR</span></td>`;
+          } else if (Array.isArray(value)) {
+            html += `<td>${value.join(', ') || '(empty)'}</td>`;
+          } else {
+            html += `<td>${value}</td>`;
+          }
+        });
+        
+        html += '</tr>';
+      });
+      html += '</tbody>';
+      html += '</table>';
+      
+      return html;
+    }
+
+    function renderPointsTable(data) {
+      if (!data || typeof data !== 'object') {
+        return '<p style="color: #ff6b6b;">No points data available</p>';
+      }
+
+      let html = '<table>';
+      html += '<thead><tr><th>Team</th><th>Points</th></tr></thead>';
+      html += '<tbody>';
+      
+      Object.entries(data).forEach(([team, points]) => {
+        html += '<tr>';
+        html += `<td style="font-weight: 600;">${team}</td>`;
+        html += `<td>${points}</td>`;
+        html += '</tr>';
+      });
+      
+      html += '</tbody>';
+      html += '</table>';
+      
+      return html;
+    }
+
+    async function checkPoints() {
+      try {
+        const response = await fetch('/api/points', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+        
+        const data = await response.json();
+        
+        if (response.ok) {
+          document.getElementById('modal-header').textContent = 'Current Points Leaderboard';
+          document.getElementById('modal-body').innerHTML = renderPointsTable(data);
+          document.getElementById('data-modal').classList.add('show');
+        } else {
+          alert('Error: ' + (data.error || 'Failed to fetch points'));
+        }
+      } catch (error) {
+        console.error('Request failed:', error);
+        alert('Error: ' + error.message);
+      }
+    }
+
+    document.getElementById('admin-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const password = document.getElementById('admin-pass').value;
+      
+      try {
+        const response = await fetch('./clear_points', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ password })
+        });
+        
+        const data = await response.json();
+        
+        if (response.ok) {
+          if (data.details) {
+            document.getElementById('modal-header').textContent = 'System Data';
+            document.getElementById('modal-body').innerHTML = renderDataTable(data.details);
+            document.getElementById('data-modal').classList.add('show');
+          }
+        } else {
+          alert('Error: ' + (data.details || data.error || 'Unknown error'));
+        }
+      } catch (error) {
+        console.error('Request failed:', error);
+        alert('Error: ' + error.message);
+      }
+    });
+  </script>
+</body>
+</html>
