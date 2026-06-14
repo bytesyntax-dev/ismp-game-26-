@@ -32,7 +32,7 @@ export default function FileExplorerPanel({
 
         <div className="flex-1 overflow-y-auto space-y-1.5 pr-1 text-xs">
           {Object.entries(getContentsAtPath()).map(([name, val]) => {
-            const isDir = typeof val === 'object';
+            const isDir = val.type==='dir';
             const isHidden = name.startsWith('.');
             
             if (isHidden) return null; // Hide dot files in visual list to match terminal rules
