@@ -45,7 +45,7 @@ const PORT = process.env.port || 3000;
 // Data structures to track game state
 const groups = new Map(); // Store team/group information and their members
 const refTable = new Map(); // Map client references to socket IDs
-const points = {}; // Track points for each group
+let points = {}; // Track points for each group
 
 /*----- Socket.io Connection Handler: Manages real-time game events -----*/
 io.on("connection", (socket) => {
@@ -269,14 +269,13 @@ app.get("/api/file", (req, res) => {
  */
 
 app.get("/admin/login", (req, res) => {
-    res.writeHead(200, { "Content-Type": "text/html" });
-    res.write(`<form action="./clear_points" method="POST" style="font-family: system-ui, sans-serif; display: flex; gap: 10px; max-width: 320px; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);"><input type="password" name="password" placeholder="Enter password" required style="flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='#0070f3'"><button type="submit" style="padding: 10px 16px; background: #0070f3; color: white; border: none; border-radius: 6px; font-size: 14px; font-weight: 500; cursor: pointer; transition: background 0.2s;" onmouseover="this.style.background='#0051a8'" onmouseout="this.style.background='#0070f3'">Submit</button></form>`)
+    res.sendFile(path.join(__dirname, "../frontend/admin_login.html"));
 })
 
 app.post("/admin/clear_points", (req, res) => {
     const { password } = req.body;
     // Validate admin password (salted with "admin@IITRPR")
-    if (hash(password + "admin@IITRPR") === process.env.ADMIN_PASSWORD) {
+    if (hash(password + "admin@IITRPR") === /*process.env.ADMIN_PASSWORD*/ "a59550bc5b00ce521e9b73372a7a8bfd1fd6451c2f7b285bf460d573adf5881b") {
         points = {}; // Clear points on successful login
         groups.clear();
         loadDetails(); // Reload question details to reset answered_by arrays
