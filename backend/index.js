@@ -176,9 +176,11 @@ io.on("connection", (socket) => {
 /*----- Express API Endpoints: File system navigation and game data -----*/
 
 /**
- * GET /api/directory
- * Navigate directory structure and list subdirectories/files
- * Query param: path - directory path to navigate
+ * Helper function to navigate directory structure
+ * @param {Object} root - Root directory object to search in
+ * @param {Array} path_arr - Array of path segments to navigate through
+ * @returns {Object} - The directory/file object at the specified path
+ * @throws {Error} - If path is invalid or restricted keywords are used
  */
 function find_dir(root, path_arr) {
     let r = root;
@@ -191,6 +193,11 @@ function find_dir(root, path_arr) {
     return r;
 }
 
+/**
+ * GET /api/level_details
+ * Retrieve level information including name, points, and completion status
+ * Query params: level - level ID, group (optional) - group name to check if they completed it
+ */
 app.get("/api/level_details", (req, res) => {
     const { level,group } = req.query;
     const response={
@@ -231,7 +238,11 @@ app.get("/api/directory", (req, res) => {
     return res.json(output);
 });
 
-// 2. Fetch File Contents
+/**
+ * GET /api/file
+ * Retrieve file contents from the directory structure
+ * Query params: path - file path, level - level ID, password (optional) - for protected files
+ */
 app.get("/api/file", (req, res) => {
     const dir = req.query.path?.split(/\/|\\/g).filter(Boolean) ?? [];
     const level = req.query.level;
@@ -264,14 +275,18 @@ app.get("/api/file", (req, res) => {
 /*----- Admin Control Endpoints: Require admin authentication -----*/
 
 /**
- * POST /admin/clear_points
- * Reset all game data (points and groups)
+ * GET /admin/login
+ * Serve the admin login page (admin_login.html)
  */
-
 app.get("/admin/login", (req, res) => {
     res.sendFile(path.join(__dirname, "../frontend/admin_login.html"));
 })
 
+/**
+ * POST /admin/clear_points
+ * Reset all game data (points and groups) after validating admin password
+ * Body: password - admin password to verify authentication
+ */
 app.post("/admin/clear_points", (req, res) => {
     const { password } = req.body;
     // Validate admin password (salted with "admin@IITRPR")
