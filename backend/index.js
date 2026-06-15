@@ -15,7 +15,7 @@ const writeJson = (relativePath, data) => fs.writeFileSync(new URL(relativePath,
 let root, details;
 
 const loadData = (lvl) => {
-    root = loadJson("./data/levels" + (lvl) + ".json");// Load directory structure and question data from JSON files
+    root = loadJson("./data/levels/" + (lvl) + ".json");// Load directory structure and question data from JSON files
 }
 const loadDetails = () => {
     details = loadJson("./data/ans.json");// Load answers and points configuration for quiz questions
