@@ -1,0 +1,484 @@
+{
+  "root": {
+    "type": "dir",
+    "hidden": false,
+    "author": "SOFTCOM",
+    "creation": "12-7-26",
+    "Hostels-Net":{
+        "type": "dir",
+        "hidden": false,
+        "author": "SOFTCOM",
+        "creation": "12-7-26",
+        "Brahmaputra-East":{
+            "type": "dir",
+            "hidden": false,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "Caretaker-Logs":{
+                "type": "dir",
+                "hidden": false,
+                "author": "SOFTCOM",
+                "creation": "12-7-26",
+                "Mess_Bill_August":{
+                    "type": "dir",
+                    "hidden": false,
+                    "author": "SOFTCOM",
+                    "creation": "12-7-26",
+                    "Bill_summary.txt":{
+                        "type": "file",
+                        "hidden": false,
+                        "author": "SOFTCOM",
+                        "creation": "12-7-26", 
+                        "content":"Mess Bill Status: Processed. Extra charges added for add-ons. No system bypass keys here."
+                        
+                    }
+                },
+                "Hostel_leaving_database":{
+                    "type": "dir",
+                    "hidden": false,
+                    "author": "SOFTCOM",
+                    "creation": "12-7-26",
+                    "archive_2025.txt": {
+                        "type": "file",
+                        "hidden": false,
+                        "author": "SOFTCOM",
+                        "creation": "12-7-26",
+                        "content": "All old logs cleared. Go check active network terminals instead."
+                        }
+                }
+            },
+            "NetAdmin_Desk":{
+                "type": "dir",
+                "hidden": false,
+                "author": "SOFTCOM",
+                "creation": "12-7-26",
+                "Wifi_Subnet":{
+                    "type": "dir",
+                    "hidden": false,
+                    "author": "SOFTCOM",
+                    "creation": "12-7-26",
+                    "Ground_floor_routerNet":{
+                        "type": "dir",
+                        "hidden": false,
+                        "author": "SOFTCOM",
+                        "creation": "12-7-26",
+                        "RouterWingA-R001-R010":{
+                            "type": "dir",
+                            "hidden": false,
+                            "author": "SOFTCOM",
+                            "creation": "12-7-26",
+                            "routernet-R001-R005":{
+                                "type": "dir",
+                                "hidden": false,
+                                "author": "SOFTCOM",
+                                "creation": "12-7-26",
+                                "rnet.txt":{
+                                    "type": "file",
+                                    "hidden": false,
+                                    "author": "SOFTCOM",
+                                    "creation": "12-7-26",
+                                    "content":"This router is out of your room's range, find the correct one to access its info."
+                                }
+                            },
+                            "routernet-R006-R010":{
+                                "type": "dir",
+                                "hidden": false,
+                                "author": "SOFTCOM",
+                                "creation": "12-7-26",
+                                "rnet.txt":{
+                                    "type": "file",
+                                    "hidden": false,
+                                    "author": "SOFTCOM",
+                                    "creation": "12-7-26",
+                                    "content":"This router is out of your room's range, find the correct one to access its info."
+                                }
+                            }
+                        },
+                        "RouterWingB-R011-R020":{
+                            "type": "dir",
+                            "hidden": false,
+                            "author": "SOFTCOM",
+                            "creation": "12-7-26",
+                            "routernet-R011-R015":{
+                                "type": "dir",
+                                "hidden": false,
+                                "author": "SOFTCOM",
+                                "creation": "12-7-26",
+                                "rnet.txt":{
+                                    "type": "file",
+                                    "hidden": false,
+                                    "author": "SOFTCOM",
+                                    "creation": "12-7-26",
+                                    "content":"This router is out of your room's range, find the correct one to access its info."
+                                },
+                                "washroom_anomaly.txt":{
+                                    "type": "file",
+                                    "hidden": false,
+                                    "author": "SOFTCOM",
+                                    "creation": "12-7-26",
+                                    "content":"Massive bandwidth anomaly detected on Washroom Subnet. Huh, strange."
+                                }
+                            },
+                            "routernet-R016-R020":{
+                                "type": "dir",
+                                "hidden": false,
+                                "author": "SOFTCOM",
+                                "creation": "12-7-26",
+                                "rnet.txt":{
+                                    "type": "file",
+                                    "hidden": false,
+                                    "author": "SOFTCOM",
+                                    "creation": "12-7-26",
+                                    "content":"This router is out of your room's range, find the correct one to access its info."
+                                }
+                            }
+                        }
+                    },
+                    "First_floor_routerNet":{
+                        "type": "dir",
+                        "hidden": false,
+                        "author": "SOFTCOM",
+                        "creation": "12-7-26",
+                        "RouterWingA-R101-R110":{
+                            "type": "dir",
+                            "hidden": false,
+                            "author": "SOFTCOM",
+                            "creation": "12-7-26",
+                            "routernet-R101-R105":{
+                                "type": "dir",
+                                "hidden": false,
+                                "author": "SOFTCOM",
+                                "creation": "12-7-26",
+                                "rnet.txt":{
+                                    "type": "file",
+                                    "hidden": false,
+                                    "author": "SOFTCOM",
+                                    "creation": "12-7-26",
+                                    "content":"This router is out of your room's range, find the correct one to access its info."
+                                }
+                            },
+                            "routernet-R106-R110":{
+                                "type": "dir",
+                                "hidden": false,
+                                "author": "SOFTCOM",
+                                "creation": "12-7-26",
+                                "rnet.txt":{
+                                    "type": "file",
+                                    "hidden": false,
+                                    "author": "SOFTCOM",
+                                    "creation": "12-7-26",
+                                    "content":"This router is out of your room's range, find the correct one to access its info."
+                                }
+                            }
+                        },
+                        "RouterWingB-R111-R120":{
+                            "type": "dir",
+                            "hidden": false,
+                            "author": "SOFTCOM",
+                            "creation": "12-7-26",
+                            "routernet-R111-R115":{
+                                "type": "dir",
+                                "hidden": false,
+                                "author": "SOFTCOM",
+                                "creation": "12-7-26",
+                                "rnet.txt":{
+                                    "type": "file",
+                                    "hidden": false,
+                                    "author": "SOFTCOM",
+                                    "creation": "12-7-26",
+                                    "content":"This router is out of your room's range. But it should be the right one for Room No.111. You try again, and then it hits you. You live in Brahmaputra West."
+                                }
+                            },
+                            "routernet-R116-R120":{
+                                "type": "dir",
+                                "hidden": false,
+                                "author": "SOFTCOM",
+                                "creation": "12-7-26",
+                                "rnet.txt":{
+                                    "type": "file",
+                                    "hidden": false,
+                                    "author": "SOFTCOM",
+                                    "creation": "12-7-26",
+                                    "content":"This router is out of your room's range, find the correct one to access its info."
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Brahmaputra-West":{
+            "type": "dir",
+            "hidden": false,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "Caretaker-Logs":{
+                "type": "dir",
+                "hidden": false,
+                "author": "SOFTCOM",
+                "creation": "12-7-26",
+                "Mess_Bill_August":{
+                    "type": "dir",
+                    "hidden": false,
+                    "author": "SOFTCOM",
+                    "creation": "12-7-26",
+                    "Bill_summary.txt":{
+                        "type": "file",
+                        "hidden": false,
+                        "author": "SOFTCOM",
+                        "creation": "12-7-26", 
+                        "content":"Mess Bill Status: Processed. Extra charges added for add-ons. No system bypass keys here."
+                        
+                    }
+                },
+                "Hostel_leaving_database":{
+                    "type": "dir",
+                    "hidden": false,
+                    "author": "SOFTCOM",
+                    "creation": "12-7-26",
+                    "archive_2025.txt": {
+                        "type": "file",
+                        "hidden": false,
+                        "author": "SOFTCOM",
+                        "creation": "12-7-26",
+                        "content": "All old logs cleared. Go check active network terminals instead."
+                        }
+                }
+            },
+            "NetAdmin_Desk":{
+                "type": "dir",
+                "hidden": false,
+                "author": "SOFTCOM",
+                "creation": "12-7-26",
+                "Wifi_Subnet":{
+                    "type": "dir",
+                    "hidden": false,
+                    "author": "SOFTCOM",
+                    "creation": "12-7-26",
+                    "Ground_floor_routerNet":{
+                        "type": "dir",
+                        "hidden": false,
+                        "author": "SOFTCOM",
+                        "creation": "12-7-26",
+                        "RouterWingA-R001-R010":{
+                            "type": "dir",
+                            "hidden": false,
+                            "author": "SOFTCOM",
+                            "creation": "12-7-26",
+                            "routernet-R001-R005":{
+                                "type": "dir",
+                                "hidden": false,
+                                "author": "SOFTCOM",
+                                "creation": "12-7-26",
+                                "rnet.txt":{
+                                    "type": "file",
+                                    "hidden": false,
+                                    "author": "SOFTCOM",
+                                    "creation": "12-7-26",
+                                    "content":"This router is out of your room's range, find the correct one to access its info."
+                                }
+                            },
+                            "routernet-R006-R010":{
+                                "type": "dir",
+                                "hidden": false,
+                                "author": "SOFTCOM",
+                                "creation": "12-7-26",
+                                "rnet.txt":{
+                                    "type": "file",
+                                    "hidden": false,
+                                    "author": "SOFTCOM",
+                                    "creation": "12-7-26",
+                                    "content":"This router is out of your room's range, find the correct one to access its info."
+                                }
+                            }
+                        },
+                        "RouterWingB-R011-R020":{
+                            "type": "dir",
+                            "hidden": false,
+                            "author": "SOFTCOM",
+                            "creation": "12-7-26",
+                            "routernet-R011-R015":{
+                                "type": "dir",
+                                "hidden": false,
+                                "author": "SOFTCOM",
+                                "creation": "12-7-26",
+                                "rnet.txt":{
+                                    "type": "file",
+                                    "hidden": false,
+                                    "author": "SOFTCOM",
+                                    "creation": "12-7-26",
+                                    "content":"This router is out of your room's range, find the correct one to access its info."
+                                },
+                                "washroom_anomaly.txt":{
+                                    "type": "file",
+                                    "hidden": false,
+                                    "author": "SOFTCOM",
+                                    "creation": "12-7-26",
+                                    "content":"Massive bandwidth anomaly detected on Washroom Subnet. Huh, strange."
+                                }
+                            },
+                            "routernet-R016-R020":{
+                                "type": "dir",
+                                "hidden": false,
+                                "author": "SOFTCOM",
+                                "creation": "12-7-26",
+                                "rnet.txt":{
+                                    "type": "file",
+                                    "hidden": false,
+                                    "author": "SOFTCOM",
+                                    "creation": "12-7-26",
+                                    "content":"This router is out of your room's range, find the correct one to access its info."
+                                }
+                            }
+                        }
+                    },
+                    "First_floor_routerNet":{
+                        "type": "dir",
+                        "hidden": false,
+                        "author": "SOFTCOM",
+                        "creation": "12-7-26",
+                        "RouterWingA-R101-R110":{
+                            "type": "dir",
+                            "hidden": false,
+                            "author": "SOFTCOM",
+                            "creation": "12-7-26",
+                            "routernet-R101-R105":{
+                                "type": "dir",
+                                "hidden": false,
+                                "author": "SOFTCOM",
+                                "creation": "12-7-26",
+                                "rnet.txt":{
+                                    "type": "file",
+                                    "hidden": false,
+                                    "author": "SOFTCOM",
+                                    "creation": "12-7-26",
+                                    "content":"This router is out of your room's range, find the correct one to access its info."
+                                }
+                            },
+                            "routernet-R106-R110":{
+                                "type": "dir",
+                                "hidden": false,
+                                "author": "SOFTCOM",
+                                "creation": "12-7-26",
+                                "rnet.txt":{
+                                    "type": "file",
+                                    "hidden": false,
+                                    "author": "SOFTCOM",
+                                    "creation": "12-7-26",
+                                    "content":"This router is out of your room's range, find the correct one to access its info."
+                                }
+                            }
+                        },
+                        "RouterWingB-R111-R120":{
+                            "type": "dir",
+                            "hidden": false,
+                            "author": "SOFTCOM",
+                            "creation": "12-7-26",
+                            "routernet-R111-R115":{
+                                "type": "dir",
+                                "hidden": false,
+                                "author": "SOFTCOM",
+                                "creation": "12-7-26",
+                                "rnet.txt":{
+                                    "type": "file",
+                                    "hidden": false,
+                                    "author": "SOFTCOM",
+                                    "creation": "12-7-26",
+                                    "content":"Router Network Accessed. The only part left now is to link it with the LHC subnet.\nThe first part of the password is: gvdlb"
+                                }
+                            },
+                            "routernet-R116-R120":{
+                                "type": "dir",
+                                "hidden": false,
+                                "author": "SOFTCOM",
+                                "creation": "12-7-26",
+                                "rnet.txt":{
+                                    "type": "file",
+                                    "hidden": false,
+                                    "author": "SOFTCOM",
+                                    "creation": "12-7-26",
+                                    "content":"This router is out of your room's range, find the correct one to access its info."
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "LHC-Net": {
+        "type": "dir",
+        "hidden": false,
+        "author": "SOFTCOM",
+        "creation": "12-7-26",
+        "groundFloor-net":{
+            "type": "dir",
+            "hidden": false,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "M1.txt":{
+                "type": "file",
+                "hidden": false,
+                "author": "SOFTCOM",
+                "creation": "12-7-26",
+                "content":"Seriously? Who the hell even uses M1? This is not the correct lecture hall."
+            },
+            "M2.txt":{
+                "type": "file",
+                "hidden": false,
+                "author": "SOFTCOM",
+                "creation": "12-7-26",
+                "content":"This is not the correct lecture hall. Try another."
+            },
+            "M3.txt":{
+                "type": "file",
+                "hidden": false,
+                "author": "SOFTCOM",
+                "creation": "12-7-26",
+                "content":"This is not the correct lecture hall. Try another."
+            },
+            "M4.txt":{
+                "type": "file",
+                "hidden": false,
+                "author": "SOFTCOM",
+                "creation": "12-7-26",
+                "content":"You have successfully linked your hostel router to the classroom network and marked your proxy. This was clearly a one time exception and you will attend all your lectures from tomorrow onwards. The second part of the password is: dbemz\nIf you have found the complete password, you can advance to the next level."
+            },
+            "M5.txt":{
+                "type": "file",
+                "hidden": false,
+                "author": "SOFTCOM",
+                "creation": "12-7-26",
+                "content":"This is not the correct lecture hall. Try another."
+            },
+            "M6.txt":{
+                "type": "file",
+                "hidden": false,
+                "author": "SOFTCOM",
+                "creation": "12-7-26",
+                "content":"Geez. You don't even know where your class is, do you? Try another."
+            }
+        },
+        "firstFloor-net":{
+            "type": "dir",
+            "hidden": false,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "note_from_editor.txt":{
+                "type": "file",
+                "hidden": false,
+                "author": "SOFTCOM",
+                "creation": "12-7-26",
+                "content":"'What do you mean there's an LHC First Floor? There has never been a first floor in the history of this campus... Wait, they actually finished construction? Ohh fu-'\nPS: The password is not on the first floor."
+            }
+        }
+    },
+    "README.txt": {
+      "type": "file",
+      "hidden": false,
+      "author": "SOFTCOM",
+      "creation": "12-7-26",
+      "content": "--------------------\nLevel 3\n--------------------\n\nYou wake up on the bed in your hostel room and look at the time in your phone beside your bed. 8:47 AM. Today is your first 9AM class at IIT Ropar. 'Class jana jaruri hota hai kya?', you think to yourself and lay back down on the bed. Attendance policy is 75% anyways, you can probably skip the first 25% of the classes. But then a sudden stroke of genius hits you: why walk all the way to LHC when you can just tunnel into the campus subnets from your room no. 111 and link your hostel router directly to the classroom mainframe network to mark a proxy for yourself?. It might turn out to be easier than walking upto M4 all the way from Brahmaputra West for you.\n\nFind the first part of the password in the hostel network and the second part in the LHC network and combine it and pass it as the argument for the 'next' command to advance to the next level.\n\nUseful Commands:\n- cd\n- ls"
+    }
+  }
+}

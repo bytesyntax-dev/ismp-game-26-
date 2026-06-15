@@ -1,0 +1,269 @@
+{
+  "root": {
+    "type": "dir",
+    "hidden": false,
+    "author": "SOFTCOM",
+    "creation": "12-7-26",
+    "Maggie-Point": {
+      "type": "dir",
+      "hidden": false,
+      "author": "SOFTCOM",
+      "creation": "12-7-26",
+      "Menu": {
+        "type": "dir",
+        "hidden": false,
+        "author": "SOFTCOM",
+        "creation": "12-7-26",
+        "item1.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "Burger"
+        },
+        "item2.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "Iced-Tea"
+        },
+        "item3.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "Grilled-Sandwich"
+        },
+        "item4.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "Paneer-Kulcha"
+        },
+        "item5.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "Hazelnut-Coffee"
+        }
+      }
+    },
+    "DUC": {
+      "type": "dir",
+      "hidden": false,
+      "author": "SOFTCOM",
+      "creation": "12-7-26",
+      "Menu": {
+        "type": "dir",
+        "hidden": false,
+        "author": "SOFTCOM",
+        "creation": "12-7-26",
+        "item1.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "Aloo_Patty"
+        },
+        "item2.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "Kulhad-Chai"
+        },
+        "item3.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "Chocolate Chai. But why?"
+        },
+        "item4.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "Cheese-Pasta"
+        }
+      }
+    },
+    "CSB": {
+      "type": "dir",
+      "hidden": false,
+      "author": "SOFTCOM",
+      "creation": "12-7-26",
+      "Menu": {
+        "type": "dir",
+        "hidden": false,
+        "author": "SOFTCOM",
+        "creation": "12-7-26",
+        "item1.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "Aloo_Patty"
+        },
+        "item2.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "Kulhad-Chai"
+        },
+        "item3.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "Loaded Fries"
+        },
+        "item4.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "Brownie"
+        },
+        "item5.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "Grilled Sandwich"
+        }
+      }
+    },
+    "Amul": {
+      "type": "dir",
+      "hidden": false,
+      "author": "SOFTCOM",
+      "creation": "12-7-26",
+      "Menu": {
+        "type": "dir",
+        "hidden": false,
+        "author": "SOFTCOM",
+        "creation": "12-7-26",
+        "item1.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "Chai"
+        },
+        "item2.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "Aloo-Paratha"
+        },
+        "item3.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "French Fries"
+        },
+        "item4.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "Paneer Sandwich"
+        },
+        "item5.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "Cheese Corn!! You finally found it! You look at the time and its 5:13 PM. The senior who promised you the treat is a bit late. You should text him probably, but wait, you don't have his number. The password to proceed to the next level is: intro_do"
+        }
+      }
+    },
+    "Dubey-Canteen": {
+      "type": "dir",
+      "hidden": false,
+      "author": "SOFTCOM",
+      "creation": "12-7-26",
+      "what.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "Wait, where is that? Don't ask the seniors please."
+        }
+    },
+    "Mess": {
+      "type": "dir",
+      "hidden": false,
+      "author": "SOFTCOM",
+      "creation": "12-7-26",
+      "mess.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "Cheese Corn ke liye mess kyu dekh rahe ho? 😭"
+        }
+    },
+    "Bake-o-Mocha": {
+      "type": "dir",
+      "hidden": false,
+      "author": "SOFTCOM",
+      "creation": "12-7-26",
+      "Menu": {
+        "type": "dir",
+        "hidden": false,
+        "author": "SOFTCOM",
+        "creation": "12-7-26",
+        "item1.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "Schezwan Noodles"
+        },
+        "item2.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "Pastry"
+        },
+        "item3.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "Pizza"
+        },
+        "item4.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "Mojito"
+        },
+        "item5.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "Grill Burger"
+        }
+      }
+    },
+    "README.txt": {
+      "type": "file",
+      "hidden": false,
+      "author": "SOFTCOM",
+      "creation": "12-7-26",
+      "content": "--------------------\nLevel 2\n--------------------\n\nYou were scrolling Insta reels for several hours when you looked at the time and realised that it was 4:37 PM already. The mess is closed right now and you are feeling hungry. Luckily, you gave a senior your intro this morning and he offered to treat you to Cheese Corn at 5PM. But, now that you think of it you don't really remember where can you find it on the campus. You must find the place now to get that party from your senior.\n\nFind the password for the next place at the place where you can buy Cheese Corn on the campus and pass it as the argument for the 'next' command to advance to the next level.\n\nUseful Commands:\n- cd\n- ls"
+    }
+  }
+}
