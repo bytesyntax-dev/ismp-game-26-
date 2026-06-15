@@ -1,6 +1,7 @@
 # API Endpoints Documentation
 
 This file documents the API endpoints and Socket.io events defined in `backend/index.js`.
+Note: all hashes for file passwords are hashed in sha256 algorithm.
 
 ## Express API Endpoints
 
