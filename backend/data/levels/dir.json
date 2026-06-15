@@ -66,6 +66,13 @@
       "password": "572990d52a3b8c590c8c62555f04b89e58733f5b0d5616605fe782e6cc6776db",
 
       "content": "This is file 1"
+    },
+    "README.txt": {
+      "type": "file",
+      "hidden": false,
+      "author": "SOFTCOM",
+      "creation": "12-7-26",
+      "content": "Sample file"
     }
   }
 }
