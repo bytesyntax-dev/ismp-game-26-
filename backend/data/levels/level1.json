@@ -1,152 +1,125 @@
 {
   "root": {
-    "sub_dir": {
-      "Auditorium": {
-        "sub_dir": {
-          "Registration_Desk": {
-            "desk.txt": {
-              "content": "You ask the person doing the registrations for the wi-fi password. But he doesn't sadly.",
-              "metadata": {
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26"
-              }
-            },
-            "metadata": {
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26"
-            }
-          }
-        },
-        "audi.txt": {
-          "content": "There are a lot of students in the auditorium as Registration is going on right now. You wonder if any of them know the wi-fi password.",
-          "metadata": {
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26"
-          }
-        },
-        "metadata": {
+    "type": "dir",
+    "hidden": false,
+    "author": "SOFTCOM",
+    "creation": "12-7-26",
+    "Auditorium": {
+      "type": "dir",
+      "hidden": false,
+      "author": "SOFTCOM",
+      "creation": "12-7-26",
+      "Registration_Desk": {
+        "type": "dir",
+        "hidden": false,
+        "author": "SOFTCOM",
+        "creation": "12-7-26",
+        "desk.txt": {
+          "type": "file",
           "hidden": false,
           "author": "SOFTCOM",
-          "creation": "12-7-26"
+          "creation": "12-7-26",
+          "content": "You ask the person doing the registrations for the wi-fi password. But he doesn't know it sadly."
         }
       },
-      "Admin_Block": {
-        "sub_dir": {
-          "Senate_Hall": {
-            "senate.txt": {
-              "content": "The senate hall is empty right now.",
-              "metadata": {
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26"
-              }
-            },
-            "metadata": {
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26"
-            }
-          },
-          "Admin_Helpdesk": {
-            "desk1.txt": {
-              "content": "You go to the desk and ask the person there about the wi-fi password. He tells you to ask on the next desk.",
-              "metadata": {
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26"
-              }
-            },
-            "desk2.txt": {
-              "content": "You go to the desk and ask the person there about the wi-fi password. He tells you that it is 'V#6qF'. Success achieved, you can advance to the next level now.",
-              "metadata": {
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26"
-              }
-            },
-            "metadata": {
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26"
-            }
-          },
-          "Director's Office": {
-            "notice.txt": {
-              "content": "Notice: IIT Ropar students are not allowed.",
-              "metadata": {
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26"
-              }
-            },
-            "metadata": {
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26"
-            }
-          }
-        },
-        "metadata": {
-          "hidden": false,
-          "author": "AMN",
-          "creation": "Date_Here"
-        }
-      },
-      "Library": {
-        "sub_dir": {
-          "Ground_Floor": {
-            "ground.txt": {
-              "content": "Nothing here which can lead to the wi-fi password.",
-              "metadata": {
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26"
-              }
-            },
-            "metadata": {
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26"
-            }
-          },
-          "First_Floor": {
-            "first.txt": {
-              "content": "Nothing here which can lead to the wi-fi password either.",
-              "metadata": {
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26"
-              }
-            },
-            "metadata": {
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26"
-            }
-          }
-        },
-        "metadata": {
+      "audi.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "SOFTCOM",
+        "creation": "12-7-26",
+        "content": "There are a lot of students in the auditorium as Registration is going on right now. You wonder if any of them know the wi-fi password."
+      }
+    },
+    "Admin_Block": {
+      "type": "dir",
+      "hidden": false,
+      "author": "SOFTCOM",
+      "creation": "12-7-26",
+      "Senate_Hall": {
+        "type": "dir",
+        "hidden": false,
+        "author": "SOFTCOM",
+        "creation": "12-7-26",
+        "senate.txt": {
+          "type": "file",
           "hidden": false,
           "author": "SOFTCOM",
-          "creation": "12-7-26"
+          "creation": "12-7-26",
+          "content": "The senate hall is empty right now."
+        }
+      },
+      "Admin_Helpdesk": {
+        "type": "dir",
+        "hidden": false,
+        "author": "SOFTCOM",
+        "creation": "12-7-26",
+        "desk1.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "You go to the desk and ask the person there about the wi-fi password. He tells you to ask on the next desk."
+        },
+        "desk2.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "You go to the desk and ask the person there about the wi-fi password. He tells you that it is 'V#6qF'. Success achieved, you can advance to the next level now."
+        }
+      },
+      "Director_Office": {
+        "type": "dir",
+        "hidden": false,
+        "author": "SOFTCOM",
+        "creation": "12-7-26",
+        "notice.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "Notice: IIT Ropar students are not allowed."
+        }
+      }
+    },
+    "Library": {
+      "type": "dir",
+      "hidden": false,
+      "author": "SOFTCOM",
+      "creation": "12-7-26",
+      "Ground_Floor": {
+        "type": "dir",
+        "hidden": false,
+        "author": "SOFTCOM",
+        "creation": "12-7-26",
+        "ground.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "Nothing here which can lead to the wi-fi password."
+        }
+      },
+      "First_Floor": {
+        "type": "dir",
+        "hidden": false,
+        "author": "SOFTCOM",
+        "creation": "12-7-26",
+        "first.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "Nothing here which can lead to the wi-fi password either."
         }
       }
     },
     "README.txt": {
-      "content": "--------------------\nLevel 1\n--------------------You have just arrived at your room at the IIT Ropar campus. As you plop down on your bed to take a well-deserved Insta break, you suddenly remember that you still haven't completed your physical registration in Auditorium yet. 'Registration karni jaruri hoti hai kya', you think to yourself, and open Instagram on your phone. But, to your surprise, there is no cellular data in your room and you don't know the wifi password. Unwillingly, you get up from your bed and go out to find the wi-fi password to resume your scrolling.\n\nFind the IIT Ropar wi-fi password and pass it as the argument for the 'next' command to advance to the next level.\n\nUseful Commands:\n- cd\n -ls",
-      "metadata": {
-        "hidden": false,
-        "author": "SOFTCOM",
-        "creation": "12-7-26"
-      }
-    },
-    "metadata": {
+      "type": "file",
       "hidden": false,
       "author": "SOFTCOM",
-      "creation": "12-7-26"
+      "creation": "12-7-26",
+      "content": "--------------------\nLevel 1\n--------------------\n\nYou have just arrived at your room at the IIT Ropar campus. As you plop down on your bed to take a well-deserved Insta break, you suddenly remember that you still haven't completed your physical registration in Auditorium yet. 'Registration karni jaruri hoti hai kya?', you think to yourself, and open Instagram on your phone. But, to your surprise, there is no cellular data in your room and you don't know the wifi password. Unwillingly, you get up from your bed and go out to find the wi-fi password to resume your scrolling.\n\nFind the IIT Ropar wi-fi password and pass it as the argument for the 'next' command to advance to the next level.\n\nUseful Commands:\n- cd\n- ls"
     }
   }
 }
