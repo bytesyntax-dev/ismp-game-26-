@@ -84,67 +84,6 @@ const getLevelKey = (lvl) => {
     return keys[num - 1] || "A";
 };
 
-// Helper: Broadcast synced team state to all members in the socket room
-function broadcastTeamState(group) {
-    if (!groups.has(group)) return;
-    loadDetails();
-    const gp = groups.get(group);
-
-    let virtualFiles = {};
-    for (let i = 1; i <= 4; i++) {
-        try {
-            const levelJson = loadJson(`./data/levels/level${i}.json`);
-            virtualFiles[i] = transformFS(levelJson.root);
-        } catch (e) {
-            console.error(`Error loading level ${i} files:`, e);
-        }
-    }
-
-    // Check if game is completely finished (all 5 levels solved)
-    let completedLevelsCount = 0;
-    const totalLevels = 5;
-    for (let i = 1; i <= totalLevels; i++) {
-        const k = getLevelKey(i);
-        if (details[k]?.answered_by?.includes(group)) {
-            completedLevelsCount++;
-        }
-    }
-    const gameCompleted = completedLevelsCount === totalLevels;
-    if (gameCompleted && gp && !gp.finalTime) {
-        gp.finalTime = Date.now() - gp.startTime;
-        groups.set(group, gp);
-    }
-
-    const payload = {
-        team: {
-            name: group,
-            members: gp.members.map(ref => ({
-                id: ref,
-                name: refTable.get(ref)?.[1] || "Unknown"
-            }))
-        },
-        levelData: {
-            level: levelNum,
-            score: points[group].total || 0,
-            virtualFiles: virtualFiles,
-            levelNames: {
-                1: details["A"]?.levelName || "Level 1: The Breach",
-                2: details["B"]?.levelName || "Level 2: Hidden Channels",
-                3: details["C"]?.levelName || "Level 3: Logic Void",
-                4: details["D"]?.levelName || "Level 4: Decoder Protocol",
-                5: details["E"]?.levelName || "Level 5: Mainframe Override",
-            },
-            startTime: gp.startTime,
-            completed: levelCompleted,
-            solvedLevels: [1, 2, 3, 4, 5].filter(i => details[getLevelKey(i)]?.answered_by?.includes(group))
-        },
-        completed: gameCompleted,
-        finalTime: gameCompleted ? gp.finalTime : null
-    };
-
-    console.log(`[DEBUG] Emitting state_sync to ${group}., keys in virtualFiles:`, Object.keys(virtualFiles));
-    io.to(group).emit("state_sync", payload);
-}
 
 /*----- Socket.io Connection Handler -----*/
 io.on("connection", (socket) => {
