@@ -131,7 +131,7 @@ export default function App() {
 
     socketRef.current.on('ref_init', (data) => {
       if(!localStorage.getItem('ref')) {localStorage.setItem('ref', data.ref);}
-      socketRef.current.emit('ref_sync', { ref: data.ref });
+      socketRef.current.emit('ref_sync', { ref: localStorage.getItem('ref') || data.ref });
     });
 
     socketRef.current.on('state_sync', (data) => {

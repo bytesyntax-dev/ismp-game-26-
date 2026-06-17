@@ -88,7 +88,7 @@ export default function LobbyScreen({
                 placeholder="Enter Team Name to join"
                 value={joinTeamName}
                 onChange={(e) => setJoinTeamName(e.target.value)}
-                maxLength={8}
+                maxLength={16}
                 className="w-full bg-cyber-bg text-cyber-cyan border border-cyber-cyan/30 focus:border-cyber-cyan p-2 text-xs rounded text-center tracking-widest outline-none placeholder-cyber-cyan/20"
               />
               <button
