@@ -266,6 +266,7 @@ io.on("connection", (socket) => {
             io.emit("points", points);
 
             // Update and sync team progress
+            io.to(group).emit("level_solved", { level: questionId, points: awardPoints });
             broadcastTeamState(group);
         } else {
             sendResponse({ success: false, message: "Incorrect answer. Try again!" });
@@ -273,16 +274,6 @@ io.on("connection", (socket) => {
     });
 
     // Handle manual level navigation by team members
-    socket.on("select_level", (data) => {
-        const { group, level } = data;
-        if (groups.has(group)) {
-            const gp = groups.get(group);
-            groups.set(group, gp);
-
-            broadcastTeamState(group);
-        }
-    });
-
     socket.on("disconnect", () => {
         console.log("User disconnected:", socket.id);
     });
