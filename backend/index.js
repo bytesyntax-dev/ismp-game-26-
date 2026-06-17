@@ -66,6 +66,11 @@ const broadcastTeamState = (group) => {
                 name: refTable.get(memberRef)?.[1] || "Operative",
             })),
         };
+        payload.levelData={
+            solvedLevels: solvedLevels,
+            startTime: gp.startTime,
+            score: points[group]?.total || 0
+        }
         //Completed Logic: If the number of solved levels equals the total number of levels, mark as completed
         // Calculate final time if completed, otherwise null
         payload.completed = solvedLevels.length === Object.keys(details).length;
