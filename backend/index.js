@@ -136,7 +136,7 @@ io.on("connection", (socket) => {
             },
         });
 
-        broadcastTeamState(group);
+        // broadcastTeamState(group);
     });
 
     // Handle team joining
@@ -161,7 +161,7 @@ io.on("connection", (socket) => {
                 },
             });
 
-            broadcastTeamState(group);
+            // broadcastTeamState(group);
         } else {
             callback({ success: false, error: "Team does not exist." });
         }
@@ -206,7 +206,7 @@ io.on("connection", (socket) => {
 
             // Update and sync team progress
             io.to(group).emit("level_solved", { level: questionId, points: awardPoints });
-            broadcastTeamState(group);
+            // broadcastTeamState(group);
         } else {
             sendResponse({ success: false, message: "Incorrect answer. Try again!" });
         }
