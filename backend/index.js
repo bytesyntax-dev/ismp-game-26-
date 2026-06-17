@@ -126,7 +126,7 @@ function broadcastTeamState(group) {
         },
         levelData: {
             level: levelNum,
-            score: points[group] || 0,
+            score: points[group].total || 0,
             virtualFiles: virtualFiles,
             levelNames: {
                 1: details["A"]?.levelName || "Level 1: The Breach",
@@ -188,7 +188,7 @@ io.on("connection", (socket) => {
             currentLevel: 1,
             startTime: Date.now()
         });
-        points[group] = 0;
+        points[group] = { total: 0 }; // Initialize points for the new team
 
         const playerRecord = refTable.get(ref) || [socket.id, "Operative"];
         callback({
@@ -233,7 +233,7 @@ io.on("connection", (socket) => {
     // Handle answer submission
     socket.on("submit_answer", (data, callback) => {
         loadDetails();
-        const { questionId, answer, group } = data;
+        const { questionId, answer, group, time } = data;
         const sendResponse = (payload) => {
             if (typeof callback === 'function') callback(payload);
             else socket.emit("answer_result", payload);
@@ -258,7 +258,8 @@ io.on("connection", (socket) => {
 
         if (details[levelKey].answer === answer) {
             const awardPoints = parseInt(details[levelKey].points) || 1000;
-            points[group] = (points[group] || 0) + awardPoints;
+            points[group][questionId] = {points :awardPoints, time: time};
+            points[group][total] = (points[group][total] || 0) + awardPoints;
             details[levelKey].answered_by.push(group);
 
             // Automatically advance active level if they solved their current active level
@@ -334,8 +335,8 @@ app.get("/admin/login", (req, res) => {
 app.post("/admin/clear_points", (req, res) => {
     const { password } = req.body;
     // Allow either the salted environment password or fallback defaults
-    const isValidPassword = 
-        password === "cyberadmin123" || 
+    const isValidPassword =
+        password === "cyberadmin123" ||
         (process.env.ADMIN_PASSWORD && hash(password + "admin@IITRPR") === process.env.ADMIN_PASSWORD);
 
     if (isValidPassword) {
@@ -363,7 +364,7 @@ app.get("/api/leaderboard", (req, res) => {
     const leaderboardData = [];
     for (const [groupName, gp] of groups.entries()) {
         const score = points[groupName] || 0;
-        
+
         // Count solved levels
         let solvedCount = 0;
         for (let i = 1; i <= 5; i++) {
@@ -372,7 +373,7 @@ app.get("/api/leaderboard", (req, res) => {
                 solvedCount++;
             }
         }
-        
+
         // Time taken
         let timeTakenMs;
         if (gp.finalTime) {
@@ -383,7 +384,7 @@ app.get("/api/leaderboard", (req, res) => {
         } else {
             timeTakenMs = Date.now() - gp.startTime;
         }
-        
+
         leaderboardData.push({
             name: groupName,
             score: score,
