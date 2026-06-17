@@ -43,6 +43,37 @@ const groups = new Map(); // Store team/group states: name -> { members, startTi
 const refTable = new Map(); // Map client references to [socketId, name]
 let points = {}; // Track team scores
 
+const finalTime = (group) => {
+    let res = null;
+    for (const [k, v] of Object.entries(points[group])) {
+        if (k !== "total") {
+            res.finalTime = Math.max(res.finalTime || -Infinity, v.time);
+        }
+    }
+    return res;
+};
+
+
+const broadcastTeamState = (group) => {
+    let payload = {}
+    if (groups.has(group)) {
+        const gp = groups.get(group);
+        const solvedLevels = [1, 2, 3, 4, 5].filter(i => details[getLevelKey(i)]?.answered_by?.includes(group));
+        payload.team = {
+            name: group,
+            members: gp.members.map((memberRef) => ({
+                id: memberRef,
+                name: refTable.get(memberRef)?.[1] || "Operative",
+            })),
+        };
+        //Completed Logic: If the number of solved levels equals the total number of levels, mark as completed
+        // Calculate final time if completed, otherwise null
+        payload.completed = solvedLevels.length === Object.keys(details).length;
+        payload.finalTime = payload.completed?finalTime(group): null;
+        }
+
+        io.to(group).emit("state_sync", payload);
+};
 // Helper: Recursively convert levels database structure into client-friendly virtual files
 function transformFS(node) {
     let result = {};
@@ -136,7 +167,7 @@ io.on("connection", (socket) => {
             },
         });
 
-        // broadcastTeamState(group);
+        broadcastTeamState(group);
     });
 
     // Handle team joining
@@ -161,7 +192,7 @@ io.on("connection", (socket) => {
                 },
             });
 
-            // broadcastTeamState(group);
+            broadcastTeamState(group);
         } else {
             callback({ success: false, error: "Team does not exist." });
         }
@@ -170,7 +201,7 @@ io.on("connection", (socket) => {
     // Handle answer submission
     socket.on("submit_answer", (data, callback) => {
         const { questionId, answer, group } = data;
-        const time = Date.now() - (groups.get(group)?.startTime||-1);
+        const time = Date.now() - (groups.get(group)?.startTime || -1);
         const sendResponse = (payload) => {
             if (typeof callback === 'function') callback(payload);
             else socket.emit("answer_result", payload);
@@ -206,7 +237,7 @@ io.on("connection", (socket) => {
 
             // Update and sync team progress
             io.to(group).emit("level_solved", { level: questionId, points: awardPoints });
-            // broadcastTeamState(group);
+            broadcastTeamState(group);
         } else {
             sendResponse({ success: false, message: "Incorrect answer. Try again!" });
         }
@@ -226,8 +257,8 @@ io.on("connection", (socket) => {
  * Query params: level - level ID, group (optional) - group name to check if they completed it
  */
 app.get("/api/level_details", (req, res) => {
-    const { level,group } = req.query;
-    const response={
+    const { level, group } = req.query;
+    const response = {
         levelName: details[level].levelName || `Level ${level}`,
         points: details[level].points || 0,
         completed: group ? details[level].answered_by.includes(group) : details[level].answered_by
@@ -252,18 +283,18 @@ app.get("/api/file", (req, res) => {
     const dir = req.query.path?.split(/\/|\\/g).filter(Boolean) ?? [];
     const level = req.query.level;
     if (!fs.existsSync(`./data/levels/${level}.json`)) return res.status(400).json({ error: "Incorrect Level parameter!" });
-    
+
     let r = loadJson(`./data/levels/${level}.json`);
     try {
         for (const p of dir) {
-        if (p == "" || p == "type" || p == "author" || p == "creation" || p == "hidden" || p == "password" || p == "content") return;
-        if (!Object.hasOwn(r, p)) throw new Error("invalid path");
-        r = r[p];
-    };
+            if (p == "" || p == "type" || p == "author" || p == "creation" || p == "hidden" || p == "password" || p == "content") return;
+            if (!Object.hasOwn(r, p)) throw new Error("invalid path");
+            r = r[p];
+        };
     } catch {
         return res.status(404).json({ error: "invalid path" });
     }
-    const file=r;
+    const file = r;
 
     if (!file || file.type != "file") {
         return res
