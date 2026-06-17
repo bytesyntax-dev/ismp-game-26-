@@ -54,14 +54,18 @@ function transformFS(node) {
         }
 
         if (child && typeof child === 'object') {
-            if (child.content !== undefined) {
-                result[name] = {
-                    type: "file",
-                    content: child.content
-                };
-            } else {
+            if (child.password !== undefined) {
+                result[name] = { type: "Protected File" }
+            }
+            else if (child.content !== undefined) {
+                result[name] = child;
+            }
+            else {
                 result[name] = {
                     type: "dir",
+                    hidden: child.hidden || false,
+                    author: child.author || "Unknown",
+                    creation: child.creation || "Unknown",
                     ...transformFS(child)
                 };
             }
@@ -232,8 +236,8 @@ io.on("connection", (socket) => {
 
     // Handle answer submission
     socket.on("submit_answer", (data, callback) => {
-        loadDetails();
-        const { questionId, answer, group, time } = data;
+        const { questionId, answer, group } = data;
+        const time = Date.now() - (groups.get(group)?.startTime||-1);
         const sendResponse = (payload) => {
             if (typeof callback === 'function') callback(payload);
             else socket.emit("answer_result", payload);
@@ -258,8 +262,8 @@ io.on("connection", (socket) => {
 
         if (details[levelKey].answer === answer) {
             const awardPoints = parseInt(details[levelKey].points) || 1000;
-            points[group][questionId] = {points :awardPoints, time: time};
-            points[group][total] = (points[group][total] || 0) + awardPoints;
+            points[group][questionId] = { points: awardPoints, time: time };
+            points[group]["total"] = (points[group]["total"] || 0) + awardPoints;
             details[levelKey].answered_by.push(group);
 
             // Automatically advance active level if they solved their current active level
@@ -307,6 +311,7 @@ app.get("/api/directory", (req, res) => {
         const virtualFiles = transformFS(levelJson.root);
         return res.json(virtualFiles);
     } catch (err) {
+        log(err)
         return res.status(404).json({ error: "Directory structure not found." });
     }
 });
@@ -363,7 +368,7 @@ app.get("/api/leaderboard", (req, res) => {
 
     const leaderboardData = [];
     for (const [groupName, gp] of groups.entries()) {
-        const score = points[groupName] || 0;
+        const score = points[groupName]?.total || 0;
 
         // Count solved levels
         let solvedCount = 0;
@@ -416,7 +421,3 @@ server.listen(PORT, () => {
     console.log(`Backend server running on http://localhost:${PORT}`);
 });
 
-
-
-
-//i have made the server dynamic means when we change the ans.js in between running the game we dont need to restart the server 
