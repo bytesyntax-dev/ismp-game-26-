@@ -10,7 +10,6 @@ export default function LobbyScreen({
   errorMsg,
   handleCreateTeamSubmit,
   handleJoinTeamSubmit,
-  handleContinueSolo,
   handleDisconnect
 }) {
   return (
@@ -102,15 +101,6 @@ export default function LobbyScreen({
           </div>
         </div>
 
-        <div className="border-t border-cyber-cyan/10 pt-4 flex flex-col items-center">
-          <p className="text-[10px] text-cyber-gray font-mono mb-2">OR PROCEED WITHOUT A TEAM LOBBY</p>
-          <button
-            onClick={handleContinueSolo}
-            className="px-6 py-2 bg-cyber-blue/20 hover:bg-cyber-blue hover:text-black text-cyber-blue border border-cyber-blue/40 text-xs font-mono font-bold rounded transition shadow-[0_0_8px_rgba(0,102,255,0.15)]"
-          >
-            PLAY SOLO (CONTINUE WITHOUT TEAM)
-          </button>
-        </div>
       </div>
     </div>
   );

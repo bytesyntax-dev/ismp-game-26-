@@ -4,7 +4,7 @@ import {
   Compass, Activity, Clock, Award, Shield, Network, ShieldAlert
 } from 'lucide-react';
 import { sound } from './utils/sound';
-import AdminPortal from './components/AdminPortal';
+// AdminPortal removed
 import LoginScreen from './components/LoginScreen';
 import LobbyScreen from './components/LobbyScreen';
 import SquadPanel from './components/SquadPanel';
@@ -12,6 +12,7 @@ import FileExplorerPanel from './components/FileExplorerPanel';
 import MissionProgressPanel from './components/MissionProgressPanel';
 import TerminalPanel from './components/TerminalPanel';
 import SuccessScreen from './components/SuccessScreen';
+import Leaderboard from './components/Leaderboard';
 import { io } from 'socket.io-client';
 
 
@@ -28,6 +29,7 @@ export default function App() {
   const path = window.location.pathname.toLowerCase();
 
   const [screen, setScreen] = useState(() => {
+    if (path.includes('/leaderboard')) return 'leaderboard';
     if (path.includes('/lobby')) return 'lobby';
     if (path.includes('/game') || path.includes('/success')) return 'game';
     return 'login';
@@ -76,6 +78,24 @@ export default function App() {
     return null;
   });
   const [currentPath, setCurrentPath] = useState('/');
+  const [activeLevel, setActiveLevel] = useState(1);
+  const activeLevelRef = useRef(1);
+  const updateActiveLevel = (lvl) => {
+    setActiveLevel(lvl);
+    activeLevelRef.current = lvl;
+  };
+  const getLevelName = (lvl) => {
+    const defaultNames = {
+      1: "Level 1: The Breach",
+      2: "Level 2: Hidden Channels",
+      3: "Level 3: Logic Void",
+      4: "Level 4: Decoder Protocol",
+      5: "Level 5: Mainframe Override"
+    };
+    return (levelData?.levelNames?.[lvl] && levelData.levelNames[lvl] !== "Level name here")
+      ? levelData.levelNames[lvl]
+      : defaultNames[lvl] || `Level ${lvl}`;
+  };
   
   // Terminal Logs
   const [terminalOutput, setTerminalOutput] = useState([
@@ -88,7 +108,7 @@ export default function App() {
 
   // UI Helpers
   const [soundMuted, setSoundMuted] = useState(false);
-  const [showAdmin, setShowAdmin] = useState(() => path.includes('/admin'));
+  // showAdmin state removed
   const [elapsedSeconds, setElapsedSeconds] = useState(0);
   
   // Mobile Tab State: 'squad' | 'files' | 'levels' | 'terminal'
@@ -112,6 +132,85 @@ export default function App() {
     socketRef.current.on('ref_init', (data) => {
       if(!localStorage.getItem('ref')) {localStorage.setItem('ref', data.ref);}
       socketRef.current.emit('ref_sync', { ref: data.ref });
+    });
+
+    socketRef.current.on('state_sync', (data) => {
+      if (data.team) {
+        setTeam(data.team);
+        setScreen('game');
+      }
+      
+      if (data.levelData) {
+        setLevelData(prev => {
+          if (!prev) {
+            // Default activeLevel to first unsolved level
+            const firstUnsolved = [1, 2, 3, 4, 5].find(l => !data.levelData.solvedLevels?.includes(l)) || 1;
+            updateActiveLevel(firstUnsolved);
+            return data.levelData;
+          }
+          
+          const prevSolved = prev.solvedLevels || [];
+          const newSolved = data.levelData.solvedLevels || [];
+          const newlySolved = newSolved.filter(x => !prevSolved.includes(x));
+          
+          if (newlySolved.length > 0) {
+            sound.playLevelUp();
+            setSolvedOverlay({ 
+              level: newlySolved[0], 
+              solvedBy: data.team?.name || "THE TEAM" 
+            });
+            setTimeout(() => setSolvedOverlay(null), 4000);
+            
+            setTerminalOutput(old => [
+              ...old,
+              { type: 'success', text: `========================================================` },
+              { type: 'success', text: `[ALERT] LEVEL ${newlySolved[0]} CRACKED SUCCESSFULLY BY A TEAMMATE!` },
+              { type: 'success', text: `========================================================` }
+            ]);
+
+            // Auto-advance player terminal to next unsolved level if their current active level is solved
+            if (newlySolved.includes(activeLevelRef.current)) {
+              const nextUnsolved = [1, 2, 3, 4, 5].find(l => !newSolved.includes(l));
+              if (nextUnsolved) {
+                updateActiveLevel(nextUnsolved);
+                setCurrentPath('/');
+                const nextName = getLevelName(nextUnsolved);
+                setTerminalOutput(old => [
+                  ...old,
+                  { type: 'system', text: `AUTO-SYNCING TERMINAL TO NEXT SECURED UPLINK: LEVEL ${nextUnsolved}: ${nextName}` }
+                ]);
+              }
+            }
+          }
+          
+          return data.levelData;
+        });
+      }
+
+      if (data.completed) {
+        setCompletedState(prev => {
+          if (!prev) {
+            sound.playSuccess();
+            setTerminalOutput(old => [
+              ...old,
+              { type: 'success', text: `========================================================` },
+              { type: 'success', text: `[CRITICAL ALERT] DECRYPTION COMPLETE! MAINFRAME OVERRIDDEN.` },
+              { type: 'success', text: `========================================================` }
+            ]);
+          }
+          return {
+            finalTime: data.finalTime,
+            solvedBy: data.team?.name || "THE TEAM"
+          };
+        });
+      } else {
+        setCompletedState(null);
+      }
+    });
+
+    socketRef.current.on('session_reset', () => {
+      handleSessionReset();
+      alert("The game has been reset by the Admin. You have been returned to the login screen.");
     });
 
     socketRef.current.on('connect_error', (err) => {
@@ -155,111 +254,7 @@ export default function App() {
     ]);
   };
 
-  // 3. Status Polling Sync Loop
-  // Replaces the Socket.io real-time listeners for updates
-  const pollStatus = async () => {
-    if (path.includes('/lobby') || path.includes('/game') || path.includes('/success') || path.includes('/admin')) return;
-    if (screen === 'login') return;
-
-    try {
-      const response = await fetch('/api/team/status', {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          'x-player-id': playerId
-        }
-      });
-
-      if (response.status === 401 || response.status === 404) {
-        handleSessionReset();
-        alert("The game has been reset by the Admin or session expired.");
-        return;
-      }
-
-      if (!response.ok) return;
-
-      const data = await response.json();
-      
-      if (data.team) {
-        setTeam(data.team);
-      }
-
-      if (data.levelData) {
-        const currentLevel = levelData?.level;
-        const newLevel = data.levelData.level;
-
-        if (currentLevel && newLevel > currentLevel) {
-          sound.playLevelUp();
-          setSolvedOverlay({ level: currentLevel, solvedBy: data.levelData.solvedBy || "TEAM OPERATIVE" });
-          setCurrentPath('/'); // reset path
-          
-          setLevelData({
-            level: newLevel,
-            score: data.levelData.score,
-            virtualFiles: data.levelData.virtualFiles,
-            levelName: data.levelData.levelName,
-            startTime: data.levelData.startTime,
-            completed: data.levelData.completed
-          });
-
-          setTerminalOutput(prev => [
-            ...prev,
-            { type: 'success', text: `========================================================` },
-            { type: 'success', text: `[ALERT] LEVEL ${currentLevel} DECRYPTED SUCCESSFULLY BY ${(data.levelData.solvedBy || "TEAM").toUpperCase()}!` },
-            { type: 'success', text: `UPLINK RE-ESTABLISHED. SYNCING NODE TO LEVEL ${newLevel}...` },
-            { type: 'success', text: `========================================================` },
-            { type: 'system', text: "Use 'ls' to scan files. Type 'hint' if you get stuck." }
-          ]);
-
-          setTimeout(() => {
-            setSolvedOverlay(null);
-          }, 4000);
-        } else if (!currentLevel || levelData.score !== data.levelData.score || levelData.completed !== data.levelData.completed) {
-          setLevelData(data.levelData);
-        }
-      }
-
-      if (data.completed && !completedState) {
-        sound.playSuccess();
-        setCompletedState({ 
-          finalTime: data.finalTime, 
-          solvedBy: data.solvedBy || "SYSTEM RECOVERY" 
-        });
-
-        setLevelData(prev => ({
-          ...prev,
-          score: data.score || prev.score,
-          completed: true,
-          finalTime: data.finalTime
-        }));
-
-        setTerminalOutput(prev => [
-          ...prev,
-          { type: 'success', text: `========================================================` },
-          { type: 'success', text: `[CRITICAL ALERT] SYSTEM DECRYPTED SUCCESSFULLY!` },
-          { type: 'success', text: `MAINFRAME COMPLETELY CONTROLLED BY THE TEAM.` },
-          { type: 'success', text: `SOLVED BY: ${(data.solvedBy || "SYSTEM").toUpperCase()}` },
-          { type: 'success', text: `========================================================` }
-        ]);
-      }
-
-      if (data.reset) {
-        handleSessionReset();
-        alert("The game has been reset by the Admin. You have been returned to the login screen.");
-      }
-
-    } catch (e) {
-      console.warn("Uplink sync issue: ", e.message);
-    }
-  };
-
-  useEffect(() => {
-    if (screen === 'login') return;
-
-    pollStatus();
-    const interval = setInterval(pollStatus, 2000);
-    return () => clearInterval(interval);
-  }, [screen, levelData, completedState]);
+  // Removed status polling loop and associated useEffect since Socket.io handles all state synchronization.
 
   // Format seconds to stopwatch readable format
   const formatStopwatch = (totalSecs) => {
@@ -274,10 +269,13 @@ export default function App() {
   // Helper: Retrieve items at the current visual path
   const getContentsAtPath = () => {
     if (!levelData || !levelData.virtualFiles) return {};
-    if (currentPath === '/' || currentPath === '') return levelData.virtualFiles;
+    const filesForLevel = levelData.virtualFiles[activeLevel] || levelData.virtualFiles;
+    if (!filesForLevel) return {};
+    
+    if (currentPath === '/' || currentPath === '') return filesForLevel;
     
     const parts = currentPath.split('/').filter(Boolean);
-    let curr = levelData.virtualFiles;
+    let curr = filesForLevel;
     for (const part of parts) {
       if (curr && typeof curr === 'object' && part in curr) {
         curr = curr[part];
@@ -304,10 +302,10 @@ export default function App() {
         { type: 'input', text: `cat ${name}` }
       ]);
       const contents = getContentsAtPath();
-      const fileText = contents[name];
+      const fileText = contents[name]?.content || "";
       setTerminalOutput(prev => [
         ...prev,
-        { type: 'output', text: fileText || "" }
+        { type: 'output', text: fileText }
       ]);
     }
   };
@@ -350,7 +348,6 @@ export default function App() {
           { type: 'output', text: "  cd <dir>        Navigate to folder (e.g., 'cd system' or 'cd ..')" },
           { type: 'output', text: "  cat <file>      Read file content (e.g., 'cat README.txt')" },
           { type: 'output', text: "  decode <str>    Base64 decryption engine (e.g. level 4)" },
-          { type: 'output', text: "  hint            Query decryption intelligence (uses 0 pts)" },
           { type: 'output', text: "  submit <key>    Submit passcode key (e.g., 'submit CORE_PASS')" },
           { type: 'output', text: "  clear           Purge command console history log" }
         ]);
@@ -360,35 +357,7 @@ export default function App() {
         setTerminalOutput([]);
         break;
 
-      case 'hint':
-        fetch('/api/get_hint', {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-            'x-player-id': playerId
-          }
-        })
-        .then(res => res.json())
-        .then(res => {
-          if (res.success) {
-            setTerminalOutput(prev => [
-              ...prev,
-              { type: 'system', text: `[INTELLIGENCE HINT]: ${res.hint}` }
-            ]);
-          } else {
-            setTerminalOutput(prev => [
-              ...prev,
-              { type: 'error', text: `Hint query error: ${res.error}` }
-            ]);
-          }
-        })
-        .catch(err => {
-          setTerminalOutput(prev => [
-            ...prev,
-            { type: 'error', text: `Network error: Cannot reach intelligence server.` }
-          ]);
-        });
-        break;
+
 
       case 'ls': {
         const showAll = args.includes('-a');
@@ -404,7 +373,7 @@ export default function App() {
           const outputs = items
             .filter(name => showAll || !name.startsWith('.'))
             .map(name => {
-              const isDir = typeof contents[name] === 'object';
+              const isDir = contents[name] && contents[name].type === 'dir';
               return isDir ? `[DIR]  /${name}` : `[FILE] ${name}`;
             });
           
@@ -439,7 +408,7 @@ export default function App() {
         } else {
           const contents = getContentsAtPath();
           if (target in contents) {
-            if (typeof contents[target] === 'object') {
+            if (contents[target] && contents[target].type === 'dir') {
               const nextPath = currentPath === '/' ? `/${target}` : `${currentPath}/${target}`;
               setCurrentPath(nextPath);
             } else {
@@ -461,10 +430,10 @@ export default function App() {
 
         const contents = getContentsAtPath();
         if (file in contents) {
-          if (typeof contents[file] === 'object') {
+          if (contents[file] && contents[file].type === 'dir') {
             setTerminalOutput(prev => [...prev, { type: 'error', text: `cat: ${file}: Is a directory` }]);
           } else {
-            setTerminalOutput(prev => [...prev, { type: 'output', text: contents[file] }]);
+            setTerminalOutput(prev => [...prev, { type: 'output', text: contents[file]?.content || "" }]);
           }
         } else {
           setTerminalOutput(prev => [...prev, { type: 'error', text: `cat: ${file}: No such file` }]);
@@ -521,7 +490,7 @@ export default function App() {
           { type: 'success', text: `[ALERT] LEVEL ${levelData.level} DECRYPTED SUCCESSFULLY BY ${playerName.toUpperCase()}!` },
           { type: 'success', text: `UPLINK RE-ESTABLISHED. SYNCING NODE TO LEVEL ${levelData.level + 1}...` },
           { type: 'success', text: `========================================================` },
-          { type: 'system', text: "Use 'ls' to scan files. Type 'hint' if you get stuck." }
+          { type: 'system', text: "Use 'ls' to scan files." }
         ]);
 
         setTimeout(() => {
@@ -551,7 +520,7 @@ export default function App() {
       return;
     }
 
-    socket.emit('submit_answer', {questionId: levelData.level,answer: ans,group: team?.name,}, (res) => {
+    socket.emit('submit_answer', {questionId: activeLevel,answer: ans,group: team?.name,}, (res) => {
       if (!res) {
         sound.playError();
         setTerminalOutput(prev => [
@@ -567,7 +536,6 @@ export default function App() {
           ...prev,
           { type: 'success', text: `[DECRYPTION ACCEPTED]: ${res.message}` }
         ]);
-        pollStatus(); // sync state immediately
       } else {
         sound.playError();
         setTerminalOutput(prev => [
@@ -658,7 +626,6 @@ export default function App() {
     socket.emit('create_team', { group: teamName, ref: localStorage.getItem('ref') }, (res) => {
       if (res?.success) {
         setTeam(res.team);
-        initializeGame();
       } else {
         sound.playError();
         setErrorMsg(res?.error || 'Cannot establish team host.');
@@ -678,10 +645,9 @@ export default function App() {
       return;
     }
 
-    socket.emit('join_team', { group: teamName, ref: localStorage.getItem('ref') }, (res) => {
+    socket.emit('join_team', { group: joinTeamName, ref: localStorage.getItem('ref') }, (res) => {
       if (res?.success) {
         setTeam(res.team);
-        initializeGame();
       } else {
         sound.playError();
         setErrorMsg(res?.error || 'Cannot join selected team.');
@@ -689,60 +655,17 @@ export default function App() {
     });
   };
 
-  // 4. Solo Player Selection
-  const handleContinueSolo = () => {
+  // 4. Select Level Action
+  const handleSelectLevel = (lvl) => {
     sound.playClick();
-
-    fetch('/api/continue_solo', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-player-id': playerId
-      }
-    })
-    .then(res => res.json())
-    .then(res => {
-      if (res.success) {
-        setTeam(res.team);
-        initializeGame();
-      } else {
-        sound.playError();
-        setErrorMsg(res.error);
-      }
-    })
-    .catch(err => {
-      sound.playError();
-      setErrorMsg('Solo configuration override failed.');
-    });
-  };
-
-  const initializeGame = () => {
-    fetch('/api/get_level_data', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-player-id': playerId
-      },
-      query: {
-          level:"level1",
-          path:"root"
-      }
-    })
-    .then(res => res.json())
-    .then(res => {
-      if (res.success) {
-        setLevelData(res);
-        setScreen('game');
-        setErrorMsg('');
-        
-        if (res.completed) {
-          setCompletedState({ finalTime: res.finalTime, solvedBy: "SYSTEM RECOVERY" });
-        }
-      }
-    })
-    .catch(err => {
-      console.error("Game data load error: ", err);
-    });
+    updateActiveLevel(lvl);
+    setCurrentPath('/');
+    
+    const name = getLevelName(lvl);
+    setTerminalOutput(old => [
+      ...old,
+      { type: 'system', text: `SWITCHED TERMINAL TO LEVEL ${lvl}: ${name}` }
+    ]);
   };
 
   //UNDER REVIEW PLEASE LOOK INTO IT
@@ -763,7 +686,7 @@ export default function App() {
 
   return (
     <div className="flex-1 flex flex-col relative w-full h-full pb-20 lg:pb-0">
-      {/* Sound & Admin Control Header */}
+      {/* Sound Control Header */}
       <div className="absolute top-4 right-4 z-40 flex items-center space-x-2">
         <button
           onClick={toggleMute}
@@ -772,21 +695,7 @@ export default function App() {
         >
           {soundMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4 animate-pulse" />}
         </button>
-        <button
-          onClick={() => { sound.playClick(); setShowAdmin(true); }}
-          className="px-3 py-1.5 border border-cyber-cyan/30 bg-cyber-card text-cyber-cyan hover:bg-cyber-cyan hover:text-black font-mono text-[10px] font-semibold tracking-wider transition rounded shadow-neon-cyan"
-        >
-          SYS_ADMIN
-        </button>
       </div>
-
-      {/* Admin Portal Overlay */}
-      {showAdmin && (
-        <AdminPortal
-          playerId={playerId}
-          onClose={() => { sound.playClick(); setShowAdmin(false); }}
-        />
-      )}
 
       {/* Level Solve Interstitial Screen Overlay */}
       {solvedOverlay && (
@@ -810,6 +719,11 @@ export default function App() {
         </div>
       )}
 
+      {/* SCREEN 4: LEADERBOARD SCREEN */}
+      {screen === 'leaderboard' && (
+        <Leaderboard />
+      )}
+
       {/* SCREEN 1: LOGIN PAGE */}
       {screen === 'login' && (
         <LoginScreen
@@ -831,7 +745,6 @@ export default function App() {
           errorMsg={errorMsg}
           handleCreateTeamSubmit={handleCreateTeamSubmit}
           handleJoinTeamSubmit={handleJoinTeamSubmit}
-          handleContinueSolo={handleContinueSolo}
           handleDisconnect={handleDisconnect}
         />
       )}
@@ -861,7 +774,7 @@ export default function App() {
             {/* Middle Level Description */}
             <div className="text-left md:text-center">
               <p className="text-[10px] text-cyber-gray uppercase">UPLINK SECTOR</p>
-              <h2 className="text-md font-bold text-cyber-cyan">{levelData.levelName}</h2>
+              <h2 className="text-md font-bold text-cyber-cyan">{getLevelName(activeLevel)}</h2>
             </div>
 
             {/* Right side stats: Points & Stopwatch */}
@@ -930,7 +843,10 @@ export default function App() {
             />
             <MissionProgressPanel
               levelData={levelData}
+              activeLevel={activeLevel}
               activeTab={activeTab}
+              onSelectLevel={handleSelectLevel}
+              getLevelName={getLevelName}
             />
             <TerminalPanel
               terminalOutput={terminalOutput}
@@ -950,7 +866,7 @@ export default function App() {
               <ShieldAlert className="w-5 h-5 text-cyber-amber animate-pulse" />
               <div className="font-mono text-xs">
                 <p className="text-cyber-gray uppercase">CRYPTO OVERRIDE TRANSMITTER</p>
-                <p className="text-cyber-cyan font-bold">TYPE 'hint' IN TERMINAL IF YOU ARE STUCK</p>
+                <p className="text-cyber-cyan font-bold">TRANSMISSION ENCRYPTED</p>
               </div>
             </div>
             

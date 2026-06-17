@@ -1,7 +1,7 @@
 import React from 'react';
 import { Trophy, CheckCircle, Lock, Unlock } from 'lucide-react';
 
-export default function MissionProgressPanel({ levelData, activeTab }) {
+export default function MissionProgressPanel({ levelData, activeLevel, activeTab, onSelectLevel, getLevelName }) {
   return (
     <div className={`lg:col-span-3 bg-cyber-card border border-cyber-purple/35 rounded p-4 flex flex-col shadow-neon-purple h-[450px] lg:h-[550px] ${
       activeTab === 'levels' ? 'block' : 'hidden lg:flex'
@@ -11,35 +11,29 @@ export default function MissionProgressPanel({ levelData, activeTab }) {
           <h3 className="text-xs font-bold text-cyber-magenta tracking-wider uppercase flex items-center">
             <Trophy className="w-4 h-4 mr-1.5" /> Mission Progress
           </h3>
-          <span className="text-xs font-bold text-cyber-magenta font-sans">{levelData.score} / 5 Levels</span>
+          <span className="text-xs font-bold text-cyber-magenta font-sans">{(levelData.solvedLevels?.length || 0)} / 5 Cracked</span>
         </div>
         <p className="text-[9px] text-cyber-gray mt-0.5 uppercase">Select active decryption point</p>
       </div>
 
       <div className="flex-1 overflow-y-auto space-y-3 pr-1">
         {[1, 2, 3, 4, 5].map((lvl) => {
-          const isSolved = levelData.level > lvl || levelData.completed;
-          const isActive = levelData.level === lvl && !levelData.completed;
-          const isLocked = levelData.level < lvl;
+          const isSolved = levelData.solvedLevels?.includes(lvl);
+          const isActive = activeLevel === lvl && !levelData.completed;
+          const isLocked = false;
 
-          let levelTitle = "";
-          switch (lvl) {
-            case 1: levelTitle = "Level 1: The Breach"; break;
-            case 2: levelTitle = "Level 2: Hidden Channels"; break;
-            case 3: levelTitle = "Level 3: Logic Void"; break;
-            case 4: levelTitle = "Level 4: Decoder Protocol"; break;
-            case 5: levelTitle = "Level 5: Mainframe Override"; break;
-          }
+          const levelTitle = getLevelName ? getLevelName(lvl) : `Level ${lvl}`;
 
           return (
             <div
               key={lvl}
-              className={`p-3.5 border rounded text-xs transition duration-150 flex flex-col space-y-2.5 ${
+              onClick={() => onSelectLevel(lvl)}
+              className={`p-3.5 border rounded text-xs transition duration-150 flex flex-col space-y-2.5 cursor-pointer hover:border-cyber-cyan/60 ${
                 isActive
                   ? 'border-cyber-amber bg-cyber-amber-dark/15 text-cyber-amber font-bold shadow-neon-amber'
                   : isSolved
                   ? 'border-cyber-green bg-cyber-green-dark/10 text-cyber-green opacity-60'
-                  : 'border-cyber-border bg-cyber-bg/10 text-cyber-gray/30'
+                  : 'border-cyber-border bg-cyber-bg/10 text-cyber-gray/60 hover:text-cyber-cyan'
               }`}
             >
               <div className="flex justify-between items-center">

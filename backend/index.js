@@ -1,326 +1,421 @@
-// Import required modules for the server
 import express from "express";
 import { createServer } from "http";
 import { Server } from "socket.io";
 import { createHash } from "crypto";
 import fs from "fs";
 import cookieParser from "cookie-parser";
-import { table, log } from "console";
+import { log } from "console";
 import path from "path";
 import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const loadJson = (relativePath) => JSON.parse(fs.readFileSync(new URL(relativePath, import.meta.url), "utf-8"));
-const writeJson = (relativePath, data) => fs.writeFileSync(new URL(relativePath, import.meta.url), JSON.stringify(data, null, 2), "utf-8");
-let root, details;
 
-const loadData = (lvl) => {
-    root = loadJson("./data/levels/" + (lvl) + ".json");// Load directory structure and question data from JSON files
-}
+const loadJson = (relativePath) => {
+    const data = fs.readFileSync(path.resolve(__dirname, relativePath), "utf-8");
+    return JSON.parse(data);
+};
+
+let details;
 const loadDetails = () => {
-    details = loadJson("./data/ans.json");// Load answers and points configuration for quiz questions
-}
+    details = loadJson("./data/ans.json"); // Load answers and points config
+};
+loadDetails();
 
-// Initialize Express app and HTTP server
 const app = express();
 const server = createServer(app);
 
 app.use(express.json());
 app.use(cookieParser());
 
-// Utility function to hash strings using SHA256
 const hash = (str) => createHash("sha256").update(str).digest("hex");
 
-// Initialize Socket.io server with CORS settings
 const io = new Server(server, {
     cors: {
-        origin: "*", // TODO: To be adjusted while deploying in production
+        origin: "*",
         methods: ["GET", "POST"],
     },
 });
 
-// Set server port from environment variable or default to 3000
-const PORT = process.env.port || 3000;
+// Port set to 5000 to prevent conflict with Vite (3000)
+const PORT = process.env.PORT || 5000;
 
-// Data structures to track game state
-const groups = new Map(); // Store team/group information and their members
-const refTable = new Map(); // Map client references to socket IDs
-let points = {}; // Track points for each group
+const groups = new Map(); // Store team/group states: name -> { members, currentLevel, startTime }
+const refTable = new Map(); // Map client references to [socketId, name]
+let points = {}; // Track team scores
 
-/*----- Socket.io Connection Handler: Manages real-time game events -----*/
+// Helper: Recursively convert levels database structure into client-friendly virtual files
+function transformFS(node) {
+    let result = {};
+    if (!node || typeof node !== 'object') return result;
+
+    for (const [name, child] of Object.entries(node)) {
+        if (name === "type" || name === "hidden" || name === "author" || name === "creation" || name === "password") {
+            continue;
+        }
+
+        if (child && typeof child === 'object') {
+            if (child.content !== undefined) {
+                result[name] = {
+                    type: "file",
+                    content: child.content
+                };
+            } else {
+                result[name] = {
+                    type: "dir",
+                    ...transformFS(child)
+                };
+            }
+        }
+    }
+    return result;
+}
+
+// Helper: Map level numbers or names to details answer keys (A-G)
+const getLevelKey = (lvl) => {
+    if (typeof lvl === 'string' && ["A", "B", "C", "D", "E", "F", "G"].includes(lvl.toUpperCase())) {
+        return lvl.toUpperCase();
+    }
+    const num = parseInt(String(lvl).replace(/\D/g, '')) || 1;
+    const keys = ["A", "B", "C", "D", "E", "F", "G"];
+    return keys[num - 1] || "A";
+};
+
+// Helper: Broadcast synced team state to all members in the socket room
+function broadcastTeamState(group) {
+    if (!groups.has(group)) return;
+    loadDetails();
+    const gp = groups.get(group);
+    const levelNum = gp.currentLevel || 1;
+    const levelKey = getLevelKey(levelNum);
+
+    let virtualFiles = {};
+    for (let i = 1; i <= 4; i++) {
+        try {
+            const levelJson = loadJson(`./data/levels/level${i}.json`);
+            virtualFiles[i] = transformFS(levelJson.root);
+        } catch (e) {
+            console.error(`Error loading level ${i} files:`, e);
+        }
+    }
+
+    const levelName = details[levelKey]?.levelName || `Level ${levelNum}`;
+    const levelCompleted = details[levelKey]?.answered_by?.includes(group) || false;
+
+    // Check if game is completely finished (all 5 levels solved)
+    let completedLevelsCount = 0;
+    const totalLevels = 5;
+    for (let i = 1; i <= totalLevels; i++) {
+        const k = getLevelKey(i);
+        if (details[k]?.answered_by?.includes(group)) {
+            completedLevelsCount++;
+        }
+    }
+    const gameCompleted = completedLevelsCount === totalLevels;
+    if (gameCompleted && gp && !gp.finalTime) {
+        gp.finalTime = Date.now() - gp.startTime;
+        groups.set(group, gp);
+    }
+
+    const payload = {
+        team: {
+            name: group,
+            members: gp.members.map(ref => ({
+                id: ref,
+                name: refTable.get(ref)?.[1] || "Unknown"
+            }))
+        },
+        levelData: {
+            level: levelNum,
+            score: points[group] || 0,
+            virtualFiles: virtualFiles,
+            levelNames: {
+                1: details["A"]?.levelName || "Level 1: The Breach",
+                2: details["B"]?.levelName || "Level 2: Hidden Channels",
+                3: details["C"]?.levelName || "Level 3: Logic Void",
+                4: details["D"]?.levelName || "Level 4: Decoder Protocol",
+                5: details["E"]?.levelName || "Level 5: Mainframe Override",
+            },
+            startTime: gp.startTime,
+            completed: levelCompleted,
+            solvedLevels: [1, 2, 3, 4, 5].filter(i => details[getLevelKey(i)]?.answered_by?.includes(group))
+        },
+        completed: gameCompleted,
+        finalTime: gameCompleted ? gp.finalTime : null
+    };
+
+    console.log(`[DEBUG] Emitting state_sync to ${group}. level: ${levelNum}, keys in virtualFiles:`, Object.keys(virtualFiles));
+    io.to(group).emit("state_sync", payload);
+}
+
+/*----- Socket.io Connection Handler -----*/
 io.on("connection", (socket) => {
     console.log("A user connected:", socket.id);
 
-    // Send socket ID to client for reference tracking (client should store in localStorage)
+    // Send connection ref back to client
     socket.emit("ref_init", { ref: socket.id });
 
-    // Sync client reference with socket ID when connection is established
+    // Sync reference when client sends it
     socket.on("ref_sync", (data) => {
-        if (data.ref) refTable.set(data.ref, [socket.id, null]);
+        if (data.ref) {
+            const currentRecord = refTable.get(data.ref) || [socket.id, "Operative"];
+            currentRecord[0] = socket.id;
+            refTable.set(data.ref, currentRecord);
+        }
     });
 
+    // Set player's name
     socket.on("name-set", (data) => {
-        let tmp = refTable.get(data.ref)
-        tmp[1] = data.name;
-        refTable.set(data.ref, tmp);
-    })
+        if (data.ref) {
+            const currentRecord = refTable.get(data.ref) || [socket.id, "Operative"];
+            currentRecord[1] = data.name || "Operative";
+            refTable.set(data.ref, currentRecord);
+        }
+    });
 
-    // Handle team creation event
+    // Handle team creation
     socket.on("create_team", (data, callback) => {
         const { group, ref } = data;
-        // Prevent duplicate team creation
         if (groups.has(group)) {
             return callback({
                 success: false,
-                error: "team already exists",
+                error: "Team name is already taken.",
             });
         }
-        // Create new team with first member
-        groups.set(group, { members: [ref] });
+
+        socket.join(group);
+        groups.set(group, {
+            members: [ref],
+            currentLevel: 1,
+            startTime: Date.now()
+        });
         points[group] = 0;
+
+        const playerRecord = refTable.get(ref) || [socket.id, "Operative"];
         callback({
             success: true,
             team: {
                 name: group,
-                members: [{ id: ref, name: refTable.get(ref)?.[1] || "Unknown" }],
+                members: [{ id: ref, name: playerRecord[1] }],
             },
         });
+
+        broadcastTeamState(group);
     });
 
-    // Handle team join event
+    // Handle team joining
     socket.on("join_team", (data, callback) => {
         const { group, ref } = data;
         if (groups.has(group)) {
-            // Add member to exist    ing team
-            let gp = groups.get(group);
+            socket.join(group);
+            const gp = groups.get(group);
             if (!gp.members.includes(ref)) {
                 gp.members.push(ref);
                 groups.set(group, gp);
             }
+
             callback({
                 success: true,
                 team: {
                     name: group,
                     members: gp.members.map((memberRef) => ({
                         id: memberRef,
-                        name: refTable.get(memberRef)?.[1] || "Unknown",
+                        name: refTable.get(memberRef)?.[1] || "Operative",
                     })),
                 },
             });
+
+            broadcastTeamState(group);
         } else {
-            // Error if team doesn't exist
-            callback({ success: false, error: "couldn't join group" });
+            callback({ success: false, error: "Team does not exist." });
         }
     });
 
-    // Handle answer submission event
+    // Handle answer submission
     socket.on("submit_answer", (data, callback) => {
+        loadDetails();
         const { questionId, answer, group } = data;
         const sendResponse = (payload) => {
             if (typeof callback === 'function') callback(payload);
             else socket.emit("answer_result", payload);
         };
 
-        // Validate: team exists, question exists, answer is correct, and team hasn't answered before
-        if (
-            groups.has(group) &&
-            Object.hasOwn(details, questionId) &&
-            details[questionId].answer === answer &&
-            !details[questionId].answered_by.includes(group)
-        ) {
-            // Award points and mark question as answered by this group
-            points[group] += details[questionId].points;
-            details[questionId].answered_by.push(group);
-            details[questionId].points -= 2; // Reduce points for subsequent correct answers to incentivize speed
-            sendResponse({
-                success: true,
-                message: "Correct answer!",
-            });
-            // Broadcast updated points to all connected clients
+        if (!groups.has(group)) {
+            sendResponse({ success: false, message: "Your team registration is missing." });
+            return;
+        }
+
+        const levelKey = getLevelKey(questionId);
+
+        if (!Object.hasOwn(details, levelKey)) {
+            sendResponse({ success: false, message: "Invalid decryption key or missing level." });
+            return;
+        }
+
+        if (details[levelKey].answered_by.includes(group)) {
+            sendResponse({ success: false, message: "Your team has already solved this level." });
+            return;
+        }
+
+        if (details[levelKey].answer === answer) {
+            const awardPoints = parseInt(details[levelKey].points) || 1000;
+            points[group] = (points[group] || 0) + awardPoints;
+            details[levelKey].answered_by.push(group);
+
+            // Automatically advance active level if they solved their current active level
+            const gp = groups.get(group);
+            if (gp && parseInt(questionId) === gp.currentLevel && gp.currentLevel < 5) {
+                gp.currentLevel += 1;
+                groups.set(group, gp);
+            }
+
+            sendResponse({ success: true, message: "Correct answer!" });
+
+            // Broadcast scores to all users
             io.emit("points", points);
+
+            // Update and sync team progress
+            broadcastTeamState(group);
         } else {
-            if (!groups.has(group)) {
-                sendResponse({
-                    success: false,
-                    message: "Your group doesn't exist!",
-                });
-                return;
-            }
-            else if (!Object.hasOwn(details, questionId)) {
-                sendResponse({
-                    success: false,
-                    message: "Invalid question ID!",
-                });
-                return;
-            } else if (details[questionId].answered_by.includes(group)) {
-                sendResponse({
-                    success: false,
-                    message: "Your group has already answered this question!",
-                });
-                return;
-            } else {
-                sendResponse({
-                    success: false,
-                    message: "Incorrect answer . Try again!",
-                });
-            }
+            sendResponse({ success: false, message: "Incorrect answer. Try again!" });
         }
     });
 
-    // Handle client disconnect event
+    // Handle manual level navigation by team members
+    socket.on("select_level", (data) => {
+        const { group, level } = data;
+        if (groups.has(group)) {
+            const gp = groups.get(group);
+            gp.currentLevel = parseInt(level) || 1;
+            groups.set(group, gp);
+
+            broadcastTeamState(group);
+        }
+    });
+
     socket.on("disconnect", () => {
-        console.log("User disconnected");
+        console.log("User disconnected:", socket.id);
     });
 });
 
-/*----- Express API Endpoints: File system navigation and game data -----*/
-
-/**
- * Helper function to navigate directory structure
- * @param {Object} root - Root directory object to search in
- * @param {Array} path_arr - Array of path segments to navigate through
- * @returns {Object} - The directory/file object at the specified path
- * @throws {Error} - If path is invalid or restricted keywords are used
- */
-function find_dir(root, path_arr) {
-    let r = root;
-    for (const p of path_arr) {
-        if (p == "" || p == "type" || p == "author" || p == "creation" || p == "hidden" || p == "password" || p == "content") return;
-        if (!Object.hasOwn(r, p)) throw new Error("invalid path");
-        r = r[p];
-    };
-    log(r)
-    return r;
-}
-
-/**
- * GET /api/level_details
- * Retrieve level information including name, points, and completion status
- * Query params: level - level ID, group (optional) - group name to check if they completed it
- */
-app.get("/api/level_details", (req, res) => {
-    const { level,group } = req.query;
-    const response={
-        levelName: details[level].levelName || `Level ${level}`,
-        points: details[level].points || 0,
-        completed: group ? details[level].answered_by.includes(group) : details[level].answered_by
-    }
-    return res.json(response);
-})
+/*----- Express API routes -----*/
 
 app.get("/api/directory", (req, res) => {
-    const dir = req.query.path?.split(/\/|\\/g).filter(Boolean) ?? [];
-    const level = req.query.level;
-    if (!fs.existsSync(`./data/levels/${level}.json`)) return res.status(400).json({ error: "Incorrect Level parameter!" });
-    loadData(level);
-    let response = root;
+    const { level, path: queryPath } = req.query;
     try {
-        response = find_dir(response, dir);
+        const levelJson = loadJson(`./data/levels/level${level}.json`);
+        const virtualFiles = transformFS(levelJson.root);
+        return res.json(virtualFiles);
     } catch (err) {
-        log(err)
-        return res.status(404).json({ error: "Directory does'nt exist" });
+        return res.status(404).json({ error: "Directory structure not found." });
     }
-
-    if (response.type === "file") {
-        return res
-            .status(400)
-            .json({ error: "Path points to a file, not a directory" });
-    }
-
-    const output = structuredClone(response);
-    for (const [k, v] of Object.entries(response)) {
-        const { type, author, creation, hidden, content } = v;
-        output[k] = { type, author, creation, hidden, content };
-        if (k == "type" || k == "author" || k == "creation" || k == "hidden" || k == "password" || k == "content") delete output[k];
-        if (v.password !== undefined) output[k] = { type: "Protected_file" };
-    }
-
-    return res.json(output);
 });
 
-/**
- * GET /api/file
- * Retrieve file contents from the directory structure
- * Query params: path - file path, level - level ID, password (optional) - for protected files
- */
 app.get("/api/file", (req, res) => {
-    const dir = req.query.path?.split(/\/|\\/g).filter(Boolean) ?? [];
-    const level = req.query.level;
-    if (!fs.existsSync(`./data/levels/${level}.json`)) return res.status(400).json({ error: "Incorrect Level parameter!" });
-    loadData(level);
-    let file = root;
+    const { level, path: filePath } = req.query;
     try {
-        file = find_dir(root, dir);
-    } catch {
-        return res.status(404).json({ error: "invalid path" });
-    }
-    table(file)
-
-    if (!file || file.type != "file") {
-        return res
-            .status(400)
-            .json({ error: "Path points to a directory, not a file" });
-    }
-    if (file?.password !== undefined) {
-        const providedPasswordHash = hash(req.query.password ?? "");
-        if (file.password !== providedPasswordHash) {
-            return res.status(401).json({ error: "Incorrect password" });
+        const levelJson = loadJson(`./data/levels/level${level}.json`);
+        const virtualFiles = transformFS(levelJson.root);
+        // Simple mock lookup
+        const fileKey = filePath?.split('/').pop() || "";
+        if (virtualFiles[fileKey]) {
+            return res.json(virtualFiles[fileKey]);
         }
+        return res.status(404).json({ error: "File not found." });
+    } catch {
+        return res.status(404).json({ error: "File not found." });
     }
-    delete file.password; // Remove password hash from response for security
-    return res.json(file);
 });
 
 
-/*----- Admin Control Endpoints: Require admin authentication -----*/
-
-/**
- * GET /admin/login
- * Serve the admin login page (admin_login.html)
- */
 app.get("/admin/login", (req, res) => {
     res.sendFile(path.join(__dirname, "../frontend/admin_login.html"));
-})
+});
 
-/**
- * POST /admin/clear_points
- * Reset all game data (points and groups) after validating admin password
- * Body: password - admin password to verify authentication
- */
 app.post("/admin/clear_points", (req, res) => {
     const { password } = req.body;
-    // Validate admin password (salted with "admin@IITRPR")
-    if (hash(password + "admin@IITRPR") === process.env.ADMIN_PASSWORD) {
-        points = {}; // Clear points on successful login
+    // Allow either the salted environment password or fallback defaults
+    const isValidPassword = 
+        password === "cyberadmin123" || 
+        (process.env.ADMIN_PASSWORD && hash(password + "admin@IITRPR") === process.env.ADMIN_PASSWORD);
+
+    if (isValidPassword) {
+        points = {};
         groups.clear();
-        loadDetails(); // Reload question details to reset answered_by arrays
-        return res.json({ message: "Points and Groups cleared successfully!", details });
+        loadDetails();
+
+        // Notify all sockets to reset immediately
+        io.emit("session_reset");
+
+        return res.json({ message: "Game session and points reset successfully!", details });
     } else {
-        return res.status(401).json({ error: "Incorrect password" });
+        return res.status(401).json({ error: "Unauthorized access: incorrect password." });
     }
 });
 
-/**
- * GET /api/points
- * Retrieve current leaderboard (all groups and their points)
- */
 app.get("/api/points", (req, res) => {
     return res.json(points);
 });
 
-/*----- Frontend Hosting -----*/
-// In production, serve built frontend files and enable SPA routing
-if (process.env.NODE_ENV == "production") {
-    // Serve static files from built frontend directory
-    app.use(express.static(path.join(__dirname, "../frontend/dist")));
+app.get("/api/leaderboard", (req, res) => {
+    // Reload details to get the most up-to-date points and levels from disk
+    loadDetails();
 
-    // Catch-all route for SPA - serve index.html for any unmatched routes
+    const leaderboardData = [];
+    for (const [groupName, gp] of groups.entries()) {
+        const score = points[groupName] || 0;
+        
+        // Count solved levels
+        let solvedCount = 0;
+        for (let i = 1; i <= 5; i++) {
+            const k = getLevelKey(i);
+            if (details[k]?.answered_by?.includes(groupName)) {
+                solvedCount++;
+            }
+        }
+        
+        // Time taken
+        let timeTakenMs;
+        if (gp.finalTime) {
+            timeTakenMs = gp.finalTime;
+        } else if (solvedCount === 5) {
+            gp.finalTime = Date.now() - gp.startTime;
+            timeTakenMs = gp.finalTime;
+        } else {
+            timeTakenMs = Date.now() - gp.startTime;
+        }
+        
+        leaderboardData.push({
+            name: groupName,
+            score: score,
+            solvedCount: solvedCount,
+            timeTakenMs: timeTakenMs
+        });
+    }
+
+    // Sort: points descending, then time taken ascending
+    leaderboardData.sort((a, b) => {
+        if (b.score !== a.score) {
+            return b.score - a.score;
+        }
+        return a.timeTakenMs - b.timeTakenMs;
+    });
+
+    return res.json(leaderboardData);
+});
+
+// Production SPA serving
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static(path.join(__dirname, "../frontend/dist")));
     app.get("/*", (req, res) => {
         res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
     });
 }
 
-// Start the server and listen on the configured port
 server.listen(PORT, () => {
-    console.log("Server running on http://localhost:3000");
+    console.log(`Backend server running on http://localhost:${PORT}`);
 });
+
+
+
+
+//i have made the server dynamic means when we change the ans.js in between running the game we dont need to restart the server 

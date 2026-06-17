@@ -20,39 +20,45 @@ export default function FileExplorerPanel({
       </div>
 
       <div className="flex-1 flex flex-col space-y-3">
-        {/* Back button if not in root */}
-        {currentPath !== '/' && (
-          <button
-            onClick={handleVisualBack}
-            className="flex items-center space-x-2 p-1.5 border border-cyber-cyan/40 hover:bg-cyber-cyan/15 text-cyber-cyan text-xs font-bold rounded transition w-fit"
-          >
-            <span>&larr; BACK</span>
-          </button>
-        )}
-
         <div className="flex-1 overflow-y-auto space-y-1.5 pr-1 text-xs">
           {Object.entries(getContentsAtPath()).map(([name, val]) => {
             const isDir = val.type==='dir';
             const isHidden = name.startsWith('.');
+            
+            const isReadme = name.toLowerCase().startsWith('readme');
             
             if (isHidden) return null; // Hide dot files in visual list to match terminal rules
 
             return (
               <div
                 key={name}
-                onClick={() => handleVisualClick(name, isDir)}
-                className="flex items-center justify-between p-2.5 border border-cyber-cyan/15 bg-cyber-bg/40 hover:bg-cyber-cyan/15 rounded cursor-pointer transition text-cyber-gray hover:text-cyber-cyan group"
+                onClick={() => {
+                  if (isReadme) {
+                    handleVisualClick(name, isDir);
+                  }
+                }}
+                className={`flex items-center justify-between p-2.5 border rounded text-cyber-gray select-none transition duration-150 ${
+                  isReadme
+                    ? 'border-cyber-cyan/40 bg-cyber-cyan-dark/20 hover:border-cyber-cyan hover:bg-cyber-cyan/10 cursor-pointer text-white shadow-[0_0_8px_rgba(0,240,255,0.15)]'
+                    : 'border-cyber-cyan/15 bg-cyber-bg/40'
+                }`}
               >
                 <div className="flex items-center space-x-2">
                   {isDir ? (
-                    <Folder className="w-4 h-4 text-cyber-cyan group-hover:scale-115 transition duration-150" />
+                    <Folder className="w-4 h-4 text-cyber-cyan" />
                   ) : (
-                    <File className="w-4 h-4 text-cyber-gray group-hover:text-cyber-cyan transition" />
+                    <File className={`w-4 h-4 ${isReadme ? 'text-cyber-cyan' : 'text-cyber-gray'}`} />
                   )}
-                  <span className={isDir ? 'font-semibold text-cyber-cyan' : ''}>{name}</span>
+                  <span className={isDir ? 'font-semibold text-cyber-cyan' : isReadme ? 'font-bold text-cyber-cyan' : ''}>{name}</span>
                 </div>
-                <span className="text-[8px] text-cyber-cyan/30 uppercase">
-                  {isDir ? 'directory' : 'system file'}
+                <span className="text-[8px] uppercase">
+                  {isReadme ? (
+                    <span className="text-cyber-cyan font-bold animate-pulse">Touch to Open</span>
+                  ) : isDir ? (
+                    <span className="text-cyber-cyan/30">directory</span>
+                  ) : (
+                    <span className="text-cyber-gray/30">system file</span>
+                  )}
                 </span>
               </div>
             );

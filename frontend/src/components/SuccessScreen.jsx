@@ -24,7 +24,8 @@ export default function SuccessScreen({
         <div className="bg-cyber-card border border-cyber-cyan/40 p-4 rounded text-left space-y-2 text-sm shadow-neon-cyan">
           <p className="text-cyber-cyan">----------------------------------------</p>
           <p className="text-white">NODE OPERATORS: <span className="font-bold">{team.members.map(m => m.name).join(', ')}</span></p>
-          <p className="text-white">TOTAL POINTS SECURED: <span className="font-bold text-cyber-cyan">{levelData.score} PTS / 5 PTS</span></p>
+          <p className="text-white">TOTAL LEVELS CRACKED: <span className="font-bold text-cyber-cyan">{(levelData.solvedLevels?.length || 0)} / 5</span></p>
+          <p className="text-white">TOTAL POINTS SECURED: <span className="font-bold text-cyber-cyan">{levelData.score} PTS</span></p>
           <p className="text-white">DECRYPTION LAPSE TIME: <span className="font-bold text-cyber-cyan">{formatStopwatch(Math.floor(completedState.finalTime / 1000))}</span></p>
           <p className="text-white">FINAL NODE KEY CRACKER: <span className="font-bold">{completedState.solvedBy}</span></p>
           <p className="text-cyber-cyan">----------------------------------------</p>
