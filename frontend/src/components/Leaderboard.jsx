@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Trophy, Award, Clock, ArrowLeft, Shield } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { Trophy, Award, Clock, ArrowLeft, Shield } from "lucide-react";
 
 export default function Leaderboard() {
   const [leaderboard, setLeaderboard] = useState([]);
@@ -7,15 +7,47 @@ export default function Leaderboard() {
   const [error, setError] = useState(null);
 
   const fetchLeaderboard = () => {
-    fetch('/api/leaderboard')
+    fetch("/api/points")
       .then((res) => {
         if (!res.ok) {
-          throw new Error('Failed to fetch mainframe records.');
+          throw new Error("Failed to fetch mainframe records.");
         }
         return res.json();
       })
       .then((data) => {
-        setLeaderboard(data);
+        let payload = [];
+        for (let team in data) {
+          console.log(data[team]);
+          const teamData = data[team];
+          const score = teamData.total || 0;
+          const solvedCount = Object.keys(teamData).filter(
+            (k) => k !== "total" && k !== "start",
+          ).length;
+          payload.push({
+            name: team,
+            score: score,
+            solvedCount: solvedCount,
+            ques_data: teamData,
+            //change 5 for any no of levels
+            timeTakenMs:
+              solvedCount == 5
+                ? Object.keys(teamData)
+                    .filter(
+                      (k) =>
+                        k !== "total" && k !== "start" && teamData[k].time,
+                    )
+                    .reduce((max, k) => Math.max(max, teamData[k].time), 0)
+                : Date.now() - teamData.start,
+          });
+        }
+        // Sort by score descending, then by time ascending
+        payload.sort((a, b) => {
+          if (b.score !== a.score) {
+            return b.score - a.score; // Descending by score
+          }
+          return a.timeTakenMs - b.timeTakenMs; // Ascending by time
+        });
+        setLeaderboard(payload);
         setLoading(false);
       })
       .catch((err) => {
@@ -26,18 +58,20 @@ export default function Leaderboard() {
 
   useEffect(() => {
     fetchLeaderboard();
-    const interval = setInterval(fetchLeaderboard, 5000);
+    const interval = setInterval(fetchLeaderboard, 1000);
     return () => clearInterval(interval);
   }, []);
 
   const formatStopwatch = (totalMs) => {
-    if (!totalMs || isNaN(totalMs) || totalMs < 0) return '00:00';
+    if (!totalMs || isNaN(totalMs) || totalMs < 0) return "00:00";
     const totalSecs = Math.floor(totalMs / 1000);
     const hrs = Math.floor(totalSecs / 3600);
     const mins = Math.floor((totalSecs % 3600) / 60);
     const secs = totalSecs % 60;
-    const pad = (n) => String(n).padStart(2, '0');
-    return hrs > 0 ? `${pad(hrs)}:${pad(mins)}:${pad(secs)}` : `${pad(mins)}:${pad(secs)}`;
+    const pad = (n) => String(n).padStart(2, "0");
+    return hrs > 0
+      ? `${pad(hrs)}:${pad(mins)}:${pad(secs)}`
+      : `${pad(mins)}:${pad(secs)}`;
   };
 
   return (
@@ -82,31 +116,47 @@ export default function Leaderboard() {
                     <th className="px-6 py-4">Team Operative</th>
                     <th className="px-6 py-4 text-center">Cracked Sectors</th>
                     <th className="px-6 py-4 text-right">Score</th>
-                    <th className="px-6 py-4 text-right flex items-center justify-end">Time Elapsed</th>
+                    <th className="px-6 py-4 text-right flex items-center justify-end">
+                      Time Elapsed
+                    </th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-cyber-border/40 text-xs md:text-sm">
                   {leaderboard.map((team, idx) => {
                     const rank = idx + 1;
-                    let rankClass = 'text-cyber-gray';
-                    let rowClass = 'hover:bg-cyber-cyan/5';
+                    let rankClass = "text-cyber-gray";
+                    let rowClass = "hover:bg-cyber-cyan/5";
                     if (rank === 1) {
-                      rankClass = 'text-cyber-green font-bold drop-shadow-[0_0_5px_rgba(0,255,102,0.5)]';
-                      rowClass = 'bg-cyber-green/5 hover:bg-cyber-green/10';
+                      rankClass =
+                        "text-cyber-green font-bold drop-shadow-[0_0_5px_rgba(0,255,102,0.5)]";
+                      rowClass = "bg-cyber-green/5 hover:bg-cyber-green/10";
                     } else if (rank === 2) {
-                      rankClass = 'text-cyber-cyan font-bold drop-shadow-[0_0_5px_rgba(0,240,255,0.5)]';
-                      rowClass = 'bg-cyber-cyan/5 hover:bg-cyber-cyan/10';
+                      rankClass =
+                        "text-cyber-cyan font-bold drop-shadow-[0_0_5px_rgba(0,240,255,0.5)]";
+                      rowClass = "bg-cyber-cyan/5 hover:bg-cyber-cyan/10";
                     } else if (rank === 3) {
-                      rankClass = 'text-cyber-amber font-bold drop-shadow-[0_0_5px_rgba(255,183,0,0.5)]';
-                      rowClass = 'bg-cyber-amber/5 hover:bg-cyber-amber/10';
+                      rankClass =
+                        "text-cyber-amber font-bold drop-shadow-[0_0_5px_rgba(255,183,0,0.5)]";
+                      rowClass = "bg-cyber-amber/5 hover:bg-cyber-amber/10";
                     }
 
                     return (
-                      <tr key={team.name} className={`${rowClass} transition duration-150`}>
-                        <td className={`px-6 py-4 font-semibold ${rankClass}`}>#{rank}</td>
-                        <td className="px-6 py-4 font-bold text-white tracking-wide">{team.name}</td>
-                        <td className="px-6 py-4 text-center text-cyber-magenta font-bold">{team.solvedCount} / 5</td>
-                        <td className="px-6 py-4 text-right text-cyber-cyan font-bold">{team.score} PTS</td>
+                      <tr
+                        key={team.name}
+                        className={`${rowClass} transition duration-150`}
+                      >
+                        <td className={`px-6 py-4 font-semibold ${rankClass}`}>
+                          #{rank}
+                        </td>
+                        <td className="px-6 py-4 font-bold text-white tracking-wide">
+                          {team.name}
+                        </td>
+                        <td className="px-6 py-4 text-center text-cyber-magenta font-bold">
+                          {team.solvedCount} / 5
+                        </td>
+                        <td className="px-6 py-4 text-right text-cyber-cyan font-bold">
+                          {team.score} PTS
+                        </td>
                         <td className="px-6 py-4 text-right text-cyber-gray flex items-center justify-end space-x-1">
                           <Clock className="w-3.5 h-3.5 text-cyber-gray/50" />
                           <span>{formatStopwatch(team.timeTakenMs)}</span>

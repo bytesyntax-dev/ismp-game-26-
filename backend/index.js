@@ -9,6 +9,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const decrement = 2; //Decrement for subsequent submissions
 
 const loadJson = (relativePath) => {
     const data = fs.readFileSync(path.resolve(__dirname, relativePath), "utf-8");
@@ -66,7 +67,7 @@ const broadcastTeamState = (group) => {
                 name: refTable.get(memberRef)?.[1] || "Operative",
             })),
         };
-        payload.levelData={
+        payload.levelData = {
             solvedLevels: solvedLevels,
             startTime: gp.startTime,
             score: points[group]?.total || 0
@@ -74,10 +75,10 @@ const broadcastTeamState = (group) => {
         //Completed Logic: If the number of solved levels equals the total number of levels, mark as completed
         // Calculate final time if completed, otherwise null
         payload.completed = solvedLevels.length === Object.keys(details).length;
-        payload.finalTime = payload.completed?finalTime(group): null;
-        }
+        payload.finalTime = payload.completed ? finalTime(group) : null;
+    }
 
-        io.to(group).emit("state_sync", payload);
+    io.to(group).emit("state_sync", payload);
 };
 // Helper: Recursively convert levels database structure into client-friendly virtual files
 function transformFS(node) {
@@ -161,7 +162,7 @@ io.on("connection", (socket) => {
             members: [ref],
             startTime: Date.now()
         });
-        points[group] = { total: 0 , start: groups.get(group).startTime }; // Initialize points for the new team
+        points[group] = { total: 0, start: groups.get(group).startTime }; // Initialize points for the new team
 
         const playerRecord = refTable.get(ref) || [socket.id, "Operative"];
         callback({
@@ -233,6 +234,7 @@ io.on("connection", (socket) => {
             const awardPoints = parseInt(details[levelKey].points) || 1000;
             points[group][questionId] = { points: awardPoints, time: time };
             points[group]["total"] = (points[group]["total"] || 0) + awardPoints;
+            details[levelKey].points -= decrement;
             details[levelKey].answered_by.push(group);
 
             sendResponse({ success: true, message: "Correct answer!" });
@@ -250,12 +252,12 @@ io.on("connection", (socket) => {
 
     // Handle manual level navigation by team members
     socket.on("disconnect", () => {
-        for(let [key,val] of refTable.entries()){
-            if(val===socket.id){
-                for(let [grpname,grp] of Object.entries(groups)){
-                    if(grp.members.includes(val)){
+        for (let [key, val] of refTable.entries()) {
+            if (val === socket.id) {
+                for (let [grpname, grp] of Object.entries(groups)) {
+                    if (grp.members.includes(val)) {
                         let ngp = grp;
-                        ngp.members.splice(ngp.members.find((item)=>item===val),1)
+                        ngp.members.splice(ngp.members.find((item) => item === val), 1)
                         groups[grpname] = ngp;
                     }
                 }
