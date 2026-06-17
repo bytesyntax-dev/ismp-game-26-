@@ -250,6 +250,17 @@ io.on("connection", (socket) => {
 
     // Handle manual level navigation by team members
     socket.on("disconnect", () => {
+        for(let [key,val] of refTable.entries()){
+            if(val===socket.id){
+                for(let [grpname,grp] of Object.entries(groups)){
+                    if(grp.members.includes(val)){
+                        let ngp = grp;
+                        ngp.members.splice(ngp.members.find((item)=>item===val),1)
+                        groups[grpname] = ngp;
+                    }
+                }
+            }
+        }
         console.log("User disconnected:", socket.id);
     });
 });
