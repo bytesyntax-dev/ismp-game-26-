@@ -39,7 +39,7 @@ const io = new Server(server, {
 // Port set to 5000 to prevent conflict with Vite (3000)
 const PORT = process.env.PORT || 5000;
 
-const groups = new Map(); // Store team/group states: name -> { members, currentLevel, startTime }
+const groups = new Map(); // Store team/group states: name -> { members, startTime }
 const refTable = new Map(); // Map client references to [socketId, name]
 let points = {}; // Track team scores
 
@@ -89,8 +89,6 @@ function broadcastTeamState(group) {
     if (!groups.has(group)) return;
     loadDetails();
     const gp = groups.get(group);
-    const levelNum = gp.currentLevel || 1;
-    const levelKey = getLevelKey(levelNum);
 
     let virtualFiles = {};
     for (let i = 1; i <= 4; i++) {
@@ -101,9 +99,6 @@ function broadcastTeamState(group) {
             console.error(`Error loading level ${i} files:`, e);
         }
     }
-
-    const levelName = details[levelKey]?.levelName || `Level ${levelNum}`;
-    const levelCompleted = details[levelKey]?.answered_by?.includes(group) || false;
 
     // Check if game is completely finished (all 5 levels solved)
     let completedLevelsCount = 0;
@@ -147,7 +142,7 @@ function broadcastTeamState(group) {
         finalTime: gameCompleted ? gp.finalTime : null
     };
 
-    console.log(`[DEBUG] Emitting state_sync to ${group}. level: ${levelNum}, keys in virtualFiles:`, Object.keys(virtualFiles));
+    console.log(`[DEBUG] Emitting state_sync to ${group}., keys in virtualFiles:`, Object.keys(virtualFiles));
     io.to(group).emit("state_sync", payload);
 }
 
@@ -189,7 +184,6 @@ io.on("connection", (socket) => {
         socket.join(group);
         groups.set(group, {
             members: [ref],
-            currentLevel: 1,
             startTime: Date.now()
         });
         points[group] = { total: 0 }; // Initialize points for the new team
@@ -266,13 +260,6 @@ io.on("connection", (socket) => {
             points[group]["total"] = (points[group]["total"] || 0) + awardPoints;
             details[levelKey].answered_by.push(group);
 
-            // Automatically advance active level if they solved their current active level
-            const gp = groups.get(group);
-            if (gp && parseInt(questionId) === gp.currentLevel && gp.currentLevel < 5) {
-                gp.currentLevel += 1;
-                groups.set(group, gp);
-            }
-
             sendResponse({ success: true, message: "Correct answer!" });
 
             // Broadcast scores to all users
@@ -290,7 +277,6 @@ io.on("connection", (socket) => {
         const { group, level } = data;
         if (groups.has(group)) {
             const gp = groups.get(group);
-            gp.currentLevel = parseInt(level) || 1;
             groups.set(group, gp);
 
             broadcastTeamState(group);
