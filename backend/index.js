@@ -161,7 +161,7 @@ io.on("connection", (socket) => {
             members: [ref],
             startTime: Date.now()
         });
-        points[group] = { total: 0 , start: groups[group].startTime }; // Initialize points for the new team
+        points[group] = { total: 0 , start: groups.get(group).startTime }; // Initialize points for the new team
 
         const playerRecord = refTable.get(ref) || [socket.id, "Operative"];
         callback({
