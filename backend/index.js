@@ -340,9 +340,7 @@ app.get("/admin/login", (req, res) => {
 app.post("/admin/clear_points", (req, res) => {
     const { password } = req.body;
     // Allow either the salted environment password or fallback defaults
-    const isValidPassword =
-        password === "cyberadmin123" ||
-        (process.env.ADMIN_PASSWORD && hash(password + "admin@IITRPR") === process.env.ADMIN_PASSWORD);
+    const isValidPassword = (password && hash(password + "admin@IITRPR") === process.env.ADMIN_PASSWORD);
 
     if (isValidPassword) {
         points = {};
@@ -360,53 +358,6 @@ app.post("/admin/clear_points", (req, res) => {
 
 app.get("/api/points", (req, res) => {
     return res.json(points);
-});
-
-app.get("/api/leaderboard", (req, res) => {
-    // Reload details to get the most up-to-date points and levels from disk
-    loadDetails();
-
-    const leaderboardData = [];
-    for (const [groupName, gp] of groups.entries()) {
-        const score = points[groupName]?.total || 0;
-
-        // Count solved levels
-        let solvedCount = 0;
-        for (let i = 1; i <= 5; i++) {
-            const k = getLevelKey(i);
-            if (details[k]?.answered_by?.includes(groupName)) {
-                solvedCount++;
-            }
-        }
-
-        // Time taken
-        let timeTakenMs;
-        if (gp.finalTime) {
-            timeTakenMs = gp.finalTime;
-        } else if (solvedCount === 5) {
-            gp.finalTime = Date.now() - gp.startTime;
-            timeTakenMs = gp.finalTime;
-        } else {
-            timeTakenMs = Date.now() - gp.startTime;
-        }
-
-        leaderboardData.push({
-            name: groupName,
-            score: score,
-            solvedCount: solvedCount,
-            timeTakenMs: timeTakenMs
-        });
-    }
-
-    // Sort: points descending, then time taken ascending
-    leaderboardData.sort((a, b) => {
-        if (b.score !== a.score) {
-            return b.score - a.score;
-        }
-        return a.timeTakenMs - b.timeTakenMs;
-    });
-
-    return res.json(leaderboardData);
 });
 
 // Production SPA serving
