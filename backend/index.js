@@ -220,6 +220,22 @@ io.on("connection", (socket) => {
 
 /*----- Express API routes -----*/
 
+/**
+ * GET /api/level_details
+ * Retrieve level information including name, points, and completion status
+ * Query params: level - level ID, group (optional) - group name to check if they completed it
+ */
+app.get("/api/level_details", (req, res) => {
+    const { level,group } = req.query;
+    const response={
+        levelName: details[level].levelName || `Level ${level}`,
+        points: details[level].points || 0,
+        completed: group ? details[level].answered_by.includes(group) : details[level].answered_by
+    }
+    return res.json(response);
+})
+
+
 app.get("/api/directory", (req, res) => {
     const { level, path: queryPath } = req.query;
     try {
