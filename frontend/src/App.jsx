@@ -668,20 +668,14 @@ export default function App() {
     ]);
   };
 
-  //UNDER REVIEW PLEASE LOOK INTO IT
+  // Disconnect the socket.io client cleanly
   const handleDisconnect = () => {
     sound.playClick();
-    
-    fetch('/api/disconnect', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-player-id': playerId
-      }
-    })
-    .finally(() => {
-      window.location.reload();
-    });
+    const socket = socketRef.current;
+    if (socket && socket.connected) {
+      socket.disconnect();
+    }
+    window.location.reload();
   };
 
   return (
