@@ -431,14 +431,14 @@ export default function App() {
           const outputs = items
             .filter(name =>{ 
               if(["author","creation","type","hidden","password"].includes(name)) return false;
-              if (showAll || !name.startsWith('.')) return true;
+              if (showAll || !name.startsWith('.') || !items[name].hidden) return true;
             })
             .map(name => {
               const isDir = contents[name] && contents[name].type === 'dir';
               return isDir ? `[DIR]  /${name}` : `[FILE] ${name}`;
             });
           
-          if (outputs.length === 0 && !showAll && items.some(n => n.startsWith('.'))) {
+          if (outputs.length === 0 && !showAll && items.some(n => n.startsWith('.')||items[n].hidden)) {
             setTerminalOutput(prev => [...prev, { type: 'output', text: 'This folder contains hidden elements. Use "ls -a".' }]);
           } else {
             outputs.forEach(txt => {
