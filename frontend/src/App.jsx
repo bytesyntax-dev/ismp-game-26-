@@ -23,6 +23,15 @@ if (!playerId) {
   sessionStorage.setItem('player_id', playerId);
 }
 
+const getLevelKey = (lvl) => {
+  if (typeof lvl === 'string' && ["A", "B", "C", "D", "E"].includes(lvl.toUpperCase())) {
+    return lvl.toUpperCase();
+  }
+  const num = parseInt(String(lvl).replace(/\D/g, '')) || 1;
+  const keys = ["A", "B", "C", "D", "E"];
+  return keys[num - 1] || "A";
+};
+
 export default function App() {
   // Navigation Screens: 'login' | 'lobby' | 'game'
   // Parse path routes: /login, /lobby, /game, /success, /admin to view all pages
@@ -240,6 +249,50 @@ export default function App() {
 
     return () => clearInterval(interval);
   }, [levelData, completedState]);
+
+  // 2.5. Fetch level details and directory structure when activeLevel changes
+  useEffect(() => {
+    if (!team) return;
+
+    // Fetch directory
+    fetch(`/api/directory?level=${activeLevel}`)
+      .then(res => {
+        if (!res.ok) throw new Error('Directory fetch failed');
+        return res.json();
+      })
+      .then(dirData => {
+        setLevelData(prev => {
+          if (!prev) return prev;
+          const updatedFiles = { ...(prev.virtualFiles || {}) };
+          updatedFiles[activeLevel] = dirData;
+          return {
+            ...prev,
+            virtualFiles: updatedFiles
+          };
+        });
+      })
+      .catch(err => console.error("Error loading level directory:", err));
+
+    // Fetch level details
+    const levelKey = getLevelKey(activeLevel);
+    fetch(`/api/level_details?level=${levelKey}&group=${team.name || ''}`)
+      .then(res => {
+        if (!res.ok) throw new Error('Level details fetch failed');
+        return res.json();
+      })
+      .then(detailsData => {
+        setLevelData(prev => {
+          if (!prev) return prev;
+          const updatedNames = { ...(prev.levelNames || {}) };
+          updatedNames[activeLevel] = detailsData.levelName;
+          return {
+            ...prev,
+            levelNames: updatedNames
+          };
+        });
+      })
+      .catch(err => console.error("Error loading level details:", err));
+  }, [activeLevel, team?.name]);
 
   // Helper: Reset session states on logout or server-requested reset
   const handleSessionReset = () => {

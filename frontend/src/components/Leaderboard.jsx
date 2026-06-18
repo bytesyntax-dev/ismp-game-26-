@@ -80,7 +80,7 @@ export default function Leaderboard() {
       <div className="crt fixed inset-0 pointer-events-none z-50"></div>
       <div className="scanline fixed inset-0 pointer-events-none z-45"></div>
 
-      <div className="w-full max-w-4xl mt-8 z-10">
+      <div className="w-full max-w-5xl mt-8 z-10">
         <div className="text-center mb-8 font-mono">
           <div className="inline-flex p-3 bg-cyber-cyan-dark border border-cyber-cyan/30 rounded mb-3 shadow-neon-cyan">
             <Trophy className="w-8 h-8 text-cyber-cyan animate-pulse" />
@@ -114,8 +114,12 @@ export default function Leaderboard() {
                   <tr className="bg-cyber-dark/80 border-b border-cyber-border text-[10px] md:text-xs text-cyber-gray uppercase tracking-wider">
                     <th className="px-6 py-4">Rank</th>
                     <th className="px-6 py-4">Team Operative</th>
-                    <th className="px-6 py-4 text-center">Cracked Sectors</th>
-                    <th className="px-6 py-4 text-right">Score</th>
+                    <th className="px-3 py-4 text-center w-12">A</th>
+                    <th className="px-3 py-4 text-center w-12">B</th>
+                    <th className="px-3 py-4 text-center w-12">C</th>
+                    <th className="px-3 py-4 text-center w-12">D</th>
+                    <th className="px-3 py-4 text-center w-12">E</th>
+                    <th className="px-6 py-4 text-right w-24">Score</th>
                     <th className="px-6 py-4 text-right flex items-center justify-end">
                       Time Elapsed
                     </th>
@@ -151,9 +155,21 @@ export default function Leaderboard() {
                         <td className="px-6 py-4 font-bold text-white tracking-wide">
                           {team.name}
                         </td>
-                        <td className="px-6 py-4 text-center text-cyber-magenta font-bold">
-                          {team.solvedCount} / 5
-                        </td>
+                        {[1, 2, 3, 4, 5].map((lvl) => {
+                          const isSolved = team.ques_data && team.ques_data[lvl] !== undefined;
+                          return (
+                            <td key={lvl} className="px-3 py-4 text-center">
+                              <span
+                                className={`inline-block w-3.5 h-3.5 rounded-full border transition-all duration-200 ${
+                                  isSolved
+                                    ? "bg-cyber-green border-cyber-green shadow-[0_0_8px_#00ff66]"
+                                    : "bg-cyber-bg/40 border-cyber-border/40"
+                                }`}
+                                title={isSolved ? `Level ${lvl} Solved` : `Level ${lvl} Unsolved`}
+                              />
+                            </td>
+                          );
+                        })}
                         <td className="px-6 py-4 text-right text-cyber-cyan font-bold">
                           {team.score} PTS
                         </td>
