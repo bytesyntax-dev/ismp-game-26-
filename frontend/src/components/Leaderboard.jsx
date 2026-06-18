@@ -125,7 +125,7 @@ export default function Leaderboard() {
                     </th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-cyber-border/40 text-xs md:text-sm">
+                <tbody className="text-xs md:text-sm">
                   {leaderboard.map((team, idx) => {
                     const rank = idx + 1;
                     let rankClass = "text-cyber-gray";
