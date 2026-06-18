@@ -76,10 +76,6 @@ export default function Leaderboard() {
 
   return (
     <div className="min-h-screen bg-cyber-bg text-white font-sans flex flex-col items-center p-4 md:p-8 relative select-none">
-      {/* CRT overlay effect & Scanline effect */}
-      <div className="crt fixed inset-0 pointer-events-none z-50"></div>
-      <div className="scanline fixed inset-0 pointer-events-none z-45"></div>
-
       <div className="w-full max-w-5xl mt-8 z-10">
         <div className="text-center mb-8 font-mono">
           <div className="inline-flex p-3 bg-cyber-cyan-dark border border-cyber-cyan/30 rounded mb-3 shadow-neon-cyan">
