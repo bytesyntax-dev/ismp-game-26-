@@ -23,7 +23,7 @@ export default function FileExplorerPanel({
         <div className="flex-1 overflow-y-auto space-y-1.5 pr-1 text-xs">
           {Object.entries(getContentsAtPath()).map(([name, val]) => {
             const isDir = val.type==='dir';
-            const isHidden = name.startsWith('.');
+            const isHidden = name.startsWith('.') || ["author","creation","type","hidden","password"].includes(name);
             
             const isReadme = name.toLowerCase().startsWith('readme');
             
