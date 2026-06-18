@@ -745,7 +745,7 @@ export default function App() {
     
     const name = getLevelName(lvl);
     setTerminalOutput(old => [
-      ...old,
+      [],
       { type: 'system', text: `SWITCHED TERMINAL TO LEVEL ${lvl}: ${name}` }
     ]);
   };
