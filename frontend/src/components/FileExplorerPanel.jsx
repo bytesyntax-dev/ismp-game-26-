@@ -51,7 +51,7 @@ export default function FileExplorerPanel({
                 className={`flex items-center justify-between p-2.5 border rounded text-cyber-gray select-none transition duration-150 ${
                   isReadme
                     ? 'border-cyber-cyan/40 bg-cyber-cyan-dark/20 hover:border-cyber-cyan hover:bg-cyber-cyan/10 cursor-pointer text-white shadow-[0_0_8px_rgba(0,240,255,0.15)]'
-                    : 'border-cyber-cyan/15 bg-cyber-bg/40'
+                    : 'flex items-center justify-between p-2.5 border rounded text-cyber-gray select-none transition duration-150 border-cyber-cyan/15 bg-cyber-bg/40 cursor-pointer hover:border-cyber-cyan hover:bg-cyber-cyan/10'
                 }`}
               >
                 <div className="flex items-center space-x-2">
