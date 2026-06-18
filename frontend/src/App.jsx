@@ -196,7 +196,8 @@ export default function App() {
         });
       }
 
-      if (data.completed) {
+      const isCompletedGame = data.completed || (data.levelData?.solvedLevels?.length === 5);
+      if (isCompletedGame) {
         setCompletedState(prev => {
           if (!prev) {
             sound.playSuccess();
@@ -208,7 +209,7 @@ export default function App() {
             ]);
           }
           return {
-            finalTime: data.finalTime,
+            finalTime: data.finalTime || (data.levelData?.startTime ? (Date.now() - data.levelData.startTime) : 0),
             solvedBy: data.team?.name || "THE TEAM"
           };
         });
@@ -250,16 +251,7 @@ export default function App() {
     return () => clearInterval(interval);
   }, [levelData, completedState]);
 
-  // Redirect to leaderboard 8 seconds after completion
-  useEffect(() => {
-    if (completedState) {
-      const redirectTimer = setTimeout(() => {
-        window.history.pushState(null, '', '/leaderboard');
-        setScreen('leaderboard');
-      }, 8000);
-      return () => clearTimeout(redirectTimer);
-    }
-  }, [completedState]);
+
 
   // 2.5. Fetch level details and directory structure when activeLevel changes
   useEffect(() => {
@@ -972,6 +964,10 @@ export default function App() {
               levelData={levelData}
               formatStopwatch={formatStopwatch}
               handleDisconnect={handleDisconnect}
+              onGoToLeaderboard={() => {
+                window.history.pushState(null, '', '/leaderboard');
+                setScreen('leaderboard');
+              }}
             />
           )}
 

@@ -45,13 +45,14 @@ const refTable = new Map(); // Map client references to [socketId, name]
 let points = {}; // Track team scores
 
 const finalTime = (group) => {
-    let res = null;
+    let maxTime = 0;
+    if (!points[group]) return 0;
     for (const [k, v] of Object.entries(points[group])) {
-        if (k !== "total") {
-            res.finalTime = Math.max(res.finalTime || -Infinity, v.time);
+        if (k !== "total" && k !== "start" && v && typeof v === 'object' && v.time) {
+            maxTime = Math.max(maxTime, v.time);
         }
     }
-    return res;
+    return maxTime;
 };
 
 
@@ -74,7 +75,7 @@ const broadcastTeamState = (group) => {
         }
         //Completed Logic: If the number of solved levels equals the total number of levels, mark as completed
         // Calculate final time if completed, otherwise null
-        payload.completed = solvedLevels.length === Object.keys(details).length;
+        payload.completed = solvedLevels.length === 5;
         payload.finalTime = payload.completed ? finalTime(group) : null;
     }
 

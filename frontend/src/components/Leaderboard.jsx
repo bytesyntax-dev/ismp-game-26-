@@ -40,12 +40,12 @@ export default function Leaderboard() {
                 : Date.now() - teamData.start,
           });
         }
-        // Sort by score descending, then by time ascending
+        // Sort by number of solved levels descending, then by time ascending
         payload.sort((a, b) => {
-          if (b.score !== a.score) {
-            return b.score - a.score; // Descending by score
+          if (b.solvedCount !== a.solvedCount) {
+            return b.solvedCount - a.solvedCount; // Descending by solved levels count
           }
-          return a.timeTakenMs - b.timeTakenMs; // Ascending by time
+          return a.timeTakenMs - b.timeTakenMs; // Ascending by time taken
         });
         setLeaderboard(payload);
         setLoading(false);
@@ -182,16 +182,6 @@ export default function Leaderboard() {
           )}
         </div>
 
-        {/* Back Link Button */}
-        <div className="text-center mt-8">
-          <a
-            href="/"
-            className="inline-flex items-center space-x-2 text-cyber-cyan border border-cyber-cyan/30 bg-cyber-cyan-dark/15 hover:bg-cyber-cyan hover:text-black hover:shadow-neon-cyan transition duration-200 px-5 py-2.5 rounded font-mono text-xs uppercase tracking-widest"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            <span>Return to Terminal</span>
-          </a>
-        </div>
       </div>
     </div>
   );
