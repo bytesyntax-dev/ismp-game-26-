@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Award } from 'lucide-react';
 
 export default function SuccessScreen({
@@ -6,17 +6,9 @@ export default function SuccessScreen({
   team,
   levelData,
   formatStopwatch,
-  handleDisconnect
+  handleDisconnect,
+  onGoToLeaderboard
 }) {
-  const [countdown, setCountdown] = useState(8);
-
-  useEffect(() => {
-    if (countdown <= 0) return;
-    const timer = setTimeout(() => {
-      setCountdown(countdown - 1);
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, [countdown]);
   return (
     <div className="fixed inset-0 bg-black/95 z-50 flex flex-col items-center justify-center font-mono border-4 border-cyber-cyan p-6">
       <div className="matrix-bg absolute inset-0 opacity-15"></div>
@@ -40,16 +32,15 @@ export default function SuccessScreen({
           <p className="text-cyber-cyan">----------------------------------------</p>
         </div>
         <div className="pt-4 space-y-4">
-          <p className="text-cyber-cyan animate-pulse font-mono text-sm font-bold">
-            SECURE UPLINK ESTABLISHED. REDIRECTING TO LEADERBOARD IN {countdown}S...
-          </p>
           <p className="text-cyber-gray text-xs">The cyber-security system has been compromised. All credentials purged.</p>
-          <button
-            onClick={handleDisconnect}
-            className="px-6 py-3 bg-cyber-cyan text-black font-bold hover:bg-white border border-cyber-cyan rounded hover:shadow-neon-cyan-intense transition duration-200"
-          >
-            DISCONNECT CONNECTION & RESET
-          </button>
+          <div className="flex justify-center">
+            <button
+              onClick={onGoToLeaderboard}
+              className="px-8 py-3.5 bg-cyber-cyan text-black font-bold hover:bg-white border border-cyber-cyan rounded hover:shadow-neon-cyan-intense transition duration-200 uppercase text-sm"
+            >
+              Go to Leaderboard
+            </button>
+          </div>
         </div>
       </div>
     </div>
