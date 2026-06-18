@@ -250,6 +250,17 @@ export default function App() {
     return () => clearInterval(interval);
   }, [levelData, completedState]);
 
+  // Redirect to leaderboard 8 seconds after completion
+  useEffect(() => {
+    if (completedState) {
+      const redirectTimer = setTimeout(() => {
+        window.history.pushState(null, '', '/leaderboard');
+        setScreen('leaderboard');
+      }, 8000);
+      return () => clearTimeout(redirectTimer);
+    }
+  }, [completedState]);
+
   // 2.5. Fetch level details and directory structure when activeLevel changes
   useEffect(() => {
     if (!team) return;
