@@ -21,9 +21,22 @@ export default function FileExplorerPanel({
 
       <div className="flex-1 flex flex-col space-y-3">
         <div className="flex-1 overflow-y-auto space-y-1.5 pr-1 text-xs">
+          {currentPath !== '/' && (
+            <div
+              key=".."
+              onClick={() => handleVisualBack()}
+              className="flex items-center justify-between p-2.5 border rounded text-cyber-gray select-none transition duration-150 border-cyber-cyan/15 bg-cyber-bg/40 cursor-pointer hover:border-cyber-cyan hover:bg-cyber-cyan/10"
+            >
+              <div className="flex items-center space-x-2">
+                <Folder className="w-4 h-4 text-cyber-cyan" />
+                <span className="font-semibold text-cyber-cyan">..</span>
+              </div>
+              <span className="text-[8px] uppercase text-cyber-cyan/30">parent dir</span>
+            </div>
+          )}
           {Object.entries(getContentsAtPath()).map(([name, val]) => {
             const isDir = val.type==='dir';
-            const isHidden = name.startsWith('.') || ["author","creation","type","hidden","password"].includes(name);
+            const isHidden = name.startsWith('.')|| val.hidden || ["author","creation","type","hidden","password"].includes(name);
             
             const isReadme = name.toLowerCase().startsWith('readme');
             
@@ -33,9 +46,7 @@ export default function FileExplorerPanel({
               <div
                 key={name}
                 onClick={() => {
-                  if (isReadme) {
                     handleVisualClick(name, isDir);
-                  }
                 }}
                 className={`flex items-center justify-between p-2.5 border rounded text-cyber-gray select-none transition duration-150 ${
                   isReadme
@@ -64,11 +75,6 @@ export default function FileExplorerPanel({
             );
           })}
 
-          {Object.keys(getContentsAtPath()).filter(n => !n.startsWith('.')).length === 0 && (
-            <div className="text-center text-cyber-gray text-xs py-8">
-              No visual files in this sector.
-            </div>
-          )}
         </div>
 
         <div className="text-[9px] text-cyber-gray border-t border-cyber-cyan/15 pt-2 flex items-center justify-between">
