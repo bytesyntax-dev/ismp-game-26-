@@ -101,9 +101,7 @@ export default function App() {
       4: "Level 4: Decoder Protocol",
       5: "Level 5: Mainframe Override"
     };
-    return (levelData?.levelNames?.[lvl] && levelData.levelNames[lvl] !== "Level name here")
-      ? levelData.levelNames[lvl]
-      : defaultNames[lvl] || `Level ${lvl}`;
+    return levelData?.levelNames?.[lvl] || defaultNames[lvl] || `Level ${lvl}`;
   };
   
   // Terminal Logs
@@ -253,7 +251,7 @@ export default function App() {
 
 
 
-  // 2.5. Fetch level details and directory structure when activeLevel changes
+  // 2.5. Fetch directory structure when activeLevel changes
   useEffect(() => {
     if (!team) return;
 
@@ -275,27 +273,33 @@ export default function App() {
         });
       })
       .catch(err => console.error("Error loading level directory:", err));
-
-    // Fetch level details
-    const levelKey = getLevelKey(activeLevel);
-    fetch(`/api/level_details?level=${levelKey}&group=${team.name || ''}`)
-      .then(res => {
-        if (!res.ok) throw new Error('Level details fetch failed');
-        return res.json();
-      })
-      .then(detailsData => {
-        setLevelData(prev => {
-          if (!prev) return prev;
-          const updatedNames = { ...(prev.levelNames || {}) };
-          updatedNames[activeLevel] = detailsData.levelName;
-          return {
-            ...prev,
-            levelNames: updatedNames
-          };
-        });
-      })
-      .catch(err => console.error("Error loading level details:", err));
   }, [activeLevel, team?.name]);
+
+  // 2.6. Bulk fetch level details for all levels on startup/team name change to sync names
+  useEffect(() => {
+    if (!team) return;
+
+    [1, 2, 3, 4, 5].forEach(lvl => {
+      const lvlKey = getLevelKey(lvl);
+      fetch(`/api/level_details?level=${lvlKey}&group=${team.name || ''}`)
+        .then(res => {
+          if (!res.ok) throw new Error('Level details fetch failed');
+          return res.json();
+        })
+        .then(detailsData => {
+          setLevelData(prev => {
+            if (!prev) return prev;
+            const updatedNames = { ...(prev.levelNames || {}) };
+            updatedNames[lvl] = detailsData.levelName;
+            return {
+              ...prev,
+              levelNames: updatedNames
+            };
+          });
+        })
+        .catch(err => console.error(`Error loading level ${lvl} details:`, err));
+    });
+  }, [team?.name]);
 
   // Helper: Reset session states on logout or server-requested reset
   const handleSessionReset = () => {
@@ -363,6 +367,9 @@ export default function App() {
         ...prev,
         { type: 'output', text: fileText }
       ]);
+      if (name.toLowerCase().endsWith('.txt')) {
+        setActiveTab('terminal');
+      }
     }
   };
 

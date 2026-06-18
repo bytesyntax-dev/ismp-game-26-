@@ -277,10 +277,19 @@ io.on("connection", (socket) => {
  */
 app.get("/api/level_details", (req, res) => {
     const { level, group } = req.query;
+    
+    // Read the latest names from disk so changes in ans.json are loaded instantly without server restart
+    let diskDetails = details;
+    try {
+        diskDetails = loadJson("./data/ans.json");
+    } catch (e) {
+        console.error("Error reading ans.json from disk:", e);
+    }
+
     const response = {
-        levelName: details[level].levelName || `Level ${level}`,
-        points: details[level].points || 0,
-        completed: group ? details[level].answered_by.includes(group) : details[level].answered_by
+        levelName: diskDetails[level]?.levelName || details[level]?.levelName || `Level ${level}`,
+        points: details[level]?.points || 0,
+        completed: group ? details[level]?.answered_by?.includes(group) : details[level]?.answered_by
     }
     return res.json(response);
 })

@@ -54,15 +54,15 @@ export default function TerminalPanel({
       </div>
 
       {/* Console Input Bar */}
-      <div className="mt-3 flex items-center space-x-2 font-mono text-xs border border-cyber-red/35 bg-cyber-bg rounded p-2 focus-within:border-cyber-red transition">
-        <span className="text-cyber-cyan">user:{currentPath}$</span>
+      <div className="mt-3 flex flex-wrap items-center gap-2 font-mono text-xs border border-cyber-red/35 bg-cyber-bg rounded p-2 focus-within:border-cyber-red transition">
+        <span className="text-cyber-cyan break-all">user:{currentPath}$</span>
         <input
           type="text"
           value={terminalInput}
           onChange={(e) => setTerminalInput(e.target.value)}
           onKeyDown={handleTerminalKeyDown}
           placeholder="Type 'help' to begin..."
-          className="flex-1 bg-transparent text-white outline-none border-none caret-cyber-red"
+          className="flex-grow min-w-[150px] bg-transparent text-white outline-none border-none caret-cyber-red"
           autoFocus
         />
       </div>
