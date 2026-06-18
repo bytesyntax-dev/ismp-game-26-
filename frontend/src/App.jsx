@@ -418,13 +418,18 @@ export default function App() {
         /** @todo : To fetch 1 level deep directory items */
         const contents = getContentsAtPath();
         const items = Object.keys(contents);
+
+
         
         if (items.length === 0) {
           setTerminalOutput(prev => [...prev, { type: 'output', text: '(directory empty)' }]);
         } else {
           // Format list
           const outputs = items
-            .filter(name => showAll || !name.startsWith('.'))
+            .filter(name =>{ 
+              if(["author","creation","type","hidden","password"].includes(name)) return false;
+              if (showAll || !name.startsWith('.')) return true;
+            })
             .map(name => {
               const isDir = contents[name] && contents[name].type === 'dir';
               return isDir ? `[DIR]  /${name}` : `[FILE] ${name}`;
