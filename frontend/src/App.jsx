@@ -493,8 +493,29 @@ export default function App() {
         if (file in contents) {
           if (contents[file] && contents[file].type === 'dir') {
             setTerminalOutput(prev => [...prev, { type: 'error', text: `cat: ${file}: Is a directory` }]);
-          } else {
+          }
+          else if(contents[file] && contents[file].type==='Protected File') {
+            if( !args[1] || !args[1].startsWith("--pwd=") )setTerminalOutput(prev=>[...prev,{type:'error', text:`Enter a valid password`}]);
+            else {
+              const pwd=args[1].substring(6);
+              const path =currentPath.endsWith('/')?currentPath+args[0]:currentPath+'/'+args[0];
+              fetch(`/api/file?level=${activeLevel}&path=root${path}&password=${pwd}`).then(async res=>{
+                res=await res.json()
+                console.table(res)
+                if(res.error) setTerminalOutput(prev => [...prev, { type: 'error', text: `cat: ${file}: ${res.error}` }]);
+                else{
+
+                  setTerminalOutput(prev => [...prev, { type: 'output', text: res?.content || "" }]);
+                  setTerminalOutput(prev => [...prev, { type: 'output', text: `\n-> Author : ${res.author}\n-> Creation-Date : ${res.creation}` }]);
+                }
+              }).catch(err=>{
+                setTerminalOutput(prev => [...prev, { type: 'error', text: `cat: ${file}: ${err}` }])
+              })
+            }
+          }
+          else {
             setTerminalOutput(prev => [...prev, { type: 'output', text: contents[file]?.content || "" }]);
+            setTerminalOutput(prev => [...prev, { type: 'output', text: `\n-> Author : ${contents[file].author}\n-> Creation-Date : ${contents[file].creation}` }]);
           }
         } else {
           setTerminalOutput(prev => [...prev, { type: 'error', text: `cat: ${file}: No such file` }]);

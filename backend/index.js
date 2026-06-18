@@ -301,9 +301,9 @@ app.get("/api/directory", (req, res) => {
 app.get("/api/file", (req, res) => {
     const dir = req.query.path?.split(/\/|\\/g).filter(Boolean) ?? [];
     const level = req.query.level;
-    if (!fs.existsSync(`./data/levels/${level}.json`)) return res.status(400).json({ error: "Incorrect Level parameter!" });
+    if (!fs.existsSync(`./data/levels/level${level}.json`)) return res.status(400).json({ error: "Incorrect Level parameter!" });
 
-    let r = loadJson(`./data/levels/${level}.json`);
+    let r = loadJson(`./data/levels/level${level}.json`);
     try {
         for (const p of dir) {
             if (p == "" || p == "type" || p == "author" || p == "creation" || p == "hidden" || p == "password" || p == "content") return;
@@ -316,14 +316,12 @@ app.get("/api/file", (req, res) => {
     const file = r;
 
     if (!file || file.type != "file") {
-        return res
-            .status(400)
-            .json({ error: "Path points to a directory, not a file" });
+        return res.json({ error: "Path points to a directory, not a file" });
     }
     if (file?.password !== undefined) {
         const providedPasswordHash = hash(req.query.password ?? "");
         if (file.password !== providedPasswordHash) {
-            return res.status(401).json({ error: "Incorrect password" });
+            return res.json({ error: "Incorrect password" });
         }
     }
     delete file.password; // Remove password hash from response for security

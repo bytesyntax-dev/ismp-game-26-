@@ -62,7 +62,9 @@ export default function FileExplorerPanel({
                 className={`flex items-center justify-between p-2.5 border rounded text-cyber-gray select-none transition duration-150 ${
                   isReadme
                     ? "border-cyber-cyan/40 bg-cyber-cyan-dark/20 hover:border-cyber-cyan hover:bg-cyber-cyan/10 cursor-pointer text-white shadow-[0_0_8px_rgba(0,240,255,0.15)]"
-                    : "flex items-center justify-between p-2.5 border rounded text-cyber-gray select-none transition duration-150 border-cyber-cyan/15 bg-cyber-bg/40 cursor-pointer hover:border-cyber-cyan hover:bg-cyber-cyan/10"
+                    : isProtected
+                      ? "border-cyber-cyan/15 bg-cyber-bg/40 cursor-default"
+                      : "border-cyber-cyan/15 bg-cyber-bg/40 cursor-pointer hover:border-cyber-cyan hover:bg-cyber-cyan/10"
                 }`}
               >
                 <div className="flex items-center space-x-2">
@@ -70,7 +72,7 @@ export default function FileExplorerPanel({
                     <Folder className="w-4 h-4 text-cyber-cyan" />
                   ) : (
                     <File
-                      className={`w-4 h-4 ${isReadme ? "text-cyber-cyan" :isProtected? "text-xyber-turquoise" : "text-cyber-gray"}`}
+                      className={`w-4 h-4 ${isReadme ? "text-cyber-cyan" :isProtected? "text-teal-400" : "text-cyber-gray"}`}
                     />
                   )}
                   <span
@@ -80,7 +82,7 @@ export default function FileExplorerPanel({
                         : isReadme
                           ? "font-bold text-cyber-cyan"
                           : isProtected
-                            ?"text-cyber-turquoise"
+                            ?"text-teal-400"
                             :""
                     }
                   >
@@ -95,7 +97,7 @@ export default function FileExplorerPanel({
                   ) : isDir ? (
                     <span className="text-cyber-cyan/30">directory</span>
                   ) : isProtected ? (
-                    <span className="text-cyber-turquoise/30">Protected file</span>
+                    <span className="text-teal-400/30">Protected file</span>
                   ) : (
                     <span className="text-cyber-gray/30">system file</span>
                   )}
