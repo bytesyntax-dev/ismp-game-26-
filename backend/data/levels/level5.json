@@ -1,0 +1,78 @@
+{
+  "root": {
+    "type": "dir",
+    "hidden": false,
+    "author": "AMN",
+    "creation": "Date_Here",
+
+    "dir1": {
+      "type": "dir",
+      "hidden": false,
+      "author": "AMN",
+      "creation": "Date_Here",
+
+      "dir3": {
+        "type": "dir",
+        "hidden": false,
+        "author": "AMN",
+        "creation": "Date_Here",
+
+        "file1.txt": {
+          "type": "file",
+          "hidden": true,
+          "author": "AMN",
+          "creation": "Date_Here",
+
+          "content": "This is file 1"
+        }
+      },
+      "file1.txt": {
+        "type": "file",
+        "hidden": true,
+        "author": "AMN",
+        "creation": "Date_Here",
+
+        "content": "This is file 1"
+      },
+      "file2.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "AMN",
+        "creation": "Date_Here",
+
+        "content": "This is file 2"
+      }
+    },
+    ".dir2": {
+      "type": "dir",
+      "hidden": false,
+      "author": "AMN",
+      "creation": "Date_Here",
+
+      "file1.txt": {
+        "type": "file",
+        "hidden": true,
+        "author": "AMN",
+        "creation": "Date_Here",
+
+        "content": "This is file 1"
+      }
+    },
+    "output.txt": {
+      "type": "file",
+      "hidden": false,
+      "author": "AMN",
+      "creation": "Date_Here",
+      "password": "572990d52a3b8c590c8c62555f04b89e58733f5b0d5616605fe782e6cc6776db",
+
+      "content": "This is file 1"
+    },
+    "README.txt": {
+      "type": "file",
+      "hidden": false,
+      "author": "SOFTCOM",
+      "creation": "12-7-26",
+      "content": "Sample file"
+    }
+  }
+}
