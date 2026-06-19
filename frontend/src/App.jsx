@@ -362,7 +362,8 @@ export default function App() {
         { type: 'input', text: `cat ${name}` }
       ]);
       const contents = getContentsAtPath();
-      const fileText = contents[name]?.content || "";
+      const val = contents[name];
+      const fileText = typeof val === 'string' ? val : (val?.content || "");
       setTerminalOutput(prev => [
         ...prev,
         { type: 'output', text: fileText }
@@ -398,7 +399,25 @@ export default function App() {
     // Add to terminal line
     setTerminalOutput(prev => [...prev, { type: 'input', text: cmd }]);
 
-    const tokens = cmd.split(/\s+/);
+    // Helper to tokenize command string respecting single/double quotes
+    const parseCommandTokens = (cmdStr) => {
+      const tokens = [];
+      const regex = /"([^"\\]*(?:\\.[^"\\]*)*)"|'([^'\\]*(?:\\.[^'\\]*)*)'|([^\s"']+)/g;
+      let match;
+      while ((match = regex.exec(cmdStr)) !== null) {
+        if (match[1] !== undefined) {
+          tokens.push(match[1].replace(/\\"/g, '"'));
+        } else if (match[2] !== undefined) {
+          tokens.push(match[2].replace(/\\'/g, "'"));
+        } else if (match[3] !== undefined) {
+          tokens.push(match[3]);
+        }
+      }
+      return tokens;
+    };
+
+    const tokens = parseCommandTokens(cmd);
+    if (tokens.length === 0) return;
     const baseCmd = tokens[0].toLowerCase();
     const args = tokens.slice(1);
 
@@ -410,6 +429,8 @@ export default function App() {
           { type: 'output', text: "  ls [-a]         List directories and files in current folder" },
           { type: 'output', text: "  cd <dir>        Navigate to folder (e.g., 'cd system' or 'cd ..')" },
           { type: 'output', text: "  cat <file>      Read file content (e.g., 'cat README.txt')" },
+          { type: 'output', text: "  grep <pattern> <file> Search text in a file (e.g. 'grep key info.txt')" },
+          { type: 'output', text: "  grep -r <pattern>     Recursively search files in all folders" },
           { type: 'output', text: "  decode <str>    Base64 decryption engine (e.g. level 4)" },
           { type: 'output', text: "  submit <key>    Submit passcode key (e.g., 'submit CORE_PASS')" },
           { type: 'output', text: "  clear           Purge command console history log" }
@@ -419,6 +440,119 @@ export default function App() {
       case 'clear':
         setTerminalOutput([]);
         break;
+
+      case 'grep': {
+        // Syntax: grep <pattern> <filename> | grep <pattern> * | grep -r <pattern>
+        let pattern = "";
+        let target = "";
+        let isRecursive = false;
+
+        if (args[0] === '-r') {
+          isRecursive = true;
+          pattern = args[1];
+        } else {
+          pattern = args[0];
+          target = args[1];
+        }
+
+        if (!pattern) {
+          setTerminalOutput(prev => [
+            ...prev,
+            { type: 'error', text: 'Usage: grep <pattern> <file>  OR  grep <pattern> *  OR  grep -r <pattern>' }
+          ]);
+          break;
+        }
+
+        const contents = getContentsAtPath();
+
+        // Helper to recursively search through directory nodes
+        const searchNode = (node, pathStr, searchPattern) => {
+          let results = [];
+          if (!node || typeof node !== 'object') return results;
+
+          for (const [name, child] of Object.entries(node)) {
+            // Skip metadata keys
+            if (["type", "hidden", "author", "creation", "password"].includes(name)) continue;
+
+            if (child && typeof child === 'object') {
+              if (child.type === 'dir' || !child.type) {
+                // If it is a directory, search subfolders recursively
+                const subResults = searchNode(child, pathStr === '/' ? `/${name}` : `${pathStr}/${name}`, searchPattern);
+                results = [...results, ...subResults];
+              } else {
+                // If it is a file, search inside its content
+                const fileContent = child.content || "";
+                if (fileContent.toLowerCase().includes(searchPattern.toLowerCase())) {
+                  results.push(`[${pathStr === '/' ? '' : pathStr}/${name}]: ${fileContent}`);
+                }
+              }
+            } else if (typeof child === 'string') {
+              // Text nodes
+              if (child.toLowerCase().includes(searchPattern.toLowerCase())) {
+                results.push(`[${pathStr === '/' ? '' : pathStr}/${name}]: ${child}`);
+              }
+            }
+          }
+          return results;
+        };
+
+        let matches = [];
+
+        if (isRecursive) {
+          matches = searchNode(contents, currentPath, pattern);
+        } else if (target === '*') {
+          // Search all files in current folder
+          for (const [name, val] of Object.entries(contents)) {
+            if (["type", "hidden", "author", "creation", "password"].includes(name)) continue;
+            if (typeof val === 'string') {
+              if (val.toLowerCase().includes(pattern.toLowerCase())) {
+                matches.push(`[${name}]: ${val}`);
+              }
+            } else if (val && typeof val === 'object' && val.type !== 'dir') {
+              const fileContent = val.content || "";
+              if (fileContent.toLowerCase().includes(pattern.toLowerCase())) {
+                matches.push(`[${name}]: ${fileContent}`);
+              }
+            }
+          }
+        } else if (target) {
+          // Search in a specific file
+          if (target in contents) {
+            const val = contents[target];
+            if (typeof val === 'string') {
+              if (val.toLowerCase().includes(pattern.toLowerCase())) {
+                matches.push(`[${target}]: ${val}`);
+              }
+            } else if (val && typeof val === 'object' && val.type !== 'dir') {
+              const fileContent = val.content || "";
+              if (fileContent.toLowerCase().includes(pattern.toLowerCase())) {
+                matches.push(`[${target}]: ${fileContent}`);
+              }
+            } else {
+              setTerminalOutput(prev => [...prev, { type: 'error', text: `grep: ${target}: Is a directory` }]);
+              break;
+            }
+          } else {
+            setTerminalOutput(prev => [...prev, { type: 'error', text: `grep: ${target}: No such file` }]);
+            break;
+          }
+        } else {
+          setTerminalOutput(prev => [
+            ...prev,
+            { type: 'error', text: 'Usage: grep <pattern> <file>  OR  grep <pattern> *  OR  grep -r <pattern>' }
+          ]);
+          break;
+        }
+
+        if (matches.length === 0) {
+          setTerminalOutput(prev => [...prev, { type: 'output', text: 'No matches found.' }]);
+        } else {
+          matches.forEach(matchText => {
+            setTerminalOutput(prev => [...prev, { type: 'output', text: matchText }]);
+          });
+        }
+        break;
+      }
 
 
 
@@ -521,8 +655,15 @@ export default function App() {
             }
           }
           else {
-            setTerminalOutput(prev => [...prev, { type: 'output', text: contents[file]?.content || "" }]);
-            setTerminalOutput(prev => [...prev, { type: 'output', text: `\n-> Author : ${contents[file].author}\n-> Creation-Date : ${contents[file].creation}` }]);
+            const val = contents[file];
+            if (typeof val === 'string') {
+              setTerminalOutput(prev => [...prev, { type: 'output', text: val }]);
+            } else {
+              setTerminalOutput(prev => [...prev, { type: 'output', text: val?.content || "" }]);
+              if (val?.author || val?.creation) {
+                setTerminalOutput(prev => [...prev, { type: 'output', text: `\n-> Author : ${val.author || "Unknown"}\n-> Creation-Date : ${val.creation || "Unknown"}` }]);
+              }
+            }
           }
         } else {
           setTerminalOutput(prev => [...prev, { type: 'error', text: `cat: ${file}: No such file` }]);
