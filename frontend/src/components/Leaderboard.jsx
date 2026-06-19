@@ -42,8 +42,8 @@ export default function Leaderboard() {
         }
         // Sort by number of solved levels descending, then by time ascending
         payload.sort((a, b) => {
-          if (b.solvedCount !== a.solvedCount) {
-            return b.solvedCount - a.solvedCount; // Descending by solved levels count
+          if (b.score !== a.score) {
+            return b.score - a.score; // Descending by solved levels count
           }
           return a.timeTakenMs - b.timeTakenMs; // Ascending by time taken
         });
