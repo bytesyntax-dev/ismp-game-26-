@@ -2,77 +2,997 @@
   "root": {
     "type": "dir",
     "hidden": false,
-    "author": "AMN",
-    "creation": "Date_Here",
-
-    "dir1": {
+    "author": "SOFTCOM",
+    "creation": "12-7-26",
+    "IIT-Ropar": {
       "type": "dir",
       "hidden": false,
-      "author": "AMN",
-      "creation": "Date_Here",
-
-      "dir3": {
+      "author": "SOFTCOM",
+      "creation": "12-7-26",
+      "Auditorium": {
         "type": "dir",
         "hidden": false,
-        "author": "AMN",
-        "creation": "Date_Here",
-
-        "file1.txt": {
+        "author": "SOFTCOM",
+        "creation": "12-7-26",
+        "audi.txt": {
           "type": "file",
-          "hidden": true,
-          "author": "AMN",
-          "creation": "Date_Here",
-
-          "content": "This is file 1"
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "It's really crowded in the auditorium right now. There might be some hidden files here not visible normally."
+        },
+        "Audi-Foyer": {
+          "type": "dir",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "desk.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "content": "No password here."
+          }
+        },
+        "Main-hall": {
+          "type": "dir",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "hall.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "content": "A movie screening is going on right now. So, that's why there was such a huge crowd outside."
+          },
+          ".hidden": {
+            "type": "file",
+            "hidden": true,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "content": "Success!! The first part of the password is the name of the best club at IIT Ropar. *wink wink*"
+          }
         }
       },
-      "file1.txt": {
-        "type": "file",
-        "hidden": true,
-        "author": "AMN",
-        "creation": "Date_Here",
-
-        "content": "This is file 1"
-      },
-      "file2.txt": {
-        "type": "file",
+      "Sports-Complex": {
+        "type": "dir",
         "hidden": false,
-        "author": "AMN",
-        "creation": "Date_Here",
-
-        "content": "This is file 2"
+        "author": "SOFTCOM",
+        "creation": "12-7-26",
+        "cricket-ground": {
+          "type": "dir",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "court.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "content": ""
+          }
+        },
+        "hockey-ground": {
+          "type": "dir",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "court.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "content": ""
+          }
+        },
+        "volleyball-court": {
+          "type": "dir",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "court.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "content": ""
+          }
+        },
+        "basketball-court": {
+          "type": "dir",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "court.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "content": ""
+          }
+        },
+        "swimming-pool": {
+          "type": "dir",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "swimming-pool.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "content": "Since the password is in the IIT Ropar Campus, it wouldn't be here."
+          }
+        }
+      },
+      "Admin_Block": {
+        "type": "dir",
+        "hidden": false,
+        "author": "SOFTCOM",
+        "creation": "12-7-26",
+        "Senate_Hall": {
+          "type": "dir",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "senate.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "content": "The senate hall is empty right now."
+          }
+        },
+        "Director_Office": {
+          "type": "dir",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "notice.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "content": "Notice: IIT Ropar students are still not allowed."
+          }
+        }
+      },
+      "Library": {
+        "type": "dir",
+        "hidden": false,
+        "author": "SOFTCOM",
+        "creation": "12-7-26",
+        "Ground_Floor": {
+          "type": "dir",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "ground.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "content": "Nothing here which can lead to the password."
+          }
+        },
+        "First_Floor": {
+          "type": "dir",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "first.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "content": "Nothing here which can lead to the password either."
+          }
+        }
+      },
+      "SAB": {
+        "type": "dir",
+        "hidden": false,
+        "author": "SOFTCOM",
+        "creation": "12-7-26",
+        "sab.txt": {
+          "type": "file",
+          "hidden": true,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "An anonymous tip has told you that the password might be in the C block, but navigating here is no easy than a maze and some rooms might be hidden."
+        },
+        "Ground_Floor": {
+          "type": "dir",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "A-Block": {
+            "type": "dir",
+            "hidden": false,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "A101.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "A102.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "A104.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "A103.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "A105.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "A106.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "A107.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "A108.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            }
+          },
+          "B-Block": {
+            "type": "dir",
+            "hidden": false,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "B101.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "B102.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "B103.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "B104.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "B105.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "B106.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "B107.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "B108.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            }
+          },
+          "C-Block": {
+            "type": "dir",
+            "hidden": false,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "C101.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "C102.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "C103.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "C104.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "C105.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "C106.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "C107.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "C108.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            }
+          }
+        },
+        "First_Floor": {
+          "type": "dir",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "A-Block": {
+            "type": "dir",
+            "hidden": false,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "A101.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "A102.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "A104.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "A103.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "A105.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "A106.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "A107.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "A108.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            }
+          },
+          "B-Block": {
+            "type": "dir",
+            "hidden": false,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "B101.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "B102.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "B103.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "B104.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "B105.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "B106.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "B107.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "B108.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            }
+          },
+          "C-Block": {
+            "type": "dir",
+            "hidden": false,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "C101.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "C102.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "C103.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "C104.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "C105.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "C106.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "C107.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Success!! The second part of the password is the number of places where you could get a haircut in the campus.(Men and women both included)"
+            },
+            "C108.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            }
+          }
+        },
+        "Second_Floor": {
+          "type": "dir",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "A-Block": {
+            "type": "dir",
+            "hidden": false,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "A101.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "A102.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "A104.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "A103.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "A105.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "A106.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "A107.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "A108.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            }
+          },
+          "B-Block": {
+            "type": "dir",
+            "hidden": false,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "B101.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "B102.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "B103.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "B104.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "B105.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "B106.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "B107.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "B108.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            }
+          },
+          "C-Block": {
+            "type": "dir",
+            "hidden": false,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "C101.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "C102.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "C103.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "C104.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "C105.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "C106.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "C107.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            },
+            "C108.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Empty room. No password here."
+            }
+          }
+        }
+      },
+      "Hostels": {
+        "type": "dir",
+        "hidden": false,
+        "author": "SOFTCOM",
+        "creation": "12-7-26",
+        ".hint": {
+          "type": "file",
+          "hidden": true,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "A part of the password might be in the hostel named after the river which flows near IIT Ropar."
+        },
+        "Brahmaputra": {
+          "type": "dir",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "Caretaker-Logs": {
+            "type": "dir",
+            "hidden": false,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "logs.txt": {
+              "type": "file",
+              "hidden": true,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Just a list of hostel expenses. No password here."
+            }
+          },
+          "commonRoom.txt": {
+            "type": "file",
+            "hidden": true,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "content": "The room is empty right now."
+          }
+        },
+        "Chenab": {
+          "type": "dir",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "Caretaker-Logs": {
+            "type": "dir",
+            "hidden": false,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "logs.txt": {
+              "type": "file",
+              "hidden": true,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Just a list of hostel expenses. No password here."
+            }
+          },
+            "commonRoom.txt": {
+              "type": "file",
+              "hidden": true,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "The room is empty right now."
+            }
+        },
+        "Satluj": {
+          "type": "dir",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "Caretaker-Logs": {
+            "type": "dir",
+            "hidden": false,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "logs.txt": {
+              "type": "file",
+              "hidden": true,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Just a list of hostel expenses. No password here."
+            }
+          },
+          "commonRoom.txt": {
+            "type": "file",
+            "hidden": true,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "content": "The room is empty right now."
+          },
+          ".deletedLogs": {
+            "type": "file",
+            "hidden": true,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "content": "Bingo! The third part of the password is the number of people in the IIT Ropar logo multiplied by its NIRF Ranking. You may use a calculator since one of these numbers might be too large."
+          }
+        },
+        "Ravi": {
+          "type": "dir",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "Caretaker-Logs": {
+            "type": "dir",
+            "hidden": false,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "logs.txt": {
+              "type": "file",
+              "hidden": true,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "Just a list of hostel expenses. No password here."
+            }
+          },
+          "commonRoom.txt": {
+            "type": "file",
+            "hidden": true,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "content": "The room is empty right now."
+          }
+        }
+      },
+      "LOC": {
+        "type": "dir",
+        "hidden": false,
+        "author": "SOFTCOM",
+        "creation": "12-7-26",
+        "loc.txt": {
+          "type": "file",
+          "hidden": true,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "The password is the full-form of LOC. Hehe, just kidding, its not the password. Or is it? You might want to try it once just to be sure."
+        }
+      },
+      "LHC": {
+        "type": "dir",
+        "hidden": false,
+        "author": "SOFTCOM",
+        "creation": "12-7-26",
+        ".hidden": {
+          "type": "file",
+          "hidden": true,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "Just a decoy. Keep looking."
+        },
+        "M1.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "No password here."
+        },
+         "M2.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "No password here."
+        },
+         "M3.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "No password here."
+        },
+         "M4.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "No password here."
+        },
+         "M5.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "A prof. is taking a MA101 lecture right now."
+        },
+         "M6.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "SOFTCOM",
+          "creation": "12-7-26",
+          "content": "A prof. is taking a MA101 lecture right now."
+        }
       }
+      
+
     },
-    ".dir2": {
+    "IIT-Bombay": {
       "type": "dir",
       "hidden": false,
-      "author": "AMN",
-      "creation": "Date_Here",
-
-      "file1.txt": {
+      "author": "SOFTCOM",
+      "creation": "12-7-26",
+      "wait.txt": {
         "type": "file",
-        "hidden": true,
-        "author": "AMN",
-        "creation": "Date_Here",
-
-        "content": "This is file 1"
+        "hidden": false,
+        "author": "SOFTCOM",
+        "creation": "12-7-26",
+        "content": "Wait! You have been stopped by Kabeer Chillar. You like someone who is not from IIT Bombay!! Go back to your IIT right now!"
       }
-    },
-    "output.txt": {
-      "type": "file",
-      "hidden": false,
-      "author": "AMN",
-      "creation": "Date_Here",
-      "password": "572990d52a3b8c590c8c62555f04b89e58733f5b0d5616605fe782e6cc6776db",
-
-      "content": "This is file 1"
     },
     "README.txt": {
       "type": "file",
       "hidden": false,
       "author": "SOFTCOM",
       "creation": "12-7-26",
-      "content": "Sample file"
+      "content": "--------------------\nLevel 5\n--------------------\n\nThis is the final level. If you've come this far, then you have perfectly understood the usage of all the commands taught to you so far. For the final task, the password for the next level has been split into three parts and scattered across the entire IIT Ropar campus. You might have to access the metadata of a file using the cat command. Find them and complete the game. All the best.\n\nUseful Commands:\n- cd\n- ls\n- cat\ngrep"
     }
   }
 }
