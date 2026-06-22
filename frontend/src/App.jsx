@@ -134,7 +134,7 @@ export default function App() {
   const socketRef = useRef(null);
 
   useEffect(() => {
-    socketRef.current = io({ autoConnect: false });
+    socketRef.current = io(import.meta.env.VITE_API_URL || '', { autoConnect: false });
 
     socketRef.current.on('ref_init', (data) => {
       if(!localStorage.getItem('ref')) {localStorage.setItem('ref', data.ref);}
@@ -256,7 +256,7 @@ export default function App() {
     if (!team) return;
 
     // Fetch directory
-    fetch(`/api/directory?level=${activeLevel}`)
+    fetch(`${import.meta.env.VITE_API_URL || ''}/api/directory?level=${activeLevel}`)
       .then(res => {
         if (!res.ok) throw new Error('Directory fetch failed');
         return res.json();
@@ -281,7 +281,7 @@ export default function App() {
 
     [1, 2, 3, 4, 5].forEach(lvl => {
       const lvlKey = getLevelKey(lvl);
-      fetch(`/api/level_details?level=${lvlKey}&group=${team.name || ''}`)
+      fetch(`${import.meta.env.VITE_API_URL || ''}/api/level_details?level=${lvlKey}&group=${team.name || ''}`)
         .then(res => {
           if (!res.ok) throw new Error('Level details fetch failed');
           return res.json();
@@ -640,7 +640,7 @@ export default function App() {
             else {
               const pwd=args[1].substring(6);
               const path =currentPath.endsWith('/')?currentPath+args[0]:currentPath+'/'+args[0];
-              fetch(`/api/file?level=${activeLevel}&path=root${path}&password=${pwd}`).then(async res=>{
+              fetch(`${import.meta.env.VITE_API_URL || ''}/api/file?level=${activeLevel}&path=root${path}&password=${pwd}`).then(async res=>{
                 res=await res.json()
                 console.table(res)
                 if(res.error) setTerminalOutput(prev => [...prev, { type: 'error', text: `cat: ${file}: ${res.error}` }]);
@@ -902,7 +902,7 @@ export default function App() {
   const handleDisconnect = () => {
     sound.playClick();
     
-    fetch('/api/disconnect', {
+    fetch(`${import.meta.env.VITE_API_URL || ''}/api/disconnect`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

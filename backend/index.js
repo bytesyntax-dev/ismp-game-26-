@@ -28,6 +28,18 @@ const server = createServer(app);
 app.use(express.json());
 app.use(cookieParser());
 
+// Enable CORS for frontend requests (needed when frontend is deployed on Vercel)
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, PATCH, DELETE");
+    res.setHeader("Access-Control-Allow-Headers", "X-Requested-With,content-type,x-player-id");
+    res.setHeader("Access-Control-Allow-Credentials", "true");
+    if (req.method === 'OPTIONS') {
+        return res.sendStatus(200);
+    }
+    next();
+});
+
 const hash = (str) => createHash("sha256").update(str).digest("hex");
 
 const io = new Server(server, {

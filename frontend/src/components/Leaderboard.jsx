@@ -7,7 +7,7 @@ export default function Leaderboard() {
   const [error, setError] = useState(null);
 
   const fetchLeaderboard = () => {
-    fetch("/api/points")
+    fetch(`${import.meta.env.VITE_API_URL || ''}/api/points`)
       .then((res) => {
         if (!res.ok) {
           throw new Error("Failed to fetch mainframe records.");
