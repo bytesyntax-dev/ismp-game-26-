@@ -190,7 +190,7 @@ export default function App() {
             }
           }
           
-          return data.levelData;
+          return { ...prev, ...data.levelData };
         });
       }
 
