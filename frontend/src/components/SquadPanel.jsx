@@ -41,7 +41,7 @@ export default function SquadPanel({ team, playerId, activeTab }) {
           <div className="border border-dashed border-cyber-green/20 p-4 rounded text-center text-cyber-gray text-[10px] flex flex-col items-center justify-center space-y-1.5 mt-4">
             <Server className="w-5 h-5 text-cyber-green/20 animate-pulse" />
             <span>WAITING FOR MEMBERS TO CONNECT</span>
-            <span className="text-cyber-green font-bold text-xs">CODE: {team.code}</span>
+            <span className="text-cyber-green font-bold text-xs">CODE: {team.code || team.name}</span>
           </div>
         )}
       </div>

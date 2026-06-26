@@ -20,32 +20,40 @@ export default function Leaderboard() {
           console.log(data[team]);
           const teamData = data[team];
           const score = teamData.total || 0;
-          const solvedCount = Object.keys(teamData).filter(
-            (k) => k !== "total" && k !== "start",
-          ).length;
+          
+          const solvedLevels = Object.keys(teamData).filter(
+            (k) => k !== "total" && k !== "start" && teamData[k] && teamData[k].time !== undefined,
+          );
+          const solvedCount = solvedLevels.length;
+
+          const lastSolveTimeMs = solvedCount > 0
+            ? solvedLevels.reduce((max, k) => Math.max(max, teamData[k].time), 0)
+            : null;
+
+          const elapsedTimeMs = solvedCount === 5
+            ? lastSolveTimeMs
+            : Date.now() - teamData.start;
+
           payload.push({
             name: team,
             score: score,
             solvedCount: solvedCount,
             ques_data: teamData,
-            //change 5 for any no of levels
-            timeTakenMs:
-              solvedCount == 5
-                ? Object.keys(teamData)
-                    .filter(
-                      (k) =>
-                        k !== "total" && k !== "start" && teamData[k].time,
-                    )
-                    .reduce((max, k) => Math.max(max, teamData[k].time), 0)
-                : Date.now() - teamData.start,
+            lastSolveTimeMs: lastSolveTimeMs,
+            elapsedTimeMs: elapsedTimeMs,
           });
         }
-        // Sort by number of solved levels descending, then by time ascending
+        // Sort by score descending, then by lastSolveTimeMs ascending
         payload.sort((a, b) => {
           if (b.score !== a.score) {
-            return b.score - a.score; // Descending by solved levels count
+            return b.score - a.score; // Descending by score
           }
-          return a.timeTakenMs - b.timeTakenMs; // Ascending by time taken
+          const aTime = a.lastSolveTimeMs ?? Infinity;
+          const bTime = b.lastSolveTimeMs ?? Infinity;
+          if (aTime !== bTime) {
+            return aTime - bTime; // Ascending by last solve time
+          }
+          return a.elapsedTimeMs - b.elapsedTimeMs; // Fallback to elapsed time
         });
         setLeaderboard(payload);
         setLoading(false);
@@ -109,13 +117,14 @@ export default function Leaderboard() {
                 <thead>
                   <tr className="bg-cyber-dark/80 border-b border-cyber-border text-[10px] md:text-xs text-cyber-gray uppercase tracking-wider">
                     <th className="px-6 py-4">Rank</th>
-                    <th className="px-6 py-4">Team Operative</th>
+                    <th className="px-6 py-4">Team Name</th>
                     <th className="px-3 py-4 text-center w-12">A</th>
                     <th className="px-3 py-4 text-center w-12">B</th>
                     <th className="px-3 py-4 text-center w-12">C</th>
                     <th className="px-3 py-4 text-center w-12">D</th>
                     <th className="px-3 py-4 text-center w-12">E</th>
                     <th className="px-6 py-4 text-right w-24">Score</th>
+                    <th className="px-6 py-4 text-right w-32">Last Solve</th>
                     <th className="px-6 py-4 text-right flex items-center justify-end">
                       Time Elapsed
                     </th>
@@ -169,9 +178,12 @@ export default function Leaderboard() {
                         <td className="px-6 py-4 text-right text-cyber-cyan font-bold">
                           {team.score} PTS
                         </td>
+                        <td className="px-6 py-4 text-right text-cyber-green font-bold w-32">
+                          {team.lastSolveTimeMs ? formatStopwatch(team.lastSolveTimeMs) : "—"}
+                        </td>
                         <td className="px-6 py-4 text-right text-cyber-gray flex items-center justify-end space-x-1">
                           <Clock className="w-3.5 h-3.5 text-cyber-gray/50" />
-                          <span>{formatStopwatch(team.timeTakenMs)}</span>
+                          <span>{formatStopwatch(team.elapsedTimeMs)}</span>
                         </td>
                       </tr>
                     );

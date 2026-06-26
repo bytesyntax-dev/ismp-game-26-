@@ -994,7 +994,7 @@ export default function App() {
                   <span className="text-sm font-bold text-cyber-cyan">{team.name}</span>
                   {!team.isSolo && (
                     <span className="text-[10px] border border-cyber-cyan/30 px-1.5 py-0.5 rounded text-cyber-gray">
-                      CODE: {team.code}
+                      CODE: {team.code || team.name}
                     </span>
                   )}
                 </div>

@@ -75,6 +75,7 @@ const broadcastTeamState = (group) => {
         const solvedLevels = [1, 2, 3, 4, 5].filter(i => details[getLevelKey(i)]?.answered_by?.includes(group));
         payload.team = {
             name: group,
+            code: group,
             members: gp.members.map((memberRef) => ({
                 id: memberRef,
                 name: refTable.get(memberRef)?.[1] || "Operative",
@@ -182,6 +183,7 @@ io.on("connection", (socket) => {
             success: true,
             team: {
                 name: group,
+                code: group,
                 members: [{ id: ref, name: playerRecord[1] }],
             },
         });
@@ -204,6 +206,7 @@ io.on("connection", (socket) => {
                 success: true,
                 team: {
                     name: group,
+                    code: group,
                     members: gp.members.map((memberRef) => ({
                         id: memberRef,
                         name: refTable.get(memberRef)?.[1] || "Operative",
