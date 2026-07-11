@@ -1,31 +1,31 @@
 {
   "A": {
-    "levelName": "Level 1: The Breach",
-    "answer": "V#6qF",
+    "levelName": "Level Name A",
+    "answer": "fresher_init",
     "points": "500",
     "answered_by": []
   },
   "B": {
-    "levelName": "Level 2: Hidden Channels",
-    "answer": "intro_do",
+    "levelName": "Level name B",
+    "answer": "fresher_runtime",
     "points": "750",
     "answered_by": []
   },
   "C": {
-    "levelName": "Level 3: Logic Void",
-    "answer": "gvdlbdbemz",
+    "levelName": "Level name C",
+    "answer": "runtime_complete",
     "points": "1000",
     "answered_by": []
   },
   "D": {
-    "levelName": "Level 4: Decoder Protocol",
-    "answer": "satishdhawan",
+    "levelName": "Level 4: THE LOC PROPHECIES",
+    "answer": "LOVEOFCAMPUS",
     "points": "1250",
     "answered_by": []
   },
   "E": {
-    "levelName": "Level 5: Mainframe Override",
-    "answer": "softcom3160",
+    "levelName": "Level 5: SKIP OR SEARCH",
+    "answer": "DAWN",
     "points": "1500",
     "answered_by": []
   },

@@ -4,114 +4,60 @@
     "hidden": false,
     "author": "SOFTCOM",
     "creation": "12-7-26",
-    "Auditorium": {
+    "Sandbox_Server": {
       "type": "dir",
       "hidden": false,
       "author": "SOFTCOM",
       "creation": "12-7-26",
-      "Registration_Desk": {
+      "System_Check": {
         "type": "dir",
         "hidden": false,
         "author": "SOFTCOM",
         "creation": "12-7-26",
-        "desk.txt": {
+        "status.txt": {
           "type": "file",
           "hidden": false,
           "author": "SOFTCOM",
           "creation": "12-7-26",
-          "content": "You ask the person doing the registrations for the wi-fi password. But he doesn't know it sadly."
+          "content": "Diagnostics complete. Everything is running smoothly. To find the initialization token, back out of this folder using 'cd ..' and navigate into the 'Terminal_Labs' directory!"
         }
       },
-      "audi.txt": {
-        "type": "file",
-        "hidden": false,
-        "author": "SOFTCOM",
-        "creation": "12-7-26",
-        "content": "There are a lot of students in the auditorium as Registration is going on right now. You wonder if any of them know the wi-fi password."
-      }
-    },
-    "Admin_Block": {
-      "type": "dir",
-      "hidden": false,
-      "author": "SOFTCOM",
-      "creation": "12-7-26",
-      "Senate_Hall": {
+      "Terminal_Labs": {
         "type": "dir",
         "hidden": false,
         "author": "SOFTCOM",
         "creation": "12-7-26",
-        "senate.txt": {
-          "type": "file",
+        "Practice_Zone": {
+          "type": "dir",
           "hidden": false,
           "author": "SOFTCOM",
           "creation": "12-7-26",
-          "content": "The senate hall is empty right now."
-        }
-      },
-      "Admin_Helpdesk": {
-        "type": "dir",
-        "hidden": false,
-        "author": "SOFTCOM",
-        "creation": "12-7-26",
-        "desk1.txt": {
-          "type": "file",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "content": "You go to the desk and ask the person there about the wi-fi password. He tells you to ask on the next desk."
+          "chest.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "content": "Empty! No token here. However, sometimes folders themselves are hidden from standard view. Go back to the Terminal_Labs folder and try using 'ls -a' to see if there is a hidden pathway!"
+          }
         },
-        "desk2.txt": {
-          "type": "file",
-          "hidden": false,
+        ".secret_hallway": {
+          "type": "dir",
+          "hidden": true,
           "author": "SOFTCOM",
           "creation": "12-7-26",
-          "content": "You go to the desk and ask the person there about the wi-fi password. He tells you that it is 'V#6qF'. Success achieved, you can advance to the next level now."
-        }
-      },
-      "Director_Office": {
-        "type": "dir",
-        "hidden": false,
-        "author": "SOFTCOM",
-        "creation": "12-7-26",
-        "notice.txt": {
-          "type": "file",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "content": "Notice: IIT Ropar students are not allowed."
-        }
-      }
-    },
-    "Library": {
-      "type": "dir",
-      "hidden": false,
-      
-      "author": "SOFTCOM",
-      "creation": "12-7-26",
-      "Ground_Floor": {
-        "type": "dir",
-        "hidden": false,
-        "author": "SOFTCOM",
-        "creation": "12-7-26",
-        "ground.txt": {
-          "type": "file",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "content": "Nothing here which can lead to the wi-fi password."
-        }
-      },
-      "First_Floor": {
-        "type": "dir",
-        "hidden": false,
-        "author": "SOFTCOM",
-        "creation": "12-7-26",
-        "first.txt": {
-          "type": "file",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "content": "Nothing here which can lead to the wi-fi password either."
+          "Flag_Room": {
+            "type": "dir",
+            "hidden": false,
+            "author": "SOFTCOM",
+            "creation": "12-7-26",
+            "sandbox_token.txt": {
+              "type": "file",
+              "hidden": false,
+              "author": "SOFTCOM",
+              "creation": "12-7-26",
+              "content": "SUCCESS! Your sandbox password is 'fresher_init'."
+            }
+          }
         }
       }
     },
@@ -120,7 +66,7 @@
       "hidden": false,
       "author": "SOFTCOM",
       "creation": "12-7-26",
-      "content": "--------------------\nLevel 1\n--------------------\n\nYou have just arrived at your room at the IIT Ropar campus. As you plop down on your bed to take a well-deserved Insta break, you suddenly remember that you still haven't completed your physical registration in Auditorium yet. 'Registration karni jaruri hoti hai kya?', you think to yourself, and open Instagram on your phone. But, to your surprise, there is no cellular data in your room and you don't know the wifi password. Unwillingly, you get up from your bed and go out to find the wi-fi password to resume your scrolling.\n\nFind the IIT Ropar wi-fi password and pass it as the argument for the 'next' command to advance to the next level.\n\nUseful Commands:\n- cd\n- ls"
+      "content": "--------------------\nLevel 1\n--------------------\n\nWelcome to your basic command training interface. Your objective is to navigate this deeply nested simulated filesystem to recover a calibration token.\n\nYour Essential Tactical Commands:\n  cd <dir>   - Change directory (Move inside a folder)\n  cd ..      - Move backward (Return to the parent folder)\n  ls         - List all visible files and folders in your current location\n  ls -a      - Reveal hidden system files\n  cat <file> - Print the text content of a file on your screen\n\nLet's get started."
     }
   }
 }
