@@ -351,6 +351,7 @@ app.post("/admin/clear_points", (req, res) => {
     if (isValidPassword) {
         points = {};
         groups.clear();
+        backup({});
         loadDetails();
 
         // Notify all sockets to reset immediately
