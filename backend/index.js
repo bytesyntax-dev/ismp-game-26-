@@ -7,6 +7,7 @@ import cookieParser from "cookie-parser";
 import { log } from "console";
 import path from "path";
 import { fileURLToPath } from "url";
+import { backup, getBackup } from "./backup";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const decrement = 2; //Decrement for subsequent submissions
@@ -18,7 +19,7 @@ const loadJson = (relativePath) => {
 
 let details;
 const loadDetails = () => {
-    details = loadJson("./data/ans.json"); // Load answers and points config
+    details = getBackup()?.details || loadJson("./data/ans.json"); // Load answers and points config
 };
 loadDetails();
 
@@ -40,9 +41,9 @@ const io = new Server(server, {
 // Port set to 5000 to prevent conflict with Vite (3000)
 const PORT = process.env.PORT || 5000;
 
-const groups = new Map(); // Store team/group states: name -> { members, startTime }
+const groups = new Map( Object.entries( getBackup()?.groups || {} ) ); // Store team/group states: name -> { members, startTime }
 const refTable = new Map(); // Map client references to [socketId, name]
-let points = {}; // Track team scores
+let points = getBackup()?.points || {}; // Track team scores
 
 const finalTime = (group) => {
     let maxTime = 0;
@@ -277,7 +278,7 @@ io.on("connection", (socket) => {
  */
 app.get("/api/level_details", (req, res) => {
     const { level, group } = req.query;
-    
+
     // Read the latest names from disk so changes in ans.json are loaded instantly without server restart
     let diskDetails = details;
     try {
@@ -372,6 +373,8 @@ if (process.env.NODE_ENV === "production") {
         res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
     });
 }
+
+setInterval(() => backup({ details, groups, points }), 1000);
 
 server.listen(PORT, () => {
     console.log(`Backend server running on http://localhost:${PORT}`);
