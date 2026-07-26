@@ -23,8 +23,8 @@ export default function FileExplorerPanel({
         </p>
       </div>
 
-      <div className="flex-1 flex flex-col space-y-3">
-        <div className="flex-1 overflow-y-auto space-y-1.5 pr-1 text-xs">
+      <div className="flex-1 flex flex-col space-y-3 min-h-0">
+        <div className="flex-1 overflow-y-auto space-y-1.5 pr-1 text-xs min-h-0">
           {currentPath !== "/" && (
             <div
               key=".."
