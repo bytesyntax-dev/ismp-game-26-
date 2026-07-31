@@ -240,7 +240,9 @@
         <button type="button" onclick="checkPoints()">Check Points</button>
       </div>
     </form>
-
+    <div>
+      <button onclick="startGame()">START</button>
+    </div>
     <div id="data-modal" class="modal">
       <div class="modal-content">
         <div id="modal-header" class="modal-header">System Data</div>
@@ -385,6 +387,17 @@
             alert("Error: " + error.message);
           }
         });
+      async function startGame(params) {
+        const password = document.getElementById("admin-pass").value;
+        const response = await fetch("./start_game", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ password }),
+        });
+        alert(response.started?"Game started successfully":"Game Failed to start");
+      }
     </script>
   </body>
 </html>

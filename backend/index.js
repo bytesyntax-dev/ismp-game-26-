@@ -41,9 +41,10 @@ const io = new Server(server, {
 // Port set to 5000 to prevent conflict with Vite (3000)
 const PORT = process.env.PORT || 5000;
 
-const groups = new Map( Object.entries( getBackup()?.groups || {} ) ); // Store team/group states: name -> { members, startTime }
+const groups = new Map(Object.entries(getBackup()?.groups || {})); // Store team/group states: name -> { members }
 const refTable = new Map(); // Map client references to [socketId, name]
 let points = getBackup()?.points || {}; // Track team scores
+let TIME_START = getBackup()?.TIME_STARTS || null;
 
 const finalTime = (group) => {
     let maxTime = 0;
@@ -71,7 +72,7 @@ const broadcastTeamState = (group) => {
         };
         payload.levelData = {
             solvedLevels: solvedLevels,
-            startTime: gp.startTime,
+            startTime: TIME_START,
             score: points[group]?.total || 0
         }
         //Completed Logic: If the number of solved levels equals the total number of levels, mark as completed
@@ -152,6 +153,7 @@ io.on("connection", (socket) => {
     // Handle team creation
     socket.on("create_team", (data, callback) => {
         const { group, ref } = data;
+        if(!TIME_START)return callback({ success: false, error: "Team cannot be created after start" });
         if (groups.has(group)) {
             return callback({
                 success: false,
@@ -162,9 +164,8 @@ io.on("connection", (socket) => {
         socket.join(group);
         groups.set(group, {
             members: [ref],
-            startTime: Date.now()
         });
-        points[group] = { total: 0, start: groups.get(group).startTime }; // Initialize points for the new team
+        points[group] = { total: 0 }; // Initialize points for the new team
 
         const playerRecord = refTable.get(ref) || [socket.id, "Operative"];
         callback({
@@ -180,6 +181,9 @@ io.on("connection", (socket) => {
 
     // Handle team joining
     socket.on("join_team", (data, callback) => {
+        if(!TIME_START)return callback({ success: false, error: "Team cannot be joined after start" });
+        if(!groups.has(data.group))return callback({ success: false, error: "Team does not exist." });
+        if(groups.get(data.group).length>=3)return callback({ success: false, error: "Team full" });
         const { group, ref } = data;
         if (groups.has(group)) {
             socket.join(group);
@@ -209,7 +213,7 @@ io.on("connection", (socket) => {
     // Handle answer submission
     socket.on("submit_answer", (data, callback) => {
         const { questionId, answer, group } = data;
-        const time = Date.now() - (groups.get(group)?.startTime || -1);
+        const time = Date.now() - (TIME_START || -1);
         const sendResponse = (payload) => {
             if (typeof callback === 'function') callback(payload);
             else socket.emit("answer_result", payload);
@@ -353,6 +357,7 @@ app.post("/admin/clear_points", (req, res) => {
         groups.clear();
         backup({});
         loadDetails();
+        TIME_START = null
 
         // Notify all sockets to reset immediately
         io.emit("session_reset");
@@ -367,6 +372,21 @@ app.get("/api/points", (req, res) => {
     return res.json(points);
 });
 
+app.post("/admin/start_game", (req, res) => {
+    const { password } = req.body;
+    // Allow either the salted environment password or fallback defaults
+    const isValidPassword = (password && hash(password + "admin@IITRPR") === '41fd5fb0b5fac0d3ff8910bc5092aa9c8585485690260641bb618e7aa0b95908'/*process.env.ADMIN_PASSWORD*/);
+
+    TIME_START = Date.now();
+    for(const key in points) points[key].start=TIME_START;
+    return res.json({ started: !!TIME_START, time: TIME_START });
+
+})
+
+app.get("/api/started", (req, res) => {
+    return res.json({ started: !!TIME_START, time: TIME_START });
+});
+
 // Production SPA serving
 if (process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname, "../frontend/dist")));
@@ -375,7 +395,7 @@ if (process.env.NODE_ENV === "production") {
     });
 }
 
-setInterval(() => backup({ details, groups, points }), 1000);
+setInterval(() => backup({ details, groups, points, TIME_START }), 1000);
 
 server.listen(PORT, () => {
     console.log(`Backend server running on http://localhost:${PORT}`);
