@@ -1,31 +1,31 @@
 {
   "A": {
-    "levelName": "Level Name A",
-    "answer": "fresher_init",
+    "levelName": "Level 1: THE BREACH",
+    "answer": "V#6qF",
     "points": "500",
     "answered_by": []
   },
   "B": {
-    "levelName": "Level name B",
-    "answer": "fresher_runtime",
+    "levelName": "Level 2: HIDDEN CHANNELS",
+    "answer": "intro_do",
     "points": "750",
     "answered_by": []
   },
   "C": {
-    "levelName": "Level name C",
-    "answer": "runtime_complete",
+    "levelName": "Level 3: LOGIC VOID",
+    "answer": "gvdlbdbemz",
     "points": "1000",
     "answered_by": []
   },
   "D": {
-    "levelName": "Level 4: THE LOC PROPHECIES",
-    "answer": "LOVEOFCAMPUS",
+    "levelName": "Level 4: DECODER PROTOCOL",
+    "answer": "satishdhawan",
     "points": "1250",
     "answered_by": []
   },
   "E": {
-    "levelName": "Level 5: SKIP OR SEARCH",
-    "answer": "DAWN",
+    "levelName": "Level 5: MAINFRAME OVERRIDE",
+    "answer": "softcom3160",
     "points": "1500",
     "answered_by": []
   },
