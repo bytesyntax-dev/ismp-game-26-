@@ -7,6 +7,9 @@ import cookieParser from "cookie-parser";
 import { log } from "console";
 import path from "path";
 import { fileURLToPath } from "url";
+import { backup, getBackup } from "./backup.js";
+import dotenv from "dotenv";
+dotenv.config();
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const decrement = 2; //Decrement for subsequent submissions
@@ -18,7 +21,7 @@ const loadJson = (relativePath) => {
 
 let details;
 const loadDetails = () => {
-    details = loadJson("./data/ans.json"); // Load answers and points config
+    details = getBackup()?.details || loadJson("./data/ans.json"); // Load answers and points config
 };
 loadDetails();
 
@@ -52,9 +55,10 @@ const io = new Server(server, {
 // Port set to 5000 to prevent conflict with Vite (3000)
 const PORT = process.env.PORT || 5000;
 
-const groups = new Map(); // Store team/group states: name -> { members, startTime }
+const groups = new Map(Object.entries(getBackup()?.groups || {})); // Store team/group states: name -> { members }
 const refTable = new Map(); // Map client references to [socketId, name]
-let points = {}; // Track team scores
+let points = getBackup()?.points || {}; // Track team scores
+let TIME_START = getBackup()?.TIME_START || null;
 
 const finalTime = (group) => {
     let maxTime = 0;
@@ -83,7 +87,7 @@ const broadcastTeamState = (group) => {
         };
         payload.levelData = {
             solvedLevels: solvedLevels,
-            startTime: gp.startTime,
+            startTime: TIME_START,
             score: points[group]?.total || 0
         }
         //Completed Logic: If the number of solved levels equals the total number of levels, mark as completed
@@ -164,6 +168,7 @@ io.on("connection", (socket) => {
     // Handle team creation
     socket.on("create_team", (data, callback) => {
         const { group, ref } = data;
+        if(!!TIME_START)return callback({ success: false, error: "Team cannot be created after start" });
         if (groups.has(group)) {
             return callback({
                 success: false,
@@ -174,9 +179,8 @@ io.on("connection", (socket) => {
         socket.join(group);
         groups.set(group, {
             members: [ref],
-            startTime: Date.now()
         });
-        points[group] = { total: 0, start: groups.get(group).startTime }; // Initialize points for the new team
+        points[group] = { total: 0 }; // Initialize points for the new team
 
         const playerRecord = refTable.get(ref) || [socket.id, "Operative"];
         callback({
@@ -193,6 +197,8 @@ io.on("connection", (socket) => {
 
     // Handle team joining
     socket.on("join_team", (data, callback) => {
+        if(!groups.has(data.group))return callback({ success: false, error: "Team does not exist." });
+        if(groups.get(data.group).length>=3)return callback({ success: false, error: "Team full" });
         const { group, ref } = data;
         if (groups.has(group)) {
             socket.join(group);
@@ -222,8 +228,9 @@ io.on("connection", (socket) => {
 
     // Handle answer submission
     socket.on("submit_answer", (data, callback) => {
+        if(!TIME_START)return callback({ success: false, message: "Cannot submit answers before the game starts." });
         const { questionId, answer, group } = data;
-        const time = Date.now() - (groups.get(group)?.startTime || -1);
+        const time = Date.now() - (TIME_START || -1);
         const sendResponse = (payload) => {
             if (typeof callback === 'function') callback(payload);
             else socket.emit("answer_result", payload);
@@ -292,7 +299,7 @@ io.on("connection", (socket) => {
  */
 app.get("/api/level_details", (req, res) => {
     const { level, group } = req.query;
-    
+
     // Read the latest names from disk so changes in ans.json are loaded instantly without server restart
     let diskDetails = details;
     try {
@@ -365,7 +372,9 @@ app.post("/admin/clear_points", (req, res) => {
     if (isValidPassword) {
         points = {};
         groups.clear();
+        backup({});
         loadDetails();
+        TIME_START = null
 
         // Notify all sockets to reset immediately
         io.emit("session_reset");
@@ -377,18 +386,35 @@ app.post("/admin/clear_points", (req, res) => {
 });
 
 app.get("/api/points", (req, res) => {
-    return res.json(points);
+    for(const key in points) points[key].start=TIME_START;
+    return res.status(200).json(points);
+});
+
+app.post("/admin/start_game", (req, res) => {
+    const { password } = req.body;
+    // Allow either the salted environment password or fallback defaults
+    const isValidPassword = (password && (hash(password + "admin@IITRPR") === process.env.ADMIN_PASSWORD));
+    if(!isValidPassword) return res.status(401).json({ error: "Unauthorized access: incorrect password." });
+    TIME_START = Date.now();
+    for(const key in points) points[key].start=TIME_START;
+    return res.status(200).json({ started: !!TIME_START, time: TIME_START });
+
+})
+
+app.get("/api/started", (req, res) => {
+    return res.status(200).json({ started: !!TIME_START, time: TIME_START });
 });
 
 // Production SPA serving
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV === "production" || true) {
     app.use(express.static(path.join(__dirname, "../frontend/dist")));
     app.get("/*splat", (req, res) => {
         res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
     });
 }
 
+setInterval(() => backup({ details, groups, points, TIME_START }), 1000);
+
 server.listen(PORT, () => {
     console.log(`Backend server running on http://localhost:${PORT}`);
 });
-
