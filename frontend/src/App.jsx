@@ -13,6 +13,7 @@ import MissionProgressPanel from './components/MissionProgressPanel';
 import TerminalPanel from './components/TerminalPanel';
 import SuccessScreen from './components/SuccessScreen';
 import Leaderboard from './components/Leaderboard';
+import GameStartOverlay from './components/GameStartOverlay';
 import { io } from 'socket.io-client';
 
 
@@ -916,6 +917,13 @@ export default function App() {
 
   return (
     <div className="flex-1 flex flex-col relative w-full h-full pb-20 lg:pb-0">
+      {/* Game Start Lock: blocks game actions until the admin starts the game */}
+      <GameStartOverlay
+        active={screen === 'game'}
+        team={team}
+        currentMemberId={localStorage.getItem('ref')}
+      />
+
       {/* Sound Control Header */}
       <div className="absolute top-4 right-4 z-40 flex items-center space-x-2">
         <button

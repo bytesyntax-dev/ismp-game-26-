@@ -7,7 +7,9 @@ import cookieParser from "cookie-parser";
 import { log } from "console";
 import path from "path";
 import { fileURLToPath } from "url";
-import { backup, getBackup } from "./backup";
+import { backup, getBackup } from "./backup.js";
+import dotenv from "dotenv";
+dotenv.config();
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const decrement = 2; //Decrement for subsequent submissions
@@ -44,7 +46,7 @@ const PORT = process.env.PORT || 5000;
 const groups = new Map(Object.entries(getBackup()?.groups || {})); // Store team/group states: name -> { members }
 const refTable = new Map(); // Map client references to [socketId, name]
 let points = getBackup()?.points || {}; // Track team scores
-let TIME_START = getBackup()?.TIME_STARTS || null;
+let TIME_START = getBackup()?.TIME_START || null;
 
 const finalTime = (group) => {
     let maxTime = 0;
@@ -153,7 +155,7 @@ io.on("connection", (socket) => {
     // Handle team creation
     socket.on("create_team", (data, callback) => {
         const { group, ref } = data;
-        if(!TIME_START)return callback({ success: false, error: "Team cannot be created after start" });
+        if(!!TIME_START)return callback({ success: false, error: "Team cannot be created after start" });
         if (groups.has(group)) {
             return callback({
                 success: false,
@@ -181,7 +183,6 @@ io.on("connection", (socket) => {
 
     // Handle team joining
     socket.on("join_team", (data, callback) => {
-        if(!TIME_START)return callback({ success: false, error: "Team cannot be joined after start" });
         if(!groups.has(data.group))return callback({ success: false, error: "Team does not exist." });
         if(groups.get(data.group).length>=3)return callback({ success: false, error: "Team full" });
         const { group, ref } = data;
@@ -212,6 +213,7 @@ io.on("connection", (socket) => {
 
     // Handle answer submission
     socket.on("submit_answer", (data, callback) => {
+        if(!TIME_START)return callback({ success: false, message: "Cannot submit answers before the game starts." });
         const { questionId, answer, group } = data;
         const time = Date.now() - (TIME_START || -1);
         const sendResponse = (payload) => {
@@ -369,28 +371,28 @@ app.post("/admin/clear_points", (req, res) => {
 });
 
 app.get("/api/points", (req, res) => {
-    return res.json(points);
+    return res.status(200).json(points);
 });
 
 app.post("/admin/start_game", (req, res) => {
     const { password } = req.body;
     // Allow either the salted environment password or fallback defaults
-    const isValidPassword = (password && hash(password + "admin@IITRPR") === '41fd5fb0b5fac0d3ff8910bc5092aa9c8585485690260641bb618e7aa0b95908'/*process.env.ADMIN_PASSWORD*/);
-
+    const isValidPassword = (password && (hash(password + "admin@IITRPR") === process.env.ADMIN_PASSWORD));
+    if(!isValidPassword) return res.status(401).json({ error: "Unauthorized access: incorrect password." });
     TIME_START = Date.now();
     for(const key in points) points[key].start=TIME_START;
-    return res.json({ started: !!TIME_START, time: TIME_START });
+    return res.status(200).json({ started: !!TIME_START, time: TIME_START });
 
 })
 
 app.get("/api/started", (req, res) => {
-    return res.json({ started: !!TIME_START, time: TIME_START });
+    return res.status(200).json({ started: !!TIME_START, time: TIME_START });
 });
 
 // Production SPA serving
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV === "production" || true) {
     app.use(express.static(path.join(__dirname, "../frontend/dist")));
-    app.get("/*", (req, res) => {
+    app.get("/*splat", (req, res) => {
         res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
     });
 }
@@ -400,4 +402,3 @@ setInterval(() => backup({ details, groups, points, TIME_START }), 1000);
 server.listen(PORT, () => {
     console.log(`Backend server running on http://localhost:${PORT}`);
 });
-
