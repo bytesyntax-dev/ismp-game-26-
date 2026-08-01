@@ -371,6 +371,7 @@ app.post("/admin/clear_points", (req, res) => {
 });
 
 app.get("/api/points", (req, res) => {
+    for(const key in points) points[key].start=TIME_START;
     return res.status(200).json(points);
 });
 
