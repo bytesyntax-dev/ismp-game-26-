@@ -51,7 +51,7 @@ export default function App() {
   const [teamName, setTeamName] = useState('');
   const [joinTeamName, setJoinTeamName] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
-
+  const [startTime, setStartTime] = useState(Date.now())
   // Game States
   const [team, setTeam] = useState(() => {
     if (path.includes('/game') || path.includes('/success')) {
@@ -243,13 +243,23 @@ export default function App() {
     if (!levelData || levelData.completed || completedState) return;
 
     const interval = setInterval(() => {
-      const ms = Date.now() - levelData.startTime;
+      const ms = Date.now() - startTime;
       setElapsedSeconds(Math.floor(ms / 1000));
     }, 1000);
 
     return () => clearInterval(interval);
   }, [levelData, completedState]);
 
+  useEffect(()=>{
+    const int = setInterval(() => {
+      const res = await fetch(`/api/started`);
+      const {time} = await res.json()
+      if(time!==null){
+        setStartTime(time);
+        clearInterval(int)
+      }
+    }, 1000);
+  },[])
 
 
   // 2.5. Fetch directory structure when activeLevel changes

@@ -377,6 +377,7 @@ app.get("/api/points", (req, res) => {
 app.post("/admin/start_game", (req, res) => {
     const { password } = req.body;
     // Allow either the salted environment password or fallback defaults
+    if(TIME_START!==null)return res.status(503).json({ error: "Game Started already." })
     const isValidPassword = (password && (hash(password + "admin@IITRPR") === process.env.ADMIN_PASSWORD));
     if(!isValidPassword) return res.status(401).json({ error: "Unauthorized access: incorrect password." });
     TIME_START = Date.now();
