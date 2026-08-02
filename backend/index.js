@@ -155,7 +155,6 @@ io.on("connection", (socket) => {
     // Handle team creation
     socket.on("create_team", (data, callback) => {
         const { group, ref } = data;
-        if(!!TIME_START)return callback({ success: false, error: "Team cannot be created after start" });
         if (groups.has(group)) {
             return callback({
                 success: false,
