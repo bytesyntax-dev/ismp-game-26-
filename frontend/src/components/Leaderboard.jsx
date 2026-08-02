@@ -112,7 +112,7 @@ export default function Leaderboard() {
               NO ACTIVE NODE CONNECTIONS REGISTERED ON MAINFRAME.
             </div>
           ) : (
-            <div className="overflow-x-auto">
+        <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse">
                 <thead>
                   <tr className="bg-cyber-dark/80 border-b border-cyber-border text-[10px] md:text-xs text-cyber-gray uppercase tracking-wider">
@@ -125,9 +125,6 @@ export default function Leaderboard() {
                     <th className="px-3 py-4 text-center w-12">E</th>
                     <th className="px-6 py-4 text-right w-24">Score</th>
                     <th className="px-6 py-4 text-right w-32">Last Solve</th>
-                    <th className="px-6 py-4 text-right flex items-center justify-end">
-                      Time Elapsed
-                    </th>
                   </tr>
                 </thead>
                 <tbody className="text-xs md:text-sm">
@@ -179,11 +176,8 @@ export default function Leaderboard() {
                           {team.score} PTS
                         </td>
                         <td className="px-6 py-4 text-right text-cyber-green font-bold w-32">
+                          <Clock className="w-3.5 h-3.5 text-cyber-lime/50" />
                           {team.lastSolveTimeMs ? formatStopwatch(team.lastSolveTimeMs) : "—"}
-                        </td>
-                        <td className="px-6 py-4 text-right text-cyber-gray flex items-center justify-end space-x-1">
-                          <Clock className="w-3.5 h-3.5 text-cyber-gray/50" />
-                          <span>{formatStopwatch(team.elapsedTimeMs)}</span>
                         </td>
                       </tr>
                     );
