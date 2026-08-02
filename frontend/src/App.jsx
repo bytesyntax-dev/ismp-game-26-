@@ -51,7 +51,7 @@ export default function App() {
   const [teamName, setTeamName] = useState('');
   const [joinTeamName, setJoinTeamName] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
-  const [startTime, setStartTime] = useState(Date.now())
+  const [startTime, setStartTime] = useState(null)
   // Game States
   const [team, setTeam] = useState(() => {
     if (path.includes('/game') || path.includes('/success')) {
@@ -148,6 +148,10 @@ export default function App() {
         setScreen('game');
       }
       
+      if (data.levelData?.startTime) {
+        setStartTime(data.levelData.startTime);
+      }
+
       if (data.levelData) {
         setLevelData(prev => {
           if (!prev) {
@@ -242,17 +246,23 @@ export default function App() {
   useEffect(() => {
     if (!levelData || levelData.completed || completedState) return;
 
+    if (!startTime) {
+      // Fall back to server/mock-provided level start time when present
+      if (levelData.startTime) setStartTime(levelData.startTime);
+      return;
+    }
+
     const interval = setInterval(() => {
       const ms = Date.now() - startTime;
       setElapsedSeconds(Math.floor(ms / 1000));
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [levelData, completedState]);
+  }, [levelData, completedState, startTime]);
 
-  useEffect(()=>{
-    const int = setInterval(() => {
-      const res = await fetch(`/api/started`);
+  useEffect(() => {
+    const int = setInterval(async () => {
+      const res = await fetch(`${import.meta.env.VITE_API_URL || ''}/api/started`);
       const {time} = await res.json()
       if(time!==null){
         setStartTime(time);
@@ -318,6 +328,8 @@ export default function App() {
     setScreen('login');
     setTeam(null);
     setLevelData(null);
+    setStartTime(null);
+    setElapsedSeconds(0);
     setCompletedState(null);
     setSolvedOverlay(null);
     setTerminalOutput([
