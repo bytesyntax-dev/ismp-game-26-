@@ -2,125 +2,291 @@
   "root": {
     "type": "dir",
     "hidden": false,
-    "author": "SOFTCOM",
-    "creation": "12-7-26",
-    "Auditorium": {
+    "author": "ASHISH",
+    "creation": "23-06-26",
+    "Main Gate": {
       "type": "dir",
       "hidden": false,
-      "author": "SOFTCOM",
-      "creation": "12-7-26",
-      "Registration_Desk": {
-        "type": "dir",
+      "author": "ASHISH",
+      "creation": "23-06-26",
+      "Harappan Structures.txt": {
+        "type": "file",
         "hidden": false,
-        "author": "SOFTCOM",
-        "creation": "12-7-26",
-        "desk.txt": {
-          "type": "file",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "content": "You ask the person doing the registrations for the wi-fi password. But he doesn't know it sadly."
-        }
+        "author": "ASHISH",
+        "creation": "23-06-26",
+        "content": "The massive Harappan-inspired pillars stands before you. After years of preparation, coaching classes, exams and counselling rounds, you are finally an IIT Ropar student."
       },
+      "Security Paaji.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "ASHISH",
+        "creation": "23-06-26",
+        "content": "Kaise ho bachche? Registration complete karwa lo pehle. And Welcome maje karo ab!"
+      },
+      "Campus Map.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "ASHISH",
+        "creation": "23-06-26",
+        "content": "You stare at the giant campus map. Everything looks important and everything looks far away. You notice empty spaces and come to know IIT Ropar is still in it's first stage development...Anyways, The Admin Block seems to be somewhere ahead."
+      },
+      "Parents Goodbye.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "ASHISH",
+        "creation": "23-06-26",
+        "content": "You watch several parents giving final instructions. 'Beta khana time pe khana.' \n'Beta phone karna.' \n'Beta padhai pe dhyan dena.'"
+      }
+    },
+    "Auditorium Foyer": {
+      "type": "dir",
+      "hidden": false,
+      "author": "ASHISH",
+      "creation": "23-06-26",
       "audi.txt": {
         "type": "file",
         "hidden": false,
-        "author": "SOFTCOM",
-        "creation": "12-7-26",
-        "content": "There are a lot of students in the auditorium as Registration is going on right now. You wonder if any of them know the wi-fi password."
+        "author": "ASHISH",
+        "creation": "23-06-26",
+        "content": "The foyer is packed with nervous freshers carrying files and folders. Some look confident. Most are excited."
+      },
+      "Orientation Schedule.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "ASHISH",
+        "creation": "23-06-26",
+        "content": "09:00 Welcome Session\n10:00 Director Address\n11:00 Institute Overview\n12:00 Questions From Freshers\n12:01 More Questions From Freshers and meet with General Secretaries"
+      },
+      "Sleepy Fresher.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "ASHISH",
+        "creation": "23-06-26",
+        "content": "A student sitting in the corner is already asleep. Orientation has only been running for twenty minutes. Must be tired from travelling from  Chandigarh..."
+      },
+      "Senior Volunteer.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "ASHISH",
+        "creation": "23-06-26",
+        "content": "Don't worry. Everyone gets lost during the first week. Some people continue getting lost during the fourth year as well xD"
+      },
+      "Registration Desk": {
+        "type": "dir",
+        "hidden": false,
+        "author": "ASHISH",
+        "creation": "23-06-26",
+        "desk.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "ASHISH",
+          "creation": "23-06-26",
+          "content": "Registration completed? Good. Now get your biometrics done in the Admin Block."
+        },
+        "Volunteer 2.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "ASHISH",
+          "creation": "23-06-26",
+          "content": "You're looking for biometrics? Admin Block East Wing. And no, I don't know where your hostel is."
+        },
+        "Lost Fresher.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "ASHISH",
+          "creation": "23-06-26",
+          "content": "Bhai, Admin Block kidhar hai?"
+        },
+        "Document Checklist.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "ASHISH",
+          "creation": "23-06-26",
+          "content": "Required Documents:\n\n✓ Admission Letter\n✓ ID Proof\n✓ Photographs\n✓ Patience"
+        },
+        "Missing_Pen.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "ASHISH",
+          "creation": "23-06-26",
+          "content": "A pen is chained to the table. Experience suggests that even this is not enough lmao."
+        }
       }
     },
-    "Admin_Block": {
+    "LOC": {
       "type": "dir",
       "hidden": false,
-      "author": "SOFTCOM",
-      "creation": "12-7-26",
-      "Senate_Hall": {
-        "type": "dir",
+      "author": "ASHISH",
+      "creation": "23-06-26",
+      "Photo Spot.txt": {
+        "type": "file",
         "hidden": false,
-        "author": "SOFTCOM",
-        "creation": "12-7-26",
-        "senate.txt": {
-          "type": "file",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "content": "The senate hall is empty right now."
-        }
+        "author": "ASHISH",
+        "creation": "23-06-26",
+        "content": "A group of freshers is already taking photos.\n\nAchievement Progress:\n0/500 LOC Photos LOL"
       },
-      "Admin_Helpdesk": {
+      "Influencer.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "ASHISH",
+        "creation": "23-06-26",
+        "content": "This student has been on campus for five minutes and has already uploaded three Instagram stories."
+      },
+      "Selfie Group.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "ASHISH",
+        "creation": "23-06-26",
+        "content": "Three freshers are taking group photos as if graduation is tomorrow."
+      }
+    },
+    "Admin Block": {
+      "type": "dir",
+      "hidden": false,
+      "author": "ASHISH",
+      "creation": "23-06-26",
+      "Directions.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "ASHISH",
+        "creation": "23-06-26",
+        "content": "East Wing -> Registrars\nWest Wing -> Administrative Offices\nWrong Turn -> Director Office"
+      },
+      "Lost Student.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "ASHISH",
+        "creation": "23-06-26",
+        "content": "I came here looking for the UG Registrar. Somehow I reached the Director Office."
+      },
+      "East Wing": {
         "type": "dir",
         "hidden": false,
-        "author": "SOFTCOM",
-        "creation": "12-7-26",
-        "desk1.txt": {
-          "type": "file",
+        "author": "ASHISH",
+        "creation": "23-06-26",
+        "UG Registrar": {
+          "type": "dir",
           "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "content": "You go to the desk and ask the person there about the wi-fi password. He tells you to ask on the next desk."
+          "author": "ASHISH",
+          "creation": "23-06-26",
+          "registrar.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "ASHISH",
+            "creation": "23-06-26",
+            "content": "You have completed your academic registration. One final step remains: biometrics."
+          },
+          "Queue.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "ASHISH",
+            "creation": "23-06-26",
+            "content": "Current Queue Length: 17\n\nEstimated Wait Time: Forever."
+          },
+          "Helpful Clue.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "ASHISH",
+            "creation": "23-06-26",
+            "content": "LOC ka full form LOC ko khud bhi nahi pata."
+          }
         },
-        "desk2.txt": {
-          "type": "file",
+        "Biometric Centre": {
+          "type": "dir",
           "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "content": "You go to the desk and ask the person there about the wi-fi password. He tells you that it is 'V#6qF'. Success achieved, you can advance to the next level now."
+          "author": "ASHISH",
+          "creation": "23-06-26",
+          "Fingerprint Scanner.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "ASHISH",
+            "creation": "23-06-26",
+            "content": "The scanner rejects your finger once. Then twice. Finally it accepts that you exist."
+          },
+          "Admin Staff.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "ASHISH",
+            "creation": "23-06-26",
+            "content": "Congratulations. You can now enter through biometric gates instead of signing the register every time."
+          },
+          "scanner.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "ASHISH",
+            "creation": "23-06-26",
+            "content": "Biometrics completed successfully.\n\nActivation Code: IITRPR2026\n\nPass this code as an argument to the 'submit <passcode>' to proceed to Level 2."
+          }
         }
       },
-      "Director_Office": {
+      "West Wing": {
         "type": "dir",
         "hidden": false,
-        "author": "SOFTCOM",
-        "creation": "12-7-26",
+        "author": "ASHISH",
+        "creation": "23-06-26",
+        "Awadh.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "ASHISH",
+          "creation": "23-06-26",
+          "content": "Several administrative offices are located here. Everyone seems busy."
+        },
+        "Annam.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "ASHISH",
+          "creation": "23-06-26",
+          "content": "A staff member asks if you need help. You panic and say 'No' despite being completely lost."
+        }
+      },
+      "Director Office": {
+        "type": "dir",
+        "hidden": false,
+        "author": "ASHISH",
+        "creation": "23-06-26",
         "notice.txt": {
           "type": "file",
           "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "content": "Notice: IIT Ropar students are not allowed."
+          "author": "ASHISH",
+          "creation": "23-06-26",
+          "content": "Notice: Students entering without purpose will be stared at intensely."
+        },
+        "Receptionist.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "ASHISH",
+          "creation": "23-06-26",
+          "content": "The receptionist looks at you. You look at the receptionist. Both of you know you are not supposed to be here."
+        },
+        "Meeting In Progress.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "ASHISH",
+          "creation": "23-06-26",
+          "content": "A meeting is currently in progress. Your chances of finding useful information here are roughly equal to attending every 8 AM class this semester."
         }
       }
     },
-    "Library": {
-      "type": "dir",
-      "hidden": false,
-      
-      "author": "SOFTCOM",
-      "creation": "12-7-26",
-      "Ground_Floor": {
-        "type": "dir",
-        "hidden": false,
-        "author": "SOFTCOM",
-        "creation": "12-7-26",
-        "ground.txt": {
-          "type": "file",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "content": "Nothing here which can lead to the wi-fi password."
-        }
-      },
-      "First_Floor": {
-        "type": "dir",
-        "hidden": false,
-        "author": "SOFTCOM",
-        "creation": "12-7-26",
-        "first.txt": {
-          "type": "file",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "content": "Nothing here which can lead to the wi-fi password either."
-        }
-      }
+    "homesick.txt": {
+      "type": "file",
+      "hidden": true,
+      "author": "ASHISH",
+      "creation": "23-06-26",
+      "content": "The room feels quieter than home. Maybe that's because your roommate hasn't arrived yet."
+    },
+    "future_memory.txt": {
+      "type": "file",
+      "hidden": true,
+      "author": "ASHISH",
+      "creation": "23-06-26",
+      "content": "One day you'll walk through this campus without needing a map."
     },
     "README.txt": {
       "type": "file",
       "hidden": false,
-      "author": "SOFTCOM",
-      "creation": "12-7-26",
-      "content": "--------------------\nLevel 1\n--------------------\n\nYou have just arrived at your room at the IIT Ropar campus. As you plop down on your bed to take a well-deserved Insta break, you suddenly remember that you still haven't completed your physical registration in Auditorium yet. 'Registration karni jaruri hoti hai kya?', you think to yourself, and open Instagram on your phone. But, to your surprise, there is no cellular data in your room and you don't know the wifi password. Unwillingly, you get up from your bed and go out to find the wi-fi password to resume your scrolling.\n\nFind the IIT Ropar wi-fi password and pass it as the argument for the 'next' command to advance to the next level.\n\nUseful Commands:\n- cd\n- ls"
+      "author": "ASHISH",
+      "creation": "23-06-26",
+      "content": "\nLEVEL 1: KNOW YOUR CAMPUS\n\n\nYou have finally arrived at IIT Ropar.\n\nYour parents have left. Your hostel room is ready. Your new life is about to begin.\n\nUnfortunately, your admission process is not complete yet.\n\nTasks:\n1. Visit the Auditorium Foyer.\n2. Complete registration.\n3. Find the Admin Block.\n4. Locate the UG Registrar.\n5. Complete your biometrics.\n6. Discover the activation code.\n\nUse the activation code with the 'submit' command to proceed.\n\nUseful Commands:\n- ls\n- ls -a\n- cd\n- cat\n- pwd\n- grep\n\nTip: Not everything important is visible."
     }
   }
 }

@@ -1,484 +1,242 @@
 {
-  "root": {
-    "type": "dir",
-    "hidden": false,
-    "author": "SOFTCOM",
-    "creation": "12-7-26",
-    "Hostels-Net":{
+    "root": {
         "type": "dir",
         "hidden": false,
         "author": "SOFTCOM",
-        "creation": "12-7-26",
-        "Brahmaputra-East":{
+        "creation": "23-06-26",
+        "Student Activity Centre": {
             "type": "dir",
             "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "Caretaker-Logs":{
+            "README.txt": {
+                "type": "file",
+                "hidden": false,
+                "content": "Level 3: STUDENT ACTIVITY CENTRE\n\nThis place is not just a collection of clubs. It is a layered system of people, habits, late-night decisions, and unfinished ideas.\n\nMost students think they joined for certificates.\nThey stay for something they cannot easily explain.\n\nNavigation Rules:\n- Some directories appear incomplete\n- Some files contain fragments of larger ideas\n- Nothing important is written in a single place\n\nIf you are careful enough, patterns will begin to repeat.\nUseful Commands:\n- ls\n- ls -a\n- cd\n- cat\n- pwd\n- grep\n\nTip: Not everything important is visible."
+            },
+            "Coding Club": {
                 "type": "dir",
                 "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "Mess_Bill_August":{
-                    "type": "dir",
+                "Recruitment Challenge.txt": {
+                    "type": "file",
                     "hidden": false,
-                    "author": "SOFTCOM",
-                    "creation": "12-7-26",
-                    "Bill_summary.txt":{
-                        "type": "file",
-                        "hidden": false,
-                        "author": "SOFTCOM",
-                        "creation": "12-7-26", 
-                        "content":"Mess Bill Status: Processed. Extra charges added for add-ons. No system bypass keys here."
-                        
-                    }
+                    "content": "You are given a problem statement that looks straightforward at first glance.\n\nInput: a list of numbers and a target condition.\nOutput: something that should be easy.\n\nBut the test cases do not behave as expected. One of them produces an output that should not be possible under normal logic.\n\nA senior walks past and says:\n\"If you're only solving what is visible, you're missing the actual question.\"\n\nOn the back of the sheet, faint pencil marks appear when tilted under light. They resemble a partial code fragment, but it is incomplete."
                 },
-                "Hostel_leaving_database":{
-                    "type": "dir",
+                "Senior Mentor.txt": {
+                    "type": "file",
                     "hidden": false,
-                    "author": "SOFTCOM",
-                    "creation": "12-7-26",
-                    "archive_2025.txt": {
-                        "type": "file",
-                        "hidden": false,
-                        "author": "SOFTCOM",
-                        "creation": "12-7-26",
-                        "content": "All old logs cleared. Go check active network terminals instead."
-                        }
+                    "content": "The difference between beginners and experienced developers is not intelligence. It is persistence under confusion.\n\nYou will spend hours debugging something that turns out to be a missing bracket or a misunderstood assumption.\n\nThe real skill is not writing code that works once. It is writing code that survives repeated failure.\n\nSome of the best solutions in this club were not the first attempt. They were the fifteenth revision of a bad idea that refused to die."
+                },
+                "Late Night Project.txt": {
+                    "type": "file",
+                    "hidden": false,
+                    "content": "It usually starts casually.\n\nSomeone says: \"What if we build something?\"\nAnother person replies at 1:12 AM with a half-finished idea.\n\nBy 2:30 AM, there are three repositories, one broken API call, and a shared understanding that nobody is sleeping.\n\nBy morning, half the code is rewritten. Nobody remembers who wrote what, but it somehow works.\n\nHidden in older commits of these projects are small naming patterns that match fragments found elsewhere in the system."
                 }
             },
-            "NetAdmin_Desk":{
+            "E Cell": {
                 "type": "dir",
                 "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "Wifi_Subnet":{
-                    "type": "dir",
+                "Startup Ideas.txt": {
+                    "type": "file",
                     "hidden": false,
-                    "author": "SOFTCOM",
-                    "creation": "12-7-26",
-                    "Ground_floor_routerNet":{
-                        "type": "dir",
-                        "hidden": false,
-                        "author": "SOFTCOM",
-                        "creation": "12-7-26",
-                        "RouterWingA-R001-R010":{
-                            "type": "dir",
-                            "hidden": false,
-                            "author": "SOFTCOM",
-                            "creation": "12-7-26",
-                            "routernet-R001-R005":{
-                                "type": "dir",
-                                "hidden": false,
-                                "author": "SOFTCOM",
-                                "creation": "12-7-26",
-                                "rnet.txt":{
-                                    "type": "file",
-                                    "hidden": false,
-                                    "author": "SOFTCOM",
-                                    "creation": "12-7-26",
-                                    "content":"This router is out of your room's range, find the correct one to access its info."
-                                }
-                            },
-                            "routernet-R006-R010":{
-                                "type": "dir",
-                                "hidden": false,
-                                "author": "SOFTCOM",
-                                "creation": "12-7-26",
-                                "rnet.txt":{
-                                    "type": "file",
-                                    "hidden": false,
-                                    "author": "SOFTCOM",
-                                    "creation": "12-7-26",
-                                    "content":"This router is out of your room's range, find the correct one to access its info."
-                                }
-                            }
-                        },
-                        "RouterWingB-R011-R020":{
-                            "type": "dir",
-                            "hidden": false,
-                            "author": "SOFTCOM",
-                            "creation": "12-7-26",
-                            "routernet-R011-R015":{
-                                "type": "dir",
-                                "hidden": false,
-                                "author": "SOFTCOM",
-                                "creation": "12-7-26",
-                                "rnet.txt":{
-                                    "type": "file",
-                                    "hidden": false,
-                                    "author": "SOFTCOM",
-                                    "creation": "12-7-26",
-                                    "content":"This router is out of your room's range, find the correct one to access its info."
-                                },
-                                "washroom_anomaly.txt":{
-                                    "type": "file",
-                                    "hidden": false,
-                                    "author": "SOFTCOM",
-                                    "creation": "12-7-26",
-                                    "content":"Massive bandwidth anomaly detected on Washroom Subnet. Huh, strange."
-                                }
-                            },
-                            "routernet-R016-R020":{
-                                "type": "dir",
-                                "hidden": false,
-                                "author": "SOFTCOM",
-                                "creation": "12-7-26",
-                                "rnet.txt":{
-                                    "type": "file",
-                                    "hidden": false,
-                                    "author": "SOFTCOM",
-                                    "creation": "12-7-26",
-                                    "content":"This router is out of your room's range, find the correct one to access its info."
-                                }
-                            }
-                        }
-                    },
-                    "First_floor_routerNet":{
-                        "type": "dir",
-                        "hidden": false,
-                        "author": "SOFTCOM",
-                        "creation": "12-7-26",
-                        "RouterWingA-R101-R110":{
-                            "type": "dir",
-                            "hidden": false,
-                            "author": "SOFTCOM",
-                            "creation": "12-7-26",
-                            "routernet-R101-R105":{
-                                "type": "dir",
-                                "hidden": false,
-                                "author": "SOFTCOM",
-                                "creation": "12-7-26",
-                                "rnet.txt":{
-                                    "type": "file",
-                                    "hidden": false,
-                                    "author": "SOFTCOM",
-                                    "creation": "12-7-26",
-                                    "content":"This router is out of your room's range, find the correct one to access its info."
-                                }
-                            },
-                            "routernet-R106-R110":{
-                                "type": "dir",
-                                "hidden": false,
-                                "author": "SOFTCOM",
-                                "creation": "12-7-26",
-                                "rnet.txt":{
-                                    "type": "file",
-                                    "hidden": false,
-                                    "author": "SOFTCOM",
-                                    "creation": "12-7-26",
-                                    "content":"This router is out of your room's range, find the correct one to access its info."
-                                }
-                            }
-                        },
-                        "RouterWingB-R111-R120":{
-                            "type": "dir",
-                            "hidden": false,
-                            "author": "SOFTCOM",
-                            "creation": "12-7-26",
-                            "routernet-R111-R115":{
-                                "type": "dir",
-                                "hidden": false,
-                                "author": "SOFTCOM",
-                                "creation": "12-7-26",
-                                "rnet.txt":{
-                                    "type": "file",
-                                    "hidden": false,
-                                    "author": "SOFTCOM",
-                                    "creation": "12-7-26",
-                                    "content":"This router is out of your room's range. But it should be the right one for Room No.111. You try again, and then it hits you. You live in Brahmaputra West."
-                                }
-                            },
-                            "routernet-R116-R120":{
-                                "type": "dir",
-                                "hidden": false,
-                                "author": "SOFTCOM",
-                                "creation": "12-7-26",
-                                "rnet.txt":{
-                                    "type": "file",
-                                    "hidden": false,
-                                    "author": "SOFTCOM",
-                                    "creation": "12-7-26",
-                                    "content":"This router is out of your room's range, find the correct one to access its info."
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        "Brahmaputra-West":{
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "Caretaker-Logs":{
-                "type": "dir",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "Mess_Bill_August":{
-                    "type": "dir",
-                    "hidden": false,
-                    "author": "SOFTCOM",
-                    "creation": "12-7-26",
-                    "Bill_summary.txt":{
-                        "type": "file",
-                        "hidden": false,
-                        "author": "SOFTCOM",
-                        "creation": "12-7-26", 
-                        "content":"Mess Bill Status: Processed. Extra charges added for add-ons. No system bypass keys here."
-                        
-                    }
+                    "content": "Every startup idea begins as a joke.\n\nA food delivery app for hostels. A notes-sharing platform that 'definitely no one else has thought of'. A system that automates attendance tracking but somehow still requires manual input.\n\nMost ideas die in discussion. Some survive long enough to become slides.\nA rare few turn into prototypes.\n\nThe pattern is always the same: excitement peaks at night, and reality arrives during funding discussions.\n\nIf you read carefully, the first letters of each failed idea in older records form something unusual."
                 },
-                "Hostel_leaving_database":{
-                    "type": "dir",
+                "Funding Notes.txt": {
+                    "type": "file",
                     "hidden": false,
-                    "author": "SOFTCOM",
-                    "creation": "12-7-26",
-                    "archive_2025.txt": {
-                        "type": "file",
-                        "hidden": false,
-                        "author": "SOFTCOM",
-                        "creation": "12-7-26",
-                        "content": "All old logs cleared. Go check active network terminals instead."
-                        }
+                    "content": "Investors do not buy ideas. They buy execution timelines that look believable.\n\nA pitch deck is not about truth. It is about confidence presented in structured slides.\n\nOne mentor once said:\n\"If you cannot explain your idea in one sentence, you probably do not understand it yet.\"\n\nThe earliest versions of funded projects often look nothing like their final form. What survives is rarely the original concept, but a refined distortion of it.\n\nSome funding logs reference external identifiers that do not match any current system entries"
                 }
             },
-            "NetAdmin_Desk":{
+            "Zenith": {
                 "type": "dir",
                 "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "Wifi_Subnet":{
+                "Observation Night.txt": {
+                    "type": "file",
+                    "hidden": false,
+                    "content": "You are standing under an open sky with a telescope that takes longer to calibrate than to use.\n\nSomeone points at a cluster of stars and gives it a name that is not official. It is something personal, something only this group understands.\n\nFor a brief moment, everything feels still.\n\nThen someone drops a screw, and the illusion breaks.\n\nIn older observation logs, certain coordinates repeat more often than expected. They do not correspond to known celestial patterns."
+                },
+                "Clouds.txt": {
+                    "type": "file",
+                    "hidden": false,
+                    "content": "Clear skies are always described in advance. That is usually how you know they will not stay clear.\n\nThe observation schedule was planned weeks ago, but nature does not follow schedules.\n\nStudents often treat weather as interference. Seniors treat it as probability.\n\nSome logs mention visibility windows that appear only at specific times, but those timestamps do not align with normal clock cycles."
+                },
+                "Night Mode.txt": {
+                    "type": "file",
+                    "hidden": false,
+                    "content": "The system behaves differently after midnight.\n\nNot visibly. Not dramatically. Just enough to feel inconsistent if you are paying attention.\n\nFiles load in slightly different order. Some directories appear more responsive. Some hints become clearer without changing content.\n\nMost users ignore this.\nThose who notice it start checking timestamps more carefully."
+                }
+            },
+            "Friend Circle": {
+                "type": "dir",
+                "hidden": false,
+                "The Notes Guy.txt": {
+                    "type": "file",
+                    "hidden": false,
+                    "content": "Every class has someone who documents everything.\n\nNot just notes, but patterns. Attendance trends. Faculty behavior. Exam timing shifts. Small inconsistencies that others ignore.\n\nDuring exams, entire batches depend on this person indirectly, even if nobody admits it.\n\nTheir notebooks often contain references to conversations they were not part of."
+                },
+                "The Bunk Master.txt": {
+                    "type": "file",
+                    "hidden": false,
+                    "content": "Attendance rules are strict in theory.\nIn practice, there are exceptions that nobody fully understands.\n\nThis person has turned absence into an art form.\nThey know exactly which lectures can be missed without consequences and which ones cannot.\n\nTheir survival strategy is not luck. It is observation of patterns in human enforcement behavior."
+                },
+                "The Gym Bro.txt": {
+                    "type": "file",
+                    "hidden": false,
+                    "content": "Progress is measured in repetitions, but explained in motivation.\n\n\"One more set\" is not a statement. It is a loop that never terminates cleanly.\n\nSome say discipline is about consistency. Others say it is about ignoring discomfort long enough for it to become normal.\n\nTheir training log contains numbers that repeat in patterns suspiciously similar to other encoded data in the system."
+                },
+                "The 8AM Warrior.txt": {
+                    "type": "file",
+                    "hidden": false,
+                    "content": "Nobody understands how this person wakes up early every day.\n\nThere are theories: strict routine, lack of sleep, or some unknown internal mechanism that resets daily.\n\nThey are always present before most students arrive, as if campus time runs differently for them.\n\nOccasionally, they leave behind notes that are not addressed to anyone in particular."
+                },
+                "The Assignment Supplier.txt": {
+                    "type": "file",
+                    "hidden": false,
+                    "content": "Group projects usually distribute workload unevenly.\n\nThis person becomes the central repository of all submissions.\nFiles, edits, final versions, backups—all converge here.\n\nOver time, their storage structure becomes more organized than the official system itself.\n\nSome filenames inside their folders resemble fragments seen in club directories."
+                }
+            },
+            "Mentorship Program": {
+                "type": "dir",
+                "hidden": false,
+                "Faculty Mentor.txt": {
+                    "type": "file",
+                    "hidden": false,
+                    "content": "College is not a straight path.\nIt is a network of decisions that only make sense in hindsight.\n\nStudents often focus on outcomes, but ignore process.\nMentors focus on patterns that repeat across generations.\n\nWhat you think is a unique problem is usually a variation of something already solved."
+                },
+                "Student Mentor.txt": {
+                    "type": "file",
+                    "hidden": false,
+                    "content": "Senior students operate differently from faculty.\nThey understand the system not because it was taught, but because they experienced its inconsistencies.\n\nThey know which rules are flexible and which ones are absolute.\n\nAdvice is rarely direct. It is usually embedded in stories that only make sense later."
+                },
+                "Legendary Senior.txt": {
+                    "type": "file",
+                    "hidden": false,
+                    "content": "Some seniors become legends not because of achievements, but because of knowledge distribution.\n\nThey know how clubs connect, how events overlap, and how information flows through unofficial channels.\n\nPeople say they can predict outcomes before announcements.\n\nTheir notes often reference locations and identifiers that appear across multiple unrelated systems."
+                },
+                "Advice.txt": {
+                    "type": "file",
+                    "hidden": false,
+                    "content": "Join things.\nTry things.\nFail at things.\nRepeat.\n\nThe value of college is not in structure, but in exposure.\n\nMost important lessons are not scheduled.\nThey happen in between scheduled events."
+                }
+            },
+            "LOC": {
+                "type": "dir",
+                "hidden": false,
+                "Sunset.txt": {
+                    "type": "file",
+                    "hidden": false,
+                    "content": "Sunset is not just a visual experience on campus.\nIt is a transition point.\n\nAssignments feel less urgent. Conversations last longer. Decisions feel softer.\n\nMany important discussions happen during this window without being planned."
+                },
+                "Group Photo.txt": {
+                    "type": "file",
+                    "hidden": false,
+                    "content": "Group photos are rarely about the photo itself.\n\nThey are about proving that a moment existed.\nSomeone always blinks. Someone is always missing. Yet the image becomes permanent.\n\nLater, people use these photos to remember things they did not notice at the time."
+                }
+            },
+            "Campus Crushes": {
+                "type": "dir",
+                "hidden": false,
+                "Library Encounter.txt": {
+                    "type": "file",
+                    "hidden": false,
+                    "content": "You enter the library with a clear goal.\n\nWithin minutes, that goal is replaced by distraction.\nNot intentional distraction. Just awareness of presence.\n\nPages remain unread longer than expected."
+                },
+                "Mutual Friend.txt": {
+                    "type": "file",
+                    "hidden": false,
+                    "content": "Campus connections are surprisingly dense.\n\nMost introductions happen through shared acquaintances rather than direct interaction.\n\nIt often feels like everyone is separated by distance but connected through a very small number of intermediaries."
+                }
+            },
+            "Old Campus Network": {
+                "type": "dir",
+                "hidden": false,
+                "Map.txt": {
+                    "type": "file",
+                    "hidden": false,
+                    "content": "This is an unofficial map of campus systems.\n\nNodes:\n- Student Activity Centre\n- LOC\n- E Cell\n- Zenith\n\nConnections are not physical paths. They are interaction flows.\n\nSome connections only become active under certain conditions that are not documented officially."
+                },
+                "Broken Link.txt": {
+                    "type": "file",
+                    "hidden": false,
+                    "content": "This entry used to redirect to multiple systems.\n\nNow it returns incomplete data.\n\nWhat remains suggests that some links were intentionally removed rather than lost."
+                }
+            },
+            "Club Crosslinks": {
+                "type": "dir",
+                "hidden": false,
+                "pattern.txt": {
+                    "type": "file",
+                    "hidden": false,
+                    "content": "To reconstruct the access code:\n\nTalk to that introvert guy who larped to level 3 from the juice centre while you were enjoying oreoshake!"
+                },
+                "sync.txt": {
+                    "type": "file",
+                    "hidden": false,
+                    "content": "Synchronization attempts reveal mismatched patterns across directories.\n\nMentorship records appear to stabilize inconsistencies when cross-referenced.\n\nThis suggests the system was designed with overlapping validation layers rather than a single key source.\n\n\n\n\n A bunch of yap and nothing else LMAO"
+                }
+            },
+            "Quiet Vault": {
+                "type": "dir",
+                "hidden": false,
+                "README.txt": {
+                    "type": "file",
+                    "hidden": false,
+                    "content": "ACCESS NOTICE\n\nThis directory contains personal backups of student interactions that were never meant to be organized.\n\nFiles may appear duplicated, incomplete, or emotionally inconsistent.\nProceed only if necessary."
+                },
+                "Folders": {
                     "type": "dir",
                     "hidden": false,
-                    "author": "SOFTCOM",
-                    "creation": "12-7-26",
-                    "Ground_floor_routerNet":{
+                    "The Social Guy": {
                         "type": "dir",
                         "hidden": false,
-                        "author": "SOFTCOM",
-                        "creation": "12-7-26",
-                        "RouterWingA-R001-R010":{
-                            "type": "dir",
+                        "content_hint": "Too helpful. Probably wrong.",
+                        "note.txt": {
+                            "type": "file",
                             "hidden": false,
-                            "author": "SOFTCOM",
-                            "creation": "12-7-26",
-                            "routernet-R001-R005":{
-                                "type": "dir",
-                                "hidden": false,
-                                "author": "SOFTCOM",
-                                "creation": "12-7-26",
-                                "rnet.txt":{
-                                    "type": "file",
-                                    "hidden": false,
-                                    "author": "SOFTCOM",
-                                    "creation": "12-7-26",
-                                    "content":"This router is out of your room's range, find the correct one to access its info."
-                                }
-                            },
-                            "routernet-R006-R010":{
-                                "type": "dir",
-                                "hidden": false,
-                                "author": "SOFTCOM",
-                                "creation": "12-7-26",
-                                "rnet.txt":{
-                                    "type": "file",
-                                    "hidden": false,
-                                    "author": "SOFTCOM",
-                                    "creation": "12-7-26",
-                                    "content":"This router is out of your room's range, find the correct one to access its info."
-                                }
-                            }
-                        },
-                        "RouterWingB-R011-R020":{
-                            "type": "dir",
-                            "hidden": false,
-                            "author": "SOFTCOM",
-                            "creation": "12-7-26",
-                            "routernet-R011-R015":{
-                                "type": "dir",
-                                "hidden": false,
-                                "author": "SOFTCOM",
-                                "creation": "12-7-26",
-                                "rnet.txt":{
-                                    "type": "file",
-                                    "hidden": false,
-                                    "author": "SOFTCOM",
-                                    "creation": "12-7-26",
-                                    "content":"This router is out of your room's range, find the correct one to access its info."
-                                },
-                                "washroom_anomaly.txt":{
-                                    "type": "file",
-                                    "hidden": false,
-                                    "author": "SOFTCOM",
-                                    "creation": "12-7-26",
-                                    "content":"Massive bandwidth anomaly detected on Washroom Subnet. Huh, strange."
-                                }
-                            },
-                            "routernet-R016-R020":{
-                                "type": "dir",
-                                "hidden": false,
-                                "author": "SOFTCOM",
-                                "creation": "12-7-26",
-                                "rnet.txt":{
-                                    "type": "file",
-                                    "hidden": false,
-                                    "author": "SOFTCOM",
-                                    "creation": "12-7-26",
-                                    "content":"This router is out of your room's range, find the correct one to access its info."
-                                }
-                            }
+                            "content": "Hey! I think the password is definitely something like 'FRIENDSHIP123' or maybe 'CAMPUSLOVE'. Not 100% sure though!"
                         }
                     },
-                    "First_floor_routerNet":{
+                    "The Overthinker": {
                         "type": "dir",
                         "hidden": false,
-                        "author": "SOFTCOM",
-                        "creation": "12-7-26",
-                        "RouterWingA-R101-R110":{
-                            "type": "dir",
+                        "log.txt": {
+                            "type": "file",
                             "hidden": false,
-                            "author": "SOFTCOM",
-                            "creation": "12-7-26",
-                            "routernet-R101-R105":{
-                                "type": "dir",
-                                "hidden": false,
-                                "author": "SOFTCOM",
-                                "creation": "12-7-26",
-                                "rnet.txt":{
-                                    "type": "file",
-                                    "hidden": false,
-                                    "author": "SOFTCOM",
-                                    "creation": "12-7-26",
-                                    "content":"This router is out of your room's range, find the correct one to access its info."
-                                }
-                            },
-                            "routernet-R106-R110":{
-                                "type": "dir",
-                                "hidden": false,
-                                "author": "SOFTCOM",
-                                "creation": "12-7-26",
-                                "rnet.txt":{
-                                    "type": "file",
-                                    "hidden": false,
-                                    "author": "SOFTCOM",
-                                    "creation": "12-7-26",
-                                    "content":"This router is out of your room's range, find the correct one to access its info."
-                                }
-                            }
+                            "content": "If I assume the system is recursive, then the password must also be recursive. So maybe it's itself? Or maybe it's nothing? Or maybe I'm overthinking this again."
+                        }
+                    },
+                    "The Motivational Guy": {
+                        "type": "dir",
+                        "hidden": false,
+                        "speech.txt": {
+                            "type": "file",
+                            "hidden": false,
+                            "content": "YOU CAN DO IT!!! THE PASSWORD IS JUST BELIEF + HARDWORK + CONSISTENCY!!! NEVER GIVE UP!!!"
+                        }
+                    },
+                    "The Silent One": {
+                        "type": "dir",
+                        "hidden": false,
+                        "chair.txt": {
+                            "type": "file",
+                            "hidden": false,
+                            "content": "The room is almost empty.\n\nA chair is slightly pulled back, as if someone just left without rushing. It could be that weird mysterious guy...\n\nThere is no introduction, no explanation, no decoration.\nJust a sticky note stuck under the table."
                         },
-                        "RouterWingB-R111-R120":{
-                            "type": "dir",
+                        "note_under_table.txt": {
+                            "type": "file",
                             "hidden": false,
-                            "author": "SOFTCOM",
-                            "creation": "12-7-26",
-                            "routernet-R111-R115":{
-                                "type": "dir",
-                                "hidden": false,
-                                "author": "SOFTCOM",
-                                "creation": "12-7-26",
-                                "rnet.txt":{
-                                    "type": "file",
-                                    "hidden": false,
-                                    "author": "SOFTCOM",
-                                    "creation": "12-7-26",
-                                    "content":"Router Network Accessed. The only part left now is to link it with the LHC subnet.\nThe first part of the password is: gvdlb"
-                                }
-                            },
-                            "routernet-R116-R120":{
-                                "type": "dir",
-                                "hidden": false,
-                                "author": "SOFTCOM",
-                                "creation": "12-7-26",
-                                "rnet.txt":{
-                                    "type": "file",
-                                    "hidden": false,
-                                    "author": "SOFTCOM",
-                                    "creation": "12-7-26",
-                                    "content":"This router is out of your room's range, find the correct one to access its info."
-                                }
-                            }
+                            "content": "ughh I hate peopleeeeee, take this and leave: passcode is PASSCODE"
+                        }
+                    },
+                    "Empty Room": {
+                        "type": "dir",
+                        "hidden": false,
+                        "nothing.txt": {
+                            "type": "file",
+                            "hidden": false,
+                            "content": "This folder contains no useful information.\n\nSeriously.\nStop checking it."
                         }
                     }
                 }
             }
         }
-    },
-    "LHC-Net": {
-        "type": "dir",
-        "hidden": false,
-        "author": "SOFTCOM",
-        "creation": "12-7-26",
-        "groundFloor-net":{
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "M1.txt":{
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content":"Seriously? Who the hell even uses M1? This is not the correct lecture hall."
-            },
-            "M2.txt":{
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content":"This is not the correct lecture hall. Try another."
-            },
-            "M3.txt":{
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content":"This is not the correct lecture hall. Try another."
-            },
-            "M4.txt":{
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content":"You have successfully linked your hostel router to the classroom network and marked your proxy. This was clearly a one time exception and you will attend all your lectures from tomorrow onwards. The second part of the password is: dbemz\nIf you have found the complete password, you can advance to the next level."
-            },
-            "M5.txt":{
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content":"This is not the correct lecture hall. Try another."
-            },
-            "M6.txt":{
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content":"Geez. You don't even know where your class is, do you? Try another."
-            }
-        },
-        "firstFloor-net":{
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "note_from_editor.txt":{
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content":"'What do you mean there's an LHC First Floor? There has never been a first floor in the history of this campus... Wait, they actually finished construction? Ohh fu-'\nPS: The password is not on the first floor."
-            }
-        }
-    },
-    "README.txt": {
-      "type": "file",
-      "hidden": false,
-      "author": "SOFTCOM",
-      "creation": "12-7-26",
-      "content": "--------------------\nLevel 3\n--------------------\n\nYou wake up on the bed in your hostel room and look at the time in your phone beside your bed. 8:47 AM. Today is your first 9AM class at IIT Ropar. 'Class jana jaruri hota hai kya?', you think to yourself and lay back down on the bed. Attendance policy is 75% anyways, you can probably skip the first 25% of the classes. But then a sudden stroke of genius hits you: why walk all the way to LHC when you can just tunnel into the campus subnets from your room no. 111 and link your hostel router directly to the classroom mainframe network to mark a proxy for yourself?. It might turn out to be easier than walking upto M4 all the way from Brahmaputra West for you.\n\nFind the first part of the password in the hostel network and the second part in the LHC network and combine it and pass it as the argument for the 'next' command to advance to the next level.\n\nUseful Commands:\n- cd\n- ls"
     }
-  }
 }

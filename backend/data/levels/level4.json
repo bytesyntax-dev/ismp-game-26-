@@ -3,1934 +3,536 @@
     "type": "dir",
     "hidden": false,
     "author": "SOFTCOM",
-    "creation": "12-7-26",
-    "Library": {
+    "creation": "23-06-26",
+    "README.txt": {
+      "type": "file",
+      "content": "LEVEL 4: GAMES, GAMES AND MORE GAMES\n\nWelcome academic warrior. You have registered and obtained your hostel keys. Now the actual trial begins\nTo unlock your academic profile, you must obtain the password from the famous places on campus.\n\nUsing 'grep' can find specific text terms inside files.\n\nOnce you have found master passcode. Unlock level 5 by using 'submit <passcode>'\n\nGood luck!"
+    },
+    "Nalanda Library": {
       "type": "dir",
       "hidden": false,
-      "author": "SOFTCOM",
-      "creation": "12-7-26",
-      "Ground_Floor": {
+      "Entrance Desk": {
         "type": "dir",
-        "hidden": false,
-        "author": "SOFTCOM",
-        "creation": "12-7-26",
-        "Right-Wing": {
-          "type": "dir",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "Shelf1":{
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "Rack1":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Introduction to Algorithms - Cormen, Leiserson, Rivest, Stein\n2. Data Structures and Algorithms in C++ - Adam Drozdek\n3. Operating System Concepts - Silberschatz, Galvin, Gagne\n4. Computer Networking: A Top-Down Approach - Kurose, Ross\n5. Higher Engineering Mathematics - B.S. Grewal\n6. University Physics - Freedman and Young"
-              }
-            },
-            "Rack2":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Compilers: Principles, Techniques, and Tools - Aho, Lam\n2. Discrete Mathematics and Its Applications - Kenneth Rosen\n3. Advanced Engineering Mathematics - Erwin Kreyszig\n4. Quantum Mechanics: The Theoretical Minimum - Leonard\n5. How to Cope with Low CGPA and Social Anxiety - Anonymous Third Year"
-              }
-            },
-            "Rack3":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Database System Concepts - Abraham \n2. Design Patterns: Elements of Reusable Software - Gang of Four\n3. Mein Kampf - Adolf Hitler (Why is this even here?)\n4. Classical Mechanics - Herbert Goldstein\n5. A Complete Guide to Talking to Women - Written by an Engineer\n6. Cryptography and Network Security - William Stallings"
-              }
-            },
-            "Rack4":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Macroeconomics for Engineers Who Just Want to Build Bridges\n2. The Art of the Cookie Jar\n3. Engineering Thermodynamics by an Author Who Has Given Up\n4. How to Convince Your Parents That a Seven point Five CGPA is Actually Great\n5. Principles of Linear Algebra and Unnecessary Mental Suffering"
-              }
-            },
-            "Rack5":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Fundamentals of Physics - Halliday and Resnick\n2. Calculus: Early Transcendentals - James Stewart\n3. Engineering Mechanics: Statics and Lifeless Objects That Refuse to Move\n4. Introduction to Materials Science for Engineers - James Shackelford\n5. Principles of Microeconomics and Macro Depressions"
-              }
-            }
-          },
-          "Shelf2":{
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "Rack1":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Introduction to Algorithms - Cormen, Leiserson, Rivest, Stein\n2. Data Structures and Algorithms in C++ - Adam Drozdek\n3. Operating System Concepts - Silberschatz, Galvin, Gagne\n4. Computer Networking: A Top-Down Approach - Kurose, Ross\n5. Higher Engineering Mathematics - B.S. Grewal\n6. University Physics - Freedman and Young"
-              }
-            },
-            "Rack2":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Compilers: Principles, Techniques, and Tools - Aho, Lam\n2. Discrete Mathematics and Its Applications - Kenneth Rosen\n3. Advanced Engineering Mathematics - Erwin Kreyszig\n4. Quantum Mechanics: The Theoretical Minimum - Leonard\n5. How to Cope with Low CGPA and Social Anxiety - Anonymous Third Year"
-              }
-            },
-            "Rack3":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Database System Concepts - Abraham \n2. Design Patterns: Elements of Reusable Software - Gang of Four\n3. Mein Kampf - Adolf Hitler (Why is this even here?)\n4. Classical Mechanics - Herbert Goldstein\n5. A Complete Guide to Talking to Women - Written by an Engineer\n6. Cryptography and Network Security - William Stallings"
-              }
-            },
-            "Rack4":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Macroeconomics for Engineers Who Just Want to Build Bridges\n2. The Art of the Cookie Jar\n3. Engineering Thermodynamics by an Author Who Has Given Up\n4. How to Convince Your Parents That a Seven point Five CGPA is Actually Great\n5. Principles of Linear Algebra and Unnecessary Mental Suffering"
-              }
-            },
-            "Rack5":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Fundamentals of Physics - Halliday and Resnick\n2. Calculus: Early Transcendentals - James Stewart\n3. Engineering Mechanics: Statics and Lifeless Objects That Refuse to Move\n4. Introduction to Materials Science for Engineers - James Shackelford\n5. Principles of Microeconomics and Macro Depressions"
-              }
-            }
-          },
-          "Shelf3":{
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "Rack1":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Introduction to Algorithms - Cormen, Leiserson, Rivest, Stein\n2. Data Structures and Algorithms in C++ - Adam Drozdek\n3. Operating System Concepts - Silberschatz, Galvin, Gagne\n4. Computer Networking: A Top-Down Approach - Kurose, Ross\n5. Higher Engineering Mathematics - B.S. Grewal\n6. University Physics - Freedman and Young"
-              }
-            },
-            "Rack2":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Compilers: Principles, Techniques, and Tools - Aho, Lam\n2. Discrete Mathematics and Its Applications - Kenneth Rosen\n3. Advanced Engineering Mathematics - Erwin Kreyszig\n4. Quantum Mechanics: The Theoretical Minimum - Leonard\n5. How to Cope with Low CGPA and Social Anxiety - Anonymous Third Year"
-              }
-            },
-            "Rack3":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Database System Concepts - Abraham \n2. Design Patterns: Elements of Reusable Software - Gang of Four\n3. Mein Kampf - Adolf Hitler (Why is this even here?)\n4. Classical Mechanics - Herbert Goldstein\n5. A Complete Guide to Talking to Women - Written by an Engineer\n6. Cryptography and Network Security - William Stallings"
-              }
-            },
-            "Rack4":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Macroeconomics for Engineers Who Just Want to Build Bridges\n2. The Art of the Cookie Jar\n3. Engineering Thermodynamics by an Author Who Has Given Up\n4. How to Convince Your Parents That a Seven point Five CGPA is Actually Great\n5. Principles of Linear Algebra and Unnecessary Mental Suffering"
-              }
-            },
-            "Rack5":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Fundamentals of Physics - Halliday and Resnick\n2. Calculus: Early Transcendentals - James Stewart\n3. Engineering Mechanics: Statics and Lifeless Objects That Refuse to Move\n4. Introduction to Materials Science for Engineers - James Shackelford\n5. Principles of Microeconomics and Macro Depressions"
-              }
-            }
-          },
-          "Shelf4":{
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "Rack1":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Introduction to Algorithms - Cormen, Leiserson, Rivest, Stein\n2. Data Structures and Algorithms in C++ - Adam Drozdek\n3. Operating System Concepts - Silberschatz, Galvin, Gagne\n4. Computer Networking: A Top-Down Approach - Kurose, Ross\n5. Higher Engineering Mathematics - B.S. Grewal\n6. University Physics - Freedman and Young"
-              }
-            },
-            "Rack2":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Compilers: Principles, Techniques, and Tools - Aho, Lam\n2. Discrete Mathematics and Its Applications - Kenneth Rosen\n3. Advanced Engineering Mathematics - Erwin Kreyszig\n4. Quantum Mechanics: The Theoretical Minimum - Leonard\n5. How to Cope with Low CGPA and Social Anxiety - Anonymous Third Year"
-              }
-            },
-            "Rack3":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Database System Concepts - Abraham \n2. Design Patterns: Elements of Reusable Software - Gang of Four\n3. Mein Kampf - Adolf Hitler (Why is this even here?)\n4. Classical Mechanics - Herbert Goldstein\n5. A Complete Guide to Talking to Women - Written by an Engineer\n6. Cryptography and Network Security - William Stallings"
-              }
-            },
-            "Rack4":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Macroeconomics for Engineers Who Just Want to Build Bridges\n2. The Art of the Cookie Jar\n3. Engineering Thermodynamics by an Author Who Has Given Up\n4. How to Convince Your Parents That a Seven point Five CGPA is Actually Great\n5. Principles of Linear Algebra and Unnecessary Mental Suffering"
-              }
-            },
-            "Rack5":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Fundamentals of Physics - Halliday and Resnick\n2. Calculus: Early Transcendentals - James Stewart\n3. Engineering Mechanics: Statics and Lifeless Objects That Refuse to Move\n4. Introduction to Materials Science for Engineers - James Shackelford\n5. Principles of Microeconomics and Macro Depressions"
-              }
-            }
-          },
-          "Shelf5":{
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "Rack1":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Introduction to Algorithms - Cormen, Leiserson, Rivest, Stein\n2. Data Structures and Algorithms in C++ - Adam Drozdek\n3. Operating System Concepts - Silberschatz, Galvin, Gagne\n4. Computer Networking: A Top-Down Approach - Kurose, Ross\n5. Higher Engineering Mathematics - B.S. Grewal\n6. University Physics - Freedman and Young"
-              }
-            },
-            "Rack2":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Compilers: Principles, Techniques, and Tools - Aho, Lam\n2. Discrete Mathematics and Its Applications - Kenneth Rosen\n3. Advanced Engineering Mathematics - Erwin Kreyszig\n4. Quantum Mechanics: The Theoretical Minimum - Leonard\n5. How to Cope with Low CGPA and Social Anxiety - Anonymous Third Year"
-              }
-            },
-            "Rack3":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Database System Concepts - Abraham \n2. Design Patterns: Elements of Reusable Software - Gang of Four\n3. Mein Kampf - Adolf Hitler (Why is this even here?)\n4. Classical Mechanics - Herbert Goldstein\n5. A Complete Guide to Talking to Women - Written by an Engineer\n6. Cryptography and Network Security - William Stallings"
-              }
-            },
-            "Rack4":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Macroeconomics for Engineers Who Just Want to Build Bridges\n2. The Art of the Cookie Jar\n3. Engineering Thermodynamics by an Author Who Has Given Up\n4. How to Convince Your Parents That a Seven point Five CGPA is Actually Great\n5. Principles of Linear Algebra and Unnecessary Mental Suffering"
-              }
-            },
-            "Rack5":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Fundamentals of Physics - Halliday and Resnick\n2. Calculus: Early Transcendentals - James Stewart\n3. Engineering Mechanics: Statics and Lifeless Objects That Refuse to Move\n4. Introduction to Materials Science for Engineers - James Shackelford\n5. Principles of Microeconomics and Macro Depressions"
-              }
-            }
-          },
-          "Shelf6":{
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "Rack1":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Introduction to Algorithms - Cormen, Leiserson, Rivest, Stein\n2. Data Structures and Algorithms in C++ - Adam Drozdek\n3. Operating System Concepts - Silberschatz, Galvin, Gagne\n4. Computer Networking: A Top-Down Approach - Kurose, Ross\n5. Higher Engineering Mathematics - B.S. Grewal\n6. University Physics - Freedman and Young"
-              }
-            },
-            "Rack2":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Compilers: Principles, Techniques, and Tools - Aho, Lam\n2. Discrete Mathematics and Its Applications - Kenneth Rosen\n3. Advanced Engineering Mathematics - Erwin Kreyszig\n4. Quantum Mechanics: The Theoretical Minimum - Leonard\n5. How to Cope with Low CGPA and Social Anxiety - Anonymous Third Year"
-              }
-            },
-            "Rack3":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Database System Concepts - Abraham \n2. Design Patterns: Elements of Reusable Software - Gang of Four\n3. Mein Kampf - Adolf Hitler (Why is this even here?)\n4. Classical Mechanics - Herbert Goldstein\n5. A Complete Guide to Talking to Women - Written by an Engineer\n6. Cryptography and Network Security - William Stallings"
-              }
-            },
-            "Rack4":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Macroeconomics for Engineers Who Just Want to Build Bridges\n2. The Art of the Cookie Jar\n3. Engineering Thermodynamics by an Author Who Has Given Up\n4. How to Convince Your Parents That a Seven point Five CGPA is Actually Great\n5. Principles of Linear Algebra and Unnecessary Mental Suffering"
-              }
-            },
-            "Rack5":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Fundamentals of Physics - Halliday and Resnick\n2. Calculus: Early Transcendentals - James Stewart\n3. Engineering Mechanics: Statics and Lifeless Objects That Refuse to Move\n4. Introduction to Materials Science for Engineers - James Shackelford\n5. Principles of Microeconomics and Macro Depressions"
-              }
-            }
-          },
-          "Shelf7":{
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "Rack1":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Introduction to Algorithms - Cormen, Leiserson, Rivest, Stein\n2. Data Structures and Algorithms in C++ - Adam Drozdek\n3. Operating System Concepts - Silberschatz, Galvin, Gagne\n4. Computer Networking: A Top-Down Approach - Kurose, Ross\n5. Higher Engineering Mathematics - B.S. Grewal\n6. University Physics - Freedman and Young"
-              }
-            },
-            "Rack2":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Compilers: Principles, Techniques, and Tools - Aho, Lam\n2. Discrete Mathematics and Its Applications - Kenneth Rosen\n3. Advanced Engineering Mathematics - Erwin Kreyszig\n4. Quantum Mechanics: The Theoretical Minimum - Leonard\n5. How to Cope with Low CGPA and Social Anxiety - Anonymous Third Year"
-              }
-            },
-            "Rack3":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Database System Concepts - Abraham \n2. Design Patterns: Elements of Reusable Software - Gang of Four\n3. Mein Kampf - Adolf Hitler (Why is this even here?)\n4. Classical Mechanics - Herbert Goldstein\n5. A Complete Guide to Talking to Women - Written by an Engineer\n6. Cryptography and Network Security - William Stallings"
-              }
-            },
-            "Rack4":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Macroeconomics for Engineers Who Just Want to Build Bridges\n2. The Art of the Cookie Jar\n3. Engineering Thermodynamics by an Author Who Has Given Up\n4. How to Convince Your Parents That a Seven point Five CGPA is Actually Great\n5. Principles of Linear Algebra and Unnecessary Mental Suffering"
-              }
-            },
-            "Rack5":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Fundamentals of Physics - Halliday and Resnick\n2. Calculus: Early Transcendentals - James Stewart\n3. Engineering Mechanics: Statics and Lifeless Objects That Refuse to Move\n4. Introduction to Materials Science for Engineers - James Shackelford\n5. Principles of Microeconomics and Macro Depressions"
-              }
-            }
-          },
-          "Shelf8":{
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "Rack1":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Introduction to Algorithms - Cormen, Leiserson, Rivest, Stein\n2. Data Structures and Algorithms in C++ - Adam Drozdek\n3. Operating System Concepts - Silberschatz, Galvin, Gagne\n4. Computer Networking: A Top-Down Approach - Kurose, Ross\n5. Higher Engineering Mathematics - B.S. Grewal\n6. University Physics - Freedman and Young"
-              }
-            },
-            "Rack2":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Compilers: Principles, Techniques, and Tools - Aho, Lam\n2. Discrete Mathematics and Its Applications - Kenneth Rosen\n3. Advanced Engineering Mathematics - Erwin Kreyszig\n4. Quantum Mechanics: The Theoretical Minimum - Leonard\n5. How to Cope with Low CGPA and Social Anxiety - Anonymous Third Year"
-              }
-            },
-            "Rack3":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Database System Concepts - Abraham \n2. Design Patterns: Elements of Reusable Software - Gang of Four\n3. Mein Kampf - Adolf Hitler (Why is this even here?)\n4. Classical Mechanics - Herbert Goldstein\n5. A Complete Guide to Talking to Women - Written by an Engineer\n6. Cryptography and Network Security - William Stallings"
-              }
-            },
-            "Rack4":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Macroeconomics for Engineers Who Just Want to Build Bridges\n2. The Art of the Cookie Jar\n3. Engineering Thermodynamics by an Author Who Has Given Up\n4. How to Convince Your Parents That a Seven point Five CGPA is Actually Great\n5. Principles of Linear Algebra and Unnecessary Mental Suffering"
-              }
-            },
-            "Rack5":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Fundamentals of Physics - Halliday and Resnick\n2. Calculus: Early Transcendentals - James Stewart\n3. Engineering Mechanics: Statics and Lifeless Objects That Refuse to Move\n4. Introduction to Materials Science for Engineers - James Shackelford\n5. Principles of Microeconomics and Macro Depressions"
-              }
-            }
-          }
+        "instructions.txt": {
+          "type": "file",
+          "content": "Nalanda Library entry: Please login to portal on desk system. Or if you can't understand anything, sign the ancient paper register."
         },
-        "Left-Wing": {
-          "type": "dir",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "Shelf1":{
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "Rack1":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Introduction to Algorithms - Cormen, Leiserson, Rivest, Stein\n2. Data Structures and Algorithms in C++ - Adam Drozdek\n3. Operating System Concepts - Silberschatz, Galvin, Gagne\n4. Computer Networking: A Top-Down Approach - Kurose, Ross\n5. Higher Engineering Mathematics - B.S. Grewal\n6. University Physics - Freedman and Young"
-              }
-            },
-            "Rack2":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Compilers: Principles, Techniques, and Tools - Aho, Lam\n2. Discrete Mathematics and Its Applications - Kenneth Rosen\n3. Advanced Engineering Mathematics - Erwin Kreyszig\n4. Quantum Mechanics: The Theoretical Minimum - Leonard\n5. How to Cope with Low CGPA and Social Anxiety - Anonymous Third Year"
-              }
-            },
-            "Rack3":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Database System Concepts - Abraham \n2. Design Patterns: Elements of Reusable Software - Gang of Four\n3. Mein Kampf - Adolf Hitler (Why is this even here?)\n4. Classical Mechanics - Herbert Goldstein\n5. A Complete Guide to Talking to Women - Written by an Engineer\n6. Cryptography and Network Security - William Stallings"
-              }
-            },
-            "Rack4":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Macroeconomics for Engineers Who Just Want to Build Bridges\n2. The Art of the Cookie Jar\n3. Engineering Thermodynamics by an Author Who Has Given Up\n4. How to Convince Your Parents That a Seven point Five CGPA is Actually Great\n5. Principles of Linear Algebra and Unnecessary Mental Suffering"
-              }
-            },
-            "Rack5":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Fundamentals of Physics - Halliday and Resnick\n2. Calculus: Early Transcendentals - James Stewart\n3. Engineering Mechanics: Statics and Lifeless Objects That Refuse to Move\n4. Introduction to Materials Science for Engineers - James Shackelford\n5. Principles of Microeconomics and Macro Depressions"
-              }
-            }
-          },
-          "Shelf2":{
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "Rack1":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Introduction to Algorithms - Cormen, Leiserson, Rivest, Stein\n2. Data Structures and Algorithms in C++ - Adam Drozdek\n3. Operating System Concepts - Silberschatz, Galvin, Gagne\n4. Computer Networking: A Top-Down Approach - Kurose, Ross\n5. Higher Engineering Mathematics - B.S. Grewal\n6. University Physics - Freedman and Young"
-              }
-            },
-            "Rack2":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Compilers: Principles, Techniques, and Tools - Aho, Lam\n2. Discrete Mathematics and Its Applications - Kenneth Rosen\n3. Advanced Engineering Mathematics - Erwin Kreyszig\n4. Quantum Mechanics: The Theoretical Minimum - Leonard\n5. How to Cope with Low CGPA and Social Anxiety - Anonymous Third Year"
-              }
-            },
-            "Rack3":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Database System Concepts - Abraham \n2. Design Patterns: Elements of Reusable Software - Gang of Four\n3. Mein Kampf - Adolf Hitler (Why is this even here?)\n4. Classical Mechanics - Herbert Goldstein\n5. A Complete Guide to Talking to Women - Written by an Engineer\n6. Cryptography and Network Security - William Stallings"
-              }
-            },
-            "Rack4":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Macroeconomics for Engineers Who Just Want to Build Bridges\n2. The Art of the Cookie Jar\n3. Engineering Thermodynamics by an Author Who Has Given Up\n4. How to Convince Your Parents That a Seven point Five CGPA is Actually Great\n5. Principles of Linear Algebra and Unnecessary Mental Suffering"
-              }
-            },
-            "Rack5":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Fundamentals of Physics - Halliday and Resnick\n2. Calculus: Early Transcendentals - James Stewart\n3. Engineering Mechanics: Statics and Lifeless Objects That Refuse to Move\n4. Introduction to Materials Science for Engineers - James Shackelford\n5. Principles of Microeconomics and Macro Depressions"
-              }
-            }
-          },
-          "Shelf3":{
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "Rack1":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Introduction to Algorithms - Cormen, Leiserson, Rivest, Stein\n2. Data Structures and Algorithms in C++ - Adam Drozdek\n3. Operating System Concepts - Silberschatz, Galvin, Gagne\n4. Computer Networking: A Top-Down Approach - Kurose, Ross\n5. Higher Engineering Mathematics - B.S. Grewal\n6. University Physics - Freedman and Young"
-              }
-            },
-            "Rack2":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Compilers: Principles, Techniques, and Tools - Aho, Lam\n2. Discrete Mathematics and Its Applications - Kenneth Rosen\n3. Advanced Engineering Mathematics - Erwin Kreyszig\n4. Quantum Mechanics: The Theoretical Minimum - Leonard\n5. How to Cope with Low CGPA and Social Anxiety - Anonymous Third Year"
-              }
-            },
-            "Rack3":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Database System Concepts - Abraham \n2. Design Patterns: Elements of Reusable Software - Gang of Four\n3. Mein Kampf - Adolf Hitler (Why is this even here?)\n4. Classical Mechanics - Herbert Goldstein\n5. A Complete Guide to Talking to Women - Written by an Engineer\n6. Cryptography and Network Security - William Stallings"
-              }
-            },
-            "Rack4":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Macroeconomics for Engineers Who Just Want to Build Bridges\n2. The Art of the Cookie Jar\n3. Engineering Thermodynamics by an Author Who Has Given Up\n4. How to Convince Your Parents That a Seven point Five CGPA is Actually Great\n5. Principles of Linear Algebra and Unnecessary Mental Suffering"
-              }
-            },
-            "Rack5":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Fundamentals of Physics - Halliday and Resnick\n2. Calculus: Early Transcendentals - James Stewart\n3. Engineering Mechanics: Statics and Lifeless Objects That Refuse to Move\n4. Introduction to Materials Science for Engineers - James Shackelford\n5. Principles of Microeconomics and Macro Depressions"
-              }
-            }
-          },
-          "Shelf4":{
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "Rack1":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Introduction to Algorithms - Cormen, Leiserson, Rivest, Stein\n2. Data Structures and Algorithms in C++ - Adam Drozdek\n3. Operating System Concepts - Silberschatz, Galvin, Gagne\n4. Computer Networking: A Top-Down Approach - Kurose, Ross\n5. Higher Engineering Mathematics - B.S. Grewal\n6. University Physics - Freedman and Young"
-              }
-            },
-            "Rack2":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Compilers: Principles, Techniques, and Tools - Aho, Lam\n2. Discrete Mathematics and Its Applications - Kenneth Rosen\n3. Advanced Engineering Mathematics - Erwin Kreyszig\n4. Quantum Mechanics: The Theoretical Minimum - Leonard\n5. How to Cope with Low CGPA and Social Anxiety - Anonymous Third Year"
-              }
-            },
-            "Rack3":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Database System Concepts - Abraham \n2. Design Patterns: Elements of Reusable Software - Gang of Four\n3. Mein Kampf - Adolf Hitler (Why is this even here?)\n4. Classical Mechanics - Herbert Goldstein\n5. A Complete Guide to Talking to Women - Written by an Engineer\n6. Cryptography and Network Security - William Stallings"
-              }
-            },
-            "Rack4":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Macroeconomics for Engineers Who Just Want to Build Bridges\n2. The Art of the Cookie Jar\n3. Engineering Thermodynamics by an Author Who Has Given Up\n4. How to Convince Your Parents That a Seven point Five CGPA is Actually Great\n5. Principles of Linear Algebra and Unnecessary Mental Suffering"
-              }
-            },
-            "Rack5":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Fundamentals of Physics - Halliday and Resnick\n2. Calculus: Early Transcendentals - James Stewart\n3. Engineering Mechanics: Statics and Lifeless Objects That Refuse to Move\n4. Introduction to Materials Science for Engineers - James Shackelford\n5. Principles of Microeconomics and Macro Depressions"
-              }
-            }
-          },
-          "Shelf5":{
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "Rack1":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Introduction to Algorithms - Cormen, Leiserson, Rivest, Stein\n2. Data Structures and Algorithms in C++ - Adam Drozdek\n3. Operating System Concepts - Silberschatz, Galvin, Gagne\n4. Computer Networking: A Top-Down Approach - Kurose, Ross\n5. Higher Engineering Mathematics - B.S. Grewal\n6. University Physics - Freedman and Young"
-              }
-            },
-            "Rack2":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Compilers: Principles, Techniques, and Tools - Aho, Lam\n2. Discrete Mathematics and Its Applications - Kenneth Rosen\n3. Advanced Engineering Mathematics - Erwin Kreyszig\n4. Quantum Mechanics: The Theoretical Minimum - Leonard\n5. How to Cope with Low CGPA and Social Anxiety - Anonymous Third Year"
-              }
-            },
-            "Rack3":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Database System Concepts - Abraham \n2. Design Patterns: Elements of Reusable Software - Gang of Four\n3. Mein Kampf - Adolf Hitler (Why is this even here?)\n4. Classical Mechanics - Herbert Goldstein\n5. A Complete Guide to Talking to Women - Written by an Engineer\n6. Cryptography and Network Security - William Stallings"
-              }
-            },
-            "Rack4":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Macroeconomics for Engineers Who Just Want to Build Bridges\n2. The Art of the Cookie Jar\n3. Engineering Thermodynamics by an Author Who Has Given Up\n4. How to Convince Your Parents That a Seven point Five CGPA is Actually Great\n5. Principles of Linear Algebra and Unnecessary Mental Suffering"
-              }
-            },
-            "Rack5":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Fundamentals of Physics - Halliday and Resnick\n2. Calculus: Early Transcendentals - James Stewart\n3. Engineering Mechanics: Statics and Lifeless Objects That Refuse to Move\n4. Introduction to Materials Science for Engineers - James Shackelford\n5. Principles of Microeconomics and Macro Depressions"
-              }
-            }
-          },
-          "Shelf6":{
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "Rack1":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Introduction to Algorithms - Cormen, Leiserson, Rivest, Stein\n2. Data Structures and Algorithms in C++ - Adam Drozdek\n3. Operating System Concepts - Silberschatz, Galvin, Gagne\n4. Computer Networking: A Top-Down Approach - Kurose, Ross\n5. Higher Engineering Mathematics - B.S. Grewal\n6. University Physics - Freedman and Young"
-              }
-            },
-            "Rack2":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Compilers: Principles, Techniques, and Tools - Aho, Lam\n2. Discrete Mathematics and Its Applications - Kenneth Rosen\n3. Advanced Engineering Mathematics - Erwin Kreyszig\n4. Quantum Mechanics: The Theoretical Minimum - Leonard\n5. How to Cope with Low CGPA and Social Anxiety - Anonymous Third Year"
-              }
-            },
-            "Rack3":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Database System Concepts - Abraham \n2. Design Patterns: Elements of Reusable Software - Gang of Four\n3. Mein Kampf - Adolf Hitler (Why is this even here?)\n4. Classical Mechanics - Herbert Goldstein\n5. A Complete Guide to Talking to Women - Written by an Engineer\n6. Cryptography and Network Security - William Stallings"
-              }
-            },
-            "Rack4":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Macroeconomics for Engineers Who Just Want to Build Bridges\n2. The Art of the Cookie Jar\n3. Engineering Thermodynamics by an Author Who Has Given Up\n4. How to Convince Your Parents That a Seven point Five CGPA is Actually Great\n5. Principles of Linear Algebra and Unnecessary Mental Suffering"
-              }
-            },
-            "Rack5":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Fundamentals of Physics - Halliday and Resnick\n2. Calculus: Early Transcendentals - James Stewart\n3. Engineering Mechanics: Statics and Lifeless Objects That Refuse to Move\n4. Introduction to Materials Science for Engineers - James Shackelford\n5. Principles of Microeconomics and Macro Depressions"
-              }
-            }
-          },
-          "Shelf7":{
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "Rack1":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Introduction to Algorithms - Cormen, Leiserson, Rivest, Stein\n2. Data Structures and Algorithms in C++ - Adam Drozdek\n3. Operating System Concepts - Silberschatz, Galvin, Gagne\n4. Computer Networking: A Top-Down Approach - Kurose, Ross\n5. Higher Engineering Mathematics - B.S. Grewal\n6. University Physics - Freedman and Young"
-              }
-            },
-            "Rack2":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Compilers: Principles, Techniques, and Tools - Aho, Lam\n2. Discrete Mathematics and Its Applications - Kenneth Rosen\n3. Advanced Engineering Mathematics - Erwin Kreyszig\n4. Quantum Mechanics: The Theoretical Minimum - Leonard\n5. How to Cope with Low CGPA and Social Anxiety - Anonymous Third Year"
-              }
-            },
-            "Rack3":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Database System Concepts - Abraham \n2. Design Patterns: Elements of Reusable Software - Gang of Four\n3. Mein Kampf - Adolf Hitler (Why is this even here?)\n4. Classical Mechanics - Herbert Goldstein\n5. A Complete Guide to Talking to Women - Written by an Engineer\n6. Cryptography and Network Security - William Stallings"
-              }
-            },
-            "Rack4":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Macroeconomics for Engineers Who Just Want to Build Bridges\n2. The Art of the Cookie Jar\n3. Engineering Thermodynamics by an Author Who Has Given Up\n4. How to Convince Your Parents That a Seven point Five CGPA is Actually Great\n5. Principles of Linear Algebra and Unnecessary Mental Suffering"
-              }
-            },
-            "Rack5":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Fundamentals of Physics - Halliday and Resnick\n2. Calculus: Early Transcendentals - James Stewart\n3. Engineering Mechanics: Statics and Lifeless Objects That Refuse to Move\n4. Introduction to Materials Science for Engineers - James Shackelford\n5. Principles of Microeconomics and Macro Depressions"
-              }
-            }
-          },
-          "Shelf8":{
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "Rack1":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Introduction to Algorithms - Cormen, Leiserson, Rivest, Stein\n2. Data Structures and Algorithms in C++ - Adam Drozdek\n3. Operating System Concepts - Silberschatz, Galvin, Gagne\n4. Computer Networking: A Top-Down Approach - Kurose, Ross\n5. Higher Engineering Mathematics - B.S. Grewal\n6. University Physics - Freedman and Young"
-              }
-            },
-            "Rack2":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Compilers: Principles, Techniques, and Tools - Aho, Lam\n2. Discrete Mathematics and Its Applications - Kenneth Rosen\n3. Advanced Engineering Mathematics - Erwin Kreyszig\n4. Quantum Mechanics: The Theoretical Minimum - Leonard\n5. How to Cope with Low CGPA and Social Anxiety - Anonymous Third Year"
-              }
-            },
-            "Rack3":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Database System Concepts - Abraham \n2. Design Patterns: Elements of Reusable Software - Gang of Four\n3. Mein Kampf - Adolf Hitler (Why is this even here?)\n4. Classical Mechanics - Herbert Goldstein\n5. A Complete Guide to Talking to Women - Written by an Engineer\n6. Cryptography and Network Security - William Stallings"
-              }
-            },
-            "Rack4":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Macroeconomics for Engineers Who Just Want to Build Bridges\n2. The Art of the Cookie Jar\n3. Engineering Thermodynamics by an Author Who Has Given Up\n4. How to Convince Your Parents That a Seven point Five CGPA is Actually Great\n5. Principles of Linear Algebra and Unnecessary Mental Suffering"
-              }
-            },
-            "Rack5":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Fundamentals of Physics - Halliday and Resnick\n2. Calculus: Early Transcendentals - James Stewart\n3. Engineering Mechanics: Statics and Lifeless Objects That Refuse to Move\n4. Introduction to Materials Science for Engineers - James Shackelford\n5. Principles of Microeconomics and Macro Depressions"
-              }
-            }
-          }
+        "Librarian.txt": {
+          "type": "file",
+          "content": "Silence is gold here. Outside, we have the peafowls screaming. Inside, we have students silently screaming because of exams."
         }
       },
-      "First_Floor": {
+      "Aisle A": {
         "type": "dir",
-        "hidden": false,
-        "author": "SOFTCOM",
-        "creation": "12-7-26",
-        "TechnoBooth": {
-          "type": "dir",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-           "technobooth.txt": {
-            "type": "file",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "content": "You don't have your ID Card,duh. You cannot go into the TechnoBooth."
-            
-          }
+        "shelf 1.txt": {
+          "type": "file",
+          "content": "Calculus Vol 1: Dusty. Looks like it hasn't been touched since the campus main gate was constructed."
         },
-        "Common-area": {
-          "type": "dir",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "Common-area.txt": {
-            "type": "file",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "content": "Every single desk is physically empty, yet completely 'reserved'. One has been claimed by a single un-capped Reynolds pen since 2:00 PM while another has an empty water bottle resting on it. No ID card here."
-          }
+        "shelf 2.txt": {
+          "type": "file",
+          "content": "Introduction to Algorithms: Pages 400 to 450 are completely worn out. Must be the dynamic programming chapter right before placement season."
         },
-        "Cubicles":{
-          "type": "dir",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "Wing-1": {
-          "type": "dir",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "Shelf1":{
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "Rack1":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Introduction to Algorithms - Cormen, Leiserson, Rivest, Stein\n2. Data Structures and Algorithms in C++ - Adam Drozdek\n3. Operating System Concepts - Silberschatz, Galvin, Gagne\n4. Computer Networking: A Top-Down Approach - Kurose, Ross\n5. Higher Engineering Mathematics - B.S. Grewal\n6. University Physics - Freedman and Young"
-              }
-            },
-            "Rack2":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Compilers: Principles, Techniques, and Tools - Aho, Lam\n2. Discrete Mathematics and Its Applications - Kenneth Rosen\n3. Advanced Engineering Mathematics - Erwin Kreyszig\n4. Quantum Mechanics: The Theoretical Minimum - Leonard\n5. How to Cope with Low CGPA and Social Anxiety - Anonymous Third Year"
-              }
-            },
-            "Rack3":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Database System Concepts - Abraham \n2. Design Patterns: Elements of Reusable Software - Gang of Four\n3. Mein Kampf - Adolf Hitler (Why is this even here?)\n4. Classical Mechanics - Herbert Goldstein\n5. A Complete Guide to Talking to Women - Written by an Engineer\n6. Cryptography and Network Security - William Stallings"
-              }
-            },
-            "Rack4":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Macroeconomics for Engineers Who Just Want to Build Bridges\n2. The Art of the Cookie Jar\n3. Engineering Thermodynamics by an Author Who Has Given Up\n4. How to Convince Your Parents That a Seven point Five CGPA is Actually Great\n5. Principles of Linear Algebra and Unnecessary Mental Suffering"
-              }
-            },
-            "Rack5":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Fundamentals of Physics - Halliday and Resnick\n2. Calculus: Early Transcendentals - James Stewart\n3. Engineering Mechanics: Statics and Lifeless Objects That Refuse to Move\n4. Introduction to Materials Science for Engineers - James Shackelford\n5. Principles of Microeconomics and Macro Depressions"
-              }
-            }
-          },
-          "Shelf2":{
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "Rack1":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Introduction to Algorithms - Cormen, Leiserson, Rivest, Stein\n2. Data Structures and Algorithms in C++ - Adam Drozdek\n3. Operating System Concepts - Silberschatz, Galvin, Gagne\n4. Computer Networking: A Top-Down Approach - Kurose, Ross\n5. Higher Engineering Mathematics - B.S. Grewal\n6. University Physics - Freedman and Young"
-              }
-            },
-            "Rack2":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Compilers: Principles, Techniques, and Tools - Aho, Lam\n2. Discrete Mathematics and Its Applications - Kenneth Rosen\n3. Advanced Engineering Mathematics - Erwin Kreyszig\n4. Quantum Mechanics: The Theoretical Minimum - Leonard\n5. How to Cope with Low CGPA and Social Anxiety - Anonymous Third Year"
-              }
-            },
-            "Rack3":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Database System Concepts - Abraham \n2. Design Patterns: Elements of Reusable Software - Gang of Four\n3. Mein Kampf - Adolf Hitler (Why is this even here?)\n4. Classical Mechanics - Herbert Goldstein\n5. A Complete Guide to Talking to Women - Written by an Engineer\n6. Cryptography and Network Security - William Stallings"
-              }
-            },
-            "Rack4":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Macroeconomics for Engineers Who Just Want to Build Bridges\n2. The Art of the Cookie Jar\n3. Engineering Thermodynamics by an Author Who Has Given Up\n4. How to Convince Your Parents That a Seven point Five CGPA is Actually Great\n5. Principles of Linear Algebra and Unnecessary Mental Suffering"
-              }
-            },
-            "Rack5":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Fundamentals of Physics - Halliday and Resnick\n2. Calculus: Early Transcendentals - James Stewart\n3. Engineering Mechanics: Statics and Lifeless Objects That Refuse to Move\n4. Introduction to Materials Science for Engineers - James Shackelford\n5. Principles of Microeconomics and Macro Depressions"
-              }
-            }
-          },
-          "Shelf3":{
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "Rack1":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Introduction to Algorithms - Cormen, Leiserson, Rivest, Stein\n2. Data Structures and Algorithms in C++ - Adam Drozdek\n3. Operating System Concepts - Silberschatz, Galvin, Gagne\n4. Computer Networking: A Top-Down Approach - Kurose, Ross\n5. Higher Engineering Mathematics - B.S. Grewal\n6. University Physics - Freedman and Young"
-              }
-            },
-            "Rack2":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Compilers: Principles, Techniques, and Tools - Aho, Lam\n2. Discrete Mathematics and Its Applications - Kenneth Rosen\n3. Advanced Engineering Mathematics - Erwin Kreyszig\n4. Quantum Mechanics: The Theoretical Minimum - Leonard\n5. How to Cope with Low CGPA and Social Anxiety - Anonymous Third Year"
-              }
-            },
-            "Rack3":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Database System Concepts - Abraham \n2. Design Patterns: Elements of Reusable Software - Gang of Four\n3. Mein Kampf - Adolf Hitler (Why is this even here?)\n4. Classical Mechanics - Herbert Goldstein\n5. A Complete Guide to Talking to Women - Written by an Engineer\n6. Cryptography and Network Security - William Stallings"
-              }
-            },
-            "Rack4":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Macroeconomics for Engineers Who Just Want to Build Bridges\n2. The Art of the Cookie Jar\n3. Engineering Thermodynamics by an Author Who Has Given Up\n4. How to Convince Your Parents That a Seven point Five CGPA is Actually Great\n5. Principles of Linear Algebra and Unnecessary Mental Suffering"
-              }
-            },
-            "Rack5":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Fundamentals of Physics - Halliday and Resnick\n2. Calculus: Early Transcendentals - James Stewart\n3. Engineering Mechanics: Statics and Lifeless Objects That Refuse to Move\n4. Introduction to Materials Science for Engineers - James Shackelford\n5. Principles of Microeconomics and Macro Depressions"
-              }
-            }
-          },
-          "Shelf4":{
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "Rack1":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Introduction to Algorithms - Cormen, Leiserson, Rivest, Stein\n2. Data Structures and Algorithms in C++ - Adam Drozdek\n3. Operating System Concepts - Silberschatz, Galvin, Gagne\n4. Computer Networking: A Top-Down Approach - Kurose, Ross\n5. Higher Engineering Mathematics - B.S. Grewal\n6. University Physics - Freedman and Young"
-              }
-            },
-            "Rack2":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Compilers: Principles, Techniques, and Tools - Aho, Lam\n2. Discrete Mathematics and Its Applications - Kenneth Rosen\n3. Advanced Engineering Mathematics - Erwin Kreyszig\n4. Quantum Mechanics: The Theoretical Minimum - Leonard\n5. How to Cope with Low CGPA and Social Anxiety - Anonymous Third Year"
-              }
-            },
-            "Rack3":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "Your ID Card!! It's right there on top of this rack. You may advance to the next level now. The password to proceed to the next level is the name of the mechanical block, all letters small, no space."
-              }
-            },
-            "Rack4":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Macroeconomics for Engineers Who Just Want to Build Bridges\n2. The Art of the Cookie Jar\n3. Engineering Thermodynamics by an Author Who Has Given Up\n4. How to Convince Your Parents That a Seven point Five CGPA is Actually Great\n5. Principles of Linear Algebra and Unnecessary Mental Suffering"
-              }
-            },
-            "Rack5":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Fundamentals of Physics - Halliday and Resnick\n2. Calculus: Early Transcendentals - James Stewart\n3. Engineering Mechanics: Statics and Lifeless Objects That Refuse to Move\n4. Introduction to Materials Science for Engineers - James Shackelford\n5. Principles of Microeconomics and Macro Depressions"
-              }
-            }
-          },
-          "Shelf5":{
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "Rack1":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Introduction to Algorithms - Cormen, Leiserson, Rivest, Stein\n2. Data Structures and Algorithms in C++ - Adam Drozdek\n3. Operating System Concepts - Silberschatz, Galvin, Gagne\n4. Computer Networking: A Top-Down Approach - Kurose, Ross\n5. Higher Engineering Mathematics - B.S. Grewal\n6. University Physics - Freedman and Young"
-              }
-            },
-            "Rack2":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Compilers: Principles, Techniques, and Tools - Aho, Lam\n2. Discrete Mathematics and Its Applications - Kenneth Rosen\n3. Advanced Engineering Mathematics - Erwin Kreyszig\n4. Quantum Mechanics: The Theoretical Minimum - Leonard\n5. How to Cope with Low CGPA and Social Anxiety - Anonymous Third Year"
-              }
-            },
-            "Rack3":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Database System Concepts - Abraham \n2. Design Patterns: Elements of Reusable Software - Gang of Four\n3. Mein Kampf - Adolf Hitler (Why is this even here?)\n4. Classical Mechanics - Herbert Goldstein\n5. A Complete Guide to Talking to Women - Written by an Engineer\n6. Cryptography and Network Security - William Stallings"
-              }
-            },
-            "Rack4":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Macroeconomics for Engineers Who Just Want to Build Bridges\n2. The Art of the Cookie Jar\n3. Engineering Thermodynamics by an Author Who Has Given Up\n4. How to Convince Your Parents That a Seven point Five CGPA is Actually Great\n5. Principles of Linear Algebra and Unnecessary Mental Suffering"
-              }
-            },
-            "Rack5":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Fundamentals of Physics - Halliday and Resnick\n2. Calculus: Early Transcendentals - James Stewart\n3. Engineering Mechanics: Statics and Lifeless Objects That Refuse to Move\n4. Introduction to Materials Science for Engineers - James Shackelford\n5. Principles of Microeconomics and Macro Depressions"
-              }
-            }
-          }
+        "shelf 3.txt": {
+          "type": "file",
+          "content": "The Art of Doing Science and Engineering: A classic. Someone left a bookmark that says 'Oreo Shakes have inflated by 10 rupees again. Life is hard.'"
         },
-        "Wing-2": {
-          "type": "dir",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "Shelf1":{
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "Rack1":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Introduction to Algorithms - Cormen, Leiserson, Rivest, Stein\n2. Data Structures and Algorithms in C++ - Adam Drozdek\n3. Operating System Concepts - Silberschatz, Galvin, Gagne\n4. Computer Networking: A Top-Down Approach - Kurose, Ross\n5. Higher Engineering Mathematics - B.S. Grewal\n6. University Physics - Freedman and Young"
-              }
-            },
-            "Rack2":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Compilers: Principles, Techniques, and Tools - Aho, Lam\n2. Discrete Mathematics and Its Applications - Kenneth Rosen\n3. Advanced Engineering Mathematics - Erwin Kreyszig\n4. Quantum Mechanics: The Theoretical Minimum - Leonard\n5. How to Cope with Low CGPA and Social Anxiety - Anonymous Third Year"
-              }
-            },
-            "Rack3":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Database System Concepts - Abraham \n2. Design Patterns: Elements of Reusable Software - Gang of Four\n3. Mein Kampf - Adolf Hitler (Why is this even here?)\n4. Classical Mechanics - Herbert Goldstein\n5. A Complete Guide to Talking to Women - Written by an Engineer\n6. Cryptography and Network Security - William Stallings"
-              }
-            },
-            "Rack4":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Macroeconomics for Engineers Who Just Want to Build Bridges\n2. The Art of the Cookie Jar\n3. Engineering Thermodynamics by an Author Who Has Given Up\n4. How to Convince Your Parents That a Seven point Five CGPA is Actually Great\n5. Principles of Linear Algebra and Unnecessary Mental Suffering"
-              }
-            },
-            "Rack5":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Fundamentals of Physics - Halliday and Resnick\n2. Calculus: Early Transcendentals - James Stewart\n3. Engineering Mechanics: Statics and Lifeless Objects That Refuse to Move\n4. Introduction to Materials Science for Engineers - James Shackelford\n5. Principles of Microeconomics and Macro Depressions"
-              }
-            }
-          },
-          "Shelf2":{
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "Rack1":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Introduction to Algorithms - Cormen, Leiserson, Rivest, Stein\n2. Data Structures and Algorithms in C++ - Adam Drozdek\n3. Operating System Concepts - Silberschatz, Galvin, Gagne\n4. Computer Networking: A Top-Down Approach - Kurose, Ross\n5. Higher Engineering Mathematics - B.S. Grewal\n6. University Physics - Freedman and Young"
-              }
-            },
-            "Rack2":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Compilers: Principles, Techniques, and Tools - Aho, Lam\n2. Discrete Mathematics and Its Applications - Kenneth Rosen\n3. Advanced Engineering Mathematics - Erwin Kreyszig\n4. Quantum Mechanics: The Theoretical Minimum - Leonard\n5. How to Cope with Low CGPA and Social Anxiety - Anonymous Third Year"
-              }
-            },
-            "Rack3":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Database System Concepts - Abraham \n2. Design Patterns: Elements of Reusable Software - Gang of Four\n3. Mein Kampf - Adolf Hitler (Why is this even here?)\n4. Classical Mechanics - Herbert Goldstein\n5. A Complete Guide to Talking to Women - Written by an Engineer\n6. Cryptography and Network Security - William Stallings"
-              }
-            },
-            "Rack4":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Macroeconomics for Engineers Who Just Want to Build Bridges\n2. The Art of the Cookie Jar\n3. Engineering Thermodynamics by an Author Who Has Given Up\n4. How to Convince Your Parents That a Seven point Five CGPA is Actually Great\n5. Principles of Linear Algebra and Unnecessary Mental Suffering"
-              }
-            },
-            "Rack5":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Fundamentals of Physics - Halliday and Resnick\n2. Calculus: Early Transcendentals - James Stewart\n3. Engineering Mechanics: Statics and Lifeless Objects That Refuse to Move\n4. Introduction to Materials Science for Engineers - James Shackelford\n5. Principles of Microeconomics and Macro Depressions"
-              }
-            }
-          },
-          "Shelf3":{
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "Rack1":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Introduction to Algorithms - Cormen, Leiserson, Rivest, Stein\n2. Data Structures and Algorithms in C++ - Adam Drozdek\n3. Operating System Concepts - Silberschatz, Galvin, Gagne\n4. Computer Networking: A Top-Down Approach - Kurose, Ross\n5. Higher Engineering Mathematics - B.S. Grewal\n6. University Physics - Freedman and Young"
-              }
-            },
-            "Rack2":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Compilers: Principles, Techniques, and Tools - Aho, Lam\n2. Discrete Mathematics and Its Applications - Kenneth Rosen\n3. Advanced Engineering Mathematics - Erwin Kreyszig\n4. Quantum Mechanics: The Theoretical Minimum - Leonard\n5. How to Cope with Low CGPA and Social Anxiety - Anonymous Third Year"
-              }
-            },
-            "Rack3":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Database System Concepts - Abraham \n2. Design Patterns: Elements of Reusable Software - Gang of Four\n3. Mein Kampf - Adolf Hitler (Why is this even here?)\n4. Classical Mechanics - Herbert Goldstein\n5. A Complete Guide to Talking to Women - Written by an Engineer\n6. Cryptography and Network Security - William Stallings"
-              }
-            },
-            "Rack4":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Macroeconomics for Engineers Who Just Want to Build Bridges\n2. The Art of the Cookie Jar\n3. Engineering Thermodynamics by an Author Who Has Given Up\n4. How to Convince Your Parents That a Seven point Five CGPA is Actually Great\n5. Principles of Linear Algebra and Unnecessary Mental Suffering"
-              }
-            },
-            "Rack5":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Fundamentals of Physics - Halliday and Resnick\n2. Calculus: Early Transcendentals - James Stewart\n3. Engineering Mechanics: Statics and Lifeless Objects That Refuse to Move\n4. Introduction to Materials Science for Engineers - James Shackelford\n5. Principles of Microeconomics and Macro Depressions"
-              }
-            }
-          },
-          "Shelf4":{
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "Rack1":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Introduction to Algorithms - Cormen, Leiserson, Rivest, Stein\n2. Data Structures and Algorithms in C++ - Adam Drozdek\n3. Operating System Concepts - Silberschatz, Galvin, Gagne\n4. Computer Networking: A Top-Down Approach - Kurose, Ross\n5. Higher Engineering Mathematics - B.S. Grewal\n6. University Physics - Freedman and Young"
-              }
-            },
-            "Rack2":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Compilers: Principles, Techniques, and Tools - Aho, Lam\n2. Discrete Mathematics and Its Applications - Kenneth Rosen\n3. Advanced Engineering Mathematics - Erwin Kreyszig\n4. Quantum Mechanics: The Theoretical Minimum - Leonard\n5. How to Cope with Low CGPA and Social Anxiety - Anonymous Third Year"
-              }
-            },
-            "Rack3":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Database System Concepts - Abraham \n2. Design Patterns: Elements of Reusable Software - Gang of Four\n3. Mein Kampf - Adolf Hitler (Why is this even here?)\n4. Classical Mechanics - Herbert Goldstein\n5. A Complete Guide to Talking to Women - Written by an Engineer\n6. Cryptography and Network Security - William Stallings"
-              }
-            },
-            "Rack4":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Macroeconomics for Engineers Who Just Want to Build Bridges\n2. The Art of the Cookie Jar\n3. Engineering Thermodynamics by an Author Who Has Given Up\n4. How to Convince Your Parents That a Seven point Five CGPA is Actually Great\n5. Principles of Linear Algebra and Unnecessary Mental Suffering"
-              }
-            },
-            "Rack5":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Fundamentals of Physics - Halliday and Resnick\n2. Calculus: Early Transcendentals - James Stewart\n3. Engineering Mechanics: Statics and Lifeless Objects That Refuse to Move\n4. Introduction to Materials Science for Engineers - James Shackelford\n5. Principles of Microeconomics and Macro Depressions"
-              }
-            }
-          },
-          "Shelf5":{
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "Rack1":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Introduction to Algorithms - Cormen, Leiserson, Rivest, Stein\n2. Data Structures and Algorithms in C++ - Adam Drozdek\n3. Operating System Concepts - Silberschatz, Galvin, Gagne\n4. Computer Networking: A Top-Down Approach - Kurose, Ross\n5. Higher Engineering Mathematics - B.S. Grewal\n6. University Physics - Freedman and Young"
-              }
-            },
-            "Rack2":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Compilers: Principles, Techniques, and Tools - Aho, Lam\n2. Discrete Mathematics and Its Applications - Kenneth Rosen\n3. Advanced Engineering Mathematics - Erwin Kreyszig\n4. Quantum Mechanics: The Theoretical Minimum - Leonard\n5. How to Cope with Low CGPA and Social Anxiety - Anonymous Third Year"
-              }
-            },
-            "Rack3":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Database System Concepts - Abraham \n2. Design Patterns: Elements of Reusable Software - Gang of Four\n3. Mein Kampf - Adolf Hitler (Why is this even here?)\n4. Classical Mechanics - Herbert Goldstein\n5. A Complete Guide to Talking to Women - Written by an Engineer\n6. Cryptography and Network Security - William Stallings"
-              }
-            },
-            "Rack4":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Macroeconomics for Engineers Who Just Want to Build Bridges\n2. The Art of the Cookie Jar\n3. Engineering Thermodynamics by an Author Who Has Given Up\n4. How to Convince Your Parents That a Seven point Five CGPA is Actually Great\n5. Principles of Linear Algebra and Unnecessary Mental Suffering"
-              }
-            },
-            "Rack5":{
-              "type": "dir",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "rack_index.txt": {
-                "type": "file",
-                "hidden": false,
-                "author": "SOFTCOM",
-                "creation": "12-7-26",
-                "content": "1. Fundamentals of Physics - Halliday and Resnick\n2. Calculus: Early Transcendentals - James Stewart\n3. Engineering Mechanics: Statics and Lifeless Objects That Refuse to Move\n4. Introduction to Materials Science for Engineers - James Shackelford\n5. Principles of Microeconomics and Macro Depressions"
-              }
-            }
-          }
+        "shelf 4.txt": {
+          "type": "file",
+          "content": "Fake file. Just some library logs of missing books: Principles of Electromagnetic Waves, Organic Chemistry Vol II, Life in Wilderness."
+        },
+        "shelf 5.txt": {
+          "type": "file",
+          "content": "Another fake file listing library rules. Please do not sleep on the study desks. Go to hostel bed instead."
         }
+      },
+      "Aisle B": {
+        "type": "dir",
+        "book 1.txt": {
+          "type": "file",
+          "content": "A book about medieval castles. There is a handwritten note inside: 'Seniors said class gossip is high tonight. Meet at Maggie Point at 11 PM.'"
+        },
+        "book 2.txt": {
+          "type": "file",
+          "content": "Sci-Fi collection: Time travel stories. A student has written underneath: 'If I could time travel, I would sleep through the 8 AM physics lecture.'"
+        },
+        "book 3.txt": {
+          "type": "file",
+          "content": "A thrilling novel containing bookmarks, grocery receipts, and a small doodle of watchman Paaji running after a cycle."
+        },
+        "book 4.txt": {
+          "type": "file",
+          "content": "Why Do Dogs Bark At Midnight: A thesis on campus wildlife. Highly descriptive of dog personalities."
+        }
+      },
+      "Aisle C": {
+        "type": "dir",
+        "physics.txt": {
+          "type": "file",
+          "content": "Quantum Physics - Intro. Nothing but Greek letters and crying emoji sticker on the index page."
+        },
+        "thermo equations.txt": {
+          "type": "file",
+          "content": "Enthalpy vs Entropy. A recipe for Maggie is written in between: Boil water, add tastemaker, add processed cheese, pray it is good."
+        },
+        "geology rocks.txt": {
+          "type": "file",
+          "content": "A guide to local Punjab soil. Mentioned Harappan civilization relics. Very interesting but irrelevant to the token search!"
+        },
+        "stars sky.txt": {
+          "type": "file",
+          "content": "Zenith stargazing guidebook. Describes how to search the cosmic map."
+        },
+        "mathematical games.txt": {
+          "type": "file",
+          "content": "Game theory. A student paper explaining how to maximize chance of getting paneer pieces on paneer day mess menu."
+        }
+      },
+      "Study Cabins": {
+        "type": "dir",
+        "cabin 1.txt": {
+          "type": "file",
+          "content": "A copy of class schedule with red circles around 'Proxy' - marked with tears."
+        },
+        "cabin 2.txt": {
+          "type": "file",
+          "content": "Sleepy student diary: 'Day 4 of trying to understand electrodynamics. The dogs barking outside the window makes more sense than this professor.'"
+        },
+        "cabin 3.txt": {
+          "type": "file",
+          "content": "A high scorer's notebook. It contains neat handwriting. At the footer: 'Not all toppers have bad handwriting'"
+        },
+        "cabin 4.txt": {
+          "type": "file",
+          "content": "Clean wood surface with a pencil carving of 'The hacking god was here'. What a troll LOL"
+        },
+        "cabin 5.txt": {
+          "type": "file",
+          "content": "Draft assignment on circuit design. Highly neat diagrams but completely wrong values, marked with a red marker 'this design sucks'."
+        }
+      },
+      "Silent Zone": {
+        "type": "dir",
+        "zone rules.txt": {
+          "type": "file",
+          "content": "Silent zone guidelines: 1. Keep laptops on mute. 2. Any student found whispering will be shushed intensely by librarian."
         }
       }
     },
-    "README.txt": {
-      "type": "file",
+    "SS Bhatnagar Block": {
+      "type": "dir",
       "hidden": false,
-      "author": "SOFTCOM",
-      "creation": "12-7-26",
-      "content": "--------------------\nLevel 1\n--------------------\n\nMid sems are fast approaching and you, aiming for a modest 10 CGPA in your first semester go to the library to study for your upcoming exams. But, while returning, you realize that you have lost your ID Card in the library. You must have left it on the shelf while browsing some books.How will you book those precious TechnoBooths now to slee-, *ahm* study all day?\n\nFind your ID card in the library to get the password and pass it as the argument for the 'next' command to advance to the next level.\n\nUseful Commands:\n- cd\n- ls\n- grep"
+      "Ground Floor": {
+        "type": "dir",
+        "Chemistry Lab 1": {
+          "type": "dir",
+          "flasks.txt": {
+            "type": "file",
+            "content": "Beakers filled with colourful blue liquids. Do not drink, even if they smell like lime juice."
+          },
+          "log book.txt": {
+            "type": "file",
+            "content": "Chemistry researchers log:\n- Tested solution A with solution B.\n- Result: Nothing happened.\n- Tested with a random catalyst.\n- Result: Small puff of smoke and TA started staring of judgment."
+          }
+        },
+        "Security Cabin": {
+          "type": "dir",
+          "paaji.txt": {
+            "type": "file",
+            "content": "SS Bhatnagar Security Paaji: 'Oye Bachche! Jaldi waha se hato!!!'"
+          }
+        },
+        "Chemical Storage Room": {
+          "type": "dir",
+          "crate A1 logs.txt": {
+            "type": "file",
+            "content": "Crate holds pure hydrochloric acid containers. Safe handling only."
+          },
+          "crate A2 logs.txt": {
+            "type": "file",
+            "content": "Crate A2 holds sodium bicarbonate samples. Perfect for standard freshman salt analysis labs."
+          },
+          "crate A3 logs.txt": {
+            "type": "file",
+            "content": "Crate A3 is empty. Someone has placed half-finished burger wrapper inside. Lab assistant is angry."
+          }
+        }
+      },
+      "First Floor": {
+        "type": "dir",
+        "Faculty Wing A": {
+          "type": "dir",
+          "cabin 101.txt": {
+            "type": "file",
+            "content": "Research on polymer chemistry. A slide deck on the screen is titled 'Why plastic is bad and paper notebooks are better but expensive.'"
+          },
+          "cabin 102.txt": {
+            "type": "file",
+            "content": "Professor Garg: 'Please submit assignment in Google Classroom. Do not spam my inbox!'"
+          },
+          "cabin 103 empty.txt": {
+            "type": "file",
+            "content": "Faculty out for national science conference. Sticky note on door says: 'Leave assignments under the door mat.'"
+          },
+          "cabin 104 records.txt": {
+            "type": "file",
+            "content": "List of freshman project marks. Most received B. One genius student got an A but bunked every class!??"
+          },
+          "cabin 105 syllabus.txt": {
+            "type": "file",
+            "content": "Organic chemistry course manual. Learn your IUPAC nomenclature before trying to synthesize anything!"
+          }
+        },
+        "Lecture Hall A": {
+          "type": "dir",
+          "chalkboard.txt": {
+            "type": "file",
+            "content": "Molecules drawn with imperfect hexagons."
+          },
+          "benches.txt": {
+            "type": "file",
+            "content": "There is a pencil carving on the third row: 'Satish Dhawan (Green Window Outlines) has a secret under the lathe machine.'"
+          },
+          "lost belongings.txt": {
+            "type": "file",
+            "content": "Items found under benches: A water bottle, three pencil box lids, a sheet of formulas, and immense existential dread."
+          }
+        },
+        "Lecture Hall B": {
+          "type": "dir",
+          "syllabus notes.txt": {
+            "type": "file",
+            "content": "Halls C and D are currently inaccessible due to construction work. We are closing B as well shortly. Please cooperate..."
+          }
+        }
+      },
+      "Second Floor": {
+        "type": "dir",
+        "Department Library": {
+          "type": "dir",
+          "chem journals.txt": {
+            "type": "file",
+            "content": "Journals dating back to 1995. Just kidding IIT Ropar was founded in 2009"
+          },
+          "old theses.txt": {
+            "type": "file",
+            "content": "A dusty stack of research papers on chemical engineering catalyst processes."
+          }
+        },
+        "Chemical Engine Room": {
+          "type": "dir",
+          "safety rules.txt": {
+            "type": "file",
+            "content": "Rule 1: Always wear safety glasses.\nRule 2: Don't panic if the blue windows rattle because of sports ground noise.\nRule 3: Ask for cookies from the professor if you haven't had breakfast. Some profs are cool and chill, just like the ice bath you'll use in experiments."
+          },
+          "instrument calibration.txt": {
+            "type": "file",
+            "content": "Spectrophotometer calibrated on June 22. Status: Working but makes clicking sounds."
+          }
+        }
+      }
+    },
+    "Satish Dhawan Block": {
+      "type": "dir",
+      "hidden": false,
+      "Ground Floor": {
+        "type": "dir",
+        "Mechanical Workshop": {
+          "type": "dir",
+          "lathe machines.txt": {
+            "type": "file",
+            "content": "Massive iron lathe machines that demand complete respect and a haircut before starting. Safety first...\n\n\n\n\n\n What?? Oh you need the password? Not here :P  \n\n\n Ok don't cry duh! Try searching those 3 machines..."
+          },
+          "safety chart.txt": {
+            "type": "file",
+            "content": "Chart shows correct workshop behavior. In fine print: 'Do not attempt to lathe your hostel room keys. They are standard-made.'"
+          },
+          "workshop blueprint.txt": {
+            "type": "file",
+            "content": "Blueprint for a customized engine prototype designed by team Zenith.\nNotes: Exhaust system needs calibration."
+          },
+          "machine 1 log.txt": {
+            "type": "file",
+            "content": "Machine 1 is fully functional. Gears greased. Ready for heavy manufacturing."
+          },
+          "machine 2 log.txt": {
+            "type": "file",
+            "content": "Machine 2 out of order. Needs sprocket replace. Please do not turn it on!"
+          },
+          "machine 3 log.txt": {
+            "type": "file",
+            "content": "Machine 3 has a custom shield attached to handle flying metal scraps during practical classes. You notice some scraps below, they make nice pattern that reminds you of fibonacci sequence, could this be a hint?"
+          }
+        },
+        "Hydraulics Lab": {
+          "type": "dir",
+          "water tank.txt": {
+            "type": "file",
+            "content": "Large water tanks for fluid mechanics experiments. It leaks slightly. Reminds you of the swimming pool that doesn't exist."
+          },
+          "pumps log.txt": {
+            "type": "file",
+            "content": "Centrifugal pump log indicating flow rate is stable. No signs of fluid leaks."
+          }
+        },
+        "Foundry": {
+          "type": "dir",
+          "sand molding records.txt": {
+            "type": "file",
+            "content": "Sand preparation instructions: Mix Bentonite clay, coal powder, water, and molding sand in exact ratio."
+          }
+        }
+      },
+      "First Floor": {
+        "type": "dir",
+        "Thermodynamics Lab": {
+          "type": "dir",
+          "clist.txt": {
+            "type": "file",
+            "content": "List of components: Pistons, cylinders, valves, and a broken mug that says 'Mechanical Engineers keep the world turning.'"
+          },
+          "professor notes.txt": {
+            "type": "file",
+            "content": "Thermodynamics is simple: you cannot win, you cannot break even, and you cannot get out of the game."
+          },
+          "stirling engine log.txt": {
+            "type": "file",
+            "content": "The stirling engine model runs when heated with hot water. Beautiful demo."
+          }
+        },
+        "CAD Room": {
+          "type": "dir",
+          "drawing desks.txt": {
+            "type": "file",
+            "content": "Desks designed for engineering drawing. Old drafters are clamped everywhere. A graveyard of bad angles."
+          },
+          "computer configs.txt": {
+            "type": "file",
+            "content": "SolidWorks configurations: Auto-save enabled. Recommended ram is 16GB. Student PC-4 keeps rendering slow."
+          },
+          "drawing sheets.txt": {
+            "type": "file",
+            "content": "A high scorer sheet with concentric circles. Beautiful presentation. Student got B+ because he used non-HB pencil. Harsh professors standards FAHHHHH."
+          }
+        }
+      },
+      "Second Floor": {
+        "type": "dir",
+        "Aeorodynamics Lab": {
+          "type": "dir",
+          "wind tunnel.txt": {
+            "type": "file",
+            "content": "A mini wind tunnel. Nothing extraordinary..."
+          },
+          "flight model.txt": {
+            "type": "file",
+            "content": "Model plane made of balsa wood. It is named 'Fledgling-9'. It has wingmate signatures."
+          },
+          "altitude calibration.txt": {
+            "type": "file",
+            "content": "Altitude tests indicating high accuracy. Ostriches fly much higher than this drone anyway."
+          }
+        },
+        "Department Office": {
+          "type": "dir",
+          "announcements.txt": {
+            "type": "file",
+            "content": "Registration notice: Please verify your block codes under floor records."
+          },
+          "budget sheets.txt": {
+            "type": "file",
+            "content": "Purchasing list: 10 new micrometers, 5 boxes of chalks, 3 whiteboard erasers, and infinite supply of student anxiety."
+          }
+        }
+      }
+    },
+    "Special Block(that doesn't exist)": {
+      "type": "dir",
+      "hidden": false,
+      "Ground Floor": {
+        "type": "dir",
+        "Computer Systems Lab": {
+          "type": "dir",
+          "monitors.txt": {
+            "type": "file",
+            "content": "Thirty LCD monitors showing VS Code editor windows. Some have compiling errors. Most are showing StackOverflow tabs. Oh sorry, now they must be using Chatgpt/Claude...Good ol' days"
+          },
+          "system backup.txt": {
+            "type": "file",
+            "content": "Computer Lab System Recovery Logs:\n- All workstations active.\n- Network security updated.\n- System bypassed from blacklists."
+          },
+          "pc 1 sys.txt": {
+            "type": "file",
+            "content": "PC-1 system specs: Ubuntu 22.04 LTS, gcc version 11.4. Keep terminal clean!"
+          },
+          "pc 2 sys.txt": {
+            "type": "file",
+            "content": "PC-2 shows python code loops: while True: try: sleep() except Exception: print('Help')"
+          },
+          "pc 3 sys.txt": {
+            "type": "file",
+            "content": "PC-3 history logged by previous student: cd root, ls, cat assignments.txt, rm -rf *.o"
+          },
+          "pc 4 sys.txt": {
+            "type": "file",
+            "content": "PC-4 screen saver: A glowing 3D cube revolving endlessly around its axis."
+          },
+          "pc 5 sys.txt": {
+            "type": "file",
+            "content": "PC-5 user directory holds a hack script that downloads games silently while class is ongoing."
+          }
+        },
+        "Network Server Room": {
+          "type": "dir",
+          "router config.txt": {
+            "type": "file",
+            "content": "WiFi Blacklist Policy:\n- Gaming during classes = Autodetect and disconnect.\n- Watching 4k videos = Slow down speed to 64kbps.\n- Downloading assignments = Unlimited bandwidth granted."
+          },
+          "server cabinet 1.txt": {
+            "type": "file",
+            "content": "Server cabinet 1: Handles hostel connectivity. Main bandwidth limiter rule: peak throttle during midterm nights."
+          }
+        }
+      },
+      "First Floor": {
+        "type": "dir",
+        "VLSI Design Lab": {
+          "type": "dir",
+          "chips.txt": {
+            "type": "file",
+            "content": "Silicon boards with micro-controllers. There is a tiny microchip labeled: 'Property of Tinkerer's lab'"
+          },
+          "soldering station.txt": {
+            "type": "file",
+            "content": "Soldering irons and lead-free alloy wire. Smells like melted flux and late-night deadlines."
+          }
+        },
+        "Embedded Systems Cabin": {
+          "type": "dir",
+          "sensor log.txt": {
+            "type": "file",
+            "content": "Smart Campus IoT Prototype: Temperature reading 38C. Humidity 60%."
+          },
+          "arduino codes.txt": {
+            "type": "file",
+            "content": "Sample blink code: void setup() { pinMode(LED BUILTIN, OUTPUT); } void loop() { digitalWrite(LED BUILTIN, HIGH); delay(1000); } WTH is that bruh?"
+          }
+        }
+      },
+      "Second Floor": {
+        "type": "dir",
+        "Software Club Hub": {
+          "type": "dir",
+          "ideas board.txt": {
+            "type": "file",
+            "content": "Written on whiteboard: 'Let's build a parser that checks if a student missed breakfast, then orders a Maggie from Maggie point automatically.'"
+          },
+          "club secrets.txt": {
+            "type": "file",
+            "content": "Coding club rule #0: If it works, don't touch it. Even if you don't know why it works."
+          },
+          "hackathon rules.txt": {
+            "type": "file",
+            "content": "Rules: 1. No chatGPT during the final round. 2. Sleep is forbidden. 3. Coffee refills are sponsor-provided."
+          }
+        }
+      }
+    },
+    "S. Ramanujan Block": {
+      "type": "dir",
+      "hidden": false,
+      "Ground Floor": {
+        "type": "dir",
+        "Math Lab 101": {
+          "type": "dir",
+          "constants.txt": {
+            "type": "file",
+            "content": "A list of mathematical constants. Pi, Euler, Golden Ratio, and the exact constant of Paaji's burger price inflation."
+          },
+          "fibonacci seq.txt": {
+            "type": "file",
+            "content": "0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144... You notice a weird number next. 264?? That reminds you of Rohit's unbelievable ODI innings, maybe Cricket ground has clues!??"
+          }
+        },
+        "Department Foyer": {
+          "type": "dir",
+          "ramanujan portrait.txt": {
+            "type": "file",
+            "content": "An elegant portrait of S. Ramanujan. His brilliant equation logs are printed alongside. You feel tiny and uneducated just looking at it."
+          }
+        }
+      },
+      "First Floor": {
+        "type": "dir",
+        "Seminar Room 1": {
+          "type": "dir",
+          "seminar log.txt": {
+            "type": "file",
+            "content": "Research Seminar Abstract: On the probability of surviving an 8 AM class given you was awake till 4 AM doing assignment and chatting with wingmates on the social circle."
+          },
+          "board write.txt": {
+            "type": "file",
+            "content": "Empty room board summary:\n- Limit of CGPA as stress approaches infinity = 10.0"
+          }
+        }
+      },
+      "Second Floor": {
+        "type": "dir",
+        "Statistical Lab": {
+          "type": "dir",
+          "probability.txt": {
+            "type": "file",
+            "content": "True statistics:\n- Chance of winning a chess match: ???%\n- Chance of finding paneer pieces inside the gravy: not 100%"
+          },
+          "campus surveys.txt": {
+            "type": "file",
+            "content": "Surveys of student satisfaction: 95% love Oreo Shakes, 3% prefer healthy juice, 2% are asleep."
+          },
+          "dog demographics.txt": {
+            "type": "file",
+            "content": "A map of dogs by geographic location: main gate protectors, admin block lounge sleepers, hostel courtyard rulers."
+          }
+        },
+        "Algebra Lab": {
+          "type": "dir",
+          "matrix multiplication.txt": {
+            "type": "file",
+            "content": "N x N heavy matrices. Compilers are burning just running this analysis."
+          }
+        }
+      }
+    },
+    "Sports Complex": {
+      "type": "dir",
+      "hidden": false,
+      "Cricket Ground": {
+        "type": "dir",
+        "pitch.txt": {
+          "type": "file",
+          "content": "Beautiful green pitch. Under the practice nets, some freshers are trying to impress the cricket club coordinators."
+        },
+        "scorecard.txt": {
+          "type": "file",
+          "content": "Matches played: 4. Wins: 3. Losses: 1 (against the local PhD scholar legends team)."
+        },
+        "inventory locked.txt": {
+          "type": "file",
+          "content": "Skins, bats, rubber balls, wickets, chalk sprays. You notice a signed bat of Rohit Sharma and a chit next to it: ROHITWILLPLAY2027WC, maybe this unlocks level 5!!! YAY"
+        }
+      },
+      "Football Field": {
+        "type": "dir",
+        "field.txt": {
+          "type": "file",
+          "content": "A heavy athletics turf. Perfect for running, until a dog group declares authority and blocks the practice track."
+        }
+      },
+      "Tennis Courts": {
+        "type": "dir",
+        "courts rules.txt": {
+          "type": "file",
+          "content": "Courts open: 5 PM to 8 PM. Proper shoes are required. Non-marking soles only. Watchman Paaji is vigilantly watching!"
+        }
+      }
     }
   }
 }

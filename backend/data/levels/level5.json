@@ -2,997 +2,596 @@
   "root": {
     "type": "dir",
     "hidden": false,
-    "author": "SOFTCOM",
-    "creation": "12-7-26",
-    "IIT-Ropar": {
-      "type": "dir",
-      "hidden": false,
-      "author": "SOFTCOM",
-      "creation": "12-7-26",
-      "Auditorium": {
-        "type": "dir",
-        "hidden": false,
-        "author": "SOFTCOM",
-        "creation": "12-7-26",
-        "audi.txt": {
-          "type": "file",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "content": "It's really crowded in the auditorium right now. There might be some hidden files here not visible normally."
-        },
-        "Audi-Foyer": {
-          "type": "dir",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "desk.txt": {
-            "type": "file",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "content": "No password here."
-          }
-        },
-        "Main-hall": {
-          "type": "dir",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "hall.txt": {
-            "type": "file",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "content": "A movie screening is going on right now. So, that's why there was such a huge crowd outside."
-          },
-          ".hidden": {
-            "type": "file",
-            "hidden": true,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "content": "Success!! The first part of the password is the name of the best club at IIT Ropar. *wink wink*"
-          }
-        }
-      },
-      "Sports-Complex": {
-        "type": "dir",
-        "hidden": false,
-        "author": "SOFTCOM",
-        "creation": "12-7-26",
-        "cricket-ground": {
-          "type": "dir",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "court.txt": {
-            "type": "file",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "content": ""
-          }
-        },
-        "hockey-ground": {
-          "type": "dir",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "court.txt": {
-            "type": "file",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "content": ""
-          }
-        },
-        "volleyball-court": {
-          "type": "dir",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "court.txt": {
-            "type": "file",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "content": ""
-          }
-        },
-        "basketball-court": {
-          "type": "dir",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "court.txt": {
-            "type": "file",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "content": ""
-          }
-        },
-        "swimming-pool": {
-          "type": "dir",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "swimming-pool.txt": {
-            "type": "file",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "content": "Since the password is in the IIT Ropar Campus, it wouldn't be here."
-          }
-        }
-      },
-      "Admin_Block": {
-        "type": "dir",
-        "hidden": false,
-        "author": "SOFTCOM",
-        "creation": "12-7-26",
-        "Senate_Hall": {
-          "type": "dir",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "senate.txt": {
-            "type": "file",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "content": "The senate hall is empty right now."
-          }
-        },
-        "Director_Office": {
-          "type": "dir",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "notice.txt": {
-            "type": "file",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "content": "Notice: IIT Ropar students are still not allowed."
-          }
-        }
-      },
-      "Library": {
-        "type": "dir",
-        "hidden": false,
-        "author": "SOFTCOM",
-        "creation": "12-7-26",
-        "Ground_Floor": {
-          "type": "dir",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "ground.txt": {
-            "type": "file",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "content": "Nothing here which can lead to the password."
-          }
-        },
-        "First_Floor": {
-          "type": "dir",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "first.txt": {
-            "type": "file",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "content": "Nothing here which can lead to the password either."
-          }
-        }
-      },
-      "SAB": {
-        "type": "dir",
-        "hidden": false,
-        "author": "SOFTCOM",
-        "creation": "12-7-26",
-        "sab.txt": {
-          "type": "file",
-          "hidden": true,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "content": "An anonymous tip has told you that the password might be in the C block, but navigating here is no easy than a maze and some rooms might be hidden."
-        },
-        "Ground_Floor": {
-          "type": "dir",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "A-Block": {
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "A101.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "A102.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "A104.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "A103.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "A105.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "A106.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "A107.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "A108.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            }
-          },
-          "B-Block": {
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "B101.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "B102.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "B103.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "B104.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "B105.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "B106.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "B107.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "B108.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            }
-          },
-          "C-Block": {
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "C101.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "C102.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "C103.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "C104.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "C105.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "C106.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "C107.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "C108.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            }
-          }
-        },
-        "First_Floor": {
-          "type": "dir",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "A-Block": {
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "A101.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "A102.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "A104.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "A103.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "A105.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "A106.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "A107.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "A108.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            }
-          },
-          "B-Block": {
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "B101.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "B102.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "B103.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "B104.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "B105.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "B106.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "B107.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "B108.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            }
-          },
-          "C-Block": {
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "C101.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "C102.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "C103.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "C104.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "C105.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "C106.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "C107.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Success!! The second part of the password is the number of places where you could get a haircut in the campus.(Men and women both included)"
-            },
-            "C108.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            }
-          }
-        },
-        "Second_Floor": {
-          "type": "dir",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "A-Block": {
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "A101.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "A102.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "A104.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "A103.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "A105.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "A106.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "A107.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "A108.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            }
-          },
-          "B-Block": {
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "B101.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "B102.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "B103.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "B104.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "B105.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "B106.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "B107.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "B108.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            }
-          },
-          "C-Block": {
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "C101.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "C102.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "C103.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "C104.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "C105.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "C106.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "C107.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            },
-            "C108.txt": {
-              "type": "file",
-              "hidden": false,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Empty room. No password here."
-            }
-          }
-        }
-      },
-      "Hostels": {
-        "type": "dir",
-        "hidden": false,
-        "author": "SOFTCOM",
-        "creation": "12-7-26",
-        ".hint": {
-          "type": "file",
-          "hidden": true,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "content": "A part of the password might be in the hostel named after the river which flows near IIT Ropar."
-        },
-        "Brahmaputra": {
-          "type": "dir",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "Caretaker-Logs": {
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "logs.txt": {
-              "type": "file",
-              "hidden": true,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Just a list of hostel expenses. No password here."
-            }
-          },
-          "commonRoom.txt": {
-            "type": "file",
-            "hidden": true,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "content": "The room is empty right now."
-          }
-        },
-        "Chenab": {
-          "type": "dir",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "Caretaker-Logs": {
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "logs.txt": {
-              "type": "file",
-              "hidden": true,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Just a list of hostel expenses. No password here."
-            }
-          },
-            "commonRoom.txt": {
-              "type": "file",
-              "hidden": true,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "The room is empty right now."
-            }
-        },
-        "Satluj": {
-          "type": "dir",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "Caretaker-Logs": {
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "logs.txt": {
-              "type": "file",
-              "hidden": true,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Just a list of hostel expenses. No password here."
-            }
-          },
-          "commonRoom.txt": {
-            "type": "file",
-            "hidden": true,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "content": "The room is empty right now."
-          },
-          ".deletedLogs": {
-            "type": "file",
-            "hidden": true,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "content": "Bingo! The third part of the password is the number of people in the IIT Ropar logo multiplied by its NIRF Ranking. You may use a calculator since one of these numbers might be too large."
-          }
-        },
-        "Ravi": {
-          "type": "dir",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "Caretaker-Logs": {
-            "type": "dir",
-            "hidden": false,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "logs.txt": {
-              "type": "file",
-              "hidden": true,
-              "author": "SOFTCOM",
-              "creation": "12-7-26",
-              "content": "Just a list of hostel expenses. No password here."
-            }
-          },
-          "commonRoom.txt": {
-            "type": "file",
-            "hidden": true,
-            "author": "SOFTCOM",
-            "creation": "12-7-26",
-            "content": "The room is empty right now."
-          }
-        }
-      },
-      "LOC": {
-        "type": "dir",
-        "hidden": false,
-        "author": "SOFTCOM",
-        "creation": "12-7-26",
-        "loc.txt": {
-          "type": "file",
-          "hidden": true,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "content": "The password is the full-form of LOC. Hehe, just kidding, its not the password. Or is it? You might want to try it once just to be sure."
-        }
-      },
-      "LHC": {
-        "type": "dir",
-        "hidden": false,
-        "author": "SOFTCOM",
-        "creation": "12-7-26",
-        ".hidden": {
-          "type": "file",
-          "hidden": true,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "content": "Just a decoy. Keep looking."
-        },
-        "M1.txt": {
-          "type": "file",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "content": "No password here."
-        },
-         "M2.txt": {
-          "type": "file",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "content": "No password here."
-        },
-         "M3.txt": {
-          "type": "file",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "content": "No password here."
-        },
-         "M4.txt": {
-          "type": "file",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "content": "No password here."
-        },
-         "M5.txt": {
-          "type": "file",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "content": "A prof. is taking a MA101 lecture right now."
-        },
-         "M6.txt": {
-          "type": "file",
-          "hidden": false,
-          "author": "SOFTCOM",
-          "creation": "12-7-26",
-          "content": "A prof. is taking a MA101 lecture right now."
-        }
-      }
-      
-
-    },
-    "IIT-Bombay": {
-      "type": "dir",
-      "hidden": false,
-      "author": "SOFTCOM",
-      "creation": "12-7-26",
-      "wait.txt": {
-        "type": "file",
-        "hidden": false,
-        "author": "SOFTCOM",
-        "creation": "12-7-26",
-        "content": "Wait! You have been stopped by Kabeer Chillar. You like someone who is not from IIT Bombay!! Go back to your IIT right now!"
-      }
-    },
+    "author": "FEST COORD",
+    "creation": "23-06-26",
     "README.txt": {
       "type": "file",
+      "content": "LEVEL 5: ZEITGEIST MEIN ENTRY DILWADO\n\nThe music is booming at the Zeitgeist grounds stage! The Freshers' VIP night is finally here, and DJ Roy is performing live!\n\nBut security is super tight. No students are allowed into the premium VIP zone without the final VIP Access Passcode.\n\nUseful commands: cd, ls, cat and grep to locate the token.\n\nDo you remember the maggie point 2 AM statement? Might try that..."
+    },
+    "Chenab Hostel": {
+      "type": "dir",
       "hidden": false,
-      "author": "SOFTCOM",
-      "creation": "12-7-26",
-      "content": "--------------------\nLevel 5\n--------------------\n\nThis is the final level. If you've come this far, then you have perfectly understood the usage of all the commands taught to you so far. For the final task, the password for the next level has been split into three parts and scattered across the entire IIT Ropar campus. You might have to access the metadata of a file using the cat command. Find them and complete the game. All the best.\n\nUseful Commands:\n- cd\n- ls\n- cat\ngrep"
+      "Main Entry": {
+        "type": "dir",
+        "guard desk.txt": {
+          "type": "file",
+          "content": "Chenab Guard Desk Log:\n- 22:30: All quiet. Two students asked if they can go out to buy medicine. Obviously, they are going to buy burgers.\n- 23:15: A stray dog tried to walk in. Successfully lured out with a piece of biscuit.\n- 23:45: Someone returned from the library, looking like a zombie."
+        },
+        "visitor register.txt": {
+          "type": "file",
+          "content": "Visitor Register Log:\n- Dr. Sharma (Warden) - checked in at 18:00\n- Electrician - repaired lobby lights at 17:00\n- Amazon courier - dropped 12 boxes at 14:00"
+        },
+        "lost keys box.txt": {
+          "type": "file",
+          "content": "List of unclaimed keys in drawer:\n- Key for Room 102 (marked with smiley sticker)\n- Key for Room 304 (attached to bottle opener)\n- Random small padlock key"
+        }
+      },
+      "East Wing": {
+        "type": "dir",
+        "Ground Floor": {
+          "type": "dir",
+          "laundry rules.txt": {
+            "type": "file",
+            "content": "Laundry rules: 1. Do not leave your clothes in the machine for three days. 2. Any socks left behind will be claimed by the hostel dogs."
+          },
+          "laundry rates.txt": {
+            "type": "file",
+            "content": "Rates: Absolutely Free ofc(well until 2025 idk beyond that)"
+          },
+          "warden complaints.txt": {
+            "type": "file",
+            "content": "Complaint #288: Tap in Bathroom C is leaking at a rate of 1 drop per second. It makes an ambient sound of dynamic dripping."
+          }
+        },
+        "First Floor": {
+          "type": "dir",
+          "corridor jokes.txt": {
+            "type": "file",
+            "content": "Written on Wing Board: 'If you want to know about true mechanical strength, try chewing the mess paneer.'"
+          },
+          "stickers list.txt": {
+            "type": "file",
+            "content": "Door sticker survey in East Wing First Floor:\n- 110: 'No entry without Oreo Shake'\n- 112: 'Zzz... do not disturb before 12 PM'\n- 115: 'Code is law'"
+          },
+          "late night chat.txt": {
+            "type": "file",
+            "content": "Freshman discussion notes: 'Who is watchman Paaji's favorite student? The one who buys him tea at 2 AM.'"
+          }
+        },
+        "Second Floor": {
+          "type": "dir",
+          "dogesh warning.txt": {
+            "type": "file",
+            "content": "Do not make direct eye contact with dogesh gang. They own this campus now."
+          },
+          "balcony nests.txt": {
+            "type": "file",
+            "content": "A list of coordinates for bird nests on the balconies. Check this daily!"
+          },
+          "exam timetable print.txt": {
+            "type": "file",
+            "content": "Midsems begin on Monday. Let's start studying on Sunday night. Standard engineering discipline."
+          }
+        }
+      },
+      "West Wing": {
+        "type": "dir",
+        "Ground Floor": {
+          "type": "dir",
+          "representative schedules.txt": {
+            "type": "file",
+            "content": "West Wing Rep meeting: Monday 9 PM in common room. Agenda: Wifi downtime during exam nights."
+          },
+          "common room rules.txt": {
+            "type": "file",
+            "content": "Common room speakers: Do not play high bass techno after 11 PM. Play calm acoustic guitar loops instead."
+          }
+        },
+        "First Floor": {
+          "type": "dir",
+          "study group.txt": {
+            "type": "file",
+            "content": "Study Group Roster: Rahul, Varun, Rohit. Meet up at 9 PM to solve sample math equations. They have actually stolen the VIP passcode token are going to hide it somewhere. Catch them!!!"
+          },
+          "playlist requests.txt": {
+            "type": "file",
+            "content": "Requests for Wing Playlist: 1. Amrinder Gill hits. 2. Lofi study beats. 3. Screaming peafowl remix in metal format."
+          },
+          "biscuit ratings.txt": {
+            "type": "file",
+            "content": "Best biscuits for late night study:\n- Hide & Seek: 10/10\n- Bourbon: 8/10\n- Parle-G: 11/10 (nostalgia modifier)"
+          }
+        },
+        "West Common Room": {
+          "type": "dir",
+          "carrom tournament.txt": {
+            "type": "file",
+            "content": "Carrom Tournament brackets:\n- Round 1: Room 204 vs Room 210\n- Winner gets a free Paaji burger."
+          },
+          "table tennis.txt": {
+            "type": "file",
+            "content": "Table tennis ladder: A guy has been reigning champion for 3 weeks. Someone challenge him!"
+          }
+        },
+        "Wing Lobby": {
+          "type": "dir",
+          "lobby board.txt": {
+            "type": "file",
+            "content": "Please keep the lobby clean. Do not park cycles inside the corridor! There is a bicycle stand for a reason."
+          },
+          "cleaning rhythm.txt": {
+            "type": "file",
+            "content": "Cleaning schedules: Monday morning, Wednesday evening, Friday noon. Keep dustbins empty!"
+          },
+          "festival coordination.txt": {
+            "type": "file",
+            "content": "Hostel Coordination Desk Memo:\n- All Freshers passes for Chenab wingmates approved.\n- Secure your gate validation logs."
+          }
+        },
+        "Second Floor": {
+          "type": "dir",
+          "queue logs.txt": {
+            "type": "file",
+            "content": "Bathroom rush tracking: Peak queue density from 7:45 AM to 8:10 AM due to 8:00 AM lectures. Plan accordingly."
+          },
+          "water purifier status.txt": {
+            "type": "file",
+            "content": "Purifier active. Filter changed on June 18. Status: Cold water function is chilling nicely."
+          },
+          "bin locations.txt": {
+            "type": "file",
+            "content": "Recyclable bin: corridor corner. General waste bin: opposite handwash basin."
+          }
+        }
+      },
+      "Mess": {
+        "type": "dir",
+        "Mess Committee": {
+          "type": "dir",
+          "menu revision.txt": {
+            "type": "file",
+            "content": "Mess committee suggestions:\n- Increase paneer consistency on Sunday dinner.\n- Add lemon water on intense sunny days."
+          },
+          "waste monitoring.txt": {
+            "type": "file",
+            "content": "Waste status: Food waste was low on Friday (due to high burger sales outside). Waste was high on Tuesday (gobi day)."
+          },
+          "salt survey.txt": {
+            "type": "file",
+            "content": "Survey results: 80% students say salt level is fine, a few say too low, others say they don't taste anything because of exam anxiety."
+          }
+        },
+        "Chef Office": {
+          "type": "dir",
+          "grocery list.txt": {
+            "type": "file",
+            "content": "Grocery order: 50 kg potatoes, 30 kg onions, 20 kg tomatoes, 15 kg cottage cheese (paneer)."
+          },
+          "spices checklist.txt": {
+            "type": "file",
+            "content": "Spices: Turmeric, cumin, coriander powder, garam masala, chili powder. All stocks available."
+          },
+          "paneer log.txt": {
+            "type": "file",
+            "content": "Cottage cheese weighting list: Sunday dinner requirement is 40 kilograms. Must be cut into 1.5cm cubes."
+          }
+        }
+      }
+    },
+    "Food Joints": {
+      "type": "dir",
+      "hidden": false,
+      "Maggie Point": {
+        "type": "dir",
+        "Menu": {
+          "type": "dir",
+          "maggie prices.txt": {
+            "type": "file",
+            "content": "Maggie prices:\n- Plain Maggie: 30 rupees\n- Cheese Maggie: 45 rupees\n- Butter Chili Maggie: 50 rupees"
+          },
+          "shakes prices.txt": {
+            "type": "file",
+            "content": "Drinks and Shakes:\n- Sweet Lassi: 35 rupees\n- Fresh Mango Shake: 50 rupees\n- Famous Oreo Shake: 60 rupees"
+          }
+        },
+        "Registers": {
+          "type": "dir",
+          "khata book.txt": {
+            "type": "file",
+            "content": "Student credit list:\n- Room 204: 120 rupees pending (promises to pay after pocket money arrives)\n- Room 105: 45 rupees pending\n- Room 302: Clear"
+          },
+          "midnight diaries.txt": {
+            "type": "file",
+            "content": "Maggie Point Midnight Diary Entry (2 AM):\n- Served 80 cheese maggies tonight.\n- One student claimed they can compute a matrix in their sleep.\n- Another student left their charger behind.\n- VIP Access Token: Stolen and taken somewhere in chenab at 9 PM\n"
+          },
+          "feedback notes.txt": {
+            "type": "file",
+            "content": "Feedback: Please add extra spices on demand. Freshers love intense spicier food to stay awake!"
+          }
+        }
+      },
+      "Canteen Block": {
+        "type": "dir",
+        "Juice Center": {
+          "type": "dir",
+          "fruit inventory.txt": {
+            "type": "file",
+            "content": "Fresh fruits stock: 5 boxes of bananas, 3 boxes of oranges, 2 crates of mangoes."
+          },
+          "blender logs.txt": {
+            "type": "file",
+            "content": "Blender 1: Working. Blender 2 (Heavy duty): Needs new blade rotation bearing."
+          },
+          "shake ratings.txt": {
+            "type": "file",
+            "content": "Strawberry shake receives top rating during hot summers. Oreo shake reigns supreme overall."
+          }
+        },
+        "Paaji Burger Stall": {
+          "type": "dir",
+          "bun orders.txt": {
+            "type": "file",
+            "content": "Burgers buns: Ordered 100 round sesame buns for the Freshers night rush."
+          },
+          "coal supply.txt": {
+            "type": "file",
+            "content": "Coal bags stack: 4 bags received. Ready for tandoori burger preparations."
+          },
+          "patty secrets.txt": {
+            "type": "file",
+            "content": "Secret mixture: Boiled potatoes, mixed green peas, special garam masala, coated in crunchy breadcrumbs."
+          }
+        },
+        "Kerala Canteen": {
+          "type": "dir",
+          "banana chips.txt": {
+            "type": "file",
+            "content": "Crispy golden dosas with sambhar and coconut chutney. Selling out quickly!"
+          },
+          "coupon book.txt": {
+            "type": "file",
+            "content": "Lunch coupons active. Please buy coupon from counter first before standing in meal line."
+          }
+        }
+      }
+    },
+    "SAC Clubs": {
+      "type": "dir",
+      "hidden": false,
+      "DebSoc": {
+        "type": "dir",
+        "Members": {
+          "type": "dir",
+          "alumni.txt": {
+            "type": "file",
+            "content": "Famous alumni debating members now teaching abroad or solving complex company policies."
+          },
+          "freshman intake.txt": {
+            "type": "file",
+            "content": "Freshman selections: 10 selectees out of 120 applicants. High competitive spirits!"
+          },
+          "deb calendar.txt": {
+            "type": "file",
+            "content": "Weekly debates: Every Wednesday at 6 PM in the SAC basement."
+          }
+        },
+        "Debate Archives": {
+          "type": "dir",
+          "funny topics.txt": {
+            "type": "file",
+            "content": "Past debate topics:\n- Was the wheel a bad invention because it led to cycling classes?\n- Is sleeping on desk a valid form of lecture attention?\n- Dubey Canteen's conspiracy"
+          },
+          "motion sheets.txt": {
+            "type": "file",
+            "content": "Debating Society Motion Archive #19:\n- Motion: This House believes that students should govern the hostel mess menu directly.\n- Summary: Intense debate, opposition claimed panic and starvation would follow."
+          }
+        }
+      },
+      "SOFTCOM club": {
+        "type": "dir",
+        "Mentorship": {
+          "type": "dir",
+          "git repos.txt": {
+            "type": "file",
+            "content": "Git repos hosted locally link. Contains project file checkers."
+          },
+          "scoreboard.txt": {
+            "type": "file",
+            "content": "Competitive coding rankings: Rank 1 is held by 'i_do_cp_hehe' with a streak of 420 days."
+          },
+          "riddles list.txt": {
+            "type": "file",
+            "content": "Solve this: I have keys but open no doors, I have white space but no rooms, I have input but no physical buttons. Answer: A CLI shell simulator!"
+          },
+            "TRASH turned to ASH": {
+              "type": "dir",
+              "hidden": false,
+              "description": "Massive decoy data repository. 99% corrupted / irrelevant. 1% valid payload.",
+              "README.txt": {
+                "type": "file",
+                "hidden": false,
+                "content": "WARNING\n\nThis directory contains raw dumps from multiple campus subsystems.\nMost files are auto-generated, incomplete, or intentionally corrupted.\n\nUse grep cautiously. Patterns exist but are deeply buried. \nSome files may be hidden! and hidden files have 70% chance of having the password inside them..."
+              },
+              "DUMP LAYER A": {
+                "type": "dir",
+                "hidden": false,
+                "a1.log": {
+                  "type": "file",
+                  "hidden": true,
+                  "content": "xj29#@!!klsdf0934@@@####"
+                },
+                "a2.log": {
+                  "type": "file",
+                  "hidden": true,
+                  "content": "ERROR NULL VALUE 0x00000000"
+                },
+                "a3.log": {
+                  "type": "file",
+                  "hidden": true,
+                  "content": "zzzzzzzzzzzzzzzzzzzzzzzzz"
+                },
+                "a4.tmp": {
+                  "type": "file",
+                  "hidden": true,
+                  "content": "SYSTEM BREACH DETECTED (false)"
+                },
+                "a5.tmp": {
+                  "type": "file",
+                  "hidden": true,
+                  "content": "111111111111111111111111111"
+                }
+              },
+              "DUMP LAYER B": {
+                "type": "dir",
+                "hidden": false,
+                "b1.dat": {
+                  "type": "file",
+                  "hidden": false,
+                  "content": "??????///////??????///////"
+                },
+                "b2.dat": {
+                  "type": "file",
+                  "hidden": false,
+                  "content": "corrupt memory block 92x"
+                },
+                "b3.dat": {
+                  "type": "file",
+                  "hidden": true,
+                  "content": "NO SIGNAL DETECTED"
+                },
+                "b4.dat": {
+                  "type": "file",
+                  "hidden": false,
+                  "content": "0xDEADBEEF repeated loop crash crash crash"
+                },
+                "b5.dat": {
+                  "type": "file",
+                  "hidden": false,
+                  "content": "NULL NULL NULL NULL NULL"
+                }
+              },
+              "DUMP LAYER C": {
+                "type": "dir",
+                "hidden": false,
+                "c1.sys": {
+                  "type": "file",
+                  "hidden": false,
+                  "content": "SYSTEM TRACE: garbage overflow"
+                },
+                "c2.sys": {
+                  "type": "file",
+                  "hidden": false,
+                  "content": "user input: ###########"
+                },
+                "c3.sys": {
+                  "type": "file",
+                  "hidden": true,
+                  "content": "memory leak detected but ignored"
+                },
+                "c4.sys": {
+                  "type": "file",
+                  "hidden": false,
+                  "content": "00000000000000000000000000"
+                },
+                "c5.sys": {
+                  "type": "file",
+                  "hidden": false,
+                  "content": "retry retry retry retry retry"
+                }
+              },
+              "RANDOM JUNK POOL": {
+                "type": "dir",
+                "hidden": false,
+                "junk 01.txt": {
+                  "type": "file",
+                  "hidden": false,
+                  "content": "asdkjasdjasdjasdjasdjasd"
+                },
+                "junk_02.txt": {
+                  "type": "file",
+                  "hidden": true,
+                  "content": "blablablablablablablabla"
+                },
+                "junk 03.txt": {
+                  "type": "file",
+                  "hidden": false,
+                  "content": "!!!@@@###$$$%%%^^^&&&"
+                },
+                "junk 04.txt": {
+                  "type": "file",
+                  "hidden": false,
+                  "content": "0000xxxx0000xxxx0000"
+                },
+                "real.txt": {
+                  "type": "file",
+                  "hidden": true,
+                  "content": "system noise packet"
+                }
+              },
+              "DEEP NEST 1": {
+                "type": "dir",
+                "hidden": false,
+                "DEEP NEST 2": {
+                  "type": "dir",
+                  "hidden": false,
+                  "DEEP NEST 3": {
+                    "type": "dir",
+                    "hidden": false,
+                    "DEEP NEST 4": {
+                      "type": "dir",
+                      "hidden": false,
+                      "DEEP NEST 5": {
+                        "type": "dir",
+                        "hidden": false,
+                        "trash 01.txt": {
+                          "type": "file",
+                          "hidden": false,
+                          "content": "corrupt"
+                        },
+                        "trash 02.txt": {
+                          "type": "file",
+                          "hidden": false,
+                          "content": "noise"
+                        },
+                        "trash 03.txt": {
+                          "type": "file",
+                          "hidden": false,
+                          "content": "junk data stream active"
+                        },
+                        "trash 04.txt": {
+                          "type": "file",
+                          "hidden": false,
+                          "content": "000000000000000000"
+                        },
+                        "trash 05.txt": {
+                          "type": "file",
+                          "hidden": false,
+                          "content": "system overflow error ignored"
+                        },
+                        "DECOY CORE": {
+                          "type": "dir",
+                          "hidden": false,
+                          "fake flag.txt": {
+                            "type": "file",
+                            "hidden": false,
+                            "content": "FLAG{THIS IS NOT THE REAL ONE}"
+                          },
+                          "fake_hint.txt": {
+                            "type": "file",
+                            "hidden": true,
+                            "content": "Maybe try checking random junk files?"
+                          },
+                          "deep fake.txt": {
+                            "type": "file",
+                            "hidden": false,
+                            "content": "You are getting closer... or are you?"
+                          }
+                        },
+                        "FINAL_REAL_FILE.txt": {
+                          "type": "file",
+                          "hidden": true,
+                          "content": "NICE WORK!\n\ncode is ZEITGEIST2027\n\nNOTE: This file was intentionally buried among corrupted system dumps to hide from the 'slow ones'. Okay you're a fast one i guess..."
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "GARBAGE MISC": {
+                "type": "dir",
+                "hidden": false,
+                "m1.txt": {
+                  "type": "file",
+                  "hidden": false,
+                  "content": "lololololololololololol"
+                },
+                "m2.txt": {
+                  "type": "file",
+                  "hidden": false,
+                  "content": "error error error error"
+                },
+                "m3.txt": {
+                  "type": "file",
+                  "hidden": false,
+                  "content": "system not responding"
+                },
+                "m4.txt": {
+                  "type": "file",
+                  "hidden": true,
+                  "content": "garbage dump simulation active"
+                },
+                "m5.txt": {
+                  "type": "file",
+                  "hidden": false,
+                  "content": "random noise injected successfully"
+                }
+              }
+            }
+          }
+        },
+        "Sandbox": {
+          "type": "dir",
+          "shell snippets.txt": {
+            "type": "file",
+            "content": "Quick clean backup: rm -rf ~/.cache && echo 'Disk space restored!'"
+          },
+          "docker info.txt": {
+            "type": "file",
+            "content": "Active container: Web proxy, port 3000 mapping. Working fine."
+          },
+          "linux diaries.txt": {
+            "type": "file",
+            "content": "Joke journal: There are 10 types of people in the world: those who understand binary, and those who don't. Actually there is a 11th person too: \nwho cannot find the VIP passcode and one who won't be paired with any partner cuz you're the odd one LOL"
+          }
+        }
+      },
+      "Robotics Club": {
+        "type": "dir",
+        "Inventory": {
+          "type": "dir",
+          "arduino bins.txt": {
+            "type": "file",
+            "content": "Bins containing 12 Arduinos, 8 Raspberry Pis, and endless jumper wires tangled like noodles."
+          },
+          "lidar sensors.txt": {
+            "type": "file",
+            "content": "High accuracy ultrasonic distance sensors and infrared modules. Handle with care."
+          },
+          "wiring spools.txt": {
+            "type": "file",
+            "content": "Copper wire rolls, gauges 18, 22, and 24. Perfect for making customized circuit traces."
+          }
+        },
+        "Zenith Rover": {
+          "type": "dir",
+          "motor specs.txt": {
+            "type": "file",
+            "content": "Dc geared motors: 12V supply, 200 RPM, high torque performance for harsh dirt paths."
+          },
+          "obstacle course.txt": {
+            "type": "file",
+            "content": "Testing ground track setups: Avoid simulated trees, cross the gravel box, bypass the slumbering labrador."
+          },
+          "solar calculations.txt": {
+            "type": "file",
+            "content": "Solar panel charging rate: Max 5W. Overcast weather reduces efficiency by 80%."
+          }
+        }
+      },
+      "Zenith Astro": {
+        "type": "dir",
+        "astro logs.txt": {
+          "type": "file",
+          "content": "Observatory entry log: clear sky on Tuesday night. Tracked Saturn rings. Magnificent details!"
+        },
+        "telescope details.txt": {
+          "type": "file",
+          "content": "Sky-Watcher telescope calibration metrics. Mirror cleaned on June 20."
+        },
+        "night sky checklist.txt": {
+          "type": "file",
+          "content": "Checklist: 1. Locate polaris. 2. Swing reflector. 3. Adjust fine dial to capture glowing nebulas."
+        }
+      }
     }
   }
-}
