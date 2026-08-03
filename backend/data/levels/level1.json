@@ -28,7 +28,7 @@
         "hidden": false,
         "author": "ASHISH",
         "creation": "23-06-26",
-        "content": "You stare at the giant campus map. Everything looks important and everything looks far away. You notice empty spaces and come to know IIT Ropar is still in it's first stage development...Anyways, The Admin Block seems to be somewhere ahead."
+        "content": "You stare at the campus map. Everything looks important and everything looks far away. You notice empty spaces in the map and come to know IIT Ropar is still in it's first stage of development...Anyways, The Admin Block seems to be somewhere ahead."
       },
       "Parents Goodbye.txt": {
         "type": "file",
@@ -62,7 +62,7 @@
         "hidden": false,
         "author": "ASHISH",
         "creation": "23-06-26",
-        "content": "A student sitting in the corner is already asleep. Orientation has only been running for twenty minutes. Must be tired from travelling from  Chandigarh..."
+        "content": "A student sitting in the corner is already asleep. Orientation has only been running for twenty minutes. Must be tired from travelling from Chandigarh..."
       },
       "Senior Volunteer.txt": {
         "type": "file",
@@ -109,7 +109,7 @@
           "hidden": false,
           "author": "ASHISH",
           "creation": "23-06-26",
-          "content": "A pen is chained to the table. Experience suggests that even this is not enough lmao."
+          "content": "The pen is chained to the table. SON..."
         }
       }
     },
@@ -123,7 +123,7 @@
         "hidden": false,
         "author": "ASHISH",
         "creation": "23-06-26",
-        "content": "A group of freshers is already taking photos.\n\nAchievement Progress:\n0/500 LOC Photos LOL"
+        "content": "A group of freshers is already taking photos.\n\nYour Achievement Progress:\n0/500 LOC Photos LOL"
       },
       "Influencer.txt": {
         "type": "file",
@@ -215,7 +215,7 @@
             "hidden": false,
             "author": "ASHISH",
             "creation": "23-06-26",
-            "content": "Biometrics completed successfully.\n\nActivation Code: IITRPR2026\n\nPass this code as an argument to the 'submit <passcode>' to proceed to Level 2."
+            "content": "Biometrics completed successfully.\n\nActivation Code: IITRPR2026\n\nPass this code as an argument to the ENTER DECRYPTION KEY box to proceed to Level 2."
           }
         }
       },
@@ -286,7 +286,7 @@
       "hidden": false,
       "author": "ASHISH",
       "creation": "23-06-26",
-      "content": "\nLEVEL 1: KNOW YOUR CAMPUS\n\n\nYou have finally arrived at IIT Ropar.\n\nYour parents have left. Your hostel room is ready. Your new life is about to begin.\n\nUnfortunately, your admission process is not complete yet.\n\nTasks:\n1. Visit the Auditorium Foyer.\n2. Complete registration.\n3. Find the Admin Block.\n4. Locate the UG Registrar.\n5. Complete your biometrics.\n6. Discover the activation code.\n\nUse the activation code with the 'submit' command to proceed.\n\nUseful Commands:\n- ls\n- ls -a\n- cd\n- cat\n- pwd\n- grep\n\nTip: Not everything important is visible."
+      "content": "\nLEVEL 1: KNOW YOUR CAMPUS\n\n\nYou have finally arrived at IIT Ropar.\n\nYour parents have left. Your hostel room is ready. Your new life is about to begin.\n\nUnfortunately, your admission process is not complete yet.\n\nTasks:\n1. Visit the Auditorium Foyer.\n2. Complete registration.\n3. Find the Admin Block.\n4. Locate the UG Registrar.\n5. Complete your biometrics.\n6. Discover the activation code.\n\nEnter the code in the ENTER DESCRIPTION KEY HERE box and proceed to next level."
     }
   }
 }
