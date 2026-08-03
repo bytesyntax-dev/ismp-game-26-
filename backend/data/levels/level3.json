@@ -10,7 +10,7 @@
             "README.txt": {
                 "type": "file",
                 "hidden": false,
-                "content": "Level 3: STUDENT ACTIVITY CENTRE\n\nThis place is not just a collection of clubs. It is a layered system of people, habits, late-night decisions, and unfinished ideas.\n\nMost students think they joined for certificates.\nThey stay for something they cannot easily explain.\n\nNavigation Rules:\n- Some directories appear incomplete\n- Some files contain fragments of larger ideas\n- Nothing important is written in a single place\n\nIf you are careful enough, patterns will begin to repeat.\nUseful Commands:\n- ls\n- ls -a\n- cd\n- cat\n- pwd\n- grep\n\nTip: Not everything important is visible."
+                "content": "Level 3: STUDENT ACTIVITY CENTRE\n\nThis place is not just a collection of clubs. It is a layered system of people, habits, late-night decisions, and unfinished ideas.\n\nMost students think they joined for certificates.\nThey stay for something they cannot easily explain.\n\nNavigation Rules:\n- Some directories appear incomplete\n- Some files contain fragments of larger ideas\n- Nothing important is written in a single place\n\nIf you are careful enough, patterns will begin to repeat."
             },
             "Coding Club": {
                 "type": "dir",
