@@ -62,7 +62,7 @@
         "type": "dir",
         "parcel.txt": {
           "type": "file",
-          "content": "Congratulations. Your first online parcel has arrived. Item acquired: FIRST PARCEL = AMA001"
+          "content": "Congratulations. Your first online parcel has arrived. You bought a nice suit for the fresher's party!! Item acquired: FIRST PARCEL = AMA001"
         }
       },
       "Stationery.txt": {
@@ -90,7 +90,7 @@
       },
       "Juice Centre.txt": {
         "type": "file",
-        "content": "Oreo Shake: the unofficial fuel of freshers. As you were enjoying the magical oreoshake, one fresher among you all suddenly larped to level 3(he is an introvert and hides from people)\nYou found his passcode chit btw. \nIt was BHG111ANP2026AMA007"
+        "content": "Oreo Shake: the unofficial fuel of freshers. As you were enjoying the magical oreoshake, one fresher among you all suddenly disappeared into level 3(he is an introvert and hides from people)\nYou found his passcode chit btw. \nIt was ANP2026AMA007BHB107"
       }
     },
     ".midnight maggie.txt": {
@@ -100,7 +100,7 @@
     },
     "README.txt": {
       "type": "file",
-      "content": "LEVEL 2: HOSTEL? MESS? PARCEL?\n\nObjectives:\n1. Obtain ROOM_KEY.\n2. Obtain MESS_ID.\n3. Obtain FIRST_PARCEL.\n\nOnce you have discovered all three items, use: submit <passcode>\n\nUseful Commands:\nls\nls -a\ncd\ncat\nfind"
+      "content": "LEVEL 2: ROTI KAPDA MAKAAN\n\nObjectives:\n1. Obtain ROOM_KEY.\n2. Obtain MESS_ID.\n3. Obtain FIRST_PARCEL.\n\nOnce you have discovered all three items, enter your code in ENTER DECRYPTION KEY HERE box"
     }
   }
 }
