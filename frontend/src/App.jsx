@@ -1088,17 +1088,6 @@ export default function App() {
                 <h3 className="text-xl font-bold text-cyber-cyan">{levelData.score} pts</h3>
               </div>
 
-              <div className="text-right border-l border-cyber-cyan/20 pl-6">
-                <p className="text-[10px] text-cyber-gray flex items-center justify-end">
-                  <Clock className="w-3.5 h-3.5 mr-1 text-cyber-cyan" /> ELAPSED TIME
-                </p>
-                <h3 className="text-xl font-bold text-cyber-cyan">
-                  {levelData.completed 
-                    ? formatStopwatch(Math.floor(levelData.finalTime / 1000)) 
-                    : formatStopwatch(elapsedSeconds)
-                  }
-                </h3>
-              </div>
 
               <button
                 onClick={handleDisconnect}
