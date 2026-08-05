@@ -2,596 +2,313 @@
   "root": {
     "type": "dir",
     "hidden": false,
-    "author": "FEST COORD",
-    "creation": "23-06-26",
+    "author": "System",
+    "creation": "24-06-2026",
     "README.txt": {
       "type": "file",
-      "content": "LEVEL 5: ZEITGEIST MEIN ENTRY DILWADO\n\nThe music is booming at the Zeitgeist grounds stage! The Freshers' VIP night is finally here, and DJ Roy is performing live!\n\nBut security is super tight. No students are allowed into the premium VIP zone without the final VIP Access Passcode.\n\n\nDo you remember the maggie point 2 AM statement? Might try that..."
+      "hidden": false,
+      "author": "System",
+      "creation": "24-06-2026",
+      "content": "LEVEL 5: THE GHOST FRESHIE\n\nFor years, students have reported seeing a fresher walking alone at night near the Academic Area. They never speak, and they always seem to be looking for something. Nobody knows who they are, but the reports are consistent. It's time to solve the ultimate campus mystery.\n\nObjective: Identify the Ghost Freshie.\nAnswer passcode clue: 'submit <identity>'\nUseful Commands:\n- ls\n- ls -a\n- cd\n- cat\n- grep\n. Tip: Not everything is visible..."
     },
-    "Chenab Hostel": {
+    "Nalanda Library": {
       "type": "dir",
       "hidden": false,
-      "Main Entry": {
-        "type": "dir",
-        "guard desk.txt": {
-          "type": "file",
-          "content": "Chenab Guard Desk Log:\n- 22:30: All quiet. Two students asked if they can go out to buy medicine. Obviously, they are going to buy burgers.\n- 23:15: A stray dog tried to walk in. Successfully lured out with a piece of biscuit.\n- 23:45: Someone returned from the library, looking like a zombie."
-        },
-        "visitor register.txt": {
-          "type": "file",
-          "content": "Visitor Register Log:\n- Dr. Sharma (Warden) - checked in at 18:00\n- Electrician - repaired lobby lights at 17:00\n- Amazon courier - dropped 12 boxes at 14:00"
-        },
-        "lost keys box.txt": {
-          "type": "file",
-          "content": "List of unclaimed keys in drawer:\n- Key for Room 102 (marked with smiley sticker)\n- Key for Room 304 (attached to bottle opener)\n- Random small padlock key"
-        }
+      "author": "Librarian",
+      "creation": "24-06-2026",
+      "entry logs night.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "Security",
+        "creation": "24-06-2026",
+        "content": "03:00 AM - A student was seen entering the reading room. They didn't scan their ID. When I went to check, the room was empty. Just a single notebook left on the table."
       },
-      "East Wing": {
-        "type": "dir",
-        "Ground Floor": {
-          "type": "dir",
-          "laundry rules.txt": {
-            "type": "file",
-            "content": "Laundry rules: 1. Do not leave your clothes in the machine for three days. 2. Any socks left behind will be claimed by the hostel dogs."
-          },
-          "laundry rates.txt": {
-            "type": "file",
-            "content": "Rates: Absolutely Free ofc(well until 2025 idk beyond that)"
-          },
-          "warden complaints.txt": {
-            "type": "file",
-            "content": "Complaint #288: Tap in Bathroom C is leaking at a rate of 1 drop per second. It makes an ambient sound of dynamic dripping."
-          }
-        },
-        "First Floor": {
-          "type": "dir",
-          "corridor jokes.txt": {
-            "type": "file",
-            "content": "Written on Wing Board: 'If you want to know about true mechanical strength, try chewing the mess paneer.'"
-          },
-          "stickers list.txt": {
-            "type": "file",
-            "content": "Door sticker survey in East Wing First Floor:\n- 110: 'No entry without Oreo Shake'\n- 112: 'Zzz... do not disturb before 12 PM'\n- 115: 'Code is law'"
-          },
-          "late night chat.txt": {
-            "type": "file",
-            "content": "Freshman discussion notes: 'Who is watchman Paaji's favorite student? The one who buys him tea at 2 AM.'"
-          }
-        },
-        "Second Floor": {
-          "type": "dir",
-          "dogesh warning.txt": {
-            "type": "file",
-            "content": "Do not make direct eye contact with dogesh gang. They own this campus now."
-          },
-          "balcony nests.txt": {
-            "type": "file",
-            "content": "A list of coordinates for bird nests on the balconies. Check this daily!"
-          },
-          "exam timetable print.txt": {
-            "type": "file",
-            "content": "Midsems begin on Monday. Let's start studying on Sunday night. Standard engineering discipline."
-          }
-        }
+      "notebook clue.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "Unknown",
+        "creation": "24-06-2026",
+        "content": "Notes on Level 1: Found the cycle. Notes on Level 2: Dubey's is a vibe. Notes on Level 3: Network mystery solved. Why does this handwriting look so familiar?"
       },
-      "West Wing": {
-        "type": "dir",
-        "Ground Floor": {
-          "type": "dir",
-          "representative schedules.txt": {
-            "type": "file",
-            "content": "West Wing Rep meeting: Monday 9 PM in common room. Agenda: Wifi downtime during exam nights."
-          },
-          "common room rules.txt": {
-            "type": "file",
-            "content": "Common room speakers: Do not play high bass techno after 11 PM. Play calm acoustic guitar loops instead."
-          }
-        },
-        "First Floor": {
-          "type": "dir",
-          "study group.txt": {
-            "type": "file",
-            "content": "Study Group Roster: Rahul, Varun, Rohit. Meet up at 9 PM to solve sample math equations. They have actually stolen the VIP passcode token are going to hide it somewhere. Catch them!!!"
-          },
-          "playlist requests.txt": {
-            "type": "file",
-            "content": "Requests for Wing Playlist: 1. Amrinder Gill hits. 2. Lofi study beats. 3. Screaming peafowl remix in metal format."
-          },
-          "biscuit ratings.txt": {
-            "type": "file",
-            "content": "Best biscuits for late night study:\n- Hide & Seek: 10/10\n- Bourbon: 8/10\n- Parle-G: 11/10 (nostalgia modifier)"
-          }
-        },
-        "West Common Room": {
-          "type": "dir",
-          "carrom tournament.txt": {
-            "type": "file",
-            "content": "Carrom Tournament brackets:\n- Round 1: Room 204 vs Room 210\n- Winner gets a free Paaji burger."
-          },
-          "table tennis.txt": {
-            "type": "file",
-            "content": "Table tennis ladder: A guy has been reigning champion for 3 weeks. Someone challenge him!"
-          }
-        },
-        "Wing Lobby": {
-          "type": "dir",
-          "lobby board.txt": {
-            "type": "file",
-            "content": "Please keep the lobby clean. Do not park cycles inside the corridor! There is a bicycle stand for a reason."
-          },
-          "cleaning rhythm.txt": {
-            "type": "file",
-            "content": "Cleaning schedules: Monday morning, Wednesday evening, Friday noon. Keep dustbins empty!"
-          },
-          "festival coordination.txt": {
-            "type": "file",
-            "content": "Hostel Coordination Desk Memo:\n- All Freshers passes for Chenab wingmates approved.\n- Secure your gate validation logs."
-          }
-        },
-        "Second Floor": {
-          "type": "dir",
-          "queue logs.txt": {
-            "type": "file",
-            "content": "Bathroom rush tracking: Peak queue density from 7:45 AM to 8:10 AM due to 8:00 AM lectures. Plan accordingly."
-          },
-          "water purifier status.txt": {
-            "type": "file",
-            "content": "Purifier active. Filter changed on June 18. Status: Cold water function is chilling nicely."
-          },
-          "bin locations.txt": {
-            "type": "file",
-            "content": "Recyclable bin: corridor corner. General waste bin: opposite handwash basin."
-          }
-        }
+      "Librarian Mrs Gupta.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "Librarian",
+        "creation": "24-06-2026",
+        "content": "Ah, the student in the blue hoodie? Yes, they have been checking out the campus histories books. But when I look at the registration records, the card number belongs to a student who just joined last month."
       },
-      "Mess": {
-        "type": "dir",
-        "Mess Committee": {
-          "type": "dir",
-          "menu revision.txt": {
-            "type": "file",
-            "content": "Mess committee suggestions:\n- Increase paneer consistency on Sunday dinner.\n- Add lemon water on intense sunny days."
-          },
-          "waste monitoring.txt": {
-            "type": "file",
-            "content": "Waste status: Food waste was low on Friday (due to high burger sales outside). Waste was high on Tuesday (gobi day)."
-          },
-          "salt survey.txt": {
-            "type": "file",
-            "content": "Survey results: 80% students say salt level is fine, a few say too low, others say they don't taste anything because of exam anxiety."
-          }
-        },
-        "Chef Office": {
-          "type": "dir",
-          "grocery list.txt": {
-            "type": "file",
-            "content": "Grocery order: 50 kg potatoes, 30 kg onions, 20 kg tomatoes, 15 kg cottage cheese (paneer)."
-          },
-          "spices checklist.txt": {
-            "type": "file",
-            "content": "Spices: Turmeric, cumin, coriander powder, garam masala, chili powder. All stocks available."
-          },
-          "paneer log.txt": {
-            "type": "file",
-            "content": "Cottage cheese weighting list: Sunday dinner requirement is 40 kilograms. Must be cut into 1.5cm cubes."
-          }
-        }
+      "reading_room_glitch.txt": {
+        "type": "file",
+        "hidden": true,
+        "author": "System Monitor",
+        "creation": "24-06-2026",
+        "content": "ANOMALY DETECTED: Reading Room B lights turned on automatically at 03:14 AM. No heat signatures registered on thermal grid. Books out of place on Shelf 4: 'Introduction to Recursive Mainframes' and 'The Art of Lucid Sleepwalking'."
+      },
+      "ghost_borrow_history.txt": {
+        "type": "file",
+        "hidden": true,
+        "author": "Database Bot",
+        "creation": "24-06-2026",
+        "content": "ID Card Record: 2026IDKXXXX\nName: [REDACTED / AUTO-MATCH MATCHES TERMINAL OPERATOR]\nBorrowed items list:\n1. 'Campus Mysteries and Urban Legends' (Status: Overdue)\n2. 'Local Hostels: A Blueprint' (Status: Overdue)\n3. 'Memory Reconstruction and Cognitive Loops' (Status: Borrowed at 03:05 AM today)"
+      },
+      "forgotten_note_in_book.txt": {
+        "type": "file",
+        "hidden": true,
+        "author": "Your Subconscious",
+        "creation": "24-06-2026",
+        "content": "If you are reading this, you are getting too close to the source. The terminal is not showing you external records. It is indexing your own cognitive load. Every query you run is duplicating your memory logs. Wake up."
       }
     },
-    "Food Joints": {
+    "Lecture Hall Complex": {
       "type": "dir",
       "hidden": false,
-      "Maggie Point": {
+      "author": "Maintenance",
+      "creation": "24-06-2026",
+      "CCTV report.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "Security Head",
+        "creation": "24-06-2026",
+        "content": "Grainy footage from LHC-1 corridor at 02:15 AM. A student in a blue hoodie (You actually have the same hoodie!!! Did he stole it from you??) is seen staring at the notice board for ten minutes before disappearing into the shadows."
+      },
+      "Maintenance Staff Raju.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "Raju Bhai",
+        "creation": "24-06-2026",
+        "content": "I clean the complex every night. I always see a student sleepwalking in the corridors, muttering something about 'solving the system'."
+      },
+      "LHC Corridor A": {
         "type": "dir",
-        "Menu": {
-          "type": "dir",
-          "maggie prices.txt": {
-            "type": "file",
-            "content": "Maggie prices:\n- Plain Maggie: 30 rupees\n- Cheese Maggie: 45 rupees\n- Butter Chili Maggie: 50 rupees"
-          },
-          "shakes prices.txt": {
-            "type": "file",
-            "content": "Drinks and Shakes:\n- Sweet Lassi: 35 rupees\n- Fresh Mango Shake: 50 rupees\n- Famous Oreo Shake: 60 rupees"
-          }
+        "hidden": false,
+        "author": "Staff Raju",
+        "creation": "24-06-2026",
+        "empty desk observations.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "Raju Bhai",
+          "creation": "24-06-2026",
+          "content": "LHC-101 check. Leftover materials on blackboard: drawings of a blue cycle parked under a sign that reads 'Chenab' and some formulas calculating WiFi bandwidth limits. Odd stuff."
         },
-        "Registers": {
-          "type": "dir",
-          "khata book.txt": {
-            "type": "file",
-            "content": "Student credit list:\n- Room 204: 120 rupees pending (promises to pay after pocket money arrives)\n- Room 105: 45 rupees pending\n- Room 302: Clear"
-          },
-          "midnight diaries.txt": {
-            "type": "file",
-            "content": "Maggie Point Midnight Diary Entry (2 AM):\n- Served 80 cheese maggies tonight.\n- One student claimed they can compute a matrix in their sleep.\n- Another student left their charger behind.\n- VIP Access Token: Stolen and taken somewhere in chenab at 9 PM\n"
-          },
-          "feedback notes.txt": {
-            "type": "file",
-            "content": "Feedback: Please add extra spices on demand. Freshers love intense spicier food to stay awake!"
-          }
+        "blackboard math.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "Professor Math",
+          "creation": "24-06-2026",
+          "content": "f(x) = f(f(x-1)) + Memory(x)\nIf x represents the current week, the student returns to week 1 as soon as the terminal is cleared. The loop is self-sustaining."
+        },
+        "cctv_frame_jitter.txt": {
+          "type": "file",
+          "hidden": true,
+          "author": "Video Analyzer",
+          "creation": "24-06-2026",
+          "content": "CCTV Frame Analysis: Segment 4022-4089. The silhouette in the blue hoodie does not cast a shadow on the floor tiles. Refractive coefficient is 0.00. This is a projecting construct, likely generated from a nearby laptop or terminal."
         }
       },
-      "Canteen Block": {
-        "type": "dir",
-        "Juice Center": {
-          "type": "dir",
-          "fruit inventory.txt": {
-            "type": "file",
-            "content": "Fresh fruits stock: 5 boxes of bananas, 3 boxes of oranges, 2 crates of mangoes."
-          },
-          "blender logs.txt": {
-            "type": "file",
-            "content": "Blender 1: Working. Blender 2 (Heavy duty): Needs new blade rotation bearing."
-          },
-          "shake ratings.txt": {
-            "type": "file",
-            "content": "Strawberry shake receives top rating during hot summers. Oreo shake reigns supreme overall."
-          }
-        },
-        "Paaji Burger Stall": {
-          "type": "dir",
-          "bun orders.txt": {
-            "type": "file",
-            "content": "Burgers buns: Ordered 100 round sesame buns for the Freshers night rush."
-          },
-          "coal supply.txt": {
-            "type": "file",
-            "content": "Coal bags stack: 4 bags received. Ready for tandoori burger preparations."
-          },
-          "patty secrets.txt": {
-            "type": "file",
-            "content": "Secret mixture: Boiled potatoes, mixed green peas, special garam masala, coated in crunchy breadcrumbs."
-          }
-        },
-        "Kerala Canteen": {
-          "type": "dir",
-          "banana chips.txt": {
-            "type": "file",
-            "content": "Crispy golden dosas with sambhar and coconut chutney. Selling out quickly!"
-          },
-          "coupon book.txt": {
-            "type": "file",
-            "content": "Lunch coupons active. Please buy coupon from counter first before standing in meal line."
-          }
-        }
+      "lecture_theatre_whisper.txt": {
+        "type": "file",
+        "hidden": true,
+        "author": "Student Ghost",
+        "creation": "24-06-2026",
+        "content": "I sat in the back row of LHC-2 during the mid-semester exam. I didn't write anything. I just watched everyone scribble frantically. They looked so alive, yet so trapped in their schedules. I want to wake them up. I want to wake myself up."
       }
     },
-    "SAC Clubs": {
+    "SAB": {
       "type": "dir",
       "hidden": false,
-      "DebSoc": {
+      "author": "Student Affairs",
+      "creation": "24-06-2026",
+      "lost and found records.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "SAB Staff",
+        "creation": "24-06-2026",
+        "content": "Item #405: A set of keys. Found near the LOC. Owner never claimed them."
+      },
+      "SAB_Guard.txt": {
+        "type": "file",
+        "hidden": true,
+        "author": "Prez",
+        "creation": "24-06-2026",
+        "content": "We got reports of a 'ghost freshie' but when we traced the ID card used to access the terminal, it matches your name. You are chasing your own shadow! The secret word to complete the game is YOURSELF."
+      },
+      "clique_chat_leaks.txt": {
+        "type": "file",
+        "hidden": true,
+        "author": "Leaker",
+        "creation": "24-06-2026",
+        "content": "Anonymous: Guys, did you hear? The SAB server got accessed by a non-existent student profile. He thinks it is a hacker, but security says the terminal was logged in from inside the server room itself. The door was locked from the outside! Spooky."
+      },
+      "disciplinary files.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "Warden Office",
+        "creation": "24-06-2026",
+        "content": "CONFIDENTIAL: Case Study on Student Sleepwalking.\nStudent was found walking the perimeter of the lake of contentment carrying a notepad with passwords. Upon questioning, the student claimed they were 'debugging the matrix of Ropar'. Advised counselling and academic leave. File closed."
+      }
+    },
+    "Department Buildings": {
+      "type": "dir",
+      "hidden": false,
+      "author": "Admin",
+      "creation": "24-06-2026",
+      "CS Dept Log.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "SysAdmin",
+        "creation": "24-06-2026",
+        "content": "Found an old terminal session that was never logged out. The user was searching for 'Campus Mysteries'. The timestamp is from... the first week of this semester?"
+      },
+      "Professor Venkatesh.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "Prof Venkatesh",
+        "creation": "24-06-2026",
+        "content": "Memory is a funny thing. In stressful environments, we create loops of our own actions to find comfort. You are sleep-retracing your steps."
+      },
+      "CS Server Logs": {
         "type": "dir",
-        "Members": {
-          "type": "dir",
-          "alumni.txt": {
-            "type": "file",
-            "content": "Famous alumni debating members now teaching abroad or solving complex company policies."
-          },
-          "freshman intake.txt": {
-            "type": "file",
-            "content": "Freshman selections: 10 selectees out of 120 applicants. High competitive spirits!"
-          },
-          "deb calendar.txt": {
-            "type": "file",
-            "content": "Weekly debates: Every Wednesday at 6 PM in the SAC basement."
-          }
+        "hidden": false,
+        "author": "Network Admin",
+        "creation": "24-06-2026",
+        "system status.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "Admin Bot",
+          "creation": "24-06-2026",
+          "content": "Mainframe status: Nominal. Current active terminal sessions: 1. Terminal origin: Local console (User: Self)."
         },
-        "Debate Archives": {
-          "type": "dir",
-          "funny topics.txt": {
-            "type": "file",
-            "content": "Past debate topics:\n- Was the wheel a bad invention because it led to cycling classes?\n- Is sleeping on desk a valid form of lecture attention?\n- Dubey Canteen's conspiracy"
-          },
-          "motion sheets.txt": {
-            "type": "file",
-            "content": "Debating Society Motion Archive #19:\n- Motion: This House believes that students should govern the hostel mess menu directly.\n- Summary: Intense debate, opposition claimed panic and starvation would follow."
-          }
+        "connection attempts.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "Firewall",
+          "creation": "24-06-2026",
+          "content": "02:45 AM - Connection approved for 127.0.0.1. User validated locally.\n03:10 AM - Connection approved for 127.0.0.1. User validated locally.\nNote: All traffic is internal. The hacker is inside the room."
+        },
+        "server_shadow_ping.txt": {
+          "type": "file",
+          "hidden": true,
+          "author": "Network Daemon",
+          "creation": "24-06-2026",
+          "content": "PING localhost (127.0.0.1) 56(84) bytes of data.\n64 bytes from 127.0.0.1: icmp seq=1 ttl=64 time=0.012 ms\n64 bytes from 127.0.0.1: icmp seq=2 ttl=64 time=0.015 ms\n--- localhost ping statistics ---\n2 packets transmitted, 2 received, 0% packet loss, time 1002ms\nrtt min/avg/max/mdev = 0.012/0.013/0.015/0.003 ms"
         }
       },
-      "SOFTCOM club": {
-        "type": "dir",
-        "Mentorship": {
-          "type": "dir",
-          "git repos.txt": {
-            "type": "file",
-            "content": "Git repos hosted locally link. Contains project file checkers."
-          },
-          "scoreboard.txt": {
-            "type": "file",
-            "content": "Competitive coding rankings: Rank 1 is held by 'i_do_cp_hehe' with a streak of 420 days."
-          },
-          "riddles list.txt": {
-            "type": "file",
-            "content": "Solve this: I have keys but open no doors, I have white space but no rooms, I have input but no physical buttons. Answer: A CLI shell simulator!"
-          },
-            "TRASH turned to ASH": {
-              "type": "dir",
-              "hidden": false,
-              "description": "Massive decoy data repository. 99% corrupted / irrelevant. 1% valid payload.",
-              "README.txt": {
-                "type": "file",
-                "hidden": false,
-                "content": "WARNING\n\nThis directory contains raw dumps from multiple campus subsystems.\nMost files are auto-generated, incomplete, or intentionally corrupted.\n\nUse grep cautiously. Patterns exist but are deeply buried. \nSome files may be hidden! and hidden files have 70% chance of having the password inside them..."
-              },
-              "DUMP LAYER A": {
-                "type": "dir",
-                "hidden": false,
-                "a1.log": {
-                  "type": "file",
-                  "hidden": true,
-                  "content": "xj29#@!!klsdf0934@@@####"
-                },
-                "a2.log": {
-                  "type": "file",
-                  "hidden": true,
-                  "content": "ERROR NULL VALUE 0x00000000"
-                },
-                "a3.log": {
-                  "type": "file",
-                  "hidden": true,
-                  "content": "zzzzzzzzzzzzzzzzzzzzzzzzz"
-                },
-                "a4.tmp": {
-                  "type": "file",
-                  "hidden": true,
-                  "content": "SYSTEM BREACH DETECTED (false)"
-                },
-                "a5.tmp": {
-                  "type": "file",
-                  "hidden": true,
-                  "content": "111111111111111111111111111"
-                }
-              },
-              "DUMP LAYER B": {
-                "type": "dir",
-                "hidden": false,
-                "b1.dat": {
-                  "type": "file",
-                  "hidden": false,
-                  "content": "??????///////??????///////"
-                },
-                "b2.dat": {
-                  "type": "file",
-                  "hidden": false,
-                  "content": "corrupt memory block 92x"
-                },
-                "b3.dat": {
-                  "type": "file",
-                  "hidden": true,
-                  "content": "NO SIGNAL DETECTED"
-                },
-                "b4.dat": {
-                  "type": "file",
-                  "hidden": false,
-                  "content": "0xDEADBEEF repeated loop crash crash crash"
-                },
-                "b5.dat": {
-                  "type": "file",
-                  "hidden": false,
-                  "content": "NULL NULL NULL NULL NULL"
-                }
-              },
-              "DUMP LAYER C": {
-                "type": "dir",
-                "hidden": false,
-                "c1.sys": {
-                  "type": "file",
-                  "hidden": false,
-                  "content": "SYSTEM TRACE: garbage overflow"
-                },
-                "c2.sys": {
-                  "type": "file",
-                  "hidden": false,
-                  "content": "user input: ###########"
-                },
-                "c3.sys": {
-                  "type": "file",
-                  "hidden": true,
-                  "content": "memory leak detected but ignored"
-                },
-                "c4.sys": {
-                  "type": "file",
-                  "hidden": false,
-                  "content": "00000000000000000000000000"
-                },
-                "c5.sys": {
-                  "type": "file",
-                  "hidden": false,
-                  "content": "retry retry retry retry retry"
-                }
-              },
-              "RANDOM JUNK POOL": {
-                "type": "dir",
-                "hidden": false,
-                "junk 01.txt": {
-                  "type": "file",
-                  "hidden": false,
-                  "content": "asdkjasdjasdjasdjasdjasd"
-                },
-                "junk_02.txt": {
-                  "type": "file",
-                  "hidden": true,
-                  "content": "blablablablablablablabla"
-                },
-                "junk 03.txt": {
-                  "type": "file",
-                  "hidden": false,
-                  "content": "!!!@@@###$$$%%%^^^&&&"
-                },
-                "junk 04.txt": {
-                  "type": "file",
-                  "hidden": false,
-                  "content": "0000xxxx0000xxxx0000"
-                },
-                "real.txt": {
-                  "type": "file",
-                  "hidden": true,
-                  "content": "system noise packet"
-                }
-              },
-              "DEEP NEST 1": {
-                "type": "dir",
-                "hidden": false,
-                "DEEP NEST 2": {
-                  "type": "dir",
-                  "hidden": false,
-                  "DEEP NEST 3": {
-                    "type": "dir",
-                    "hidden": false,
-                    "DEEP NEST 4": {
-                      "type": "dir",
-                      "hidden": false,
-                      "DEEP NEST 5": {
-                        "type": "dir",
-                        "hidden": false,
-                        "trash 01.txt": {
-                          "type": "file",
-                          "hidden": false,
-                          "content": "corrupt"
-                        },
-                        "trash 02.txt": {
-                          "type": "file",
-                          "hidden": false,
-                          "content": "noise"
-                        },
-                        "trash 03.txt": {
-                          "type": "file",
-                          "hidden": false,
-                          "content": "junk data stream active"
-                        },
-                        "trash 04.txt": {
-                          "type": "file",
-                          "hidden": false,
-                          "content": "000000000000000000"
-                        },
-                        "trash 05.txt": {
-                          "type": "file",
-                          "hidden": false,
-                          "content": "system overflow error ignored"
-                        },
-                        "DECOY CORE": {
-                          "type": "dir",
-                          "hidden": false,
-                          "fake flag.txt": {
-                            "type": "file",
-                            "hidden": false,
-                            "content": "FLAG{THIS IS NOT THE REAL ONE}"
-                          },
-                          "fake_hint.txt": {
-                            "type": "file",
-                            "hidden": true,
-                            "content": "Maybe try checking random junk files?"
-                          },
-                          "deep fake.txt": {
-                            "type": "file",
-                            "hidden": false,
-                            "content": "You are getting closer... or are you?"
-                          }
-                        },
-                        "FINAL_REAL_FILE.txt": {
-                          "type": "file",
-                          "hidden": true,
-                          "content": "NICE WORK!\n\ncode is ZEITGEIST2027\n\nNOTE: This file was intentionally buried among corrupted system dumps to hide from the 'slow ones'. Okay you're a fast one i guess..."
-                        }
-                      }
-                    }
-                  }
-                }
-              },
-              "GARBAGE MISC": {
-                "type": "dir",
-                "hidden": false,
-                "m1.txt": {
-                  "type": "file",
-                  "hidden": false,
-                  "content": "lololololololololololol"
-                },
-                "m2.txt": {
-                  "type": "file",
-                  "hidden": false,
-                  "content": "error error error error"
-                },
-                "m3.txt": {
-                  "type": "file",
-                  "hidden": false,
-                  "content": "system not responding"
-                },
-                "m4.txt": {
-                  "type": "file",
-                  "hidden": true,
-                  "content": "garbage dump simulation active"
-                },
-                "m5.txt": {
-                  "type": "file",
-                  "hidden": false,
-                  "content": "random noise injected successfully"
-                }
-              }
-            }
-          }
-        },
-        "Sandbox": {
-          "type": "dir",
-          "shell snippets.txt": {
-            "type": "file",
-            "content": "Quick clean backup: rm -rf ~/.cache && echo 'Disk space restored!'"
-          },
-          "docker info.txt": {
-            "type": "file",
-            "content": "Active container: Web proxy, port 3000 mapping. Working fine."
-          },
-          "linux diaries.txt": {
-            "type": "file",
-            "content": "Joke journal: There are 10 types of people in the world: those who understand binary, and those who don't. Actually there is a 11th person too: \nwho cannot find the VIP passcode and one who won't be paired with any partner cuz you're the odd one LOL"
-          }
-        }
+      "terminal_history_fresher.txt": {
+        "type": "file",
+        "hidden": true,
+        "author": "History Daemon",
+        "creation": "24-06-2026",
+        "content": "Terminal History for active node:\n> cd Brahmaputra Hostel\n> ls -la\n> cat cycle clue.txt\n> cd ../Chenab Hostel\n> cat YOUR CYCLE.txt\n> [RECONSTRUCTION DETECTED]\n> cd ../Mess Archives\n> ls -a\n> cat .dubey protocol.txt\n> [RECONSTRUCTION DETECTED]\n> cd ../Admin Network\n> grep -r 'distributed'\n> [RECONSTRUCTION DETECTED]\n> cd ../LOC\n> cat Old Campus Dog.txt\n> [RECONSTRUCTION DETECTED]\n> cd ../THE REVEAL\n> cat FINAL FILE.txt"
       },
-      "Robotics Club": {
-        "type": "dir",
-        "Inventory": {
-          "type": "dir",
-          "arduino bins.txt": {
-            "type": "file",
-            "content": "Bins containing 12 Arduinos, 8 Raspberry Pis, and endless jumper wires tangled like noodles."
-          },
-          "lidar sensors.txt": {
-            "type": "file",
-            "content": "High accuracy ultrasonic distance sensors and infrared modules. Handle with care."
-          },
-          "wiring spools.txt": {
-            "type": "file",
-            "content": "Copper wire rolls, gauges 18, 22, and 24. Perfect for making customized circuit traces."
-          }
-        },
-        "Zenith Rover": {
-          "type": "dir",
-          "motor specs.txt": {
-            "type": "file",
-            "content": "Dc geared motors: 12V supply, 200 RPM, high torque performance for harsh dirt paths."
-          },
-          "obstacle course.txt": {
-            "type": "file",
-            "content": "Testing ground track setups: Avoid simulated trees, cross the gravel box, bypass the slumbering labrador."
-          },
-          "solar calculations.txt": {
-            "type": "file",
-            "content": "Solar panel charging rate: Max 5W. Overcast weather reduces efficiency by 80%."
-          }
-        }
+      "physics_simulation_glitch.txt": {
+        "type": "file",
+        "hidden": true,
+        "author": "Lab Server",
+        "creation": "24-06-2026",
+        "content": "FATAL ERROR in simulation thread #09: Quantum coherence detected in macromolecular memory simulator. The subject has realized they are the simulation. Re-indexing memory to prevent terminal crash."
+      }
+    },
+    "Campus Mainframe": {
+      "type": "dir",
+      "hidden": false,
+      "author": "Core System",
+      "creation": "24-06-2026",
+      "automated diagnostic.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "Sys Diag",
+        "creation": "24-06-2026",
+        "content": "Mainframe health check: 100% stable.\nNumber of user records: 1 (active).\nNumber of virtual directory nodes: 5.\nIntegrity of memory registers: Fully integrated. The user has successfully retraced all 5 phases of campus exploration."
       },
-      "Zenith Astro": {
-        "type": "dir",
-        "astro logs.txt": {
-          "type": "file",
-          "content": "Observatory entry log: clear sky on Tuesday night. Tracked Saturn rings. Magnificent details!"
-        },
-        "telescope details.txt": {
-          "type": "file",
-          "content": "Sky-Watcher telescope calibration metrics. Mirror cleaned on June 20."
-        },
-        "night sky checklist.txt": {
-          "type": "file",
-          "content": "Checklist: 1. Locate polaris. 2. Swing reflector. 3. Adjust fine dial to capture glowing nebulas."
-        }
+      "user_profile_recursive.txt": {
+        "type": "file",
+        "hidden": true,
+        "author": "Mainframe",
+        "creation": "24-06-2026",
+        "content": "{\n  \"username\": \"Fresher 2026\",\n  \"status\": \"INTEGRATED\",\n  \"level 1 completed\": true,\n  \"level 2 completed\": true,\n  \"level 3 completed\": true,\n  \"level 4 completed\": true,\n  \"level 5 completed\": true,\n  \"self awareness coefficient\": 1.0,\n  \"diagnostic msg\": \"Welcome back to reality. You are the coder, the solver, and the ghost of these files. Your journey is complete.\"\n}"
+      },
+      "reconstruction_script.txt": {
+        "type": "file",
+        "hidden": true,
+        "author": "Core Loader",
+        "creation": "24-06-2026",
+        "content": "import time\nimport memory\n\ndef reconstruct identity():\n    print('[SYSTEM] Initializing memory synthesis...')\n    time.sleep(1)\n    print('[SYSTEM] Level 1: Recovered physical coordinates of Chenab Cycle Stand.')\n    time.sleep(1)\n    print('[SYSTEM] Level 2: Reconstructed social construct of Dubey Canteen.')\n    time.sleep(1)\n    print('[SYSTEM] Level 3: Cleared network logs for distributed computing student.')\n    time.sleep(1)\n    print('[SYSTEM] Level 4: Restored ancestral sunset letters of the LOC.')\n    time.sleep(1)\n    print('[SYSTEM] Level 5: Met the reflection in the terminal mirror.')\n    time.sleep(1)\n    print('[SYSTEM] Conclusion: target achieved.')\n    return True"
+      }
+    },
+    "THE REVEAL": {
+      "type": "dir",
+      "hidden": false,
+      "author": "System",
+      "creation": "24-06-2026",
+      "FINAL FILE.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "You",
+        "creation": "First Week 2026",
+        "content": "The 'ghost freshie' is actually... YOU. \n\nThe files you've been uncovering are old records from your own first week on campus. You have unknowingly been retracing your own journey throughout the semester, chasing the shadows of your own past experiences. \n\nENDING: The campus was never the mystery. You were."
+      },
+      "mirror reflection.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "System Mirror",
+        "creation": "24-06-2026",
+        "content": "Looking into the mirror, you don't see a ghost. You see yourself. The loop is complete."
+      },
+      "shadow_identity.txt": {
+        "type": "file",
+        "hidden": true,
+        "author": "Your Shadow",
+        "creation": "24-06-2026",
+        "content": "I am the one who walks when you sleep. I am the one who remembers when you forget. We are two sides of the same student, navigating the beautiful, stressful, exciting maze of IIT Ropar. Let us merge back into one."
+      },
+      "unconscious_loops.txt": {
+        "type": "file",
+        "hidden": true,
+        "author": "Psych Log",
+        "creation": "24-06-2026",
+        "content": "Loop analysis: The subject sleepwalks because they are trying to solve their own identity in a new environment. By looking at their own records as if they belonged to a stranger, they bypass their own defense mechanisms and achieve true self-integration."
+      },
+      "system_reset_protocol.txt": {
+        "type": "file",
+        "hidden": true,
+        "author": "Core Reset",
+        "creation": "24-06-2026",
+        "content": "RESET PROTOCOL: ACTIVE\nIf the passcode is validated, all temporary directories will be preserved as permanent archives of the 2026 batch. The operator is officially crowned a MASTER DETECTIVE of the Ropar campus. Congratulations!"
+      }
+    },
+    "dream_state_manifest": {
+      "type": "dir",
+      "hidden": false,
+      "author": "Subconscious",
+      "creation": "24-06-2026",
+      "nightmare logs.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "Dreamer",
+        "creation": "24-06-2026",
+        "content": "Dream 1: I was riding a blue cycle that had no wheels, trying to reach a canteen that had no walls.\nDream 2: I was running a distributed program on a terminal, but my hands were blacklisted from typing.\nDream 3: I watched a sunset at LOC, but the sun was a giant digital clock ticking backwards.\nDream 4: I met a student in a blue hoodie, but when they turned around, their face was a blank terminal console."
+      },
+      "sleepwalk_coordinates.txt": {
+        "type": "file",
+        "hidden": true,
+        "author": "GPS Log",
+        "creation": "24-06-2026",
+        "content": "Recorded sleepwalking path:\n- 02:00 AM: Left Chenab Block C (Room 214)\n- 02:20 AM: Paused near Brahmaputra Cycle Stand\n- 02:40 AM: Sat on Bench 3 at Lake of Contentment\n- 03:00 AM: Entered Nalanda Library through open window\n- 03:30 AM: Logged into CS main terminal\n- 04:00 AM: Returned to bed. No conscious memory of event."
+      },
+      "subconscious_warnings.txt": {
+        "type": "file",
+        "hidden": true,
+        "author": "Deep Mind",
+        "creation": "24-06-2026",
+        "content": "Wake up. The exams are starting. The morning alarm is ringing in Chenab. The hot water in the geyser will run out. The tea at Amul's is calling your name. Wake up."
+      },
+      "the_mirror_test.txt": {
+        "type": "file",
+        "hidden": true,
+        "author": "Philosopher",
+        "creation": "24-06-2026",
+        "content": "A terminal is just glass, silicon, and copper. It reflects light, but it can also reflect the mind. What you search for in the directory is what you are searching for in your life. You are the quest, and you are the key."
       }
     }
   }
+}

@@ -396,7 +396,7 @@
             body: JSON.stringify({ password }),
           });
           const data = await response.json();
-          alert(data.started ? "Game started successfully" : "Game failed to start\n"+data?.error||'');
+          alert(data.started ? "Game started successfully" : "Game failed to start: " + (data?.error || "Unknown error"));
         } catch (error) {
           console.error("Request failed:", error);
           alert("Error: " + error.message);

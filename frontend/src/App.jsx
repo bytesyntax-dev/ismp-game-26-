@@ -51,7 +51,13 @@ export default function App() {
   const [teamName, setTeamName] = useState('');
   const [joinTeamName, setJoinTeamName] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
-  const [startTime, setStartTime] = useState(null)
+  const [startTime, setStartTime] = useState(null);
+  const [clockSkew, setClockSkew] = useState(0);
+  const clockSkewRef = useRef(0);
+  const updateClockSkew = (val) => {
+    setClockSkew(val);
+    clockSkewRef.current = val;
+  };
   // Game States
   const [team, setTeam] = useState(() => {
     if (path.includes('/game') || path.includes('/success')) {
@@ -142,6 +148,15 @@ export default function App() {
       socketRef.current.emit('ref_sync', { ref: data.ref });  
     });
 
+    socketRef.current.on('game_started', (data) => {
+      if (data.time) {
+        setStartTime(data.time);
+        if (data.serverTime) {
+          updateClockSkew(data.serverTime - Date.now());
+        }
+      }
+    });
+
     socketRef.current.on('state_sync', (data) => {
       if (data.team) {
         setTeam(data.team);
@@ -150,6 +165,9 @@ export default function App() {
       
       if (data.levelData?.startTime) {
         setStartTime(data.levelData.startTime);
+        if (data.levelData.serverTime) {
+          updateClockSkew(data.levelData.serverTime - Date.now());
+        }
       }
 
       if (data.levelData) {
@@ -212,7 +230,7 @@ export default function App() {
             ]);
           }
           return {
-            finalTime: data.finalTime || (data.levelData?.startTime ? (Date.now() - data.levelData.startTime) : 0),
+            finalTime: data.finalTime || (data.levelData?.startTime ? ((Date.now() + clockSkewRef.current) - data.levelData.startTime) : 0),
             solvedBy: data.team?.name || "THE TEAM"
           };
         });
@@ -253,23 +271,33 @@ export default function App() {
     }
 
     const interval = setInterval(() => {
-      const ms = Date.now() - startTime;
-      setElapsedSeconds(Math.floor(ms / 1000));
+      const ms = (Date.now() + clockSkew) - startTime;
+      setElapsedSeconds(Math.max(0, Math.floor(ms / 1000)));
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [levelData, completedState, startTime]);
+  }, [levelData, completedState, startTime, clockSkew]);
 
+  // Fetch initial game start status and calculate server time skew
   useEffect(() => {
-    const int = setInterval(async () => {
-      const res = await fetch(`${import.meta.env.VITE_API_URL || ''}/api/started`);
-      const {time} = await res.json()
-      if(time!==null){
-        setStartTime(time);
-        clearInterval(int)
+    const checkInitialStart = async () => {
+      try {
+        const res = await fetch(`${import.meta.env.VITE_API_URL || ''}/api/started`);
+        if (res.ok) {
+          const data = await res.json();
+          if (data.started && data.time) {
+            setStartTime(data.time);
+            if (data.serverTime) {
+              updateClockSkew(data.serverTime - Date.now());
+            }
+          }
+        }
+      } catch (err) {
+        console.error("Initial start check failed:", err);
       }
-    }, 1000);
-  },[])
+    };
+    checkInitialStart();
+  }, []);
 
 
   // 2.5. Fetch directory structure when activeLevel changes
@@ -944,6 +972,7 @@ export default function App() {
         active={screen === 'game'}
         team={team}
         currentMemberId={localStorage.getItem('ref')}
+        started={!!startTime}
       />
 
       {/* Sound Control Header */}

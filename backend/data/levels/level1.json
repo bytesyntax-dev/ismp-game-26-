@@ -2,291 +2,339 @@
   "root": {
     "type": "dir",
     "hidden": false,
-    "author": "ASHISH",
-    "creation": "23-06-26",
-    "Main Gate": {
+    "author": "System",
+    "creation": "24-06-2026",
+    "Inside Chenab Hostel": {
       "type": "dir",
       "hidden": false,
-      "author": "ASHISH",
-      "creation": "23-06-26",
-      "Harappan Structures.txt": {
-        "type": "file",
-        "hidden": false,
-        "author": "ASHISH",
-        "creation": "23-06-26",
-        "content": "The massive Harappan-inspired pillars stands before you. After years of preparation, coaching classes, exams and counselling rounds, you are finally an IIT Ropar student."
-      },
-      "Security Paaji.txt": {
-        "type": "file",
-        "hidden": false,
-        "author": "ASHISH",
-        "creation": "23-06-26",
-        "content": "Kaise ho bachche? Registration complete karwa lo pehle. And Welcome maje karo ab!"
-      },
-      "Campus Map.txt": {
-        "type": "file",
-        "hidden": false,
-        "author": "ASHISH",
-        "creation": "23-06-26",
-        "content": "You stare at the campus map. Everything looks important and everything looks far away. You notice empty spaces in the map and come to know IIT Ropar is still in it's first stage of development...Anyways, The Admin Block seems to be somewhere ahead."
-      },
-      "Parents Goodbye.txt": {
-        "type": "file",
-        "hidden": false,
-        "author": "ASHISH",
-        "creation": "23-06-26",
-        "content": "You watch several parents giving final instructions. 'Beta khana time pe khana.' \n'Beta phone karna.' \n'Beta padhai pe dhyan dena.'"
-      }
-    },
-    "Auditorium Foyer": {
-      "type": "dir",
-      "hidden": false,
-      "author": "ASHISH",
-      "creation": "23-06-26",
-      "audi.txt": {
-        "type": "file",
-        "hidden": false,
-        "author": "ASHISH",
-        "creation": "23-06-26",
-        "content": "The foyer is packed with nervous freshers carrying files and folders. Some look confident. Most are excited."
-      },
-      "Orientation Schedule.txt": {
-        "type": "file",
-        "hidden": false,
-        "author": "ASHISH",
-        "creation": "23-06-26",
-        "content": "09:00 Welcome Session\n10:00 Director Address\n11:00 Institute Overview\n12:00 Questions From Freshers\n12:01 More Questions From Freshers and meet with General Secretaries"
-      },
-      "Sleepy Fresher.txt": {
-        "type": "file",
-        "hidden": false,
-        "author": "ASHISH",
-        "creation": "23-06-26",
-        "content": "A student sitting in the corner is already asleep. Orientation has only been running for twenty minutes. Must be tired from travelling from Chandigarh..."
-      },
-      "Senior Volunteer.txt": {
-        "type": "file",
-        "hidden": false,
-        "author": "ASHISH",
-        "creation": "23-06-26",
-        "content": "Don't worry. Everyone gets lost during the first week. Some people continue getting lost during the fourth year as well xD"
-      },
-      "Registration Desk": {
+      "author": "Admin",
+      "creation": "24-06-2026",
+      "Chenab East": {
         "type": "dir",
         "hidden": false,
-        "author": "ASHISH",
-        "creation": "23-06-26",
-        "desk.txt": {
-          "type": "file",
-          "hidden": false,
-          "author": "ASHISH",
-          "creation": "23-06-26",
-          "content": "Registration completed? Good. Now get your biometrics done in the Admin Block."
-        },
-        "Volunteer 2.txt": {
-          "type": "file",
-          "hidden": false,
-          "author": "ASHISH",
-          "creation": "23-06-26",
-          "content": "You're looking for biometrics? Admin Block East Wing. And no, I don't know where your hostel is."
-        },
-        "Lost Fresher.txt": {
-          "type": "file",
-          "hidden": false,
-          "author": "ASHISH",
-          "creation": "23-06-26",
-          "content": "Bhai, Admin Block kidhar hai?"
-        },
-        "Document Checklist.txt": {
-          "type": "file",
-          "hidden": false,
-          "author": "ASHISH",
-          "creation": "23-06-26",
-          "content": "Required Documents:\n\n✓ Admission Letter\n✓ ID Proof\n✓ Photographs\n✓ Patience"
-        },
-        "Missing_Pen.txt": {
-          "type": "file",
-          "hidden": false,
-          "author": "ASHISH",
-          "creation": "23-06-26",
-          "content": "The pen is chained to the table. SON..."
-        }
-      }
-    },
-    "LOC": {
-      "type": "dir",
-      "hidden": false,
-      "author": "ASHISH",
-      "creation": "23-06-26",
-      "Photo Spot.txt": {
-        "type": "file",
-        "hidden": false,
-        "author": "ASHISH",
-        "creation": "23-06-26",
-        "content": "A group of freshers is already taking photos.\n\nYour Achievement Progress:\n0/500 LOC Photos LOL"
-      },
-      "Influencer.txt": {
-        "type": "file",
-        "hidden": false,
-        "author": "ASHISH",
-        "creation": "23-06-26",
-        "content": "This student has been on campus for five minutes and has already uploaded three Instagram stories."
-      },
-      "Selfie Group.txt": {
-        "type": "file",
-        "hidden": false,
-        "author": "ASHISH",
-        "creation": "23-06-26",
-        "content": "Three freshers are taking group photos as if graduation is tomorrow."
-      }
-    },
-    "Admin Block": {
-      "type": "dir",
-      "hidden": false,
-      "author": "ASHISH",
-      "creation": "23-06-26",
-      "Directions.txt": {
-        "type": "file",
-        "hidden": false,
-        "author": "ASHISH",
-        "creation": "23-06-26",
-        "content": "East Wing -> Registrars\nWest Wing -> Administrative Offices\nWrong Turn -> Director Office"
-      },
-      "Lost Student.txt": {
-        "type": "file",
-        "hidden": false,
-        "author": "ASHISH",
-        "creation": "23-06-26",
-        "content": "I came here looking for the UG Registrar. Somehow I reached the Director Office."
-      },
-      "East Wing": {
-        "type": "dir",
-        "hidden": false,
-        "author": "ASHISH",
-        "creation": "23-06-26",
-        "UG Registrar": {
-          "type": "dir",
-          "hidden": false,
-          "author": "ASHISH",
-          "creation": "23-06-26",
-          "registrar.txt": {
+        "author": "Admin",
+        "creation": "24-06-2026",
+        "YOUR CYCLE.txt": {
             "type": "file",
             "hidden": false,
-            "author": "ASHISH",
-            "creation": "23-06-26",
-            "content": "You have completed your academic registration. One final step remains: biometrics."
-          },
-          "Queue.txt": {
-            "type": "file",
-            "hidden": false,
-            "author": "ASHISH",
-            "creation": "23-06-26",
-            "content": "Current Queue Length: 17\n\nEstimated Wait Time: Forever."
-          },
-          "Helpful Clue.txt": {
-            "type": "file",
-            "hidden": false,
-            "author": "ASHISH",
-            "creation": "23-06-26",
-            "content": "LOC ka full form LOC ko khud bhi nahi pata."
+            "author": "Anon Freshie",
+            "creation": "24-06-2026",
+            "content": "Who even keeps cycle inside the wing? I thought you were smart. Yeah Yeah I know...gotta check everywhere, fair!"
           }
         },
-        "Biometric Centre": {
+      "Chenab West": {
+        "type": "dir",
+        "hidden": false,
+        "author": "Admin",
+        "creation": "24-06-2026",
+        "YOUR CYCLE.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "Anon Freshie",
+            "creation": "24-06-2026",
+            "content": "Seniors wing. Your entry is not allowed. Enter at your own risk, or don't..."
+          }
+        },
+      "Chenab Gym": {
+        "type": "dir",
+        "hidden": false,
+        "author": "Admin",
+        "creation": "24-06-2026",
+        "YOUR CYCLE.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "Anon Freshie",
+            "creation": "24-06-2026",
+            "content": "SRSLY BRO?? Gym me cycle??"
+          }
+        },
+      "Chenab Security Desk": {
+        "type": "dir",
+        "hidden": false,
+        "author": "Admin",
+        "creation": "24-06-2026",
+        "YOUR CYCLE.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "Anon Freshie",
+            "creation": "24-06-2026",
+            "content": "Nhi bachche, maine aapki cycle nahi dekhi...Cycle stand check karo yaar tum bachche kahi bhi bhool jaate ho..."
+          }
+        },
+      "Chenab Common Room": {
+        "type": "dir",
+        "hidden": false,
+        "author": "Admin",
+        "creation": "24-06-2026",
+        "YOUR CYCLE.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "Anon Freshie",
+            "creation": "24-06-2026",
+            "content": "EMPTY"
+          }},
+      "Chenab Ground Floor": {
+        "type": "dir",
+        "hidden": false,
+        "author": "Admin",
+        "creation": "24-06-2026",
+        "YOUR CYCLE.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "Anon Freshie",
+            "creation": "24-06-2026",
+            "content": "EMPTY"
+          }},
+      "Chenab First Floor": {
+        "type": "dir",
+        "hidden": false,
+        "author": "Admin",
+        "creation": "24-06-2026",
+        "YOUR CYCLE.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "Anon Freshie",
+            "creation": "24-06-2026",
+            "content": "EMPTY"
+          }},
+      "Chenab Second Floor": {
+        "type": "dir",
+        "hidden": false,
+        "author": "Admin",
+        "creation": "24-06-2026",
+        "YOUR CYCLE.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "Anon Freshie",
+            "creation": "24-06-2026",
+            "content": "EMPTY"
+          }},
+      "Chenab Top Floor": {
+        "type": "dir",
+        "hidden": false,
+        "author": "Admin",
+        "creation": "24-06-2026",
+        "YOUR CYCLE.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "Anon Freshie",
+            "creation": "24-06-2026",
+            "content": "EMPTY TOP FLOOR? Are teri baat kar raha hu..."
+          }},
+      "Chenab Underground": {
+        "type": "dir",
+        "hidden": false,
+        "author": "Admin",
+        "creation": "24-06-2026",
+        "YOUR CYCLE.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "Anon Freshie",
+            "creation": "24-06-2026",
+            "content": "Aisa bhi hota hai kya??"
+          }},
+      "Cycle Stand CHNB": {
+        "type": "dir",
+        "hidden": false,
+        "author": "Admin",
+        "creation": "24-06-2026",
+        "YOUR CYCLE.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "System",
+          "creation": "24-06-2026",
+          "content": "FOUND: Your cycle is securely parked at Chenab Hostel cycle stand, locked and accounted for in the official register.\n\nThe cycle was never stolen or relocated by external actors. It has remained exactly where you left it.\n\nYour level passcode is: CHILLBRO"
+        }
+      },
+      "README.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "System",
+        "creation": "24-06-2026",
+        "content": "LEVEL 1: WHERE IS MY CYCLE??\n\nYou are a student at IIT Ropar and you have been alloted Chenab hostel\nOne day you wake up and find your cycle missing... 'Where did the thief take my cycle to?? Welcome to IIT Ropar BRUH'.\n\nYour cycle has gone missing, and you decide to look for your cycle OUTSIDE CHENAB HOSTEL.\n\nObjective: Locate your missing cycle by piecing together inconsistent logs and environmental clues.\nAnswer in the command line by using 'submit <passcode>'\nUseful Commands:\n- ls\n- ls -a\n- cd\n- cat\n- pwd\n- grep"
+      },
+      "Outside Chenab Hostel": {
+        "type": "dir",
+        "hidden": false,
+        "author": "Admin",
+        "creation": "24-06-2026",
+        "Brahmaputra Hostel": {
           "type": "dir",
           "hidden": false,
-          "author": "ASHISH",
-          "creation": "23-06-26",
-          "Fingerprint Scanner.txt": {
+          "author": "Admin",
+          "creation": "24-06-2026",
+          "Helpful Senior.txt": {
             "type": "file",
             "hidden": false,
-            "author": "ASHISH",
-            "creation": "23-06-26",
-            "content": "The scanner rejects your finger once. Then twice. Finally it accepts that you exist."
+            "author": "Senior Rahul",
+            "creation": "24-06-2026",
+            "content": "You are not the first fresher to lose something within the first week, and you will not be the last. The important thing to understand is that memory on this campus is unreliable when you are tired, so always verify locations with more than one source.\n\nIf someone tells you they saw your cycle, treat it as a lead, not a fact. I have personally seen students argue over the location of the same object while standing in front of it."
           },
-          "Admin Staff.txt": {
+          "Suspicious Freshie.txt": {
             "type": "file",
             "hidden": false,
-            "author": "ASHISH",
-            "creation": "23-06-26",
-            "content": "Congratulations. You can now enter through biometric gates instead of signing the register every time."
+            "author": "Anon Freshie",
+            "creation": "24-06-2026",
+            "content": "There is something strange about how people describe movement here. They don’t just say something was moved, they say it was ‘seen elsewhere’ as if distance itself is unreliable.\n\nI am not involved in your cycle problem, but I would strongly suggest checking whether your assumption about where you parked it is even correct."
           },
-          "scanner.txt": {
+          "Mess Rumor.txt": {
             "type": "file",
             "hidden": false,
-            "author": "ASHISH",
-            "creation": "23-06-26",
-            "content": "Biometrics completed successfully.\n\nActivation Code: IITRPR2026\n\nPass this code as an argument to the ENTER DECRYPTION KEY HERE box to proceed to Level 2."
+            "author": "Mess Attendant",
+            "creation": "24-06-2026",
+            "content": "A boy came into mess claiming his cycle was following him. You told him cycles do not have legs, but he insisted it stopped when he stopped and moved when he looked away.\n\nStudents are under too much stress during orientation, so you do not take these claims seriously, but you do write them down because patterns sometimes matter more than truth."
+          },
+          "Lost Keys.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "Warden Office",
+            "creation": "23-06-2026",
+            "content": "Key collection matching cycle lock number C-214 is unclaimed. Found in hostel lounge. Please collect if yours."
+          },
+          "Gossip Corner.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "Wing 3 Groupchat",
+            "creation": "23-06-2026",
+            "content": "Some guy was seen locking his cycle at Chenab and walking all the way here into Brahmaputra. Sleepwalking is real guys, the first month is really exhausting and makes you do stuff!"
+          }
+        },
+        "Cycle Stand BHPTRA": {
+          "type": "dir",
+          "hidden": false,
+          "author": "Admin",
+          "creation": "24-06-2026",
+          "log 23 06.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "Security",
+            "creation": "23-06-2026",
+            "content": "22:00 - Routine verification completed with no anomalies reported at first glance.\n23:30 - One subject observed near Cycle Row C behaving as if searching for a missing key, but no lost item was registered.\n02:00 - Patrol completed, however sensor calibration shows minor drift in positional mapping data across two stands."
+          },
+          "empty spot.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "System",
+            "creation": "24-06-2026",
+            "content": "A faint circular imprint remains where a cycle once stood, but the soil compression pattern suggests it was not lifted vertically. Instead, it appears to have been rotated and reoriented before removal."
+          },
+          "camera fragment.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "Security AI",
+            "creation": "24-06-2026",
+            "content": "CCTV fragment shows a moving silhouette at 01:58 AM. The figure pauses longer than expected, as if verifying alignment with something unseen.\n\nThe footage suffers a brief timestamp reset, and during that interval, the object of interest is no longer visible in the frame."
+          },
+          "decoy cycle.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "Stolen Atlas",
+            "creation": "24-06-2026",
+            "content": "This is a shiny red cycle with a lock. Definitely not your blue cycle. It has a sticker: 'DONT TOUCH MY CYCLE OR ELSE......HEHEHEHE' get a load of this guy LOL."
+          }
+        },
+        "Security Post": {
+          "type": "dir",
+          "hidden": false,
+          "author": "Admin",
+          "creation": "24-06-2026",
+          "Watchman Paaji.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "Paaji",
+            "creation": "24-06-2026",
+            "content": "I have been working here long enough to know when students are confused and when the campus itself is confusing them. You asked about a blue cycle, yes, I remember mentioning it, but I also remember it being in two places at once when I checked logs again.\n\nEither I am seeing too many nights or this place is playing tricks with records."
+          },
+          "impound list.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "Security",
+            "creation": "24-06-2026",
+            "content": "Impounded Vehicles:\n1. Red Hero Cycle - No sticker and partially erased serial number\n2. Black Atlas Cycle - Blocked walkway near Library Gate\n3. Yellow Scooter - Expired campus pass and missing registration sticker\n4. Blue Cycle - entry removed after audit discrepancy and later reappeared in Chenab registry"
+          },
+          "night patrol notes.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "Night Guard",
+            "creation": "24-06-2026",
+            "content": "Multiple cycle positions appear to shift slightly between patrol rounds without physical interference detected. Lighting conditions were stable, yet recorded coordinates do not always match visual confirmation.\n\nThis inconsistency has repeated across multiple nights and is now being flagged as a low-priority anomaly."
+          }
+        },
+        "Utility Block": {
+          "type": "dir",
+          "hidden": false,
+          "author": "Admin",
+          "creation": "24-06-2026",
+          "maintenance log.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "Staff",
+            "creation": "24-06-2026",
+            "content": "Cycle stand alignment was corrected near the central utility corridor after repeated misplacement complaints. No official unclaimed cycles were recorded today, though one lock mechanism without matching registry data was recovered and stored for inspection."
+          },
+          "lost and found note.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "Storekeeper",
+            "creation": "24-06-2026",
+            "content": "A freshly cut cycle lock was found near the juice stall area. It shows no signs of rust damage, suggesting recent removal rather than abandonment.\n\nThe item has been tagged as ‘unverified origin’ and placed under observation until ownership can be confirmed."
+          },
+          "Juice Stall Bhaiya.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "Juice Shop Manager",
+            "creation": "24-06-2026",
+            "content": "Hello beta! Fresh orange juice? Ah, a blue cycle? I saw a sleepwalking fresher parking a blue cycle at Chenab Hostel stand last night, but they walked straight to Brahmaputra room. Are you assigned to Chenab or Brahmaputra? Go look up your allocation roster in the server records!"
+          }
+        },
+        "Library Block": {
+          "type": "dir",
+          "hidden": false,
+          "author": "Admin",
+          "creation": "24-06-2026",
+          "archive glitch log.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "Library System",
+            "creation": "24-06-2026",
+            "content": "A temporary catalog mismatch occurred during midnight synchronization, resulting in duplicate entries for several student records.\n\nOne of the entries referenced a blue cycle checkout request that was never submitted through official channels."
+          },
+          "quiet floor note.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "Librarian",
+            "creation": "24-06-2026",
+            "content": "Students have reported hearing movement in the cycle stand area despite no visible activity. These reports increase during exam weeks, so they are usually attributed to fatigue.\n\nHowever, the frequency of such reports this semester is unusually high."
+          },
+          "Study Partner Preeti.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "Preeti CS",
+            "creation": "24-06-2026",
+            "content": "Sapne dekhna achchi baat hai LOL... She is as existent as your cycle with you."
+          }
+        },
+        "Campus Map Server": {
+          "type": "dir",
+          "hidden": false,
+          "author": "Admin",
+          "creation": "24-06-2026",
+          "map sync error.log": {
+            "type": "file",
+            "hidden": false,
+            "author": "System Admin",
+            "creation": "24-06-2026",
+            "content": "Campus mapping system failed to reconcile coordinate data between Cycle Stand zones and Hostel allocation grid. Two distinct locations were assigned identical identifiers during synchronization.\n\nThis resulted in temporary overlap of Brahmaputra and Chenab mapping nodes."
+          },
+          "node history.txt": {
+            "type": "file",
+            "hidden": false,
+            "author": "System Admin",
+            "creation": "24-06-2026",
+            "content": "Node tracking shows repeated reclassification of Cycle Stand C across different hostel zones. The system does not retain earlier mappings once overwritten, making historical reconstruction incomplete.\n\nRecommendation: manual verification required for all cycle-related queries."
           }
         }
-      },
-      "West Wing": {
-        "type": "dir",
-        "hidden": false,
-        "author": "ASHISH",
-        "creation": "23-06-26",
-        "Awadh.txt": {
-          "type": "file",
-          "hidden": false,
-          "author": "ASHISH",
-          "creation": "23-06-26",
-          "content": "Several administrative offices are located here. Everyone seems busy."
-        },
-        "Annam.txt": {
-          "type": "file",
-          "hidden": false,
-          "author": "ASHISH",
-          "creation": "23-06-26",
-          "content": "A staff member asks if you need help. You panic and say 'No' despite being completely lost."
-        }
-      },
-      "Director Office": {
-        "type": "dir",
-        "hidden": false,
-        "author": "ASHISH",
-        "creation": "23-06-26",
-        "notice.txt": {
-          "type": "file",
-          "hidden": false,
-          "author": "ASHISH",
-          "creation": "23-06-26",
-          "content": "Notice: Students entering without purpose will be stared at intensely."
-        },
-        "Receptionist.txt": {
-          "type": "file",
-          "hidden": false,
-          "author": "ASHISH",
-          "creation": "23-06-26",
-          "content": "The receptionist looks at you. You look at the receptionist. Both of you know you are not supposed to be here."
-        },
-        "Meeting In Progress.txt": {
-          "type": "file",
-          "hidden": false,
-          "author": "ASHISH",
-          "creation": "23-06-26",
-          "content": "A meeting is currently in progress. Your chances of finding useful information here are roughly equal to attending every 8 AM class this semester."
-        }
       }
-    },
-    "homesick.txt": {
-      "type": "file",
-      "hidden": true,
-      "author": "ASHISH",
-      "creation": "23-06-26",
-      "content": "The room feels quieter than home. Maybe that's because your roommate hasn't arrived yet."
-    },
-    "future_memory.txt": {
-      "type": "file",
-      "hidden": true,
-      "author": "ASHISH",
-      "creation": "23-06-26",
-      "content": "One day you'll walk through this campus without needing a map."
-    },
-    "README.txt": {
-      "type": "file",
-      "hidden": false,
-      "author": "ASHISH",
-      "creation": "23-06-26",
-      "content": "\nLEVEL 1: KNOW YOUR CAMPUS\n\n\nYou have finally arrived at IIT Ropar.\n\nYour parents have left. Your hostel room is ready. Your new life is about to begin.\n\nUnfortunately, your admission process is not complete yet.\n\nTasks:\n1. Visit the Auditorium Foyer.\n2. Complete registration.\n3. Find the Admin Block.\n4. Locate the UG Registrar.\n5. Complete your biometrics.\n6. Discover the activation code.\n\nEnter the code in the ENTER DECRYPTION KEY HERE box and proceed to next level."
     }
   }
 }

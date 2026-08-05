@@ -5,45 +5,13 @@ const OVERLAY_ID = 'game-start-lock';
 const START_POLL_MS = 2000;
 const GUARD_CHECK_MS = 500;
 
-export default function GameStartOverlay({ active = false, team = null, currentMemberId = null }) {
-  const [started, setStarted] = useState(false);
-  const [checking, setChecking] = useState(true);
+export default function GameStartOverlay({ active = false, team = null, currentMemberId = null, started = false }) {
   // Bumped by the guard timer when the overlay is stripped from the DOM so
   // React is forced to remount a brand new overlay node.
   const [remountKey, setRemountKey] = useState(0);
   const startedRef = useRef(false);
   startedRef.current = started;
-
-  // Poll the backend to see if the admin has started the game. Only runs while
-  // the player is in the game screen (i.e. after creating/joining a team).
-  useEffect(() => {
-    if (!active) return;
-    let cancelled = false;
-    // Fail closed: reset to locked until the poll confirms the game started.
-    setStarted(false);
-    setChecking(true);
-    const checkStarted = async () => {
-      try {
-        const res = await fetch('/api/started', { cache: 'no-store' });
-        if (!res.ok) throw new Error('started endpoint unreachable');
-        const data = await res.json();
-        if (!cancelled) {
-          setStarted(!!data.started);
-          setChecking(false);
-        }
-      } catch (err) {
-        // Fail closed: if we cannot reach the server, keep the game locked.
-        if (!cancelled) setChecking(false);
-      }
-    };
-
-    checkStarted();
-    const poll = setInterval(checkStarted, START_POLL_MS);
-    return () => {
-      cancelled = true;
-      clearInterval(poll);
-    };
-  }, [active]);
+  const checking = false;
 
   // Guard timer: continuously verify the overlay node still exists. If an
   // advanced user deletes it from DevTools, force a remount so it reappears.

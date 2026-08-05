@@ -88,7 +88,8 @@ const broadcastTeamState = (group) => {
         payload.levelData = {
             solvedLevels: solvedLevels,
             startTime: TIME_START,
-            score: points[group]?.total || 0
+            score: points[group]?.total || 0,
+            serverTime: Date.now()
         }
         //Completed Logic: If the number of solved levels equals the total number of levels, mark as completed
         // Calculate final time if completed, otherwise null
@@ -392,17 +393,20 @@ app.get("/api/points", (req, res) => {
 app.post("/admin/start_game", (req, res) => {
     const { password } = req.body;
     // Allow either the salted environment password or fallback defaults
-    if(TIME_START!==null)return res.status(503).json({ error: "Game Started already." })
     const isValidPassword = (password && (hash(password + "admin@IITRPR") === process.env.ADMIN_PASSWORD));
     if(!isValidPassword) return res.status(401).json({ error: "Unauthorized access: incorrect password." });
+    
     TIME_START = Date.now();
     for(const key in points) points[key].start=TIME_START;
-    return res.status(200).json({ started: !!TIME_START, time: TIME_START });
+    
+    // Broadcast the game start event via Socket.io to all clients
+    io.emit("game_started", { started: true, time: TIME_START, serverTime: Date.now() });
 
-})
+    return res.status(200).json({ started: true, time: TIME_START });
+});
 
 app.get("/api/started", (req, res) => {
-    return res.status(200).json({ started: !!TIME_START, time: TIME_START });
+    return res.status(200).json({ started: !!TIME_START, time: TIME_START, serverTime: Date.now() });
 });
 
 // Production SPA serving

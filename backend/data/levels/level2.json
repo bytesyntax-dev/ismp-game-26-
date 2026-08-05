@@ -2,105 +2,210 @@
   "root": {
     "type": "dir",
     "hidden": false,
-    "author": "SOFTCOM",
-    "creation": "23-06-26",
-    "Brahmaputra Hostel": {
-      "type": "dir",
-      "hidden": false,
-      "Room_101": {
-        "type": "dir",
-        "hidden": false,
-        "room.txt": {
-          "type": "file",
-          "content": "Your new room. It feels strangely empty. This place will become home sooner than you think."
-        },
-        "Roommate.txt": {
-          "type": "file",
-          "content": "Hi bro. Which branch? Ohh acha nice! Raat ko maggie khane chalenge; mast hidden spot hai ek waha pe I've heard"
-        }
-      },
-      "Wing": {
-        "type": "dir",
-        "hidden": false,
-        "Wing Senior.txt": {
-          "type": "file",
-          "content": "Welcome to the wing. Don't worry, everyone is confused during the first week."
-        },
-        "Intro Rumours.txt": {
-          "type": "file",
-          "content": "Rumour has it that seniors are taking intros tonight. Nobody knows if it's true."
-        }
-      },
-      "Hostel Office": {
-        "type": "dir",
-        "Room_Key.txt": {
-          "type": "file",
-          "content": "You have received your hostel room key. Item acquired: ROOM KEY= BHG101"
-        }
-      }
-    },
-    "Annapurna Dining Hall": {
-      "type": "dir",
-      "hidden": false,
-      "Mess Manager.txt": {
-        "type": "file",
-        "content": "Take your mess card. Don't lose it. Item acquired: MESS ID= ANP2026"
-      },
-      "Breakfast.txt": {
-        "type": "file",
-        "content": "Breakfast timing: 7:30 AM - 9:30 AM. You will still somehow miss it."
-      },
-      "Paneer Day.txt": {
-        "type": "file",
-        "content": "Today's menu contains paneer. Campus happiness increased by 300%."
-      }
-    },
-    "Utility Block": {
-      "type": "dir",
-      "hidden": false,
-      "Parcel Counter": {
-        "type": "dir",
-        "parcel.txt": {
-          "type": "file",
-          "content": "Congratulations. Your first online parcel has arrived. You bought a nice suit for the fresher's party!! Item acquired: FIRST PARCEL = AMA001"
-        }
-      },
-      "Stationery.txt": {
-        "type": "file",
-        "content": "You buy a notebook despite already owning three unused ones."
-      },
-      "Hair Salon.txt": {
-        "type": "file",
-        "content": "Haircut result: 50% stylish, 50% regret."
-      }
-    },
-    "Canteen Complex": {
-      "type": "dir",
-      "Kerala Canteen.txt": {
-        "type": "file",
-        "content": "Many students claim this place has saved entire semesters."
-      },
-      "North Canteen.txt": {
-        "type": "file",
-        "content": "Parathas, chai, and endless discussions."
-      },
-      "Paaji Burger House.txt": {
-        "type": "file",
-        "content": "Price History: Affordable -> Expensive -> Premium Lifestyle Products."
-      },
-      "Juice Centre.txt": {
-        "type": "file",
-        "content": "Oreo Shake: the unofficial fuel of freshers. As you were enjoying the magical oreoshake, one fresher among you all suddenly disappeared into level 3(he is an introvert and hides from people)\nYou found his passcode chit btw. \nIt was ANP2026AMA007BHB107"
-      }
-    },
-    ".midnight maggie.txt": {
-      "type": "file",
-      "hidden": true,
-      "content": "One day at 2 AM, this file will make complete sense."
-    },
+    "author": "System",
+    "creation": "24-06-2026",
     "README.txt": {
       "type": "file",
-      "content": "LEVEL 2: ROTI KAPDA MAKAAN\n\nObjectives:\n1. Obtain ROOM_KEY.\n2. Obtain MESS_ID.\n3. Obtain FIRST_PARCEL.\n\nOnce you have discovered all three items, enter your code in ENTER DECRYPTION KEY HERE box"
+      "hidden": false,
+      "author": "System",
+      "creation": "24-06-2026",
+      "content": "LEVEL 2: THE DUBEY CANTEEN FILES\n\nYou are now investigating a legend of IIT Ropar. Dubey Canteen is no longer treated as a physical location by official systems, yet student behavior patterns suggest it still functions as a recurring cultural node.\n\nMultiple departments deny its existence, but independent logs, festival sightings, and NPC testimonies contradict each other.\n\nObjective: Find the reason why Dubey Canteen doesn't exist physically.\nAnswer passcode clue: submit <passcode> to solve the level.\nUseful Commands:\n- ls\n- ls -a\n- cd\n- cat\n- pwd\n- grep\n\nTip: Not everything important is visible."
+    },
+    "Old Canteen Records": {
+      "type": "dir",
+      "hidden": false,
+      "author": "Archivist",
+      "creation": "24-06-2026",
+      "inventory 2017.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "Dubey Ji",
+        "creation": "10-09-2017",
+        "content": "Menu baseline established: Tea, Maggi, Samosa, Bread Pakora. Students prefer late-night orders over daytime usage. Revenue stable but behavior patterns unusual. Some students do not leave seating area even after closing hours."
+      },
+      "inventory 2018.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "Dubey Ji",
+        "creation": "15-10-2018",
+        "content": "Maggi demand has doubled during exam cycles. A recurring group of students refers to this place as 'best hangout spot'. No objections, as long as order is maintained."
+      },
+      "closure notice.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "Admin",
+        "creation": "12-10-2025",
+        "content": "Official closure issued due to infrastructure redevelopment. All references to private vendor operations must be archived and removed from active campus directories."
+      },
+      "post closure scan.log": {
+        "type": "file",
+        "hidden": false,
+        "author": "Campus Audit",
+        "creation": "02-02-2020",
+        "content": "Physical scan shows partial removal of structure. However, thermal readings indicate intermittent heat signatures at original canteen coordinates during late-night hours. No authorized activity recorded."
+      },
+      "Secret Seating": {
+        "type": "dir",
+        "hidden": false,
+        "author": "Late Nighters",
+        "creation": "24-06-2026",
+        "carving on bench.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "Batch of 2021",
+          "creation": "24-06-2026",
+          "content": "We sat here under the stars. The physical canteen might be gone, but as long as we remember it, the spirit of Dubey Ji lives on."
+        },
+        "decoy graffiti.txt": {
+          "type": "file",
+          "hidden": false,
+          "author": "Vandal Student",
+          "creation": "24-06-2026",
+          "content": "For a good time, call the network admin! Just kidding, don't. They will blacklist you."
+        }
+      }
+    },
+    "Alumni Logs": {
+      "type": "dir",
+      "hidden": false,
+      "author": "Alumni Assoc",
+      "creation": "24-06-2026",
+      "memory lane.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "Batch of 2019",
+        "creation": "20-05-2023",
+        "content": "Dubey Canteen was not just food. It was a shared pause between chaos. Even now, alumni conversations drift back to it without intention, as if it still exists in conversation space."
+      },
+      "the rumor.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "Secret Senior",
+        "creation": "14-02-2024",
+        "content": "Dubey Ji appears during fests like ZEITGEIST or ADVITIYA when campus density exceeds normal thresholds. He does not appear during regular weekdays. This suggests event-triggered manifestation rather than physical relocation."
+      },
+      "dubey last seen zeitgeist.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "Festival Observer",
+        "creation": "19-03-2025",
+        "content": "Last confirmed sighting occurred at Zeitgeist Ground during Zeitgeist Festival. Dubey Ji was observed serving snacks near unofficial stalls. No vendor registration existed for him in normal campus weekdays.\n\nAfter event closure, all traces of his stall disappeared."
+      },
+      "Senior Siddharth.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "Siddharth 2019",
+        "creation": "24-06-2026",
+        "content": "Listen kid, if you want to find the truth, read the hidden files in the Mess Archives. The administration didn't delete the logs."
+      }
+    },
+    "Mess Archives": {
+      "type": "dir",
+      "hidden": false,
+      "author": "Mess Committee",
+      "creation": "24-06-2026",
+      "menu comparison.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "Committee Head",
+        "creation": "24-06-2026",
+        "content": "Mess system prioritizes nutrition compliance and schedule stability. Dubey Canteen prioritized emotional satisfaction and unscheduled accessibility.\n\nStudent feedback shows higher long-term recall value for Dubey Canteen meals."
+      },
+      "late night pattern.log": {
+        "type": "file",
+        "hidden": false,
+        "author": "Data Analyst",
+        "creation": "24-06-2026",
+        "content": "Spike detected in canteen references between 01:30–03:30 AM. Correlation increases during exam periods and campus festivals. Pattern remains consistent across 6 academic cycles."
+      },
+      "Mess Manager Sharma.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "Sharma Ji",
+        "creation": "24-06-2026",
+        "content": "We try to match the Bread Omelettes, but nobody can duplicate Dubey Canteen's aura. It is like his canteen is tied to the soil here."
+      }
+    },
+    "Zeitgeist Ground": {
+      "type": "dir",
+      "hidden": false,
+      "author": "Event System",
+      "creation": "24-06-2026",
+      "festival 2025 overview.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "Event Admin",
+        "creation": "20-03-2025",
+        "content": "Zeitgeist Festival reached peak attendance at 21:10. Multiple unofficial vendors appeared briefly without registration. Dubey Ji was reported among them but was never logged in system records."
+      },
+      "ground anomaly scan.log": {
+        "type": "file",
+        "hidden": false,
+        "author": "Security System",
+        "creation": "20-03-2025",
+        "content": "Ground mapping shows temporary duplication of stall coordinates during peak crowd density. Coordinates normalize after event ends."
+      },
+      "ground sketch.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "Volunteer",
+        "creation": "24-06-2026",
+        "content": "I sketched the ground layout during DJ night. A small tea stall appeared near the main generator. When the generator team checked, they only found a bucket of hot water and used tea leaves."
+      }
+    },
+    "NPC Registry": {
+      "type": "dir",
+      "hidden": false,
+      "author": "Campus AI",
+      "creation": "24-06-2026",
+      "Dubey Ji Profile.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "System Record",
+        "creation": "24-06-2026",
+        "content": "Entity: Dubey Ji\nRole: Former Campus Canteen Operator\nStatus: Unstable / Event-Linked Presence\n\nLast Confirmed Physical Record: Pre-closure canteen site\nLast Verified Sighting: Zeitgeist Ground during festival conditions\nBehavior Pattern: Appears only during high emotional density events (festivals, large gatherings)."
+      },
+      "security guard paaji.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "Security NPC",
+        "creation": "24-06-2026",
+        "content": "I don’t log him because he doesn’t stay long enough to be logged. One moment he’s there, next moment he’s part of the crowd like he always was."
+      },
+      "mess worker sunita.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "Mess Staff",
+        "creation": "24-06-2026",
+        "content": "Students keep asking about Dubey Ji. I never met him officially...Must be a legend for old students here..."
+      },
+      "Tea Lover Amit.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "Amit EE",
+        "creation": "24-06-2026",
+        "content": "If you are tired enough from mid-semester prep, just go to Dubey Canteen. Oh sorry, he's no more here at campus...What did you say? Yeah I'm sure I am tea lover only. Anyways, Dubey Canteen was closed due to unhygiene reports during audits and there was a non-veg and veg mixing issue and hence in absence of a valid tender, Dubey Canteen was relieved from it's operations. He however comes for a while during fests... Maybe you'll get a chance to meet him in next fest!? And also take this: UNHYGIENIC\n\n submit this code to go to level 3"
+      }
+    },
+    "System Backend": {
+      "type": "dir",
+      "hidden": false,
+      "author": "Core System",
+      "creation": "24-06-2026",
+      "entity merge.log": {
+        "type": "file",
+        "hidden": false,
+        "author": "Backend AI",
+        "creation": "24-06-2026",
+        "content": "Dubey Canteen entity merges with student memory clusters."
+      },
+      "memory index dump.txt": {
+        "type": "file",
+        "hidden": false,
+        "author": "System Core",
+        "creation": "24-06-2026",
+        "content": "Index fragmentation detected. Multiple versions of Dubey Ji existence co-occur depending on dataset load. No single canonical record exists."
+      }
     }
   }
 }
