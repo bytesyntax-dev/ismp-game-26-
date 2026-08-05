@@ -163,9 +163,9 @@ export default function App() {
         setScreen('game');
       }
       
-      if (data.levelData?.startTime) {
+      if (data.levelData && data.levelData.startTime !== undefined) {
         setStartTime(data.levelData.startTime);
-        if (data.levelData.serverTime) {
+        if (data.levelData.startTime && data.levelData.serverTime) {
           updateClockSkew(data.levelData.serverTime - Date.now());
         }
       }
@@ -264,14 +264,27 @@ export default function App() {
   useEffect(() => {
     if (!levelData || levelData.completed || completedState) return;
 
-    if (!startTime) {
-      // Fall back to server/mock-provided level start time when present
-      if (levelData.startTime) setStartTime(levelData.startTime);
+    const parseTime = (t) => {
+      if (typeof t === 'string') {
+        const parsed = parseInt(t, 10);
+        return isNaN(parsed) ? null : parsed;
+      }
+      return typeof t === 'number' && t > 0 ? t : null;
+    };
+
+    const validStart = parseTime(startTime) || parseTime(levelData.startTime);
+
+    if (!validStart || validStart < 1700000000000) {
+      setElapsedSeconds(0);
       return;
     }
 
+    if (!startTime && validStart) {
+      setStartTime(validStart);
+    }
+
     const interval = setInterval(() => {
-      const ms = (Date.now() + clockSkew) - startTime;
+      const ms = (Date.now() + clockSkew) - validStart;
       setElapsedSeconds(Math.max(0, Math.floor(ms / 1000)));
     }, 1000);
 
@@ -972,7 +985,7 @@ export default function App() {
         active={screen === 'game'}
         team={team}
         currentMemberId={localStorage.getItem('ref')}
-        started={!!startTime}
+        started={typeof startTime === 'number' && startTime > 1700000000000}
       />
 
       {/* Sound Control Header */}
